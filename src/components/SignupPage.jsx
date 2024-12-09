@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2"; // Import SweetAlert2
 import "../styles/SignupPage.css";
 
 const SignupPage = () => {
-  const navigate = useNavigate(); // Hook to navigate back
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     firstName: "",
@@ -13,9 +14,8 @@ const SignupPage = () => {
     password: "",
   });
 
-  const [passwordVisible, setPasswordVisible] = useState(false); 
-  const [loading, setLoading] = useState(false); 
-  const [error, setError] = useState("");
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
@@ -28,7 +28,6 @@ const SignupPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError("");
 
     try {
       const response = await fetch("http://localhost:8000/api/signup", {
@@ -37,25 +36,48 @@ const SignupPage = () => {
         body: JSON.stringify(formData),
       });
       const data = await response.json();
+
       if (response.ok) {
-        localStorage.setItem("token", data.token);
-        navigate("/");
+        localStorage.setItem("token", data.token); // Store token
+        localStorage.setItem("firstName", JSON.stringify(data.firstName))
+        Swal.fire({
+          icon: "success",
+          title: "Signup Successful",
+          text: "Your account has been created successfully!",
+        }).then(() => {
+          navigate("/");
+        });
       } else {
-        setError(data.message || "Signup failed. Please try again.");
+        Swal.fire({
+          icon: "error",
+          title: "Signup Failed",
+          text: data.message || "Please try again.",
+        });
       }
     } catch (err) {
-      setError("An error occurred. Please try again later.");
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "An error occurred. Please try again later.",
+      });
     } finally {
       setLoading(false);
     }
   };
+
   return (
     <div className="signup-container">
-      {/* Back Button */}
+      {/* Back Button (Independent from menu-bar) */}
       <button className="back-button" onClick={() => navigate(-1)}>
         ← Back
       </button>
 
+      {/* Menu bar (visible only on small screens) */}
+      <nav className="menu-bar">
+        <button className="menu-button">☰</button>
+      </nav>
+
+      {/* Signup Form */}
       <div className="signup-form">
         <div className="avatar-placeholder">
           <img
@@ -119,7 +141,6 @@ const SignupPage = () => {
               I agree to the <a href="#">Terms</a>
             </span>
           </div>
-          {error && <p className="error-message">{error}</p>}
           <button type="submit" className="btn signup-btn" disabled={loading}>
             {loading ? "Registering..." : "REGISTER"}
           </button>

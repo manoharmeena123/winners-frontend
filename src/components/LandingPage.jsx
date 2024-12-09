@@ -6,9 +6,10 @@ const LandingPage = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (token) {
-      setUser({ username: "Manohar" });
+    const firstName = JSON.parse(localStorage.getItem("firstName"));
+    console.log('first', firstName)
+    if (firstName) {
+      setUser({name: firstName});
     }
   }, []);
 
@@ -23,7 +24,7 @@ const LandingPage = () => {
         <h1>Welcome to My Project</h1>
         {user ? (
           <div>
-            <p>Hello, {user.username}!</p>
+            <p>Hello, {user.name}!</p>
             <button className="btn logout-btn" onClick={handleLogout}>
               Logout
             </button>

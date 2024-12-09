@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
-import '../styles/LoginPage.css';
+import React, { useState } from "react";
+import "../styles/LoginPage.css";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const LoginPage = () => {
-  const navigate = useNavigate(); // Hook to navigate back
+  const navigate = useNavigate();
 
-  const [formData, setFormData] = useState({ username: '', password: '' });
+  const [formData, setFormData] = useState({ email: "", password: "" });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -13,27 +14,55 @@ const LoginPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch('http://localhost:8000/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(formData)
-    });
-    const data = await response.json();
-    alert(data.message);
+    try {
+      const response = await fetch("http://localhost:8000/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+
+      if (response.ok) {
+        localStorage.setItem("token", data.token); // Store token
+        localStorage.setItem("firstName", JSON.stringify(data.firstName));
+        Swal.fire({
+          icon: "success",
+          title: "Login Successful",
+          text: data.message,
+        }).then(() => {
+          navigate("/");
+        });
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Login Failed",
+          text: data.message || "Please try again.",
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: "An error occurred. Please try again later.",
+      });
+    }
   };
 
   return (
     <div className="login-container">
-             {/* Back Button */}
       <button className="back-button" onClick={() => navigate(-1)}>
         ← Back
       </button>
+      {/* Menu bar (visible only on small screens) */}
+      <nav className="menu-bar">
+        <button className="menu-button">☰</button>
+      </nav>
       <form onSubmit={handleSubmit} className="login-form">
         <h2 className="login-title">Login</h2>
         <input
-          name="username"
+          name="email"
           className="login-input"
-          placeholder="Username"
+          placeholder="Email"
           onChange={handleChange}
           required
         />
@@ -45,7 +74,9 @@ const LoginPage = () => {
           onChange={handleChange}
           required
         />
-        <button type="submit" className="login-button">Login</button>
+        <button type="submit" className="login-button">
+          Login
+        </button>
       </form>
     </div>
   );
