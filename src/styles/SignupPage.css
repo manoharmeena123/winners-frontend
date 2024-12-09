@@ -4,9 +4,9 @@
   flex-direction: column;
   align-items: center;
   height: 100vh;
-  background-image: url("https://img.freepik.com/free-photo/silhouette-tree-green-field_395237-249.jpg?t=st=1733743184~exp=1733746784~hmac=094416549b1a80705dcd25d8c1fb5ee72768c0dca9ac859297eb25769c345f4a&w=900");
   padding: 20px;
   position: relative;
+  background-image: url("https://img.freepik.com/free-photo/abstract-smooth-purple-backdrop-room-interior-background_1258-82967.jpg?t=st=1733745082~exp=1733748682~hmac=1f2cf6e508198e0c36250187080a0f6a85dd1e7c485900d0a8175759ec540125&w=740");
 }
 
 .menu-bar {
@@ -22,6 +22,7 @@
     padding: 10px 20px;
     position: fixed;
     top: 0;
+    left :15;
     width: 100%;
     z-index: 1000;
   }

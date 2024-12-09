@@ -4,9 +4,9 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b);
-    background-image: url("https://img.freepik.com/free-photo/silhouette-tree-green-field_395237-249.jpg?t=st=1733743184~exp=1733746784~hmac=094416549b1a80705dcd25d8c1fb5ee72768c0dca9ac859297eb25769c345f4a&w=900");
     padding: 20px;
+    background-image: url("https://img.freepik.com/free-photo/silhouette-tree-green-field_395237-249.jpg?t=st=1733743184~exp=1733746784~hmac=094416549b1a80705dcd25d8c1fb5ee72768c0dca9ac859297eb25769c345f4a&w=900");
+
   }
   
   /* Content styling */
