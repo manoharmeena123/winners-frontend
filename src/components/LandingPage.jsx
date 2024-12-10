@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/LandingPage.css";
+import Header from "./Header";
 
 const LandingPage = () => {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
     const firstName = JSON.parse(localStorage.getItem("firstName"));
-    console.log('first', firstName)
+    console.log("first", firstName);
     if (firstName) {
-      setUser({name: firstName});
+      setUser({ name: firstName });
     }
   }, []);
 
@@ -20,8 +21,11 @@ const LandingPage = () => {
 
   return (
     <div className="landing-container">
+      {/* Always render the Header at the top */}
+      <Header />
+
+      {/* Main content */}
       <div className="landing-content">
-        <h1>Welcome to My Project</h1>
         {user ? (
           <div>
             <p>Hello, {user.name}!</p>

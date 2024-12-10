@@ -67,12 +67,9 @@ const SignupPage = () => {
 
   return (
     <div className="signup-container">
-      {/* Back Button (Independent from menu-bar) */}
       <button className="back-button" onClick={() => navigate(-1)}>
         ← Back
       </button>
-
-      {/* Menu bar (visible only on small screens) */}
       <nav className="menu-bar">
         <button className="menu-button">☰</button>
       </nav>

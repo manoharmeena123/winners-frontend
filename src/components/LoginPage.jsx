@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "../styles/LoginPage.css";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import "../styles/LoginPage.css";
 
 const LoginPage = () => {
   const navigate = useNavigate();
