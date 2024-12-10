@@ -1,6 +1,14 @@
 import React from "react";
+import { faqs } from "../data/faqdata";
+import { useState } from "react";
 
 const SSC = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const toggleFAQ = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
   return (
     <div className="container w-[90%] mx-auto px-6 py-4">
       {/* Breadcrumbs */}
@@ -35,7 +43,7 @@ const SSC = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 bg-white p-6 shadow-md rounded-md">
         {/* Col-8 */}
         <div className="md:col-span-8">
-          <h1 className="text-2xl font-semibold mb-4">
+          <h1 className="text-3xl font-medium mb-4">
             SSC Calendar 2025 Out, Check Full List of Upcoming SSC Exams..
           </h1>
           <p className="text-gray-700">
@@ -204,8 +212,8 @@ const SSC = () => {
                 and date/month of exam.
               </p>
 
-              {/* <div className="overflow-x-auto mt-4"> */}
-              <div className="mt-4">
+              <div className="overflow-x-auto mt-4">
+              {/* <div className="mt-4"> */}
                 <table className="w-full border-collapse border border-gray-300 text-sm">
                   {/* Table Header */}
                   <thead>
@@ -961,10 +969,46 @@ const SSC = () => {
                   </p>
                 </div>
                 <img
-            src="https://www.bankersadda.com/wp-content/uploads/multisite/2024/12/09193127/SSC_Calendar_Releases_Per_Year-1536x960.png"
-            alt="Placeholder"
-            className="w-full rounded shadow-md"
-          />
+                  src="https://www.bankersadda.com/wp-content/uploads/multisite/2024/12/09193127/SSC_Calendar_Releases_Per_Year-1536x960.png"
+                  alt="Placeholder"
+                  className="w-full rounded shadow-md"
+                />
+              </div>
+              <div className="mt-4">
+                <h2 className="text-2xl font-semibold mb-4">FAQs</h2>
+                <div className="space-y-1">
+                  {faqs.map((faq, index) => (
+                    <div key={index} className="border rounded-md">
+                      {/* FAQ Header */}
+                      <div
+                        className={`flex justify-between items-center p-1 ${
+                          activeIndex === index
+                            ? "bg-blue-700 text-white"
+                            : "bg-blue-700 text-white"
+                        } cursor-pointer`}
+                        onClick={() => toggleFAQ(index)}
+                      >
+                        <span>{faq.question}</span>
+                        <span className="text-xl">
+                          {activeIndex === index ? "−" : "+"}
+                        </span>
+                      </div>
+
+                      {/* FAQ Content with Transition */}
+                      <div
+                        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+                          activeIndex === index
+                            ? "max-h-screen p-4"
+                            : "max-h-0 p-0"
+                        } bg-white text-gray-800`}
+                      >
+                        {activeIndex === index && (
+                          <div className="border-t">{faq.answer}</div>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
