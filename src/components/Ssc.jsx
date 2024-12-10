@@ -1020,10 +1020,11 @@ const SSC = () => {
                   {classes.map((cls, index) => (
                     <div
                       key={index}
-                      className="border rounded-lg shadow-md p-4 flex flex-col items-center h-full"
+                      className="border rounded-lg p-4 flex flex-col items-center h-full"
+                      style={{ boxShadow: "0 0 30px rgb(0 0 0 / 10%)" }}
                     >
                       {/* Image Section */}
-                      <div className="w-full h-28 rounded-lg flex items-center justify-center">
+                      <div className="w-full h-36 rounded-lg flex items-center justify-center">
                         <img
                           src={cls.image}
                           alt="Placeholder"
@@ -1060,9 +1061,10 @@ const SSC = () => {
                   {testSeries?.map((cls, index) => (
                     <div
                       key={index}
-                      className="border rounded-lg shadow-md p-4 flex flex-col items-center"
+                      className="border rounded-lg p-4 flex flex-col items-center"
+                      style={{ boxShadow: "0 0 30px rgb(0 0 0 / 10%)" }}
                     >
-                      <div className="w-full h-28 rounded-lg flex items-center justify-center">
+                      <div className="w-full h-36 rounded-lg flex items-center justify-center">
                         <img
                           src={cls.image}
                           alt="Placeholder"
