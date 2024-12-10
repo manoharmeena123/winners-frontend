@@ -11,8 +11,10 @@ const SSC = () => {
     setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const handleBuyNowClick = () => {
-    window.location.replace("https://live.winnersinstitute.in/courses?categoryId=16");
+  const handleBuyNowClick = (link) => {
+    window.location.replace(
+      `${link}`
+    );
   };
 
   return (
@@ -1049,9 +1051,10 @@ const SSC = () => {
                       </p>
 
                       {/* Button */}
-                      <button className="mt-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
-                        onClick={handleBuyNowClick}
-                        >
+                      <button
+                        className="mt-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
+                        onClick={ () => handleBuyNowClick(cls?.link)}
+                      >
                         {cls.button}
                       </button>
                     </div>
@@ -1088,7 +1091,7 @@ const SSC = () => {
                       {/* Button */}
                       <button
                         className="mt-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
-                        onClick={handleBuyNowClick}
+                        onClick={ () => handleBuyNowClick(cls?.link)}
                       >
                         {cls.button}
                       </button>
@@ -1108,7 +1111,7 @@ const SSC = () => {
             className="w-full rounded shadow-md"
           />
           <img
-        src="/WhatsApp Image 2024-12-10 at 17.05.59 (1).jpeg"
+            src="/WhatsApp Image 2024-12-10 at 17.05.59 (1).jpeg"
             alt="Placeholder"
             className="w-full rounded shadow-md"
           />

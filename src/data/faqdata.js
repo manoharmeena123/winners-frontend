@@ -32,13 +32,15 @@ export const classes = [
         price: "Rs 5424.75",
         button: "Buy Now",
         background: "bg-blue-900",
+        link :"https://live.winnersinstitute.in/courses/478-banking-foundation-combo-buy-1-get-10-online-course-cbf1224"
     },
     {
         image: "/WhatsApp Image 2024-12-10 at 17.05.59.jpeg",
-        description: "Complete Tier 1+2 Prep.",
+        description: "MPTET Online course",
         price: "Rs 2499.75",
         button: "Buy Now",
         background: "bg-green-600",
+        link :"https://live.winnersinstitute.in/courses/366-mptet-3-complete-online-course-mptet3-0324"
     },
     {
         image: "/WhatsApp Image 2024-12-10 at 17.06.00 (1).jpeg",
@@ -46,6 +48,7 @@ export const classes = [
         price: "Rs 2749.75",
         button: "Buy Now",
         background: "bg-teal-600",
+        link :"https://live.winnersinstitute.in/courses/492-ssc-cgl-2025-complete-online-course-cgl1224"
     },
 ];
 
