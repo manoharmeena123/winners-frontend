@@ -27,21 +27,21 @@ export const faqs = [
 
 export const classes = [
     {
-        image: "https://storeimages.adda247.com/672581723877807.png",
+        image: "/WhatsApp Image 2024-12-10 at 17.05.59 (1).jpeg",
         description: "For All Banking & SSC CGL Exam",
         price: "Rs 5424.75",
         button: "Buy Now",
         background: "bg-blue-900",
     },
     {
-        image: "https://storeimages.adda247.com/35431723877369.png",
+        image: "/WhatsApp Image 2024-12-10 at 17.05.59.jpeg",
         description: "Complete Tier 1+2 Prep.",
         price: "Rs 2499.75",
         button: "Buy Now",
         background: "bg-green-600",
     },
     {
-        image: "https://storeimages.adda247.com/39161723877334.jpg",
+        image: "/WhatsApp Image 2024-12-10 at 17.06.00 (1).jpeg",
         description: "SSC CGL, CHSL, CPO, MTS, GD, JHT",
         price: "Rs 2749.75",
         button: "Buy Now",
@@ -51,14 +51,14 @@ export const classes = [
 
 export const testSeries = [
     {
-        image: "https://storeimages.adda247.com/29761728643165.png",
+        image: "/WhatsApp Image 2024-12-10 at 17.06.00.jpeg",
         description: "For All Banking & SSC CGL Exam",
         price: "Rs 5424.75",
         button: "Buy Now",
         background: "bg-blue-900",
     },
     {
-        image: "https://storeimages.adda247.com/WhatsAppImage20240816at1520291723885994.jpeg",
+        image: "WhatsApp Image 2024-12-10 at 17.06.01.jpeg",
         description: "Complete Tier 1+2 Prep.",
         price: "Rs 2499.75",
         button: "Buy Now",

@@ -1,12 +1,18 @@
 import React from "react";
 import { faqs, classes, testSeries } from "../data/faqdata";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const SSC = () => {
+  const navigate = useNavigate();
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const handleBuyNowClick = () => {
+    window.location.replace("https://live.winnersinstitute.in/courses?categoryId=16");
   };
 
   return (
@@ -1043,7 +1049,9 @@ const SSC = () => {
                       </p>
 
                       {/* Button */}
-                      <button className="mt-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
+                      <button className="mt-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
+                        onClick={handleBuyNowClick}
+                        >
                         {cls.button}
                       </button>
                     </div>
@@ -1078,7 +1086,10 @@ const SSC = () => {
                         {cls.price}
                       </p>
                       {/* Button */}
-                      <button className="mt-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
+                      <button
+                        className="mt-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
+                        onClick={handleBuyNowClick}
+                      >
                         {cls.button}
                       </button>
                     </div>
@@ -1097,17 +1108,17 @@ const SSC = () => {
             className="w-full rounded shadow-md"
           />
           <img
-            src="https://sales.adda247.com/wp-content/uploads/2024/12/04131906/320x250-5.png"
+        src="/WhatsApp Image 2024-12-10 at 17.05.59 (1).jpeg"
             alt="Placeholder"
             className="w-full rounded shadow-md"
           />
           <img
-            src="https://www.bankersadda.com/wp-content/uploads/multisite/2024/12/04174122/Hindu-Review-November-2024.png"
+            src="/WhatsApp Image 2024-12-10 at 17.05.59.jpeg"
             alt="Placeholder"
             className="w-full rounded shadow-md"
           />
           <img
-            src="https://www.bankersadda.com/wp-content/uploads/multisite/2024/12/04133036/320x250-6.png"
+            src="/WhatsApp Image 2024-12-10 at 17.06.00 (1).jpeg"
             alt="Placeholder"
             className="w-full rounded shadow-md"
           />
