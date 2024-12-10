@@ -1,5 +1,5 @@
 import React from "react";
-import { faqs } from "../data/faqdata";
+import { faqs, classes, testSeries } from "../data/faqdata";
 import { useState } from "react";
 
 const SSC = () => {
@@ -213,7 +213,7 @@ const SSC = () => {
               </p>
 
               <div className="overflow-x-auto mt-4">
-              {/* <div className="mt-4"> */}
+                {/* <div className="mt-4"> */}
                 <table className="w-full border-collapse border border-gray-300 text-sm">
                   {/* Table Header */}
                   <thead>
@@ -1006,6 +1006,79 @@ const SSC = () => {
                           <div className="border-t">{faq.answer}</div>
                         )}
                       </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Popular Online Live Classes */}
+              <div className="mt-8">
+                <h2 className="text-2xl font-semibold mb-6">
+                  Popular Online Live Classes
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                  {classes.map((cls, index) => (
+                    <div
+                      key={index}
+                      className="border rounded-lg shadow-md p-4 flex flex-col items-center h-full"
+                    >
+                      {/* Image Section */}
+                      <div className="w-full h-28 rounded-lg flex items-center justify-center">
+                        <img
+                          src={cls.image}
+                          alt="Placeholder"
+                          className="w-full h-full object-fit rounded-lg"
+                        />
+                      </div>
+
+                      {/* Description */}
+                      <p className="text-center text-gray-700 mt-4">
+                        {cls.description}
+                      </p>
+
+                      {/* Price */}
+                      <p className="text-orange-600 font-bold text-lg mt-2">
+                        {cls.price}
+                      </p>
+
+                      {/* Button */}
+                      <button className="mt-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
+                        {cls.button}
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Popular Mock Test Series.
+               */}
+              <div className="mt-8">
+                <h2 className="text-2xl font-semibold mb-6">
+                  Popular Mock Test Series
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                  {testSeries?.map((cls, index) => (
+                    <div
+                      key={index}
+                      className="border rounded-lg shadow-md p-4 flex flex-col items-center"
+                    >
+                      <div className="w-full h-28 rounded-lg flex items-center justify-center">
+                        <img
+                          src={cls.image}
+                          alt="Placeholder"
+                          className="w-full h-full object-fit rounded-lg"
+                        />
+                      </div>
+                      <p className="text-center text-gray-700 mt-4">
+                        {cls.description}
+                      </p>
+                      <p className="text-orange-600 font-bold text-lg mt-2">
+                        {cls.price}
+                      </p>
+                      {/* Button */}
+                      <button className="mt-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
+                        {cls.button}
+                      </button>
                     </div>
                   ))}
                 </div>
