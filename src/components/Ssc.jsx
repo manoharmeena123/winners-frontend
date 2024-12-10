@@ -12,9 +12,7 @@ const SSC = () => {
   };
 
   const handleBuyNowClick = (link) => {
-    window.location.replace(
-      `${link}`
-    );
+    window.location.replace(`${link}`);
   };
 
   return (
@@ -1028,73 +1026,75 @@ const SSC = () => {
                   {classes.map((cls, index) => (
                     <div
                       key={index}
-                      className="border rounded-lg p-4 flex flex-col items-center h-full"
+                      className="border rounded-lg p-4 flex flex-row sm:flex-col items-center sm:items-start h-full"
                       style={{ boxShadow: "0 0 30px rgb(0 0 0 / 10%)" }}
                     >
                       {/* Image Section */}
-                      <div className="w-full h-36 rounded-lg flex items-center justify-center">
+                      <div className="w-1/2 sm:w-full h-36 flex items-center justify-center">
                         <img
                           src={cls.image}
                           alt="Placeholder"
-                          className="w-full h-full object-fit rounded-lg"
+                          className="w-full h-full object-cover rounded-lg"
                         />
                       </div>
 
-                      {/* Description */}
-                      <p className="text-center text-gray-700 mt-4">
-                        {cls.description}
-                      </p>
-
-                      {/* Price */}
-                      <p className="text-orange-600 font-bold text-lg mt-2">
-                        {cls.price}
-                      </p>
-
-                      {/* Button */}
-                      <button
-                        className="mt-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
-                        onClick={ () => handleBuyNowClick(cls?.link)}
-                      >
-                        {cls.button}
-                      </button>
+                      {/* Content Section */}
+                      <div className="w-1/2 sm:w-full flex flex-col justify-center text-center sm:text-center px-4 sm:px-0">
+                        <p className="text-gray-700 text-sm sm:text-base">
+                          {cls.description}
+                        </p>
+                        <p className="text-orange-600 font-bold text-md sm:text-lg mt-2">
+                          {cls.price}
+                        </p>
+                        <button
+                          className="mt-4 bg-blue-600 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-md hover:bg-blue-700 text-sm sm:text-base"
+                          onClick={() => handleBuyNowClick(cls?.link)}
+                        >
+                          {cls.button}
+                        </button>
+                      </div>
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Popular Mock Test Series.
-               */}
+              {/* Popular Mock Test Series */}
+           
               <div className="mt-8">
                 <h2 className="text-2xl font-semibold mb-6">
-                  Popular Mock Test Series
+                  Popular Online Live Classes
                 </h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                   {testSeries?.map((cls, index) => (
                     <div
                       key={index}
-                      className="border rounded-lg p-4 flex flex-col items-center"
+                      className="border rounded-lg p-4 flex flex-row sm:flex-col items-center sm:items-start h-full"
                       style={{ boxShadow: "0 0 30px rgb(0 0 0 / 10%)" }}
                     >
-                      <div className="w-full h-36 rounded-lg flex items-center justify-center">
+                      {/* Image Section */}
+                      <div className="w-1/2 sm:w-full h-36 flex items-center justify-center">
                         <img
                           src={cls.image}
                           alt="Placeholder"
-                          className="w-full h-full object-fit rounded-lg"
+                          className="w-full h-full object-cover rounded-lg"
                         />
                       </div>
-                      <p className="text-center text-gray-700 mt-4">
-                        {cls.description}
-                      </p>
-                      <p className="text-orange-600 font-bold text-lg mt-2">
-                        {cls.price}
-                      </p>
-                      {/* Button */}
-                      <button
-                        className="mt-auto bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700"
-                        onClick={ () => handleBuyNowClick(cls?.link)}
-                      >
-                        {cls.button}
-                      </button>
+
+                      {/* Content Section */}
+                      <div className="w-1/2 sm:w-full flex flex-col justify-center text-center sm:text-center px-4 sm:px-0">
+                        <p className="text-gray-700 text-sm sm:text-base">
+                          {cls.description}
+                        </p>
+                        <p className="text-orange-600 font-bold text-md sm:text-lg mt-2">
+                          {cls.price}
+                        </p>
+                        <button
+                           className="mt-4 bg-blue-600 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-md hover:bg-blue-700 text-sm sm:text-base"
+                          onClick={() => handleBuyNowClick(cls?.link)}
+                        >
+                          {cls.button}
+                        </button>
+                      </div>
                     </div>
                   ))}
                 </div>
