@@ -36,7 +36,7 @@ const Header = () => {
               </svg>
             </button>
             {/* Dropdown Menu */}
-            <div className="absolute hidden group-hover:flex flex-col bg-white border border-gray-200 mt-2 py-2 rounded-md shadow-md z-10 w-full">
+            <div className="absolute hidden group-hover:flex flex-col bg-white border border-gray-200  py-2 rounded-md shadow-md z-10 w-full">
               <Link
                 to="/mppsc"
                 className="block px-4 py-2 text-gray-700 hover:bg-red-600 hover:text-white"
