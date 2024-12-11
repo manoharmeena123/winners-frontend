@@ -1030,27 +1030,24 @@ const SSC = () => {
                       style={{ boxShadow: "0 0 30px rgb(0 0 0 / 10%)" }}
                     >
                       {/* Image Section */}
-                      <div className="w-1/2 sm:w-full h-36 sm:h-18 flex items-center justify-center">
+                      <div className="w-1/2 sm:w-full h-36 sm:h-18 lg:h-36 flex items-center justify-center">
                         <img
                           src={cls.image}
                           alt="Placeholder"
-                     className="w-full h-full lg:object-cover  sm:object-contain rounded-lg"
+                          className="w-full h-full lg:object-cover  sm:object-contain rounded-lg"
                         />
                       </div>
 
                       {/* Content Section */}
-                      <div
-                      //  className="w-1/2 sm:w-full flex flex-col justify-center text-center sm:text-center px-4 sm:px-0"
-                      className="w-1/2 sm:w-full flex flex-col justify-between h-full text-center sm:text-center px-4 sm:px-0"
-                       >
-                        <p className="text-gray-700 text-sm sm:text-base">
+                      <div className="w-1/2 sm:w-full flex flex-col justify-between h-full text-center sm:text-center px-4 sm:px-0">
+                        <p className="text-gray-700 text-xs sm:text-md sm:text-base">
                           {cls.description}
                         </p>
-                        <p className="text-orange-600 font-bold text-md sm:text-lg mt-2">
+                        <p className="text-orange-600 font-bold text-sm sm:text-md sm:text-lg mt-2">
                           {cls.price}
                         </p>
                         <button
-                          className="mt-4 bg-blue-600 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-md hover:bg-blue-700 text-sm sm:text-base"
+                          className="mt-auto bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 sm:px-6 sm:py-2 rounded-md hover:bg-blue-700 text-xs sm:text-sm sm:text-base"
                           onClick={() => handleBuyNowClick(cls?.link)}
                         >
                           {cls.button}
@@ -1062,7 +1059,7 @@ const SSC = () => {
               </div>
 
               {/* Popular Mock Test Series */}
-           
+
               <div className="mt-8">
                 <h2 className="text-2xl font-semibold mb-6">
                   Popular Online Live Classes
@@ -1084,18 +1081,15 @@ const SSC = () => {
                       </div>
 
                       {/* Content Section */}
-                      <div 
-                      // className="w-1/2 sm:w-full flex flex-col justify-center text-center sm:text-center px-4 sm:px-0"
-                      className="w-1/2 sm:w-full flex flex-col justify-between h-full text-center sm:text-center px-4 sm:px-0"
-                      >
-                        <p className="text-gray-700 text-sm sm:text-base">
+                      <div className="w-1/2 sm:w-full flex flex-col justify-between h-full text-center sm:text-center px-4 sm:px-0">
+                        <p className="text-gray-700 text-xs sm:text-sm sm:text-base">
                           {cls.description}
                         </p>
-                        <p className="text-orange-600 font-bold text-md sm:text-lg mt-2">
+                        <p className="text-orange-600 font-bold text-sm sm:text-md sm:text-lg mt-2">
                           {cls.price}
                         </p>
                         <button
-                            className="mt-auto bg-blue-600 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-md hover:bg-blue-700 text-sm sm:text-base"
+                          className="mt-auto bg-blue-600 text-white px-3 py-1 sm:px-4 sm:py-2 sm:px-6 sm:py-2 rounded-md hover:bg-blue-700 text-xs sm:text-sm sm:text-base"
                           onClick={() => handleBuyNowClick(cls?.link)}
                         >
                           {cls.button}
