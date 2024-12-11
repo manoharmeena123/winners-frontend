@@ -16,7 +16,7 @@ const SSC = () => {
   };
 
   return (
-    <div className="container w-[90%] mx-auto px-6 py-4">
+    <div className="container w-[90%] sm:w-[100%] mx-auto lg :px-6 sm:px-0 py-4">
       {/* Breadcrumbs */}
       <nav className="text-sm mb-4" aria-label="Breadcrumb">
         <ol className="list-none p-0 inline-flex">
@@ -1030,16 +1030,19 @@ const SSC = () => {
                       style={{ boxShadow: "0 0 30px rgb(0 0 0 / 10%)" }}
                     >
                       {/* Image Section */}
-                      <div className="w-1/2 sm:w-full h-36 flex items-center justify-center">
+                      <div className="w-1/2 sm:w-full h-36 sm:h-18 flex items-center justify-center">
                         <img
                           src={cls.image}
                           alt="Placeholder"
-                          className="w-full h-full object-cover rounded-lg"
+                     className="w-full h-full lg:object-cover  sm:object-contain rounded-lg"
                         />
                       </div>
 
                       {/* Content Section */}
-                      <div className="w-1/2 sm:w-full flex flex-col justify-center text-center sm:text-center px-4 sm:px-0">
+                      <div
+                      //  className="w-1/2 sm:w-full flex flex-col justify-center text-center sm:text-center px-4 sm:px-0"
+                      className="w-1/2 sm:w-full flex flex-col justify-between h-full text-center sm:text-center px-4 sm:px-0"
+                       >
                         <p className="text-gray-700 text-sm sm:text-base">
                           {cls.description}
                         </p>
@@ -1072,16 +1075,19 @@ const SSC = () => {
                       style={{ boxShadow: "0 0 30px rgb(0 0 0 / 10%)" }}
                     >
                       {/* Image Section */}
-                      <div className="w-1/2 sm:w-full h-36 flex items-center justify-center">
+                      <div className="w-1/2 sm:w-full h-36 sm:h-18 flex items-center justify-center">
                         <img
                           src={cls.image}
                           alt="Placeholder"
-                          className="w-full h-full object-cover rounded-lg"
+                          className="w-full h-full lg:object-cover  sm:object-contain rounded-lg"
                         />
                       </div>
 
                       {/* Content Section */}
-                      <div className="w-1/2 sm:w-full flex flex-col justify-center text-center sm:text-center px-4 sm:px-0">
+                      <div 
+                      // className="w-1/2 sm:w-full flex flex-col justify-center text-center sm:text-center px-4 sm:px-0"
+                      className="w-1/2 sm:w-full flex flex-col justify-between h-full text-center sm:text-center px-4 sm:px-0"
+                      >
                         <p className="text-gray-700 text-sm sm:text-base">
                           {cls.description}
                         </p>
@@ -1089,7 +1095,7 @@ const SSC = () => {
                           {cls.price}
                         </p>
                         <button
-                           className="mt-4 bg-blue-600 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-md hover:bg-blue-700 text-sm sm:text-base"
+                            className="mt-auto bg-blue-600 text-white px-4 py-2 sm:px-6 sm:py-2 rounded-md hover:bg-blue-700 text-sm sm:text-base"
                           onClick={() => handleBuyNowClick(cls?.link)}
                         >
                           {cls.button}
