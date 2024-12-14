@@ -1,16 +1,7 @@
 {
-  "name": "my-app",
+  "name": "winners",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "cra-template": "1.2.0",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-router-dom": "^7.0.2",
-    "react-scripts": "5.0.1",
-    "sweetalert2": "^11.14.5",
-    "web-vitals": "^4.2.4"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -36,8 +27,37 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.20",
-    "postcss": "^8.4.49",
-    "tailwindcss": "^3.4.16"
+    "@fortawesome/fontawesome-svg-core": "^6.7.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.0.1",
+    "@testing-library/user-event": "^14.5.2",
+    "antd": "^5.22.1",
+    "aos": "^2.3.4",
+    "axios": "^1.7.7",
+    "bootstrap": "^5.3.3",
+    "embla-carousel-react": "^8.4.0",
+    "flowbite-react": "^0.10.2",
+    "framer-motion": "^11.11.17",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.2",
+    "lenis": "^1.1.16",
+    "qrcode.react": "^4.1.0",
+    "react": "^18.3.1",
+    "react-awesome-slider": "^4.1.0",
+    "react-bootstrap": "^2.10.5",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.28.0",
+    "react-scripts": "^5.0.1",
+    "react-slick": "^0.30.2",
+    "react-spring": "^9.7.4",
+    "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.15",
+    "tailwindcss": "^3.4.15",
+    "web-vitals": "^4.2.4"
+  },
+  "dependencies": {
+    "react-helmet": "^6.1.0"
   }
 }

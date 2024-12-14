@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+
+
+.ticket-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.ticket-instructions {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .ticket-container {
+    font-size: 14px;
+    padding: 5px;
+  }
+}
+
+
+.space-x-3{
+position : relative!important;
+display : flex;
+justify-content : center;
+align-items : center;
+top  :0;
+background-color : rgb(28,38,114);
+padding : 4px;
+}
+/* Ensures all images have the same height */
+.image-container {
+  height: 200px; /* Set the desired fixed height */
+  object-fit: cover; /* Makes the image cover the container while cropping excess */
+  width: 100%; /* Makes the image responsive */
+}
+
+/* Hide the scrollbar for better UI */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}

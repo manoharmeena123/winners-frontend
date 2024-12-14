@@ -1,0 +1,104 @@
+/* Custom styling for slick slider */
+.slick-slider {
+  margin-bottom: 20px;
+}
+
+.slick-prev,
+.slick-next {
+  width: 30px !important;
+  height: 30px !important;
+  background: white !important;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  transition: all 0.3s ease;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: -15px;
+}
+
+.slick-next {
+  right: -15px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: white !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove default slick arrow styles */
+.slick-prev:before,
+.slick-next:before {
+  content: none;
+}
+
+@media (max-width: 768px) {
+  .slick-prev {
+    left: -10px;
+  }
+  
+  .slick-next {
+    right: -10px;
+  }
+
+  .slick-slider {
+    margin: 0;
+  }
+  
+  .slick-slide {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+/* Fix for image container heights */
+.slick-slide > div {
+  height: 100%;
+} 
+
+
+/* // */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 14px;
+}
+
+button:hover {
+  text-decoration: underline;
+  color: #1a73e8;
+}

@@ -1,0 +1,55 @@
+.slider-container {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding: 100px 0;
+}
+
+.slick-slider {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slick-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}
+
+.slick-list {
+  overflow: visible;
+  margin: 0 -10px;
+}
+
+/* Card styles */
+.s-card {
+  width: 313px;
+  height: 280px;
+  margin: 0 auto;
+  position: relative;
+  background-image: url('/assets/home/wrap12.svg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+/* Arrow styles */
+.arrow {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.arrow:hover {
+  transform: scale(1.1);
+}
+
+/* Active slide */
+.slick-center .s-card {
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+} 

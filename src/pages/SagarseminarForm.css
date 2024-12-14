@@ -1,0 +1,90 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Form group */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+/* Button styles */
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.otp-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.otp-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Modal styles */
+.modal-button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.verify-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Thank you message */
+.thank-you-message {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.thank-you-message h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.thank-you-message p {
+    font-size: 18px;
+}
