@@ -11,6 +11,21 @@ function Header() {
   function handleDropdown() {
     setDropdown(!dropdown);
   }
+  const [openSubCourses, setOpenSubCourses] = useState({});
+  const toggleSubCourses = (index, e) => {
+    e.stopPropagation(); // Prevent the link from being triggered
+    setOpenSubCourses((prev) => ({
+      ...prev,
+      [index]: !prev[index],
+    }));
+  };
+  // Close dropdown when unhovered
+  const handleMouseLeave = (index) => {
+    setOpenSubCourses((prevState) => ({
+      ...prevState,
+      [index]: false,
+    }));
+  };
 
   return (
     <>
@@ -45,45 +60,47 @@ function Header() {
                     alt=""
                   />
                 )}
-            <div
-                style={{ display: exams ? "block" : "none" }}
-                className="section-dropdown absolute bg-white shadow-lg rounded-md mt-2 z-10 p-4"
-              >
-                {courses.map((course, index) => (
-                  <div
-                    key={index}
-                    className="dropdown-item relative group"
-                    onMouseEnter={(e) => e.target.classList.add("hovering")}
-                    onMouseLeave={(e) => e.target.classList.remove("hovering")}
-                  >
-                    {/* Top-level course link */}
-                    <a
-                      href={course?.link}
-                      className="block px-2 py-1 text-black hover:text-white hover:bg-[#D0021B] rounded-md"
+                <div
+                  style={{ display: exams ? "block" : "none" }}
+                  className="section-dropdown absolute bg-white shadow-lg rounded-md mt-2 z-10 p-4"
+                >
+                  {courses.map((course, index) => (
+                    <div
+                      key={index}
+                      className="dropdown-item relative group"
+                      onMouseEnter={(e) => e.target.classList.add("hovering")}
+                      onMouseLeave={(e) =>
+                        e.target.classList.remove("hovering")
+                      }
                     >
-                      {course?.courseName}
-                    </a>
-
-                    {/* Popup for sub-courses */}
-                    {course?.subCourses && (
-                      <div
-                        className="child-menu-popup absolute left-full top-0 hidden group-hover:block bg-white shadow-lg rounded-md mt-[-10px] z-20 p-4"
-                        style={{ minWidth: "200px" }}
+                      {/* Top-level course link */}
+                      <a
+                        href={course?.link}
+                        className="block px-2 py-1 text-black hover:text-white hover:bg-[#D0021B] rounded-md"
                       >
-                        {course.subCourses.map((subCourse, subIndex) => (
-                          <a
-                            key={subIndex}
-                            href={subCourse?.link}
-                            className="block px-2 py-1 text-gray-700 hover:text-white hover:bg-[#D0021B] rounded-md"
-                          >
-                            {subCourse?.courseName}
-                          </a>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
+                        {course?.courseName}
+                      </a>
+
+                      {/* Popup for sub-courses */}
+                      {course?.subCourses && (
+                        <div
+                          className="child-menu-popup absolute left-full top-0 hidden group-hover:block bg-white shadow-lg rounded-md mt-[-10px] z-20 p-4"
+                          style={{ minWidth: "200px" }}
+                        >
+                          {course.subCourses.map((subCourse, subIndex) => (
+                            <a
+                              key={subIndex}
+                              href={subCourse?.link}
+                              className="block px-2 py-1 text-gray-700 hover:text-white hover:bg-[#D0021B] rounded-md"
+                            >
+                              {subCourse?.courseName}
+                            </a>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             </li>
           </div>
@@ -175,12 +192,53 @@ function Header() {
                   />
                   <div
                     style={{ display: exams ? "block" : "none" }}
-                    className="section-dropdown"
+                    className="section-dropdown bg-white shadow-lg rounded-md mt-2 z-10 p-4"
                   >
-                    {courses.map((e, i) => (
-                      <a key={i} href={e?.link}>
-                        {e?.courseName}
-                      </a>
+                    {courses.map((course, index) => (
+                      <div key={index} className="relative">
+                        {/* Top-level course */}
+                        <div className="flex items-center">
+                          <a
+                            href={course?.link}
+                            className="block px-2 py-1 text-black hover:text-white hover:bg-[#D0021B] rounded-md flex-grow"
+                          >
+                            {course?.courseName}
+                          </a>
+                          <button
+                            onClick={(e) => toggleSubCourses(index, e)}
+                            className="ml-2 text-gray-600 hover:text-black focus:outline-none"
+                          >
+                            {/* Arrow Icon */}
+                            <img
+                              src={
+                                openSubCourses[index]
+                                  ? "/assets/about/up-arrow-key.png"
+                                  : "/assets/about/downwards-arrow-key.png"
+                              }
+                              style={{ height: "12px" }}
+                              alt="Toggle Arrow"
+                            />
+                          </button>
+                        </div>
+                        {/* Sub-courses dropdown */}
+                        {openSubCourses[index] && course?.subCourses && (
+                          <div
+                            className="bg-white shadow-lg rounded-md p-4 z-20 mt-2"
+                            style={{ minWidth: "200px" }}
+                          >
+                            {course.subCourses.map((subCourse, subIndex) => (
+                              <a
+                                key={subIndex}
+                                href={subCourse?.link}
+                                className="block px-2 py-1 text-gray-700 hover:text-white hover:bg-[#D0021B] rounded-md"
+                                onClick={() => handleMouseLeave(index)}
+                              >
+                                {subCourse?.courseName}
+                              </a>
+                            ))}
+                          </div>
+                        )}
+                      </div>
                     ))}
                   </div>
                 </div>
