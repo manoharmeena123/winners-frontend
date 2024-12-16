@@ -40,7 +40,7 @@ const SSCCGL = () => {
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           {/* Main Column */}
-          <div className="md:col-span-12">
+          <div className="md:col-span-9">
             {/* First Section: SSC CGL Intro */}
             <div className="bg-white  rounded-md p-6 mb-6">
               <h1 className="text-3xl font-bold text-gray-800 mb-4">{title}</h1>
@@ -817,6 +817,24 @@ const SSCCGL = () => {
                 ))}
               </div>
             </div>
+          </div>
+            {/* Col-4 */}
+            <div className="md:col-span-3 flex flex-col space-y-4">
+            <img
+              src="/ssc-cgl-2025.jpeg"
+              alt="Placeholder"
+              className="w-full rounded shadow-md"
+            />
+            <img
+              src="/ssc-chsl-2025.jpeg"
+              alt="Placeholder"
+              className="w-full rounded shadow-md"
+            />
+            <img
+              src="/ssc-combo-books.jpeg"
+              alt="Placeholder"
+              className="w-full rounded shadow-md"
+            />
           </div>
         </div>
       </div>

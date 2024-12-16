@@ -562,11 +562,6 @@ function ExamCenter() {
           {/* Col-4 */}
           <div className="md:col-span-3 flex flex-col space-y-4">
             <img
-              src="https://www.bankersadda.com/wp-content/uploads/multisite/2024/11/26151248/refer-and-earn-its.webp"
-              alt="Placeholder"
-              className="w-full rounded shadow-md"
-            />
-            <img
               src="/ssc-cgl-2025.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"

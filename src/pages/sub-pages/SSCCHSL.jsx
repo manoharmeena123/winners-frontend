@@ -39,7 +39,7 @@ const SSCCHSL = () => {
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           {/* Main Column */}
-          <div className="md:col-span-12">
+          <div className="md:col-span-9 ">
             {/* First Section: SSC CHSL Intro */}
             <div className="bg-white  rounded-md p-6 mb-6">
               <h1 className="text-3xl font-bold text-gray-800 mb-4">{title}</h1>
@@ -99,37 +99,6 @@ const SSCCHSL = () => {
                 registration dates, selection process, and exam pattern.
               </p>
             </div>
-
-            {/* Highlights Section */}
-            {/* <div className="bg-white shadow-md rounded-md p-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                {highlights.title}
-              </h2>
-              <p className="text-gray-700 leading-relaxed">
-                {highlights.content}
-              </p>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-gray-300">
-                  <tbody>
-                    {sscExamtableData.tableData.map((row, index) => (
-                      <tr
-                        key={index}
-                        className={`border-b border-gray-300 ${
-                          index % 2 === 0 ? "bg-gray-50" : "bg-white"
-                        }`}
-                      >
-                        <td className="px-4 py-2 font-semibold text-gray-700 border-r border-gray-300">
-                          {row.label}
-                        </td>
-                        <td className="px-4 py-2 text-gray-700 whitespace-pre-line">
-                          {row.value}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div> */}
 
             {/* SSC CHSL 2025 Exam- Overview */}
             <div className="bg-white shadow-md rounded-md p-6">
@@ -833,6 +802,24 @@ const SSCCHSL = () => {
                 ))}
               </div>
             </div>
+          </div>
+            {/* Col-4 */}
+            <div className="md:col-span-3 flex flex-col space-y-4">
+            <img
+              src="/ssc-cgl-2025.jpeg"
+              alt="Placeholder"
+              className="w-full rounded shadow-md"
+            />
+            <img
+              src="/ssc-chsl-2025.jpeg"
+              alt="Placeholder"
+              className="w-full rounded shadow-md"
+            />
+            <img
+              src="/ssc-combo-books.jpeg"
+              alt="Placeholder"
+              className="w-full rounded shadow-md"
+            />
           </div>
         </div>
       </div>
