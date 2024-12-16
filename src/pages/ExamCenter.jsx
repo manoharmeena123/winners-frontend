@@ -74,9 +74,9 @@ function ExamCenter() {
         </nav>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 bg-white shadow-md rounded-md">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 bg-white md:shadow-md rounded-md">
           {/* Col-8 */}
-          <div className="md:col-span-9">
+          <div className="md:col-span-9 lg:px-6">
             <h1 className="text-3xl font-medium mb-4">
               SSC Calendar 2025 Out, Check Full List of Upcoming SSC Exams..
             </h1>

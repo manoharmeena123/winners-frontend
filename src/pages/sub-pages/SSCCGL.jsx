@@ -795,7 +795,7 @@ const SSCCGL = () => {
                   <div key={index} className="py-4">
                     <button
                       onClick={() => toggleFAQ(index)}
-                      className="flex justify-between items-center w-full text-left focus:outline-none"
+                       className="flex justify-between items-center w-full text-left focus:outline-none hover:no-underline"
                     >
                       <span className="font-semibold text-gray-700">
                         {faq.question}
