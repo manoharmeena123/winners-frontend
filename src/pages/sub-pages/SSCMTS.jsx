@@ -28,7 +28,7 @@ const SSCMTS = () => {
         title="SSC CPO - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
-      <div className="container w-[100%] sm:w-[100%] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
+      <div className="container mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
           <ol className="list-none p-0 inline-flex">
@@ -50,7 +50,7 @@ const SSCMTS = () => {
           <div className="md:col-span-9 ">
             {/* First Section: SSC CPO Intro */}
             <div className="bg-white  rounded-md p-6 mb-6">
-              <h1 className="text-3xl font-bold text-gray-800 mb-4">{title}</h1>
+              <h1 className="xl:text-3xl lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">{title}</h1>
               <p className="text-gray-600 mb-4">
                 {intro}{" "}
                 <a
@@ -69,7 +69,7 @@ const SSCMTS = () => {
 
             {/*About SSC MTS Exam */}
             <div className="bg-white shadow-md rounded-md p-6 mb-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {about.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">{about.content}</p>
@@ -77,9 +77,10 @@ const SSCMTS = () => {
 
             {/* /* SSC MTS Notification Section */}
             <div className="bg-white shadow-md rounded-md p-6 mb-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {notification.title}
               </h2>
+              
               <p className="text-gray-700 leading-relaxed mb-4">
                 SSC has recently released the{" "}
                 <a
@@ -115,7 +116,7 @@ const SSCMTS = () => {
             {/* SSC MTS 2025 - Highlights */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsHighlightsData?.title || "SSC MTS Highlights"}
               </h2>
 
@@ -173,7 +174,7 @@ const SSCMTS = () => {
             {/* SSC MTS Recruitment 2025 - Important Dates */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsImportantDatesData?.title || "Important Dates"}
               </h2>
 
@@ -230,7 +231,7 @@ const SSCMTS = () => {
             {/* SSC MTS 2025 Application Form */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsApplicationFormData?.title || "Application Form"}
               </h2>
 
@@ -243,7 +244,7 @@ const SSCMTS = () => {
             {/* SSC MTS 2025 Eligibility Criteria */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsEligibilityCriteriaData?.title || "Eligibility Criteria"}
               </h2>
 
@@ -278,7 +279,7 @@ const SSCMTS = () => {
             {/* SSC MTS 2025 Selection Process */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsSelectionProcessData?.title || "Selection Process"}
               </h2>
 
@@ -335,7 +336,7 @@ const SSCMTS = () => {
             {/* SSC MTS 2025 Exam Centers */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsExamCentersData?.title || "Exam Centers"}
               </h2>
 

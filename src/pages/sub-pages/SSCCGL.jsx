@@ -21,7 +21,7 @@ const SSCCGL = () => {
         title="SSC CGL - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
-      <div className="container w-[80%] sm:w-[100%] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
+      <div className="container mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
           <ol className="list-none p-0 inline-flex">
@@ -62,7 +62,7 @@ const SSCCGL = () => {
 
             {/* Second Section: About SSC CGL */}
             <div className="bg-white shadow-md rounded-md p-6 mb-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {about.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">{about.content}</p>
@@ -70,7 +70,7 @@ const SSCCGL = () => {
 
             {/* Third Section: SSC CGL Notification */}
             <div className="bg-white shadow-md rounded-md p-6 mb-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {notification.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -103,7 +103,7 @@ const SSCCGL = () => {
 
             {/* Highlights Section */}
             <div className="bg-white shadow-md rounded-md p-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {highlights.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -134,7 +134,7 @@ const SSCCGL = () => {
 
             {/* Important Dates Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {importantDates?.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -178,7 +178,7 @@ const SSCCGL = () => {
 
             {/* SSC CGL Vacancy Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {vacancy.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">{vacancy.content}</p>
@@ -217,7 +217,7 @@ const SSCCGL = () => {
 
             {/* SSC CGL Registration Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.registration.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -227,7 +227,7 @@ const SSCCGL = () => {
 
             {/* SSC CGL Application Fee Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.applicationFee.title}
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -283,7 +283,7 @@ const SSCCGL = () => {
 
             {/* SSC CGL Signature Specification Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.signatureSpecification.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">
@@ -326,7 +326,7 @@ const SSCCGL = () => {
 
             {/* SSC CGL Post Preference Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.postPreference.title}
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
@@ -343,7 +343,7 @@ const SSCCGL = () => {
 
             {/* SSC CGL Eligibility Criteria Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="text-2xl font-bold text-gray-800 mb-4">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.eligibilityCriteria.title}
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4">
