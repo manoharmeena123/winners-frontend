@@ -115,6 +115,10 @@ function Vacancies({ Notification }) {
                   : null; // Start date
                 const applyEndDate = applyDateMatch ? applyDateMatch[2] : null; // End date
 
+                const currentDate = new Date(); // Get the current date
+                const isPending =
+                  applyEndDate && currentDate <= new Date(applyEndDate); // Check if the current date is before the applyEndDate
+
                 return (
                   <tr
                     key={index}
@@ -132,9 +136,10 @@ function Vacancies({ Notification }) {
                     <td className="border border-gray-300 p-2">
                       {item?.Qualification || "—"}
                     </td>
+                    {/* Last Date Column with Conditional Highlight */}
                     <td
-                      className={`border border-gray-300 p-2 whitespace-nowrap last-date-cell ${
-                        applyEndDate ? "updated" : ""
+                      className={`border border-gray-300 p-2 whitespace-nowrap text-center font-bold ${
+                        isPending ? "animate-highlight" : "bg-gray-100" // Apply the highlight animation only if still pending
                       }`}
                     >
                       {applyEndDate ? formater(applyEndDate.toString()) : "—"}
@@ -206,10 +211,13 @@ function Vacancies({ Notification }) {
 function DetailsModal({ isOpen, onClose, modalData }) {
   useEffect(() => {
     if (isOpen) {
+      // Stop background scrolling
       document.body.style.overflow = "hidden";
     } else {
+      // Re-enable background scrolling
       document.body.style.overflow = "auto";
     }
+    // Cleanup on unmount or when modal closes
     return () => {
       document.body.style.overflow = "auto";
     };
@@ -217,35 +225,34 @@ function DetailsModal({ isOpen, onClose, modalData }) {
 
   if (!isOpen || !modalData) return null;
 
-  // Extract links from the syllabus
+  // Extract links from modal content
   const links = modalData.Syllabus.match(/https?:\/\/[^\s"<]+/g);
-  const applyLink = links?.[0] || "#"; // Get the first link or fallback
+  const applyLink = links?.[0] || "#";
 
   return (
     <div
-      className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50"
+      className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center overflow-y-auto"
       aria-modal="true"
       role="dialog"
       aria-labelledby="modal-title"
     >
+      {/* Modal Content */}
       <div
-        className="bg-white rounded-lg shadow-lg p-6 w-full max-w-3xl overflow-auto max-h-[90vh]"
+        className="relative bg-white rounded-lg shadow-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto"
         role="document"
       >
-        {/* Modal Header */}
+        {/* Header */}
         <div className="flex justify-between items-center mb-4">
-          <div className="flex items-center gap-3">
-            {modalData.Img && (
+        {modalData.Img && (
               <img
                 src={modalData.Img}
                 alt={`${modalData.Name} logo`}
                 className="h-11 w-11 object-contain"
               />
             )}
-            <h2 id="modal-title" className="text-xl font-bold">
-              {modalData.Name}
-            </h2>
-          </div>
+          <h2 id="modal-title" className="text-xl font-bold">
+            {modalData.Name}
+          </h2>
           <button
             className="text-gray-600 hover:text-gray-800 focus:outline-none text-2xl"
             onClick={onClose}
@@ -255,16 +262,17 @@ function DetailsModal({ isOpen, onClose, modalData }) {
           </button>
         </div>
 
-        {/* Modal Content */}
-        <div
-          className="prose overflow-y-auto"
-          dangerouslySetInnerHTML={{ __html: modalData.Syllabus }}
-        ></div>
+        {/* Modal Body */}
+        <div className="overflow-y-auto max-h-[60vh] px-2">
+          <div
+            className="prose"
+            dangerouslySetInnerHTML={{ __html: modalData.Syllabus }}
+          ></div>
+        </div>
 
-        {/* Dynamic Buttons */}
+        {/* Footer Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
-          {/* Watch Job Details */}
-          {!modalData.id && (
+        {!modalData.id && (
             <Link
               to={`/job-details/${modalData.id}`}
               className="flex-1 text-center bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-300"
@@ -284,8 +292,6 @@ function DetailsModal({ isOpen, onClose, modalData }) {
               Download PDF
             </a>
           )}
-
-          {/* Apply Now */}
           {applyLink && (
             <a
               href={applyLink}
@@ -301,6 +307,107 @@ function DetailsModal({ isOpen, onClose, modalData }) {
     </div>
   );
 }
+
+
+
+// function DetailsModal({ isOpen, onClose, modalData }) {
+//   useEffect(() => {
+//     if (isOpen) {
+//       document.body.style.overflow = "hidden";
+//     } else {
+//       document.body.style.overflow = "auto";
+//     }
+//     return () => {
+//       document.body.style.overflow = "auto";
+//     };
+//   }, [isOpen]);
+
+//   if (!isOpen || !modalData) return null;
+
+//   // Extract links from the syllabus
+//   const links = modalData.Syllabus.match(/https?:\/\/[^\s"<]+/g);
+//   const applyLink = links?.[0] || "#"; // Get the first link or fallback
+
+//   return (
+//     <div
+//       className="fixed inset-0 bg-gray-800 bg-opacity-50 flex justify-center items-center z-50"
+//       aria-modal="true"
+//       role="dialog"
+//       aria-labelledby="modal-title"
+//     >
+//       <div
+//         className="bg-white rounded-lg shadow-lg p-6 w-full max-w-3xl overflow-auto max-h-[90vh]"
+//         role="document"
+//       >
+//         {/* Modal Header */}
+//         <div className="flex justify-between items-center mb-4">
+//           <div className="flex items-center gap-3">
+//             {modalData.Img && (
+//               <img
+//                 src={modalData.Img}
+//                 alt={`${modalData.Name} logo`}
+//                 className="h-11 w-11 object-contain"
+//               />
+//             )}
+//             <h2 id="modal-title" className="text-xl font-bold">
+//               {modalData.Name}
+//             </h2>
+//           </div>
+//           <button
+//             className="text-gray-600 hover:text-gray-800 focus:outline-none text-2xl"
+//             onClick={onClose}
+//             aria-label="Close modal"
+//           >
+//             ×
+//           </button>
+//         </div>
+
+//         {/* Modal Content */}
+//         <div
+//           className="prose overflow-y-auto"
+//           dangerouslySetInnerHTML={{ __html: modalData.Syllabus }}
+//         ></div>
+
+//         {/* Dynamic Buttons */}
+//         <div className="flex flex-col sm:flex-row gap-4 mt-6">
+//           {/* Watch Job Details */}
+//           {!modalData.id && (
+//             <Link
+//               to={`/job-details/${modalData.id}`}
+//               className="flex-1 text-center bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-300"
+//             >
+//               Watch Job Details
+//             </Link>
+//           )}
+
+//           {/* Download PDF */}
+//           {!modalData.pdf && (
+//             <a
+//               href={modalData.pdf}
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="flex-1 text-center bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition duration-300"
+//             >
+//               Download PDF
+//             </a>
+//           )}
+
+//           {/* Apply Now */}
+//           {applyLink && (
+//             <a
+//               href={applyLink}
+//               target="_blank"
+//               rel="noopener noreferrer"
+//               className="flex-1 text-center bg-red-600 text-white py-2 rounded-lg hover:bg-red-700 transition duration-300"
+//             >
+//               Apply Now
+//             </a>
+//           )}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
 
 export default Vacancies;
 
