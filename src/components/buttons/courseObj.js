@@ -9,6 +9,7 @@ export const courses = [
     subCourses: [
       { courseName: "SSC CGL", link: "/ssc-cgl" },
       { courseName: "SSC CHSL", link: "/ssc-chsl" },
+      { courseName: "SSC MTS", link: "/ssc-mts" },
       { courseName: "SSC CPO", link: "/ssc-cpo" },
       { courseName: "SSC GD", link: "/ssc-gd" },
     ],
