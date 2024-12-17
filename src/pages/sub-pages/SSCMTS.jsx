@@ -400,14 +400,8 @@ const SSCMTS = () => {
                               key={colIndex}
                               className="px-4 py-3 text-center text-gray-700 border border-gray-300"
                             >
-                              <a
-                                href={item.link}
-                                className="text-blue-500 hover:underline"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                              >
+                           
                                 {item.text}
-                              </a>
                             </td>
                           ))}
                         </tr>
