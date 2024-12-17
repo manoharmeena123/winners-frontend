@@ -28,7 +28,7 @@ const SSCMTS = () => {
         title="SSC CPO - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
-      <div className="container mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
+      <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
           <ol className="list-none p-0 inline-flex">
@@ -50,7 +50,9 @@ const SSCMTS = () => {
           <div className="md:col-span-9 ">
             {/* First Section: SSC CPO Intro */}
             <div className="bg-white  rounded-md p-6 mb-6">
-              <h1 className="xl:text-3xl lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">{title}</h1>
+              <h1 className="xl:text-3xl lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
+                {title}
+              </h1>
               <p className="text-gray-600 mb-4">
                 {intro}{" "}
                 <a
@@ -80,7 +82,7 @@ const SSCMTS = () => {
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {notification.title}
               </h2>
-              
+
               <p className="text-gray-700 leading-relaxed mb-4">
                 SSC has recently released the{" "}
                 <a
@@ -401,8 +403,7 @@ const SSCMTS = () => {
                               key={colIndex}
                               className="px-4 py-3 text-center text-gray-700 border border-gray-300"
                             >
-                           
-                                {item.text}
+                              {item.text}
                             </td>
                           ))}
                         </tr>

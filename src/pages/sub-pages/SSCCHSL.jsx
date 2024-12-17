@@ -20,7 +20,7 @@ const SSCCHSL = () => {
         title="SSC CHSL - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
-      <div className="container  mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
+     <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
           <ol className="list-none p-0 inline-flex">
