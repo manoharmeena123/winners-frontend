@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./slider.css"; // Import your custom CSS for additional styles
-import { formatDate } from "../../utils/formatDate";
+import { formatDate, formater } from "../../utils/formatDate";
 import { Link } from "react-router-dom";
 
 function Vacancies({ Notification }) {
@@ -105,39 +105,56 @@ function Vacancies({ Notification }) {
           </thead>
           <tbody>
             {currentItems.length > 0 ? (
-              currentItems.map((item, index) => (
-                <tr
-                  key={index}
-                  className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
-                >
-                  <td className="border border-gray-300 p-2 whitespace-nowrap">
-                    {formatDate(item?.createdAt)}
-                  </td>
-                  <td className="border border-gray-300 p-2 whitespace-nowrap">{item?.Name}</td>
-                  <td className="border border-gray-300 p-2 whitespace-nowrap">
-                    {item?.Posts || "—"}
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    {item?.Qualification || "—"}
-                  </td>
-                  <td className="border border-gray-300 p-2 whitespace-nowrap">
-                    {item?.LastDate ? formatDate(item?.LastDate) : "—"}
-                  </td>
-                  <td className="border border-gray-300 p-2 whitespace-nowrap">
-                    {item?.ExamstartDate
-                      ? formatDate(item?.ExamstartDate)
-                      : "—"}
-                  </td>
-                  <td className="border border-gray-300 p-2">
-                    <button
-                      onClick={() => openDetails(item)}
-                      className="text-blue-600 underline hover:text-blue-800 whitespace-nowrap"
+              currentItems.map((item, index) => {
+                // Match the "Apply" date pattern and extract start and end dates
+                const applyDateMatch = item?.Syllabus?.match(
+                  /Apply\s*:\s*(\d{2}\/\d{2}\/\d{4})\s*-\s*(\d{2}\/\d{2}\/\d{4})/
+                );
+                const applyStartDate = applyDateMatch
+                  ? applyDateMatch[1]
+                  : null; // Start date
+                const applyEndDate = applyDateMatch ? applyDateMatch[2] : null; // End date
+
+                return (
+                  <tr
+                    key={index}
+                    className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
+                  >
+                    <td className="border border-gray-300 p-2 whitespace-nowrap">
+                      {formatDate(item?.createdAt)}
+                    </td>
+                    <td className="border border-gray-300 p-2 whitespace-nowrap">
+                      {item?.Name}
+                    </td>
+                    <td className="border border-gray-300 p-2 whitespace-nowrap">
+                      {item?.Posts || "—"}
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      {item?.Qualification || "—"}
+                    </td>
+                    <td
+                      className={`border border-gray-300 p-2 whitespace-nowrap last-date-cell ${
+                        applyEndDate ? "updated" : ""
+                      }`}
                     >
-                      Get Details
-                    </button>
-                  </td>
-                </tr>
-              ))
+                      {applyEndDate ? formater(applyEndDate.toString()) : "—"}
+                    </td>
+                    <td className="border border-gray-300 p-2 whitespace-nowrap">
+                      {item?.ExamstartDate
+                        ? formatDate(item?.ExamstartDate)
+                        : "—"}
+                    </td>
+                    <td className="border border-gray-300 p-2">
+                      <button
+                        onClick={() => openDetails(item)}
+                        className="text-blue-600 underline hover:text-blue-800 whitespace-nowrap"
+                      >
+                        Get Details
+                      </button>
+                    </td>
+                  </tr>
+                );
+              })
             ) : (
               <tr>
                 <td
@@ -286,7 +303,6 @@ function DetailsModal({ isOpen, onClose, modalData }) {
 }
 
 export default Vacancies;
-
 
 ////========================================================================================================================================================>
 
