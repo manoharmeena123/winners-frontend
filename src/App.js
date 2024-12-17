@@ -46,6 +46,7 @@ import RefundPolicy from "./pages/RefundPolicy";
 import TermsConditions from "./pages/TermsConditions";
 import SSCCGL from './pages/sub-pages/SSCCGL';
 import SSCCHSL from './pages/sub-pages/SSCCHSL.jsx';
+import SSCCPO from "./pages/sub-pages/SSCCPO.jsx";
 
 
 function App() {
@@ -81,6 +82,7 @@ function App() {
           <Route path="/ssc" element={<ExamCenter />} />
           <Route path="/ssc-cgl" element={<SSCCGL />} />
           <Route path="/ssc-chsl" element={<SSCCHSL />} />
+          <Route path="/ssc-cpo" element={<SSCCPO/>} />
           <Route path="/ssc-mts" element={<SSC3 />} />
           <Route path="/ssc-cpo" element={<SSC4 />} />
           <Route path="/ssc-gd" element={<SSC5 />} />
