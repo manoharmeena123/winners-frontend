@@ -231,7 +231,7 @@ export const classes = [
     link: "https://live.winnersinstitute.in/courses/491-ssc-chsl-2025-complete-online-course-chsl1224",
   },
   {
-    image: "/ssc-cgl-2025.jpeg",
+    image: "/ssc-cgl-20251.jpeg",
     description: "SSC CGL 2025 Complete Online Course (CGL1224)",
     price: "₹1199",
     button: "Buy Now",
@@ -277,7 +277,7 @@ export const testSeries = [
 
 export const sscbooksdata = [
   {
-    image: "/ssc-gd-combo-books.jpeg",
+    image: "/ssc-gd-combo-books1.jpeg",
     description: "SSC GD Special GS Combo book Set",
     price: "₹499.00",
     button: "Buy Now",
@@ -285,12 +285,12 @@ export const sscbooksdata = [
     link: "https://books.winnerspublication.store/products/ssc-gd-special-gs-combo-book-set",
   },
   {
-    image: "/railway-combo-books.jpeg",
-    description: "Railway Foundation Complete Book Combo",
-    price: "₹1,899.00",
+    image: "/ssc-gd-combo-books2.jpeg",
+    description: "SSC GD Complete Book Set Combo",
+    price: "₹1,299.00",
     button: "Buy Now",
     background: "bg-green-600",
-    link: "https://books.winnerspublication.store/products/railway-foundation-complete-book-combo",
+    link: "https://books.winnerspublication.store/products/ssc-gd-complete-book-set-combo",
   },
   {
     image: "/ssc-combo-books1.jpeg",
