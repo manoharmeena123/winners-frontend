@@ -4,7 +4,7 @@ const Card = ({ image, description, price, buttonText, onButtonClick }) => {
   return (
     <div
       className="border rounded-lg p-4 flex lg:flex-col sm:flex-row items-center sm:items-start h-full gap-2 "
-      style={{ boxShadow: "0 0 30px rgb(0 0 0 / 10%)", cursor:"pointer" }}
+      style={{ boxShadow: "0 0 30px rgb(0 0 0 / 10%)", cursor: "pointer" }}
       onClick={onButtonClick}
     >
       {/* Image Section */}

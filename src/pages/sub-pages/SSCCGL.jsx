@@ -1,8 +1,11 @@
-import React,{ useState} from "react";
+import Aos from "aos";
+import React, { useState, useEffect } from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
 import { ssccglData, sscExamData, sscExamtableData } from "../../data/ssc-cgl";
+import { classes, testSeries, sscbooksdata } from "../../data/sscData";
+import Card from "../../components/card/Card";
 
 const SSCCGL = () => {
   const { title, intro, content, officialWebsite } = ssccglData;
@@ -14,6 +17,19 @@ const SSCCGL = () => {
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index); // Toggle between open and closed
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
+  const handleBuyNowClick = (link) => {
+    window.location.replace(`${link}`);
+  };
   return (
     <>
       <Header />
@@ -21,7 +37,7 @@ const SSCCGL = () => {
         title="SSC CGL - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
-     <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
+      <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
           <ol className="list-none p-0 inline-flex">
@@ -59,7 +75,6 @@ const SSCCGL = () => {
                 <p className="text-gray-700 leading-relaxed">{content}</p>
               </div>
             </div>
-
             {/* Second Section: About SSC CGL */}
             <div className="bg-white shadow-md rounded-md p-6 mb-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -67,7 +82,6 @@ const SSCCGL = () => {
               </h2>
               <p className="text-gray-700 leading-relaxed">{about.content}</p>
             </div>
-
             {/* Third Section: SSC CGL Notification */}
             <div className="bg-white shadow-md rounded-md p-6 mb-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -100,7 +114,6 @@ const SSCCGL = () => {
                 registration dates, selection process, and exam pattern.
               </p>
             </div>
-
             {/* Highlights Section */}
             <div className="bg-white shadow-md rounded-md p-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -131,7 +144,6 @@ const SSCCGL = () => {
                 </table>
               </div>
             </div>
-
             {/* Important Dates Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -175,7 +187,6 @@ const SSCCGL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CGL Vacancy Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -214,7 +225,6 @@ const SSCCGL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CGL Registration Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -224,7 +234,6 @@ const SSCCGL = () => {
                 {sscExamData.registration.content}
               </p>
             </div>
-
             {/* SSC CGL Application Fee Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -280,7 +289,6 @@ const SSCCGL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CGL Signature Specification Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -323,7 +331,6 @@ const SSCCGL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CGL Post Preference Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -340,7 +347,6 @@ const SSCCGL = () => {
                 ))}
               </ul>
             </div>
-
             {/* SSC CGL Eligibility Criteria Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -404,7 +410,6 @@ const SSCCGL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CGL Age Limit Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -452,7 +457,6 @@ const SSCCGL = () => {
                 </tbody>
               </table>
             </div>
-
             {/* Age Limit for Other Posts Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -497,7 +501,6 @@ const SSCCGL = () => {
                 </table>
               </div>
             </div>
-
             {/* Nationality Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -523,7 +526,6 @@ const SSCCGL = () => {
                 ))}
               </ol>
             </div>
-
             {/* SSC CGL Syllabus Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -582,7 +584,6 @@ const SSCCGL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CGL Posts Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -685,7 +686,6 @@ const SSCCGL = () => {
                 </table>
               </div>
             </div>
-
             {/* How to Prepare for SSC CGL 2025 Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -695,7 +695,6 @@ const SSCCGL = () => {
                 {sscExamData.preparation.content}
               </p>
             </div>
-
             {/* How to Get Top 100 Rank in SSC CGL Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -783,8 +782,7 @@ const SSCCGL = () => {
                   </tbody>
                 </table>
               </div>
-            </div>
-
+            </div>{" "}
             {/* Frequently Asked Questions Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -795,7 +793,7 @@ const SSCCGL = () => {
                   <div key={index} className="py-4">
                     <button
                       onClick={() => toggleFAQ(index)}
-                       className="flex justify-between items-center w-full text-left focus:outline-none hover:no-underline"
+                      className="flex justify-between items-center w-full text-left focus:outline-none hover:no-underline"
                     >
                       <span className="font-semibold text-gray-700">
                         {faq.question}
@@ -817,19 +815,90 @@ const SSCCGL = () => {
                 ))}
               </div>
             </div>
+            {/* Popular Online Live Classes */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">
+                Popular Online Live Classes
+              </h2>
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
+                {classes?.map((cls, index) => (
+                  <Card
+                    key={index}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+            </div>
+            {/* Popular Mock Test Series */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">
+                Popular Mock Test Series
+              </h2>
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
+                {testSeries?.map((cls, index) => (
+                  <Card
+                    key={index}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+            </div>
+            {/* Popular Books */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">Popular Books</h2>
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
+                {sscbooksdata?.map((book, index) => (
+                  <Card
+                    key={index}
+                    image={book.image}
+                    description={book.description}
+                    price={book.price}
+                    buttonText={book.button}
+                    onButtonClick={() => handleBuyNowClick(book?.link)}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
-            {/* Col-4 */}
-            <div className="md:col-span-3 flex flex-col space-y-4">
+          {/* Col-4 */}
+          {/* Col-4 */}
+          <div className="md:col-span-3 flex flex-col space-y-4">
             <img
               src="/ssc-cgl-2025.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
-            />
+            />{" "}
+            <iframe
+              className="w-full rounded shadow-md"
+              src="https://www.youtube.com/embed/mVyOXuo89M4"
+              title="SSC Calendar 2025-26 | SSC Exam Calendar 2025 Out | SSC Exams 2025-26 | Aditya Patel Sir"
+              frameBorder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
             <img
               src="/ssc-chsl-2025.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
-            />
+            />{" "}
+            <iframe
+              className="w-full rounded shadow-md"
+              src="https://www.youtube.com/embed/KDtJdvmB26U"
+              title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB | What is SSC GD ?"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             <img
               src="/ssc-combo-books.jpeg"
               alt="Placeholder"

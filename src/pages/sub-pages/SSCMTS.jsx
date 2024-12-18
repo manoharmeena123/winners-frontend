@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import Aos from "aos";
+import React, { useState,useEffect } from "react";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
 import Footer from "../../components/footer/Footer";
 import { sscMtsData, sscMtsExamData } from "../../data/ssc-mts";
-
+import { classes, testSeries, sscbooksdata } from "../../data/sscData";
+import Card from "../../components/card/Card";
 const SSCMTS = () => {
   const { title, intro, content, officialWebsite } = sscMtsData;
   const {
@@ -21,6 +23,18 @@ const SSCMTS = () => {
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index); // Toggle between open and closed
   };
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+      Aos.init({
+        duration: 1000,
+      });
+    }, []);
+    const handleBuyNowClick = (link) => {
+      window.location.replace(`${link}`);
+    };
   return (
     <>
       <Header />
@@ -68,7 +82,6 @@ const SSCMTS = () => {
                 <p className="text-gray-700 leading-relaxed">{content}</p>
               </div>
             </div>
-
             {/*About SSC MTS Exam */}
             <div className="bg-white shadow-md rounded-md p-6 mb-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -76,7 +89,6 @@ const SSCMTS = () => {
               </h2>
               <p className="text-gray-700 leading-relaxed">{about.content}</p>
             </div>
-
             {/* /* SSC MTS Notification Section */}
             <div className="bg-white shadow-md rounded-md p-6 mb-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -172,7 +184,6 @@ const SSCMTS = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC MTS Recruitment 2025 - Important Dates */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -277,7 +288,6 @@ const SSCMTS = () => {
                 )
               )}
             </div>
-
             {/* SSC MTS 2025 Selection Process */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -412,8 +422,7 @@ const SSCMTS = () => {
                   </tbody>
                 </table>
               </div>
-            </div>
-
+            </div>{" "}
             {/* Frequently Asked Questions Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -450,6 +459,58 @@ const SSCMTS = () => {
                       </p>
                     )}
                   </div>
+                ))}
+              </div>
+            </div>
+            {/* Popular Online Live Classes */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">
+                Popular Online Live Classes
+              </h2>
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
+                {classes?.map((cls, index) => (
+                  <Card
+                    key={index}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+            </div>
+            {/* Popular Mock Test Series */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">
+                Popular Mock Test Series
+              </h2>
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
+                {testSeries?.map((cls, index) => (
+                  <Card
+                    key={index}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+            </div>
+            {/* Popular Books */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">Popular Books</h2>
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
+                {sscbooksdata?.map((book, index) => (
+                  <Card
+                    key={index}
+                    image={book.image}
+                    description={book.description}
+                    price={book.price}
+                    buttonText={book.button}
+                    onButtonClick={() => handleBuyNowClick(book?.link)}
+                  />
                 ))}
               </div>
             </div>

@@ -1,8 +1,11 @@
-import React, { useState } from "react";
+import Aos from "aos";
+import React, { useState, useEffect } from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
 import { sscchslData, sscchslExamData } from "../../data/ssc-chsl";
+import { classes, testSeries, sscbooksdata } from "../../data/sscData";
+import Card from "../../components/card/Card";
 
 const SSCCHSL = () => {
   const { title, intro, content, officialWebsite } = sscchslData;
@@ -10,8 +13,20 @@ const SSCCHSL = () => {
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index); // Toggle between open and closed
+  };
+  const handleBuyNowClick = (link) => {
+    window.location.replace(`${link}`);
   };
   return (
     <>
@@ -20,7 +35,7 @@ const SSCCHSL = () => {
         title="SSC CHSL - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
-     <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
+      <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
           <ol className="list-none p-0 inline-flex">
@@ -58,7 +73,6 @@ const SSCCHSL = () => {
                 <p className="text-gray-700 leading-relaxed">{content}</p>
               </div>
             </div>
-
             {/* What is SSC CHSL Exam? */}
             <div className="bg-white shadow-md rounded-md p-6 mb-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -66,7 +80,6 @@ const SSCCHSL = () => {
               </h2>
               <p className="text-gray-700 leading-relaxed">{about.content}</p>
             </div>
-
             {/* Third Section: SSC CHSL Notification */}
             <div className="bg-white shadow-md rounded-md p-6 mb-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -99,7 +112,6 @@ const SSCCHSL = () => {
                 registration dates, selection process, and exam pattern.
               </p>
             </div>
-
             {/* SSC CHSL 2025 Exam- Overview */}
             <div className="bg-white shadow-md rounded-md p-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -130,7 +142,6 @@ const SSCCHSL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CHSL 2025 Important Dates */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -241,7 +252,6 @@ const SSCCHSL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CHSL 2025 Eligibility Criteria */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -286,7 +296,6 @@ const SSCCHSL = () => {
                 )}
               </ul>
             </div>
-
             {/* Age Limit Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -341,7 +350,6 @@ const SSCCHSL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CHSL 2025 Selection Process */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -358,7 +366,6 @@ const SSCCHSL = () => {
                 ))}
               </ul>
             </div>
-
             {/* SSC CHSL 2025 Exam Pattern */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -371,7 +378,6 @@ const SSCCHSL = () => {
                 {sscchslExamData?.examPattern?.description}
               </p>
             </div>
-
             {/* SSC CHSL Tier 1 Exam Pattern */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -505,7 +511,6 @@ const SSCCHSL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CHSL Salary After 7th Pay Commission */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -572,7 +577,6 @@ const SSCCHSL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CHSL 2025 Job Profile */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -624,7 +628,6 @@ const SSCCHSL = () => {
                 </table>
               </div>
             </div>
-
             {/* SSC CHSL 2025 Typing Test */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -637,7 +640,6 @@ const SSCCHSL = () => {
                 {sscchslExamData?.typingTest?.description}
               </p>
             </div>
-
             {/* SSC CHSL 2025 Exam Preparation Tips */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -659,7 +661,6 @@ const SSCCHSL = () => {
                 ))}
               </ul>
             </div>
-
             {/* SSC CHSL 2025 Result */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -693,7 +694,6 @@ const SSCCHSL = () => {
                 {sscchslExamData?.onlineCoaching?.additionalText}
               </p>
             </div>
-
             {/* SSC CHSL 2025 Mock Tests */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
@@ -761,8 +761,7 @@ const SSCCHSL = () => {
                   </tbody>
                 </table>
               </div> */}
-            </div>
-
+            </div>{" "}
             {/* Frequently Asked Questions Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -802,9 +801,61 @@ const SSCCHSL = () => {
                 ))}
               </div>
             </div>
+            {/* Popular Online Live Classes */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">
+                Popular Online Live Classes
+              </h2>
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
+                {classes?.map((cls, index) => (
+                  <Card
+                    key={index}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+            </div>
+            {/* Popular Mock Test Series */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">
+                Popular Mock Test Series
+              </h2>
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
+                {testSeries?.map((cls, index) => (
+                  <Card
+                    key={index}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+            </div>
+            {/* Popular Books */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">Popular Books</h2>
+              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
+                {sscbooksdata?.map((book, index) => (
+                  <Card
+                    key={index}
+                    image={book.image}
+                    description={book.description}
+                    price={book.price}
+                    buttonText={book.button}
+                    onButtonClick={() => handleBuyNowClick(book?.link)}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
-            {/* Col-4 */}
-            <div className="md:col-span-3 flex flex-col space-y-4">
+          {/* Col-4 */}
+          <div className="md:col-span-3 flex flex-col space-y-4">
             <img
               src="/ssc-cgl-2025.jpeg"
               alt="Placeholder"
