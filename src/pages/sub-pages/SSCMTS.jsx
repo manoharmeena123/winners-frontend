@@ -521,12 +521,30 @@ const SSCMTS = () => {
               src="/ssc-cgl-2025.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
-            />
+            />{" "}
+            <iframe
+              className="w-full rounded shadow-md"
+              src="https://www.youtube.com/embed/mVyOXuo89M4"
+              title="SSC Calendar 2025-26 | SSC Exam Calendar 2025 Out | SSC Exams 2025-26 | Aditya Patel Sir"
+              frameBorder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
             <img
               src="/ssc-chsl-2025.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
-            />
+            />{" "}
+            <iframe
+              className="w-full rounded shadow-md"
+              src="https://www.youtube.com/embed/KDtJdvmB26U"
+              title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB | What is SSC GD ?"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
             <img
               src="/ssc-combo-books.jpeg"
               alt="Placeholder"
