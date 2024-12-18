@@ -209,20 +209,6 @@ function Vacancies({ Notification }) {
 }
 
 function DetailsModal({ isOpen, onClose, modalData }) {
-  useEffect(() => {
-    if (isOpen) {
-      // Stop background scrolling
-      document.body.style.overflow = "hidden";
-    } else {
-      // Re-enable background scrolling
-      document.body.style.overflow = "auto";
-    }
-    // Cleanup on unmount or when modal closes
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen]);
-
   if (!isOpen || !modalData) return null;
 
   // Extract links from modal content
@@ -231,25 +217,25 @@ function DetailsModal({ isOpen, onClose, modalData }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center overflow-y-auto"
+      className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center"
       aria-modal="true"
       role="dialog"
       aria-labelledby="modal-title"
     >
-      {/* Modal Content */}
+      {/* Scrollable Modal Content */}
       <div
-        className="relative bg-white rounded-lg shadow-lg p-6 w-full max-w-3xl max-h-[90vh] overflow-y-auto"
+        className="relative bg-white rounded-lg shadow-lg p-6 w-full max-w-3xl modal-content"
         role="document"
       >
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
-        {modalData.Img && (
-              <img
-                src={modalData.Img}
-                alt={`${modalData.Name} logo`}
-                className="h-11 w-11 object-contain"
-              />
-            )}
+          {modalData.Img && (
+            <img
+              src={modalData.Img}
+              alt={`${modalData.Name} logo`}
+              className="h-11 w-11 object-contain"
+            />
+          )}
           <h2 id="modal-title" className="text-xl font-bold">
             {modalData.Name}
           </h2>
@@ -262,8 +248,11 @@ function DetailsModal({ isOpen, onClose, modalData }) {
           </button>
         </div>
 
-        {/* Modal Body */}
-        <div className="overflow-y-auto max-h-[60vh] px-2">
+        {/* Modal Body - Scrollable */}
+        <div
+          className="overflow-y-auto max-h-[60vh] px-2"
+          style={{ scrollbarWidth: "thin" }} // Optional: for cleaner scrollbar
+        >
           <div
             className="prose"
             dangerouslySetInnerHTML={{ __html: modalData.Syllabus }}
@@ -272,7 +261,8 @@ function DetailsModal({ isOpen, onClose, modalData }) {
 
         {/* Footer Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
-        {!modalData.id && (
+          {/* Watch Job Details */}
+          {!modalData.id && (
             <Link
               to={`/job-details/${modalData.id}`}
               className="flex-1 text-center bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition duration-300"
@@ -292,6 +282,7 @@ function DetailsModal({ isOpen, onClose, modalData }) {
               Download PDF
             </a>
           )}
+          {/* Apply Now */}
           {applyLink && (
             <a
               href={applyLink}
@@ -307,8 +298,6 @@ function DetailsModal({ isOpen, onClose, modalData }) {
     </div>
   );
 }
-
-
 
 // function DetailsModal({ isOpen, onClose, modalData }) {
 //   useEffect(() => {

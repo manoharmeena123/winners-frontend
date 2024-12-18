@@ -8,7 +8,7 @@ const Card = ({ image, description, price, buttonText, onButtonClick }) => {
       onClick={onButtonClick}
     >
       {/* Image Section */}
-      <div className="w-1/2 sm:w-full h-36 sm:h-18 flex items-center justify-center">
+      <div className="sm:w-3/5 md:w-3/5 lg:w-full h-36 sm:h-18 flex items-center justify-center">
         <img
           src={image}
           alt="Placeholder"
