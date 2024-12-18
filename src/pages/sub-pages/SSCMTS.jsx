@@ -49,7 +49,7 @@ const SSCMTS = () => {
           {/* Main Column */}
           <div className="md:col-span-9 ">
             {/* First Section: SSC CPO Intro */}
-            <div className="bg-white  rounded-md p-6 mb-6">
+            <div className="bg-white  rounded-md lg:p-6 mb-6">
               <h1 className="xl:text-3xl lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {title}
               </h1>
