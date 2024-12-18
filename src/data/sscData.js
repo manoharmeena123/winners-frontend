@@ -223,7 +223,7 @@ export const faqs = [
 
 export const classes = [
   {
-    image: "/ssc-chsl-2025.jpeg",
+    image: "/ssc-chsl1-2025.jpeg",
     description: "SSC CHSL 2025 Complete Online Course (CHSL1224)",
     price: "₹999",
     button: "Buy Now",
@@ -239,7 +239,7 @@ export const classes = [
     link: "https://live.winnersinstitute.in/courses/492-ssc-cgl-2025-complete-online-course-cgl1224",
   },
   {
-    image: "/foundation-btach.png",
+    image: "/foundation.jpeg",
     description: "SSC Foundation Combo Online Course (CSSCF1224)",
     price: "₹1299",
     button: "Buy Now",
@@ -250,7 +250,7 @@ export const classes = [
 
 export const testSeries = [
   {
-    image: "/ssc-cgl-mock-test.jpeg",
+    image: "/ssc-cgl-mock-test1.jpeg",
     description: "SSC CGL Mock Test (Tier-I & Tier II) 2024",
     price: "₹149",
     button: "Buy Now",
@@ -258,7 +258,7 @@ export const testSeries = [
     link: "https://live.winnersinstitute.in/test-series/358-ssc-cgl-mock-test-tier-i-tier-ii-2024",
   },
   {
-    image: "/ssc-cpo-mock-test.jpeg",
+    image: "/ssc-cpo-mock-test1.jpeg",
     description: "SSC CPO (Tier-I) Mock Test 2024",
     price: "₹149",
     button: "Buy Now",
@@ -266,12 +266,12 @@ export const testSeries = [
     link: "https://live.winnersinstitute.in/test-series/267-ssc-cpo-tier-i-mock-test-2024",
   },
   {
-    image: "/ssc-gd-mock-test.jpeg",
-    description: "SSC GD - Online Test Series (55 Mock Test)",
+    image: "/ssc-mts-mock-test1.jpeg",
+    description: "SSC MTS - Online Test Series (55 Mock Test)",
     price: "₹149",
     button: "Buy Now",
     background: "bg-teal-600",
-    link: "https://live.winnersinstitute.in/test-series/78-ssc-gd-online-test-series-55-mock-test",
+    link: "https://live.winnersinstitute.in/test-series/321-ssc-mts-test-series-2024",
   },
 ];
 
@@ -293,7 +293,7 @@ export const sscbooksdata = [
     link: "https://books.winnerspublication.store/products/railway-foundation-complete-book-combo",
   },
   {
-    image: "/ssc-combo-books.jpeg",
+    image: "/ssc-combo-books1.jpeg",
     description: "SSC Foundation Complete Book Combo",
     price: "₹2,199.00",
     button: "Buy Now",

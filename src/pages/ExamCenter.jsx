@@ -77,25 +77,32 @@ function ExamCenter() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 bg-white  rounded-md">
           {/* Col-8 */}
           <div className="md:col-span-9 lg:px-6">
-            <h1 className="text-3xl font-medium mb-4">
-              SSC Calendar 2025 Out, Check Full List of Upcoming SSC Exams..
-            </h1>
-            <p className="text-gray-700">
-              The Staff Selection Commission has released the SSC Calendar 2025
-              on the official website,{" "}
-              <a
-                href="https://www.ssc.gov.in"
-                className="text-blue-600 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                www.ssc.gov.in
-              </a>
-              . The SSC Calendar 2025-26 highlights the name of the examination,
-              date of advertisement, closing date of submission of application
-              form, and tentative date/month of exam.
-            </p>
-
+            {/* First Section: SSC  Intro */}
+            <div className="bg-white  rounded-md lg:p-6 mb-3">
+              <h1 className="xl:text-3xl lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
+                SSC Calendar 2025 Out, Check Full List of Upcoming SSC Exams..
+              </h1>
+              <p className="text-gray-600 mb-4">
+                The Staff Selection Commission has released the SSC Calendar
+                2025 on the official website,{" "}
+                <a
+                  href="https://www.ssc.gov.in"
+                  className="text-blue-600 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  www.ssc.gov.in
+                </a>
+              </p>
+              <div className="bg-gray-50 p-4 rounded-md border">
+                <p className="text-gray-700 leading-relaxed">
+                  {" "}
+                  . The SSC Calendar 2025-26 highlights the name of the
+                  examination, date of advertisement, closing date of submission
+                  of application form, and tentative date/month of exam.
+                </p>
+              </div>
+            </div>
             <img
               src="https://www.bankersadda.com/wp-content/uploads/multisite/2024/12/06164702/SSC-Calendar-2025-26.png"
               alt="Placeholder"
