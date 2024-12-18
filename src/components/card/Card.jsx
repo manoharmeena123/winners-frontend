@@ -12,7 +12,7 @@ const Card = ({ image, description, price, buttonText, onButtonClick }) => {
         <img
           src={image}
           alt="Placeholder"
-          className="w-full h-full lg:object-cover sm:object-fill rounded-lg"
+          className="w-full h-full lg:object-contain sm:object-fill rounded-lg"
         />
       </div>
 
