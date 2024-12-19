@@ -455,7 +455,7 @@ const MPPSC = () => {
                             {row.category}
                           </td>
                           <td className="px-4 py-2 text-gray-700 whitespace-pre-line border border-gray-300">
-                            {row.minimumAge}
+                            {row?.minimumAge}
                           </td>
                           <td className="px-4 py-2 text-gray-700 whitespace-pre-line border border-gray-300">
                             {row.maxiumAge}

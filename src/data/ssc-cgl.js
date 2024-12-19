@@ -168,46 +168,556 @@ export const sscExamData = {
     ],
   },
   syllabus: {
-    title: "SSC CGL 2025 Syllabus",
-    content: `
-          Candidates aspiring for the SSC CGL Exam should go through the Syllabus. Check the detailed SSC CGL Syllabus in the table below.
-        `,
-    syllabusTable: {
-      headers: [
-        "English Comprehension",
-        "General Awareness",
-        "General Intelligence and Reasoning",
-        "Quantitative Aptitude",
-      ],
-      data: [
-        [
-          "Reading Comprehension",
-          "Static General Knowledge",
-          "Classification",
-          "Simplification",
+    title: "SSC CGL 2024 Syllabus",
+    content1: `
+          To target any examination, it is very crucial to know its syllabus well. Candidates can plan their studies in the right direction with accurate and smart strategy only after having the detailed and correct information about the syllabus.`,
+    content2: `
+       The SSC CGL Syllabus and Exam Pattern is set by the staff selection commission. Let’s have a brief view to the pattern of SSC CGL Tier-1 exams.`,
+    content3: `
+      The Tier-1 Exam is qualifying in nature. It consists of 4 sections – Quantitative Aptitude, General Awareness, English Language, General Intelligence and Reasoning. All 4 sections have 25 questions each. For each incorrect answer there is a penalty (negative marking) of 0.50 marks. Each question is of 2 marks which means the complete paper is a total of 200 marks. The time duration for the tier–1 exam is 60 minutes (1 hour).
+    `,
+    tableTitle: `SSC CGL Tier 1 Exam Pattern 2024`,
+    examData: [
+      {
+        id: 1,
+        section: "General Intelligence and Reasoning",
+        questions: 25,
+        marks: 50,
+      },
+      { id: 2, section: "General Awareness", questions: 25, marks: 50 },
+      { id: 3, section: "Quantitative Aptitude", questions: 25, marks: 50 },
+      { id: 4, section: "English Comprehension", questions: 25, marks: 50 },
+    ],
+    totalQuestions: 100,
+    totalMarks: 200,
+    syllabusDetails: {
+      generalIntelligence: {
+        title:
+          "SSC CGL Tier – 1 Syllabus for General Intelligence and Reasoning",
+        topics: [
+          "Analogies",
+          "Similarities and differences",
+          "Space visualization",
+          "Spatial orientation",
+          "Problem-solving",
+          "Analysis",
+          "Judgment",
+          "Blood Relations",
+          "Decision making",
+          "Visual memory",
+          "Discrimination",
+          "Observation",
+          "Relationship concepts",
+          "Arithmetical reasoning",
+          "Figural classification",
+          "Arithmetic number series",
+          "Non-verbal series",
+          "Coding and decoding",
+          "Statement conclusion",
+          "Syllogistic reasoning",
         ],
-        ["Fill in the Blanks", "Science", "Analogy", "Interest"],
-        ["Spellings", "Current Affairs", "Coding-Decoding", "Averages"],
-        ["Cloze Test", "Indian Geography", "Series", "Mensuration"],
-        [
-          "Synonyms and Antonyms",
-          "Current CM and Governors",
-          "Non-Verbal",
-          "DI",
-        ],
-        ["Idioms and Phrases", "Sports", "Word Formation", "Percentage"],
-        [
-          "One Word Substitution",
+      },
+      generalAwareness: {
+        title: "SSC CGL Tier – 1 Syllabus for General Awareness",
+        topics: [
+          "India and its neighbouring countries especially pertaining to History, Culture, Geography, Economic Scene, General Policy & Scientific Research",
+          "Science",
+          "Current Affairs",
           "Books and Authors",
-          "Matrix",
-          "Ratio and Proportion",
+          "Sports",
+          "Important Schemes",
+          "Important Days",
+          "Portfolio",
+          "People in News",
+          "Static GK",
         ],
-        ["Sentence Correction", "Important Schemes", "-", "Problem on Ages"],
-      ],
+      },
+      quantitativeAptitude: {
+        title: "SSC CGL Tier – 1 Syllabus for Quantitative Aptitude",
+        topics: [
+          "Computation of whole numbers",
+          "Decimals",
+          "Fractions",
+          "Relationships between numbers",
+          "Profit and Loss",
+          "Discount",
+          "Partnership Business",
+          "Mixture and Alligation",
+          "Time and distance",
+          "Time & Work",
+          "Percentage",
+          "Ratio & Proportion",
+          "Square roots",
+          "Averages",
+          "Interest",
+          "Basic algebraic identities of School Algebra & Elementary surds",
+          "Graphs of Linear Equations",
+          "Triangle and its various kinds of centres",
+          "Congruence and similarity of triangles",
+          "Circle and its chords, tangents, angles subtended by chords of a circle, common tangents to two or more circles",
+          "Triangle",
+          "Quadrilaterals",
+          "Regular Polygons",
+          "Right Prism",
+          "Right Circular Cone",
+          "Right Circular Cylinder",
+          "Sphere",
+          "Heights and Distances",
+          "Histogram",
+          "Frequency polygon",
+          "Bar diagram & Pie chart",
+          "Hemispheres",
+          "Rectangular Parallelepiped",
+          "Regular Right Pyramid with triangular or square base",
+          "Trigonometric ratio",
+          "Degree and Radian Measures",
+          "Standard Identities",
+          "Complementary angles",
+        ],
+      },
+      englishAptitude: {
+        title: "SSC CGL Tier – 1 Syllabus for English Language",
+        topics: [
+          "Idioms and Phrases",
+          "One word Substitution",
+          "Error Spotting",
+          "Fill in the Blanks",
+          "Spelling Error",
+          "Reading Comprehension",
+          "Synonyms-Antonyms",
+          "Active Passive",
+          "Sentence Rearrangement",
+          "Sentence Improvement",
+          "Cloze test",
+        ],
+      },
     },
-    syllabusLink: {
-      text: "SSC CGL Syllabus",
-      url: "#", // Add the actual syllabus link here
+    syllabusDetails2: {
+      syllabusDetailsoftier2: [
+        {
+          section: "Section I",
+          modules: [
+            {
+              module: "Module-I",
+              subject: "Mathematical Abilities",
+              questions: 30,
+              marks: 90,
+              time: 60,
+            },
+            {
+              module: "Module-II",
+              subject: "Reasoning and General Intelligence",
+              questions: 30,
+              marks: 90,
+              time: 60,
+            },
+          ],
+        },
+        {
+          section: "Section II",
+          modules: [
+            {
+              module: "Module-I",
+              subject: "English Language and Comprehension",
+              questions: 45,
+              marks: 135,
+              time: 60,
+            },
+            {
+              module: "Module-II",
+              subject: "General Awareness",
+              questions: 25,
+              marks: 75,
+              time: 60,
+            },
+          ],
+        },
+        {
+          section: "Section III",
+          modules: [
+            {
+              module: "Module-I",
+              subject: "Computer Knowledge Test",
+              questions: 20,
+              marks: 60,
+              time: 15,
+              qualifying: true,
+            },
+          ],
+        },
+        {
+          section: "Data Entry Speed Test",
+          modules: [
+            {
+              module: "Module-II",
+              subject: "Data Entry Speed Test",
+              keyDepressions: 2000,
+              time: 15,
+              qualifying: true,
+            },
+          ],
+        },
+      ],
+      content1: {
+        paragraph:
+          "The tier-2 exam has three papers. These papers are post-specific. ",
+        topics: [
+          " Paper I : Compulsory for all posts (2 hours 30 minutes)",
+          "Paper II: for candidates who apply for the posts of Junior Statistical Officer (JSO) in the Ministry of Statistics and Programme Implementation. (2 hours) ",
+          "Paper III: for candidates who apply for the posts of Assistant Audit Officer/ Assistant Accounts Officer. (2 hours)",
+        ],
+      },
+      examData: {
+        paper1: {
+          mandatory:
+            "It is mandatory for the candidates to qualify all the sections of Paper-I.",
+          negativeMarking:
+            "Negative marking of 1 mark for each wrong answer in Section-I, Section-II and Module-I of Section-III of Paper-I and of 0.50 marks for each wrong answer in Paper-II and Paper-III.",
+        },
+        paper2: {
+          paper: "Paper II (JSO Post)",
+          section: "Statistics",
+          questions: 100,
+          marks: 200,
+          duration: "2 hours",
+        },
+        paper3: {
+          paper: "Paper III (AAO Post)",
+          section: "General Studies (Finance and Economics)",
+          questions: 100,
+          marks: 200,
+          duration: "2 hours",
+        },
+      },
+      mathematicalAbilities: {
+        title: "Module-I of Session-I of Paper-I (Mathematical Abilities):",
+        content: `This Section is similar to the first exam. However, the level and type of questions will be slightly more difficult than in the Tier 1 exam. The following are the important topics of the SSC CGL Syllabus of Module-I in Tier 2 exam.`,
+      },
+      moduleTopicsData: {
+        "Number Systems": [
+          "Computation of Whole Number",
+          "Decimal and Fractions",
+          "Relationship between numbers",
+        ],
+        "Fundamental arithmetical operations": [
+          "Percentages",
+          "Ratio and Proportion",
+          "Square roots",
+          "Averages",
+          "Interest (Simple and Compound)",
+          "Profit and Loss",
+          "Discount",
+          "Partnership Business",
+          "Mixture and Alligation",
+          "Time and distance",
+          "Time and work",
+        ],
+        Algebra: [
+          "Basic algebraic identities of School Algebra and Elementary surds (simple problems)",
+          "Graphs of Linear Equations",
+        ],
+        Geometry: [
+          "Similarity with elementary geometric figures and facts: Triangle and its various kinds of centres",
+          "Congruence and similarity of triangles",
+          "Circle and its chords, tangents, angles subtended by chords of a circle, common tangents to two or more circles.",
+          "Triangle",
+          "Quadrilaterals",
+          "Regular Polygons",
+          "Circle",
+        ],
+        Mensuration: [
+          "Right Prism",
+          "Right Circular Cone",
+          "Right Circular Cylinder",
+          "Sphere",
+          "Hemispheres",
+          "Rectangular Parallelepiped",
+          "Regular Right Pyramid with triangular or square Base.",
+        ],
+        Trigonometry: [
+          "Trigonometric ratios",
+          "Complementary angles",
+          "Height and distances (simple problems only)",
+          "Standard Identities",
+        ],
+        "Statistics and probability": [
+          "Use of Tables and Graphs: Histogram, Frequency polygon, Bar-diagram, Pie-chart",
+          "Measures of central tendency: mean, median, mode, standard deviation",
+          "Calculation of simple probabilities",
+        ],
+      },
+      generalIntelligence: {
+        title:
+          "Module-II of Section-I of Paper-I (Reasoning and General Intelligence)",
+        topic: [
+          "Semantic Analogy",
+          "Symbolic operations, Symbolic/Number Analogy, Trends",
+          "Figural Analogy",
+          "Space Orientation",
+          "Semantic Classification",
+          "Venn Diagrams",
+          "Symbolic/Number Classification",
+          "Drawing inferences",
+          "Punched hole/ pattern-folding & unfolding",
+          "Figural Pattern folding and completion",
+          "Semantic Series",
+          "Number Series",
+          "Embedded figures",
+          "Figural Series",
+          "Critical Thinking",
+          "Problem-Solving",
+          "Emotional Intelligence",
+          "Social Intelligence",
+          "Word Building",
+          "Coding and de-coding",
+          "Numerical operations",
+          "Other sub-topics, if any.",
+        ],
+      },
+      englishLanguage: {
+        title:
+          "Module-I of Section-II of Paper-I (English Language and Comprehension)",
+        topic: [
+          "Vocabulary",
+          "English Grammar",
+          "Sentence structure",
+          "Spot the Error",
+          "Fill in the Blanks",
+          "Synonyms/Homonyms",
+          "Antonyms",
+          "Spellings/ Detecting misspelt words",
+          "Idioms & Phrases",
+          "One word substitution",
+          "Improvement of Sentences",
+          "Active/ Passive Voice of Verbs",
+          "Conversion into Direct/ Indirect narration",
+          "Shuffling of Sentence parts",
+          "Shuffling of Sentences in a passage",
+          "Cloze Passage",
+        ],
+      },
+      generalAwareness: {
+        title: "Module-II of Section-II of Paper-I (General Awareness):",
+        topic: [
+          "India and its neighbouring countries especially pertaining to History, Culture, Geography, Economic Scene, General Policy & Scientific Research",
+          "Science",
+          "Current Affairs",
+          "Books and Authors",
+          "Sports",
+          "Important Schemes",
+          "Important Days & Dates",
+          "Portfolio",
+          "People in News",
+        ],
+      },
+      computerProficiency: {
+        title: "Module-I of Section-III of Paper-I (Computer Proficiency):",
+        moduleTopicsData: {
+          "Computer Basics": [
+            "Organization of a computer",
+            "Central Processing Unit (CPU)",
+            "Input/output devices",
+            "Computer memory",
+            "Memory organization",
+            "Back-up devices",
+            "PORTS",
+            "Windows Explorer",
+            "Keyboard shortcuts",
+          ],
+          Software: [
+            "Windows Operating system including basics of Microsoft Office like MS word, MS Excel and Power Point etc",
+          ],
+          "Working with the Internet and e-mails": [
+            "Web Browsing & Searching, Downloading & Uploading, Managing an E-mail Account, e-Banking",
+          ],
+          "Basics of networking and cyber security": [
+            "Networking devices and protocols, Network and information security threats (like hacking, virus, worms, Trojan etc.) and preventive measures",
+          ],
+        },
+      },
+      statistics: {
+        title: "SSC CGL Tier 2 Syllabus- Paper 2 (Statistics)",
+        content:
+          "Paper 2 is only for those students who are applying for the post of Junior Statistical Officer (JSO)",
+        moduleTopicsData: {
+          "1. Statistical Data Collection, Classification, and Presentation": [
+            "Primary and Secondary data, Methods of data collection",
+            "Tabulation of data; Graphs and charts; Frequency distributions; Diagrammatic presentation of frequency distributions",
+          ],
+          "2. Measures of Central Tendency": [
+            "Common measures of central tendency-mean, median and mode; Partition values-quartiles, deciles, percentiles",
+          ],
+          "3. Measures of Dispersion- Common measures of Dispersion": [
+            "range, quartile deviations, mean deviation and standard deviation; Measures of relative dispersion",
+          ],
+          "4. Moments, Skewness and Kurtosis": [
+            "'Different types of moments and their relationship; the meaning of skewness and kurtosis; different measures of skewness and kurtosis.",
+          ],
+          "5. Correlation and Regression": [
+            "Scatter diagram; simple correlation coefficient, simple regression lines; Spearman's rank correlation; Measures of association of attributes; Multiple regression, Multiple and partial correlation (For three variables only).",
+          ],
+          "6. Probability Theory": [
+            "Meaning of probability; Different definitions of probability; Conditional probability; Compound probability; Independent events; Bayes‟ theorem.",
+          ],
+          "7. Random Variable and Probability Distributions": [
+            "Random variable; Probability functions; Expectation and Variance of a random variable; Higher moments of a random variable; Binomial, Poisson, Normal and Exponential distributions; Joint distribution of two random variable (discrete).",
+          ],
+          "8. Sampling Theory": [
+            "Concept of population and sample; Parameter and statistic, Sampling and non-sampling errors; Probability and nonprobability sampling techniques(simple random sampling, stratified sampling, multistage sampling, multiphase sampling, cluster sampling, systematic sampling, purposive sampling, convenience sampling and quota sampling); Sampling distribution(statement only); Sample size decisions.",
+          ],
+          "9. Statistical Inference": [
+            "Point estimation and interval estimation, Properties of a good estimator, Methods of estimation (Moments method, Maximum likelihood method, Least squares method), Testing of hypothesis, Basic concept of testing, Small sample and large sample tests, Tests based on Z, t, Chi-square and F statistic, Confidence intervals.",
+          ],
+          "10. Analysis of Variance": [
+            "Analysis of one-way classified data and two-way classified data.",
+          ],
+          "11. Time Series Analysis": [
+            "Components of time series, Determination of trend component by different methods, Measurement of seasonal variation by different methods.",
+          ],
+          "12. Index Numbers": [
+            "Meaning of Index Numbers, Problems in the construction of index numbers, Types of index number, Different formulae, Base shifting and splicing of index numbers, Cost of living Index Numbers, Uses of Index Numbers.",
+          ],
+        },
+      },
+      financeAndEconomics: {
+        title:
+          "SSC CGL Tier 2 Syllabus - Paper 3 (General Studies-Finance and Economics)",
+        content:
+          "Paper 3 is only for those students who are applying for the post of Assistant Audit Officer/Assistant Account Officer. (AAO)",
+          moduleTopicsData: [
+            {
+              topic: "Part A: Finance and Accounts (80 marks)",
+              subtopics: [
+                {
+                  topic: "Financial Accounting",
+                  subtopics: [
+                    "Nature and scope",
+                    "Limitations of Financial Accounting",
+                    "Basic concepts and Conventions",
+                    "Generally Accepted Accounting Principles",
+                  ],
+                },
+                {
+                  topic: "Basic concepts of accounting",
+                  subtopics: [
+                    "Distinction between Capital and Revenue Expenditure",
+                    "Depreciation Accounting",
+                    "Valuation of Inventories",
+                    "Single and double entry",
+                    "Books of Original Entry",
+                    "Bank Reconciliation",
+                    "Journal, ledgers",
+                    "Trial Balance",
+                    "Rectification of Errors",
+                    "Manufacturing",
+                    "Trading",
+                    "Profit & Loss Appropriation Accounts",
+                    "Balance Sheet",
+                    "Non-profit organisations Accounts",
+                    "Receipts and Payments and Income & Expenditure Accounts",
+                    "Bills of Exchange",
+                    "Self Balancing Ledgers",
+                  ],
+                },
+              ],
+            },
+            {
+              topic: "Part B: Economics and Governance (120 marks)",
+              subtopics: [
+                {
+                  topic: "Comptroller & Auditor General of India",
+                  subtopics: [
+                    "Constitutional provisions",
+                    "Role and responsibility",
+                  ],
+                },
+                {
+                  topic: "Finance Commission",
+                  subtopics: ["Role and functions"],
+                },
+                {
+                  topic: "Basic Concept of Economics and introduction to Micro Economics",
+                  subtopics: [
+                    "Definition",
+                    "Scope and nature of Economics",
+                    "Methods of economic study",
+                    "Central problems of an economy",
+                    "Production possibilities curve",
+                  ],
+                },
+                {
+                  topic: 'Theory of Demand and Supply',
+                  subtopics: [
+                    'Meaning and determinants of demand',
+                    'Law of demand and Elasticity of demand',
+                    'Price',
+                    'Income and cross elasticity',
+                    'Theory of consumer’s behaviour',
+                    'Marshallian approach and Indifference curve approach',
+                    'Meaning and determinants of supply',
+                    'Law of supply',
+                    'The elasticity of Supply',
+                  ],
+                },
+                {
+                  topic: 'Theory of Production and Cost',
+                  subtopics: [
+                    'Meaning and Factors of production',
+                    'Laws of production- Law of variable proportions and Laws of returns to scale',
+                    'Short-run and long-run production functions',
+                    'Concepts of total, average and marginal product and cost',
+                    'Cost curves: short-run and long-run',
+                    `Producer's equilibrium`,
+                    'Supply curve of the firm and industry',
+                    'Concepts of revenue: total, average and marginal revenue',
+                    `Producer's surplus`,
+                    'Economies and diseconomies of scale',
+                  ],
+                },
+                {
+                  topic: 'Various forms of markets',
+                  subtopics: [
+                    'Perfect Competition',
+                    'Monopoly',
+                    'Monopolistic Competition',
+                    'Oligopoly',
+                    'Price determination in these markets',
+                  ],
+                },
+                {
+                  topic: 'Nature of the Indian Economy',
+                  subtopics: [
+                    'Role of different sectors',
+                    'Role of Agriculture, Industry and Services-their problems and growth',
+                    'National Income of India-Concepts of national income, Different methods of measuring national income',
+                    'Population-Its size, rate of growth and its implication on economic growth',
+                    'Poverty and unemployment- Absolute and relative poverty, types, causes and incidence of unemployment',
+                    'Infrastructure-Energy, Transportation, Communication',
+                  ],
+                },
+                {
+                  topic: 'Economic reforms since 1991',
+                  subtopics: [
+                    'Liberalisation',
+                    'Privatisation',
+                    'Globalisation',
+                    'Disinvestment',
+                  ],
+                },
+                {
+                  topic: 'Monetary/ Fiscal policy',
+                  subtopics: [
+                    'Role and functions of Reserve Bank of India',
+                    'Functions of commercial Banks/RRB/Payment Banks',
+                    'Budget and Fiscal deficits and Balance of payments',
+                    'Fiscal Responsibility and Budget Management Act, 2003',
+                  ],
+                },
+            
+              ],
+            },
+          ]
+      },
     },
   },
   posts: {

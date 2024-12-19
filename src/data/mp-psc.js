@@ -455,4 +455,4 @@ export const mppscExamData = {
       },
     ],
   },
-};
+}

@@ -9,7 +9,7 @@ import Card from "../../components/card/Card";
 
 const SSCCGL = () => {
   const { title, intro, content, officialWebsite } = ssccglData;
-  const { about, notification, highlights, importantDates, vacancy } =
+  const { about, notification, highlights, importantDates, vacancy, syllabus } =
     sscExamData;
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
@@ -526,25 +526,485 @@ const SSCCGL = () => {
                 ))}
               </ol>
             </div>
-            {/* SSC CGL Syllabus Section */}
+            {/* SSC CGL Tier 1 Exam Pattern 2024 */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
-                {sscExamData.syllabus.title}
+                {sscExamData.syllabus?.title}
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                {sscExamData.syllabus.content}{" "}
-                <a
-                  href={sscExamData.syllabus.syllabusLink.url}
-                  className="text-blue-500 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {sscExamData.syllabus.syllabusLink.text}
-                </a>
+                {sscExamData.syllabus?.content1}{" "}
               </p>
-
+              <p className="text-gray-700 leading-relaxed mb-4">
+                {sscExamData.syllabus?.content2}{" "}
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                {sscExamData.syllabus?.content3}{" "}
+              </p>
               {/* Syllabus Table */}
-              <div className="overflow-x-auto">
+              <div className="overflow-x-auto p-4">
+                <h2 className="text-lg font-bold mb-4">
+                  SSC CGL Tier 1 Exam Pattern 2024
+                </h2>
+                <table className="table-auto border-collapse border border-gray-300 w-full text-left">
+                  <thead>
+                    <tr className="bg-blue-100 text-gray-800">
+                      <th
+                        colSpan={3}
+                        className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300 text-center"
+                      >
+                        {sscExamData.syllabus?.tableTitle}
+                      </th>
+                    </tr>
+                    <tr className="bg-gray-100">
+                      <th className="border border-gray-300 px-4 py-2">
+                        S. No.
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        Sections
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        No. of Questions
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        Marks
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        Time Allotted
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {sscExamData.syllabus?.examData.map((item, index) => (
+                      <tr key={item.id}>
+                        <td className="border border-gray-300 px-4 py-2">
+                          {index + 1}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2">
+                          {item.section}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2">
+                          {item.questions}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2">
+                          {item.marks}
+                        </td>
+                        {/* Add Time Allotted only for the first row */}
+                        {index === 0 ? (
+                          <td
+                            rowSpan={syllabus?.examData.length}
+                            className="border border-gray-300 px-4 py-2 align-top"
+                          >
+                            A cumulative time of 60 minutes (1 hour)
+                          </td>
+                        ) : null}
+                      </tr>
+                    ))}
+                    {/* Footer Row for Total */}
+                    <tr className="bg-gray-100 font-bold">
+                      <td
+                        className="border border-gray-300 px-4 py-2 text-center"
+                        colSpan={2}
+                      >
+                        Total
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {syllabus?.totalQuestions}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {syllabus?.totalMarks}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                {/* SSC CGL Tier – 1 Syllabus for General Intelligence and Reasoning */}
+                <div className="bg-white rounded-md p-6 mt-6">
+                  <h6 className="underline font-semibold text-lg mb-4">
+                    {syllabus?.syllabusDetails?.generalIntelligence?.title}
+                  </h6>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {syllabus?.syllabusDetails?.generalIntelligence?.topics.map(
+                      (topic, index) => (
+                        <li key={index}>{topic}</li>
+                      )
+                    )}
+                  </ul>
+                </div>
+                {/* SSC CGL Tier – 1 Syllabus for General Awareness */}
+                <div className="bg-white rounded-md p-6 ">
+                  <h6 className="underline font-semibold text-lg mb-4">
+                    {syllabus?.syllabusDetails?.generalAwareness?.title}
+                  </h6>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {syllabus?.syllabusDetails?.generalAwareness?.topics.map(
+                      (topic, index) => (
+                        <li key={index}>{topic}</li>
+                      )
+                    )}
+                  </ul>
+                </div>
+                {/* SSC CGL Tier – 1 Syllabus for Quantitative Aptitude */}
+                <div className="bg-white rounded-md p-6 ">
+                  <h6 className="underline font-semibold text-lg mb-4">
+                    {syllabus?.syllabusDetails?.quantitativeAptitude?.title}
+                  </h6>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {syllabus?.syllabusDetails?.quantitativeAptitude?.topics.map(
+                      (topic, index) => (
+                        <li key={index}>{topic}</li>
+                      )
+                    )}
+                  </ul>
+                </div>
+                {/* SSC CGL Tier – 1 Syllabus for English Language */}
+                <div className="bg-white rounded-md p-6 ">
+                  <h6 className="underline font-semibold text-lg mb-4">
+                    {syllabus?.syllabusDetails?.englishAptitude?.title}
+                  </h6>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {syllabus?.syllabusDetails?.englishAptitude?.topics.map(
+                      (topic, index) => (
+                        <li key={index}>{topic}</li>
+                      )
+                    )}
+                  </ul>
+                </div>
+              </div>{" "}
+              {/* SSC CGL 2024 Exam Pattern & Syllabus  for Tier 2 */}
+              <div className="overflow mx-auto">
+                <h2 className="text-lg font-bold mb-2">
+                  SSC CGL 2024 Exam Pattern & Syllabus for Tier 2
+                </h2>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  {syllabus?.syllabusDetails2?.content1?.paragraph}
+                </p>
+                <ul className="list-disc pl-6 space-y-2">
+                  {syllabus?.syllabusDetails2?.content1?.topics.map(
+                    (topic, index) => (
+                      <li key={index}>{topic}</li>
+                    )
+                  )}
+                </ul>
+                <table className="table-auto border-collapse w-full">
+                  <thead>
+                    <tr>
+                      <th className="border px-4 py-2">Sections</th>
+                      <th className="border px-4 py-2">Module</th>
+                      <th className="border px-4 py-2">Subject</th>
+                      <th className="border px-4 py-2">No. of Questions</th>
+                      <th className="border px-4 py-2">Marks</th>
+                      <th className="border px-4 py-2">Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {syllabus?.syllabusDetails2?.syllabusDetailsoftier2?.map(
+                      (section, index) => (
+                        <React.Fragment key={index}>
+                          {section.modules.map((module, index) => (
+                            <tr key={index}>
+                              <td className="border px-4 py-2">
+                                {section.section}
+                              </td>
+                              <td className="border px-4 py-2">
+                                {module.module}
+                              </td>
+                              <td className="border px-4 py-2">
+                                {module.subject}
+                              </td>
+                              <td className="border px-4 py-2">
+                                {module.questions}
+                              </td>
+                              <td className="border px-4 py-2">
+                                {module.marks}
+                              </td>
+                              <td className="border px-4 py-2">
+                                {module.time} minutes
+                              </td>
+                            </tr>
+                          ))}
+                        </React.Fragment>
+                      )
+                    )}
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td className="border px-4 py-2" colSpan={3}>
+                        TOTAL
+                      </td>
+                      <td className="border px-4 py-2">150</td>
+                      <td className="border px-4 py-2">450</td>
+                      <td className="border px-4 py-2">2 hours 15 minutes</td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+              <div className="overflow mx-auto mt-4">
+                <div className="mb-6">
+                  <p>
+                    {syllabus?.syllabusDetails2?.examData?.paper1.mandatory}
+                  </p>
+                  <p>
+                    {
+                      syllabus?.syllabusDetails2?.examData?.paper1
+                        .negativeMarking
+                    }
+                  </p>
+                </div>
+                <table className="table-auto border-collapse w-full">
+                  <thead>
+                    <tr>
+                      <th className="border px-4 py-2">Paper</th>
+                      <th className="border px-4 py-2">Section</th>
+                      <th className="border px-4 py-2">No. of Questions</th>
+                      <th className="border px-4 py-2">Maximum Marks</th>
+                      <th className="border px-4 py-2">Duration</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border px-4 py-2">
+                        {syllabus?.syllabusDetails2?.examData?.paper2.paper}
+                      </td>
+                      <td className="border px-4 py-2">
+                        {syllabus?.syllabusDetails2?.examData?.paper2.section}
+                      </td>
+                      <td className="border px-4 py-2">
+                        {syllabus?.syllabusDetails2?.examData?.paper2.questions}
+                      </td>
+                      <td className="border px-4 py-2">
+                        {syllabus?.syllabusDetails2?.examData?.paper2.marks}
+                      </td>
+                      <td className="border px-4 py-2">
+                        {syllabus?.syllabusDetails2?.examData?.paper2.duration}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td className="border px-4 py-2">
+                        {syllabus?.syllabusDetails2?.examData?.paper3.paper}
+                      </td>
+                      <td className="border px-4 py-2">
+                        {syllabus?.syllabusDetails2?.examData?.paper3.section}
+                      </td>
+                      <td className="border px-4 py-2">
+                        {syllabus?.syllabusDetails2?.examData?.paper3.questions}
+                      </td>
+                      <td className="border px-4 py-2">
+                        {syllabus?.syllabusDetails2?.examData?.paper3.marks}
+                      </td>
+                      <td className="border px-4 py-2">
+                        {syllabus?.syllabusDetails2?.examData?.paper3.duration}
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              {/* Module-I of Session-I of Paper-I (Mathematical Abilities): */}
+              <div className="bg-white rounded-md p-6 mt-6">
+                <h6 className="underline font-semibold text-lg mb-4">
+                  {syllabus?.syllabusDetails2?.mathematicalAbilities?.title}
+                </h6>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  {syllabus?.syllabusDetails2?.mathematicalAbilities?.content}
+                </p>
+                <div className="overflow mx-auto">
+                  <table className="table-auto border-collapse w-full">
+                    <thead>
+                      <tr>
+                        <th className="border px-4 py-2">Topics</th>
+                        <th className="border px-4 py-2">Sub-topics</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {Object.entries(
+                        syllabus?.syllabusDetails2?.moduleTopicsData
+                      ).map(([topic, subtopics]) => (
+                        <tr key={topic}>
+                          <td className="border px-4 py-2">{topic}</td>
+                          <td className="border px-4 py-2">
+                            <ul className="list-disc pl-4 space-2">
+                              {subtopics.map((subtopic, index) => (
+                                <li key={index}>{subtopic}</li>
+                              ))}
+                            </ul>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              {/* Module-II of Section-I of Paper-I (Reasoning and General Intelligence): */}
+              <div className="bg-white rounded-md p-6 ">
+                <h6 className="underline font-semibold text-lg mb-4">
+                  {syllabus?.syllabusDetails2?.generalIntelligence?.title}
+                </h6>
+                <ul className="list-disc pl-6 space-y-2">
+                  {syllabus?.syllabusDetails2?.generalIntelligence?.topic.map(
+                    (topic, index) => (
+                      <li key={index}>{topic}</li>
+                    )
+                  )}
+                </ul>
+              </div>
+              {/* Module-I of Section-II of Paper-I (English Language and Comprehension): */}
+              <div className="bg-white rounded-md p-6 ">
+                <h6 className="underline font-semibold text-lg mb-4">
+                  {syllabus?.syllabusDetails2?.englishLanguage?.title}
+                </h6>
+                <ul className="list-disc pl-6 space-y-2">
+                  {syllabus?.syllabusDetails2?.englishLanguage?.topic.map(
+                    (topic, index) => (
+                      <li key={index}>{topic}</li>
+                    )
+                  )}
+                </ul>
+              </div>
+              {/* Module-II of Section-II of Paper-I (General Awareness): */}
+              <div className="bg-white rounded-md p-6 ">
+                <h6 className="underline font-semibold text-lg mb-4">
+                  {syllabus?.syllabusDetails2?.generalAwareness?.title}
+                </h6>
+                <ul className="list-disc pl-6 space-y-2">
+                  {syllabus?.syllabusDetails2?.generalAwareness?.topic.map(
+                    (topic, index) => (
+                      <li key={index}>{topic}</li>
+                    )
+                  )}
+                </ul>
+              </div>
+              {/* Module-I of Section-III of Paper-I (Computer Proficiency): */}
+              <div className="bg-white rounded-md p-6 mt-6">
+                <h6 className="underline font-semibold text-lg mb-4">
+                  {syllabus?.syllabusDetails2?.mathematicalAbilities?.title}
+                </h6>
+                <div className="overflow mx-auto">
+                  <table className="table-auto border-collapse w-full">
+                    <thead>
+                      <tr>
+                        <th className="border px-4 py-2">Topics</th>
+                        <th className="border px-4 py-2">Sub-topics</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {Object.entries(
+                        syllabus?.syllabusDetails2?.computerProficiency
+                          ?.moduleTopicsData
+                      ).map(([topic, subtopics]) => (
+                        <tr key={topic}>
+                          <td className="border px-4 py-2">{topic}</td>
+                          <td className="border px-4 py-2">
+                            <ul className="list-disc pl-4 space-2">
+                              {subtopics.map((subtopic, index) => (
+                                <li key={index}>{subtopic}</li>
+                              ))}
+                            </ul>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              {/* SSC CGL Tier 2 Syllabus- Paper 2 (Statistics) */}
+              <div className="bg-white rounded-md p-6 mt-6">
+                <h6 className="underline font-semibold text-lg mb-4">
+                  {syllabus?.syllabusDetails2?.statistics?.title}
+                </h6>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  {syllabus?.syllabusDetails2?.statistics?.content}
+                </p>
+                <div className="overflow-x-auto">
+                  <table className="table-auto border-collapse w-full">
+                    <thead>
+                      <tr>
+                        <th className="border px-4 py-2">Topics</th>
+                        <th className="border px-4 py-2">Sub-topics</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {Object.entries(
+                        syllabus?.syllabusDetails2?.statistics?.moduleTopicsData
+                      ).map(([topic, subtopics]) => (
+                        <tr key={topic}>
+                          <td className="border px-4 py-2">{topic}</td>
+                          <td className="border px-4 py-2">
+                            <ul className="list-disc pl-4 space-2">
+                              {subtopics.map((subtopic, index) => (
+                                <li key={index}>{subtopic}</li>
+                              ))}
+                            </ul>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              {/* SSC CGL Tier 2 Syllabus- Paper 3(General Studies-Finance and Economics) */}
+              <div className="bg-white rounded-md p-6 mt-6">
+                <h6 className="underline font-semibold text-lg mb-4">
+                  {syllabus?.syllabusDetails2?.financeAndEconomics?.title}
+                </h6>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  {syllabus?.syllabusDetails2?.financeAndEconomics?.content}
+                </p>
+                <div className="overflow mx-auto">
+                  <table className="table-auto border-collapse w-full">
+                    <thead>
+                      <tr>
+                        {" "}
+                        <th className="border px-4 py-2">Part</th>
+                        <th className="border px-4 py-2">Subject</th>
+                        <th className="border px-4 py-2">Topics</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {Object.entries(
+                        syllabus?.syllabusDetails2?.financeAndEconomics
+                          ?.moduleTopicsData
+                      ).map(([topic, sections]) => {
+                        console.log("Topic:", topic);
+                        console.log("Sections:", sections);
+
+                        return sections?.subtopics?.map((section, index) => (
+                          <tr key={index}>
+                            <td className="border px-4 py-2">
+                              {sections.topic}
+                            </td>
+                            <td className="border px-4 py-2">
+                              {section.topic}
+                            </td>
+                            <td className="border px-4 py-2">
+                              <ul className="list-disc pl-4 space-2">
+                                {section.subtopics.map((subtopic, index) => (
+                                  <li key={index}>
+                                    {typeof subtopic === "string" ? (
+                                      subtopic
+                                    ) : (
+                                      <>
+                                        <strong className="font-semibold">
+                                          {subtopic.topic}
+                                        </strong>
+                                        <ul className="list-disc pl-4 space-2">
+                                          {subtopic.subtopics.map(
+                                            (subsubtopic, index) => (
+                                              <li key={index}>{subsubtopic}</li>
+                                            )
+                                          )}
+                                        </ul>
+                                      </>
+                                    )}
+                                  </li>
+                                ))}
+                              </ul>
+                            </td>
+                          </tr>
+                        ));
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              {/* <div className="overflow-x-auto">
                 <table className="w-full border-collapse border border-gray-300">
                   <thead>
                     <tr className="bg-gray-200">
@@ -582,7 +1042,7 @@ const SSCCGL = () => {
                     )}
                   </tbody>
                 </table>
-              </div>
+              </div> */}
             </div>
             {/* SSC CGL Posts Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
@@ -591,14 +1051,6 @@ const SSCCGL = () => {
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 {sscExamData.posts.content}{" "}
-                <a
-                  href={sscExamData.posts.postsLink.url}
-                  className="text-blue-500 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {sscExamData.posts.postsLink.text}
-                </a>
               </p>
 
               {/* Posts Table */}
@@ -635,14 +1087,6 @@ const SSCCGL = () => {
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
                 {sscExamData.salary.content}{" "}
-                <a
-                  href={sscExamData.salary.salaryLink.url}
-                  className="text-blue-500 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {sscExamData.salary.salaryLink.text}
-                </a>
               </p>
 
               {/* Salary Table */}
