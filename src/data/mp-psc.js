@@ -65,10 +65,7 @@ export const tableOfContentsData = [
     title: "MPPSC Prelims 2024 Result Out",
     link: "#mppsc-prelims-2024-result-out",
   },
-  {
-    title: "MPPSC Notification 2024 PDF",
-    link: "#mppsc-notification-2024-pdf",
-  },
+
   {
     title: "MPPSC Vacancy 2024",
     link: "#mppsc-vacancy-2024",

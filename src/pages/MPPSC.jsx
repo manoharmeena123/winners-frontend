@@ -9,7 +9,6 @@ import { mppscExamData, tableOfContentsData } from "../data/mp-psc";
 
 const MPPSC = () => {
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
-  const [activeIndex, setActiveIndex] = useState(null);
   // State to track whether the table is open or closed
   const [isOpen, setIsOpen] = useState(true);
 
@@ -198,7 +197,7 @@ const MPPSC = () => {
                   {notification.content}
                 </p>
               ))}
-              <div className="mt-4 p-2">
+              <div id="mppsc-2024" className="mt-4 p-2">
                 <h2
                   id="ssc-calendar-2025"
                   className="text-xl font-bold text-blue-900 mb-2"
@@ -216,7 +215,7 @@ const MPPSC = () => {
               </div>
             </div>
             {/* MPPSC Notification 2024 Overview Section */}
-            <div className="bg-white shadow-md rounded-md p-6">
+            <div id="mppsc-notification-2024-overview" className="bg-white shadow-md rounded-md p-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {overview?.title}
               </h2>
@@ -256,7 +255,7 @@ const MPPSC = () => {
               </div>
             </div>
             {/* MPPSC Notification 2024 Important Dates Section */}
-            <div className="bg-white shadow-md rounded-md p-6">
+            <div id="mppsc-notification-2024-important-dates" className="bg-white shadow-md rounded-md p-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {importantDates?.title}
               </h2>
@@ -305,7 +304,7 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Prelims 2024 Result Out */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-prelims-2024-result-out" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {resultOut.title}
               </h2>
@@ -314,8 +313,8 @@ const MPPSC = () => {
               </p>
             </div>
 
-            {/* MPPSC Notification 2024 PDF  */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            {/* MPPSC Vacancy 2024 */}
+            <div id="mppsc-vacancy-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2
                 id="ssc-calendar-2025"
                 className="text-xl font-bold text-blue-900 mb-2"
