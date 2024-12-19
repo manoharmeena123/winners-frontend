@@ -332,7 +332,7 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC 2024 Apply Online Link */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-2024-apply-online-link" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {onlineLink.title}
               </h2>

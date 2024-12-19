@@ -169,9 +169,12 @@ export const sscExamData = {
   },
   syllabus: {
     title: "SSC CGL 2025 Syllabus",
-    content: `
-          Candidates aspiring for the SSC CGL Exam should go through the Syllabus. Check the detailed SSC CGL Syllabus in the table below.
+    content1: `
+         To target any examination, it is very crucial to know its syllabus well. Candidates can plan their studies in the right direction with accurate and smart strategy only after having the detailed and correct information about the syllabus.
         `,
+    content2: `The SSC CGL Syllabus and Exam Pattern is set by the staff selection commission. Let’s have a brief view to the pattern of SSC CGL Tier-1 exams.`,
+    content3: `The Tier-1 Exam is qualifying in nature. It consists of 4 sections – Quantitative Aptitude, General Awareness, English Language, General Intelligence and Reasoning. All 4 sections have 25 questions each. For each incorrect answer there is a penalty (negative marking) of 0.50 marks. Each question is of 2 marks which means the complete paper is a total of 200 marks. The time duration for the tier–1 exam is 60 minutes (1 hour).
+`,
     syllabusTable: {
       headers: [
         "English Comprehension",

@@ -532,15 +532,13 @@ const SSCCGL = () => {
                 {sscExamData.syllabus.title}
               </h3>
               <p className="text-gray-700 leading-relaxed mb-4">
-                {sscExamData.syllabus.content}{" "}
-                <a
-                  href={sscExamData.syllabus.syllabusLink.url}
-                  className="text-blue-500 hover:underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {sscExamData.syllabus.syllabusLink.text}
-                </a>
+                {sscExamData.syllabus.content1}{" "}
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                {sscExamData.syllabus.content2}{" "}
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                {sscExamData.syllabus.content3}{" "}
               </p>
 
               {/* Syllabus Table */}

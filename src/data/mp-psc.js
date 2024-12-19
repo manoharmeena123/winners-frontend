@@ -47,7 +47,6 @@
 //   },
 // ];
 
-
 export const tableOfContentsData = [
   {
     title: "MPPSC 2024",
@@ -125,7 +124,6 @@ export const tableOfContentsData = [
     link: "#mppsc-notification-2024-faqs",
   },
 ];
-
 
 export const mppscExamData = {
   notifications: [
