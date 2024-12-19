@@ -6,8 +6,8 @@ import About from "./pages/About";
 import Publications from "./pages/Publications";
 import StudentZone from "./pages/StudentZone";
 import VideoLecture from "./pages/VideoLecture";
-import Exam from "./pages/Exam";
-import ExamCenter from "./pages/ExamCenter";
+import MPPSC from "./pages/MPPSC.jsx";
+import SSC from "./pages/SSC";
 // import Career from "./pages/Career";
 import PhotoGallery from "./pages/PhotoGallery";
 import ContactUS from "./pages/ContactUs";
@@ -78,8 +78,8 @@ function App() {
 
 
           
-          <Route path="/exam" element={<Exam />} />
-          <Route path="/ssc" element={<ExamCenter />} />
+          <Route path="/mp-psc" element={<MPPSC />} />
+          <Route path="/ssc" element={<SSC />} />
           <Route path="/ssc-cgl" element={<SSCCGL />} />
           <Route path="/ssc-chsl" element={<SSCCHSL />} />
           <Route path="/ssc-mts" element={<SSCMTS />} />

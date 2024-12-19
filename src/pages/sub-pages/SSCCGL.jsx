@@ -869,7 +869,6 @@ const SSCCGL = () => {
             </div>
           </div>
           {/* Col-4 */}
-          {/* Col-4 */}
           <div className="md:col-span-3 flex flex-col space-y-4">
             <img
               src="/ssc-cgl-2025.jpeg"

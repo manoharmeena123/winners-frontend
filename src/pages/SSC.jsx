@@ -23,7 +23,7 @@ import {
 } from "../data/sscData";
 import Card from "../components/card/Card";
 
-function ExamCenter() {
+function SSC() {
   const [activeIndex, setActiveIndex] = useState(null);
   const toggleFAQ = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
@@ -610,4 +610,4 @@ function ExamCenter() {
   );
 }
 
-export default ExamCenter;
+export default SSC;

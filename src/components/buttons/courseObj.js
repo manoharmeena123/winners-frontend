@@ -1,7 +1,7 @@
 export const courses = [
   {
     courseName: "MPPSC",
-    link: "/exam",
+    link: "/mp-psc",
   },
   {
     courseName: "SSC",
