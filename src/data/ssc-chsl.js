@@ -1,18 +1,19 @@
 export const sscchslData = {
-  title: "SSC CHSL 2025: Notification, Registration and Exam Date out",
+  title: "SSC CHSL 2025: Notification, Registration, and Exam Dates Announced",
   intro: `
-      The Staff Selection Commission (SSC) will release the SSC CHSL Notification on 27th May 2025 on its
-       official website at www.ssc.gov.in. Registration will be conducted for JSA, DEO, LDC, and other
-        vacancies and Tier 1 exam will be held in July-August 2025. Check SSC CHSL Eligibility, Syllabus,
-         Registration process, and salary details here..
+      The Staff Selection Commission (SSC) is set to release the SSC CHSL Notification on May 27, 2025,
+      on its official website www.ssc.gov.in. Registration will be open for positions such as JSA, DEO, LDC,
+      and others. The Tier 1 exam is scheduled for July-August 2025. Find details on SSC CHSL Eligibility,
+      Syllabus, Registration process, and salary information here.
       `,
   content: `
-       The Staff Selection Commission (SSC) has recently released the SSC Calendar 2025-26 which mentions the
-        registration dates and exam dates for all major SSC exams. One such exam is the SSC CHSL 2025 exam which
-         is conducted to select eligible candidates for 10+2 level posts in Indian Government Ministries and Departments.
-          Through this examination, candidates who are 12th pass get an opportunity to get a government job that offers 
-          stability and career opportunities. For FY 2025-26, SSC will release the SSC CHSL 2025 Notification on 27th May
-           2025 and registrations will be open till 25th June 2025. After that examination will be conducted in two stages: Tier 1 and Tier 2 computer-based exams. So, get ready to know in-depth details about the SSC CHSL (12th level) exam here..
+      The Staff Selection Commission (SSC) has published the SSC Calendar 2025-26, which includes the
+      registration and exam dates for all major SSC exams. The SSC CHSL 2025 exam aims to select eligible
+      candidates for 10+2 level posts in various Indian Government Ministries and Departments. This exam
+      provides an opportunity for 12th pass candidates to secure a government job with stability and career
+      growth. For the FY 2025-26, the SSC CHSL 2025 Notification will be released on May 27, 2025, with
+      registrations open until June 25, 2025. The examination will be conducted in two stages: Tier 1 and
+      Tier 2 computer-based exams. Learn more about the SSC CHSL (12th level) exam here.
       `,
   officialWebsite: "https://www.ssc.gov.in",
 };
@@ -448,8 +449,8 @@ export const sscchslExamData = {
         modules: "Module-1",
         subject: "Mathematical Abilities",
         questions: "30",
-        marks: "90",
-        time: "1 hour",
+        marks: "30 x 3 = 90",
+        time: "60 Minutes (1 hour)",
       },
       {
         session: "",
@@ -457,8 +458,8 @@ export const sscchslExamData = {
         modules: "Module-2",
         subject: "Reasoning and General Intelligence",
         questions: "30",
-        marks: "90",
-        time: "1 hour",
+        marks: "30 x 3 = 90",
+        time: "60 Minutes (1 hour)",
       },
       {
         session: "",
@@ -466,8 +467,8 @@ export const sscchslExamData = {
         modules: "Module-1",
         subject: "English Language and Comprehension",
         questions: "40",
-        marks: "90",
-        time: "1 hour",
+        marks: "40 x 3 = 120",
+        time: "60 Minutes (1 hour)",
       },
       {
         session: "",
@@ -475,7 +476,7 @@ export const sscchslExamData = {
         modules: "Module-2",
         subject: "General Awareness",
         questions: "20",
-        marks: "90",
+        marks: "20 x 3 = 60",
         time: "",
       },
       {
@@ -484,18 +485,26 @@ export const sscchslExamData = {
         modules: "Module-1",
         subject: "Computer Knowledge Module",
         questions: "15",
-        marks: "45",
+        marks: "15 x 3 = 45",
         time: "15 minutes",
       },
       {
-        session: "Session II",
-        section: "Section 3",
+        session: "Session-II (25 Minutes) No negative marking",
+        section: "",
         modules: "Module-2",
-        subject:
-          "Skill Test/ Typing Test Module- Part A: Skill Test for DEOs \nPart B: Typing Test for LDC/ JSA",
+        subject: "Part A: Skill Test for DEOs",
         questions: "--",
         marks: "--",
-        time: "15 minutes 10 minutes",
+        time: "15 minutes",
+      },
+      {
+        session: "",
+        section: "",
+        modules: "Module-2",
+        subject: "Part B: Typing Test for LDC/JSA",
+        questions: "--",
+        marks: "--",
+        time: "10 minutes",
       },
     ],
     syllabusData: [
@@ -686,6 +695,67 @@ export const sscchslExamData = {
         "Degree and Radian Measures",
         "Standard Identities",
         "Complementary angles",
+      ],
+    },
+    computerProfency: [
+      {
+        category: "Computer Basics",
+        topics: [
+          "Organization of a computer",
+          "Central Processing Unit (CPU)",
+          "Input/Output devices",
+          "Computer memory",
+          "Memory organization",
+          "Back-up devices",
+          "PORTS",
+        ],
+      },
+      {
+        category: "Software",
+        topics: [
+          "Windows Explorer",
+          "Windows Operating system including basics of Microsoft Office like MS Word, MS Excel and Power Point etc",
+          "Web Browsing & Searching",
+          "Downloading & Uploading",
+          "Managing an E-mail Account",
+          "e-Banking",
+        ],
+      },
+      {
+        category: "Working with Internet and e-mails",
+        topics: [
+          "Networking devices and protocols",
+          "Network and information security threats (like hacking, virus, worms, Trojan, etc.) and preventive measures.",
+        ],
+      },
+      {
+        category: "Basics of networking and cyber security",
+        topics: [
+          "Networking devices and protocols",
+          "Network and information security threats (like hacking, virus, worms, Trojan etc.) and preventive measures.",
+        ],
+      },
+    ],
+    dataentryOperator: {
+      post: "Data Entry Operator",
+      requirements: [
+        "In this test, a candidate should have a typing speed of 8,000 key depressions per hour.",
+        "The time duration of the Test is 15 minutes and the candidates are required to type an English document having about 2000-2200 strokes/key-depressions.",
+      ],
+    },
+    comptrollerAndauditor: {
+      post: "Skill test for the post of DEO in the Office of the Comptroller and Auditor General of India (C&AG):",
+      requirements: [
+        "The ‘speed of 15000 key depressions per hour will be evaluated on the basis of the accurate entry of words/key depressions according to the given passage.",
+        "The time duration of the test will be 15 minutes and each candidate will be given printed matter in English containing about 3700-4000 key-depressions will be given to each candidate who will enter the same in the test computer.",
+        "Skill test for the post of Lower Division Clerk/ Junior Secretariat Assistant (LDS/JSA) and Postal Assistants/ Sorting Assistants (PA/SA):",
+      ],
+    },
+    secretariatAssistant: {
+      post: "Skill test for the post of Lower Division Clerk/ Junior Secretariat Assistant (LDS/JSA) and Postal Assistants/ Sorting Assistants (PA/SA):",
+      requirements: [
+        "The speed of 10500 key depressions per hour will be evaluated on the basis of the accurate entry of words/key depressions as per the given passage.",
+        "The time duration of the test will be 15 minutes and each candidate will be given an English printed matter containing about 9000 key-depressions/hour will be given to each candidate who will enter the same in the test computer.",
       ],
     },
   },

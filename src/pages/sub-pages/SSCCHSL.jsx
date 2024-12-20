@@ -172,14 +172,20 @@ const SSCCHSL = () => {
               </div>
             </div>
             {/* What is SSC CHSL Exam? */}
-            <div id="what-is-ssc-chsl-exam" className="bg-white shadow-md rounded-md p-6 mb-6">
+            <div
+              id="what-is-ssc-chsl-exam"
+              className="bg-white shadow-md rounded-md p-6 mb-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {about.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">{about.content}</p>
             </div>
             {/* Third Section: SSC CHSL Notification */}
-            <div id="ssc-chsl-2025-notification" className="bg-white shadow-md rounded-md p-6 mb-6">
+            <div
+              id="ssc-chsl-2025-notification"
+              className="bg-white shadow-md rounded-md p-6 mb-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {notification.title}
               </h2>
@@ -211,7 +217,10 @@ const SSCCHSL = () => {
               </p>
             </div>
             {/* SSC CHSL 2025 Exam- Overview */}
-            <div id="ssc-chsl-2025-exam-overview" className="bg-white shadow-md rounded-md p-6">
+            <div
+              id="ssc-chsl-2025-exam-overview"
+              className="bg-white shadow-md rounded-md p-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.overview?.title}
               </h2>
@@ -241,7 +250,10 @@ const SSCCHSL = () => {
               </div>
             </div>
             {/* SSC CHSL 2025 Important Dates */}
-            <div id="ssc-chsl-2025-important-dates" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-chsl-2025-important-dates"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.importantDatesData?.title}
@@ -288,7 +300,10 @@ const SSCCHSL = () => {
               </div>
             </div>
             {/* SSC CHSL 2025 Vacancy */}
-            <div id="ssc-chsl-2025-vacancy" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-chsl-2025-vacancy"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.vacancyData?.title}
@@ -351,7 +366,10 @@ const SSCCHSL = () => {
               </div>
             </div>
             {/* SSC CHSL 2025 Eligibility Criteria */}
-            <div id="ssc-chsl-2025-eligibility-criteria" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-chsl-2025-eligibility-criteria"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.eligibilityData?.title}
@@ -395,7 +413,10 @@ const SSCCHSL = () => {
               </ul>
             </div>
             {/* Age Limit Section */}
-            <div id="ssc-chsl-2025-age-limit" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-chsl-2025-age-limit"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.ageLimitData?.title}
@@ -465,7 +486,10 @@ const SSCCHSL = () => {
               </ul>
             </div>
             {/* SSC CHSL 2025 Exam Pattern */}
-            <div id="ssc-chsl-2025-exam-pattern" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-chsl-2025-exam-pattern"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.examPattern?.title}
@@ -477,7 +501,10 @@ const SSCCHSL = () => {
               </p>
             </div>
             {/* SSC CHSL Tier 1 Exam Pattern */}
-            <div id="ssc-chsl-tier-1-exam-pattern" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-chsl-tier-1-exam-pattern"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.tier1ExamPattern?.title}
@@ -543,7 +570,10 @@ const SSCCHSL = () => {
                 </table>
               </div>
               {/* SSC CHSL Tier-1 Syllabus */}
-              <div id="ssc-chsl-tier-1-syllabus" className="overflow-x-auto mt-6">
+              <div
+                id="ssc-chsl-tier-1-syllabus"
+                className="overflow-x-auto mt-6"
+              >
                 <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                   SSC CHSL Tier-1 Syllabus
                 </h2>
@@ -588,7 +618,10 @@ const SSCCHSL = () => {
               </div>
             </div>
             {/* SSC CHSL Tier 2 Exam Pattern */}
-            <div id="ssc-chsl-tier-2-exam-pattern"  className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-chsl-tier-2-exam-pattern"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.tier2ExamPattern?.title}
@@ -649,11 +682,28 @@ const SSCCHSL = () => {
                         </tr>
                       )
                     )}
+                    <tr className="bg-gray-200">
+                      <td
+                        className="border border-gray-300 font-semibold  px-4 py-2 text-center"
+                        colSpan="4" // Adjust column span to match the total columns minus 'questions' and 'marks' columns
+                      >
+                        Total
+                      </td>
+                      <td className="border border-gray-300 font-semibold px-4 py-2 text-center">
+                        135
+                      </td>
+                      <td className="border border-gray-300 font-semibold  px-4 py-2 text-center">
+                        405
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
               {/* SSC CHSL Tier-II Syllabus */}
-              <div id="ssc-chsl-tier-2-syllabus" className="overflow-x-auto mt-6 mb-6">
+              <div
+                id="ssc-chsl-tier-2-syllabus"
+                className="overflow-x-auto mt-6 mb-6"
+              >
                 <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                   SSC CHSL Tier-2 Syllabus
                 </h2>
@@ -747,9 +797,97 @@ const SSCCHSL = () => {
                   )}
                 </ul>
               </div>
+
+              {/*  Computer Proficiency */}
+              <div className="overflow-x-auto">
+                <table className="table-auto border-collapse border border-gray-300 w-full">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                        Computer Proficiency Chapters
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                        Topics
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {sscchslExamData?.tier2ExamPattern?.computerProfency?.map(
+                      (row, index) => (
+                        <tr key={index}>
+                          <td className="border border-gray-300 px-4 py-2">
+                            {row.category}
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2">
+                            <ul>
+                              {row.topics.map((topic, topicIndex) => (
+                                <li key={topicIndex}>{topic}</li>
+                              ))}
+                            </ul>
+                          </td>
+                        </tr>
+                      )
+                    )}
+                  </tbody>
+                </table>
+              </div>
+              {/* Data Entry Operator */}
+              <div className="p-4 bg-gray-100 rounded-md">
+                <h2 className="text-lg font-bold mb-2">
+                  Skill Test for{" "}
+                  {sscchslExamData?.tier2ExamPattern?.dataentryOperator.post}
+                </h2>
+                <ul className="list-disc pl-6 space-y-2">
+                  {sscchslExamData?.tier2ExamPattern?.dataentryOperator.requirements.map(
+                    (requirement, index) => (
+                      <li key={index} className="mb-2">
+                        {requirement}
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+              {/* the Comptroller and Auditor General of India (C&AG */}
+              <div className="p-4 bg-gray-100 rounded-md">
+                <h2 className="text-lg font-bold mb-2">
+                  Skill Test for{" "}
+                  {
+                    sscchslExamData?.tier2ExamPattern?.comptrollerAndauditor
+                      .post
+                  }
+                </h2>
+                <ul className="list-disc pl-6 space-y-2">
+                  {sscchslExamData?.tier2ExamPattern?.comptrollerAndauditor.requirements.map(
+                    (requirement, index) => (
+                      <li key={index} className="mb-2">
+                        {requirement}
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+              {/* Lower Division Clerk/ Junior Secretariat Assistant (LDS/JSA) and Postal Assistants/ Sorting Assistants (PA/SA) */}
+              <div className="p-4 bg-gray-100 rounded-md">
+                <h2 className="text-lg font-bold mb-2">
+                  Skill Test for{" "}
+                  {sscchslExamData?.tier2ExamPattern?.secretariatAssistant.post}
+                </h2>
+                <ul className="list-disc pl-6 space-y-2">
+                  {sscchslExamData?.tier2ExamPattern?.secretariatAssistant.requirements.map(
+                    (requirement, index) => (
+                      <li key={index} className="mb-2">
+                        {requirement}
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
             </div>
             {/* SSC CHSL Salary After 7th Pay Commission */}
-            <div id="ssc-chsl-salary-after-7th-pay-commission" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-chsl-salary-after-7th-pay-commission"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.salaryStructure?.title}
@@ -1000,7 +1138,10 @@ const SSCCHSL = () => {
               </div> */}
             </div>{" "}
             {/* Frequently Asked Questions Section */}
-            <div id="ssc-chsl-2025-faqs" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-chsl-2025-faqs"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h3 className="text-xl font-bold text-gray-800 mb-4">
                 {sscchslExamData.faq.title}
               </h3>
