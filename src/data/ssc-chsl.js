@@ -16,6 +16,70 @@ export const sscchslData = {
       `,
   officialWebsite: "https://www.ssc.gov.in",
 };
+export const tableOfContentsData = [
+  {
+    title: "What is SSC CHSL Exam?",
+    link: "#what-is-ssc-chsl-exam",
+  },
+  {
+    title: "SSC CHSL 2025 Notification",
+    link: "#ssc-chsl-2025-notification",
+  },
+  {
+    title: "SSC CHSL 2025 Exam- Overview",
+    link: "#ssc-chsl-2025-exam-overview",
+    subItems: [
+      {
+        title: "SSC CHSL 2025 Important Dates",
+        link: "#ssc-chsl-2025-important-dates",
+      },
+      {
+        title: "SSC CHSL 2025 Vacancy",
+        link: "#ssc-chsl-2025-vacancy",
+      },
+      {
+        title: "SSC CHSL 2025 Eligibility Criteria",
+        link: "#ssc-chsl-2025-eligibility-criteria",
+      },
+      {
+        title: "SSC CHSL 2025 Age Limit",
+        link: "#ssc-chsl-2025-age-limit",
+      },
+    ],
+  },
+  {
+    title: "SSC CHSL 2025 Exam Pattern",
+    link: "#ssc-chsl-2025-exam-pattern",
+  },
+  {
+    title: "SSC CHSL Tier 1 Exam Pattern",
+    link: "#ssc-chsl-tier-1-exam-pattern",
+  },
+  {
+    title: "SSC CHSL Tier-1 Syllabus",
+    link: "#ssc-chsl-tier-1-syllabus",
+  },
+  {
+    title: "SSC CHSL Tier 2 Exam Pattern",
+    link: "#ssc-chsl-tier-2-exam-pattern",
+  },
+  {
+    title: "SSC CHSL Tier-2 Syllabus",
+    link: "#ssc-chsl-tier-2-syllabus",
+  },
+  {
+    title: "SSC CHSL Salary After 7th Pay Commission",
+    link: "#ssc-chsl-salary-after-7th-pay-commission",
+  },
+  {
+    title: "Download SSC Calendar 2025 PDF",
+    link: "https://ssc.nic.in/SSCFileServer/PortalManagement/UploadedFiles/Annual_Calendar_2024-25_07112023.pdf",
+  },
+  {
+    title: "Frequently Asked Questions about SSC CHSL 2025",
+    link: "#ssc-chsl-2025-faqs",
+  },
+];
 
 export const sscchslExamData = {
   about: {
@@ -38,7 +102,8 @@ export const sscchslExamData = {
     title: "Frequently Asked Questions",
     questions: [
       {
-        question: "How much percentage is required in the 12th Class for SSC CHSL?",
+        question:
+          "How much percentage is required in the 12th Class for SSC CHSL?",
         answer: `
                There is no bar on percentage, anyone who had passed the 12th class can fill the SSC CHSL Application.
             `,
@@ -59,60 +124,124 @@ export const sscchslExamData = {
               As per the SSC Calendar 2025-26, the SSC CHSL Tier 1 exam will be conducted in July-August 2025..
             `,
       },
-
     ],
   },
   overview: {
     title: "SSC CHSL 2025 Exam- Overview",
-    content: "The SSC SSC Combined Higher Secondary Level or 12th Level Exam is an annual process candidates are selected based on their performance in Tier 1 and Tier 2 exams. Both the exams are conducted in computer-based mode. The SSC CHSL Tie 1 exam is released on its official website. Check the major highlights of the exam below.",
+    content:
+      "The SSC SSC Combined Higher Secondary Level or 12th Level Exam is an annual process candidates are selected based on their performance in Tier 1 and Tier 2 exams. Both the exams are conducted in computer-based mode. The SSC CHSL Tie 1 exam is released on its official website. Check the major highlights of the exam below.",
     tableData: [
-      { label: "Exam Name", value: "SSC CHSL (Staff Selection Commission-Combined Higher Secondary Level)" },
+      {
+        label: "Exam Name",
+        value:
+          "SSC CHSL (Staff Selection Commission-Combined Higher Secondary Level)",
+      },
       { label: "Conducting Body", value: "Staff Selection Commission (SSC)" },
       { label: "Exam Level", value: "National Level" },
       { label: "Vacancy", value: "To be Notified" },
       {
         label: "SSC CHSL Posts",
-        value: "Lower Division Clerk (LDC), Junior Secretariat Assistant (JSA), Postal Assistant (PA), Sorting Assistant (SA), and Data Entry Operator (DEO)"
+        value:
+          "Lower Division Clerk (LDC), Junior Secretariat Assistant (JSA), Postal Assistant (PA), Sorting Assistant (SA), and Data Entry Operator (DEO)",
       },
       { label: "Application Mode", value: "Online" },
       { label: "Registration Dates", value: "27th May to 25th June 2025" },
       { label: "SSC CHSL Exam Date 2025", value: "July-August 2025" },
       {
         label: "SSC CHSL Selection Process",
-        value: "• Tier-I: Online (CBT)\n• Tier-II: Online (CBT+ Skill Test)\n• Document Verification"
+        value:
+          "• Tier-I: Online (CBT)\n• Tier-II: Online (CBT+ Skill Test)\n• Document Verification",
       },
       { label: "Exam Language", value: "English and Hindi" },
       { label: "Exam Helpdesk No.", value: "011-24361359" },
       { label: "Job Location", value: "All over India" },
       { label: "Official Website.", value: "www.ssc.gov.in" },
-
-    ]
+    ],
   },
   importantDatesData: {
     title: "SSC CHSL 2025 Important Dates",
     description:
       "The dates for the SSC CHSL Notification 2025 and Tier 1 Exam dates have been announced by the officials through the SSC Calendar 2025-26. The online application process will begin on 27th May and continue till 25th June 2025. The CBT 1 exam will be conducted in July-August 2025.",
     tableData: [
-      { event: "SSC CHSL 2025 Notification Release Date", date: "27th May 2025" },
+      {
+        event: "SSC CHSL 2025 Notification Release Date",
+        date: "27th May 2025",
+      },
       { event: "SSC CHSL 2025 Apply Online Starts", date: "27th May 2025" },
       { event: "Online Application Last Date", date: "25th June 2025" },
       { event: "SSC CHSL 2025 Exam Date", date: "July-August 2025" },
     ],
-  }
-  , vacancyData: {
+  },
+  vacancyData: {
     title: "SSC CHSL 2025 Vacancy",
     description:
       "The Staff Selection Commission (SSC) has not yet revealed the number of vacancies to be filled this year for the post of Lower Division Clerk (LDC), Junior Secretariat Assistant (JSA), Postal Assistant (PA), Sorting Assistant (SA), and Data Entry Operator (DEO). But looking at the past year trends, we can expect the vacancies to be around 4000 (approximately). Here is the past year trends of SSC CHSL Vacancy from 2018 till 2024.",
     tableHeaders: ["Year", "LDC/ JSA", "PA/ SA", "DEO", "Court Clerk", "Total"],
     tableData: [
-      { year: "2025", ldcJsa: "TBA", paSa: "TBA", deo: "TBA", courtClerk: "TBA", total: "TBA" },
-      { year: "2024", ldcJsa: "TBA", paSa: "--", deo: "TBA", courtClerk: "--", total: "3712" },
-      { year: "2023", ldcJsa: "--", paSa: "--", deo: "--", courtClerk: "NA", total: "1600" },
-      { year: "2022", ldcJsa: "3185", paSa: "898", deo: "42", courtClerk: "601", total: "4726" },
-      { year: "2021", ldcJsa: "3181", paSa: "3598", deo: "26", courtClerk: "88", total: "4893" },
-      { year: "2020", ldcJsa: "2359", paSa: "3880", deo: "02", courtClerk: "56", total: "5789" },
-      { year: "2019", ldcJsa: "2648", paSa: "3222", deo: "02", courtClerk: "917", total: "6789" },
-      { year: "2018", ldcJsa: "898", paSa: "2359", deo: "02", courtClerk: "NA", total: "3259" },
+      {
+        year: "2025",
+        ldcJsa: "TBA",
+        paSa: "TBA",
+        deo: "TBA",
+        courtClerk: "TBA",
+        total: "TBA",
+      },
+      {
+        year: "2024",
+        ldcJsa: "TBA",
+        paSa: "--",
+        deo: "TBA",
+        courtClerk: "--",
+        total: "3712",
+      },
+      {
+        year: "2023",
+        ldcJsa: "--",
+        paSa: "--",
+        deo: "--",
+        courtClerk: "NA",
+        total: "1600",
+      },
+      {
+        year: "2022",
+        ldcJsa: "3185",
+        paSa: "898",
+        deo: "42",
+        courtClerk: "601",
+        total: "4726",
+      },
+      {
+        year: "2021",
+        ldcJsa: "3181",
+        paSa: "3598",
+        deo: "26",
+        courtClerk: "88",
+        total: "4893",
+      },
+      {
+        year: "2020",
+        ldcJsa: "2359",
+        paSa: "3880",
+        deo: "02",
+        courtClerk: "56",
+        total: "5789",
+      },
+      {
+        year: "2019",
+        ldcJsa: "2648",
+        paSa: "3222",
+        deo: "02",
+        courtClerk: "917",
+        total: "6789",
+      },
+      {
+        year: "2018",
+        ldcJsa: "898",
+        paSa: "2359",
+        deo: "02",
+        courtClerk: "NA",
+        total: "3259",
+      },
     ],
   },
   eligibilityData: {
@@ -145,56 +274,72 @@ export const sscchslExamData = {
     },
   },
   ageLimitData: {
-    title: "Age Limit",
+    title: "SSC CHSL Age Limit",
     description: `
       1. The age of candidates must be between 18 to 27 years.
       2. **SSC CHSL Age Relaxation**: As per government guidelines, age relaxation in SSC CHSL is given in the table below:
     `,
-    tableHeaders: ["No.", "Category", "Permissible age relaxation beyond the upper age limit"],
+    tableHeaders: [
+      "No.",
+      "Category",
+      "Permissible age relaxation beyond the upper age limit",
+    ],
     tableData: [
       { no: "01", category: "SC/ ST", ageRelaxation: "5 years" },
       { no: "02", category: "OBC", ageRelaxation: "3 years" },
-      { no: "03", category: "Persons with Disabilities (PwD-Unreserved)", ageRelaxation: "10 years" },
+      {
+        no: "03",
+        category: "Persons with Disabilities (PwD-Unreserved)",
+        ageRelaxation: "10 years",
+      },
       { no: "04", category: "PwD + OBC", ageRelaxation: "13 years" },
       { no: "05", category: "PwD + SC/ ST", ageRelaxation: "15 years" },
       {
         no: "06",
         category: "Ex-Servicemen",
-        ageRelaxation: "03 years after deduction of the military service rendered from the actual age as on the closing date.",
+        ageRelaxation:
+          "03 years after deduction of the military service rendered from the actual age as on the closing date.",
       },
       {
         no: "07",
-        category: "Candidates who had ordinarily been domiciled in the State of Jammu & Kashmir during the period from 1st January 1980 to 31st December 1989.",
+        category:
+          "Candidates who had ordinarily been domiciled in the State of Jammu & Kashmir during the period from 1st January 1980 to 31st December 1989.",
         ageRelaxation: "5 years",
       },
       {
         no: "08",
-        category: "Defence Personnel is disabled in operation during hostilities with any foreign country or in a disturbed area and released as a consequence thereof.",
+        category:
+          "Defence Personnel is disabled in operation during hostilities with any foreign country or in a disturbed area and released as a consequence thereof.",
         ageRelaxation: "3 years",
       },
       {
         no: "09",
-        category: "Defence Personnel is disabled in operation during hostilities with any foreign country or in a disturbed area and released as a consequence thereof (SC/ ST).",
+        category:
+          "Defence Personnel is disabled in operation during hostilities with any foreign country or in a disturbed area and released as a consequence thereof (SC/ ST).",
         ageRelaxation: "8 years",
       },
       {
         no: "10",
-        category: "Central Government Civilian Employees: Those who have rendered not less than 3 years of regular and continuous service as of the closing date for receipt of online applications.",
+        category:
+          "Central Government Civilian Employees: Those who have rendered not less than 3 years of regular and continuous service as of the closing date for receipt of online applications.",
         ageRelaxation: "Up to 40 years of age",
       },
       {
         no: "11",
-        category: "Central Government Civilian Employees: Those who have rendered not less than 3 years of regular and continuous service as of the closing date for receipt of online applications (SC/ ST).",
+        category:
+          "Central Government Civilian Employees: Those who have rendered not less than 3 years of regular and continuous service as of the closing date for receipt of online applications (SC/ ST).",
         ageRelaxation: "Up to 45 years of age",
       },
       {
         no: "12",
-        category: "Widows/ Divorced Women/ Women judicially separated and who are not remarried.",
+        category:
+          "Widows/ Divorced Women/ Women judicially separated and who are not remarried.",
         ageRelaxation: "Up to 35 years of age",
       },
       {
         no: "13",
-        category: "Widows/ Divorced Women/ Women judicially separated and who are not remarried (SC/ ST).",
+        category:
+          "Widows/ Divorced Women/ Women judicially separated and who are not remarried (SC/ ST).",
         ageRelaxation: "Up to 40 years of age",
       },
     ],
@@ -220,13 +365,68 @@ export const sscchslExamData = {
       "The SSC CHSL Tier 1 Exam Pattern 2024 includes 100 questions for 200 marks, divided into four sections (25 questions, 50 marks each). The exam lasts 60 minutes, with normalization for multiple shifts. There is a negative marking of 0.5 mark for wrong answers.",
     tableHeaders: ["Sections", "No. of Questions", "Total Marks"],
     tableData: [
-      { section: "General Intelligence and Reasoning", questions: "25", marks: "50" },
+      {
+        section: "General Intelligence and Reasoning",
+        questions: "25",
+        marks: "50",
+      },
       { section: "General Awareness", questions: "25", marks: "50" },
       { section: "Quantitative Aptitude", questions: "25", marks: "50" },
       { section: "English Comprehension", questions: "25", marks: "50" },
     ],
     totalQuestions: "100",
     totalMarks: "200",
+    syllabusData: {
+      "General Intelligence": [
+        "Logical Reasoning",
+        "Alphanumeric Series",
+        "Ranking/Direction/Alphabet Test",
+        "Data Sufficiency",
+        "Coded Inequalities",
+        "Seating Arrangement",
+        "Puzzle",
+        "Tabulation",
+        "Syllogism",
+        "Blood Relations",
+        "Input-Output Coding-Decoding",
+        "Coding Decoding",
+      ],
+      "Quantitative Aptitude": [
+        "Simplification",
+        "Profit and Loss",
+        "Mixtures & Allegations",
+        "Simple Interest & Compound Interest & Surds & Indices",
+        "Work & Time",
+        "Time & Distance",
+        "Mensuration – Cylinder, Cone, Sphere",
+        "Data Interpretation",
+        "Ratio and Proportion, Percentage",
+        "Number Systems",
+        "Sequence & Series",
+        "Permutation, Combination & Probability",
+      ],
+      "English Language": [
+        "Reading Comprehension",
+        "Cloze Test",
+        "Para jumbles",
+        "Miscellaneous",
+        "Fill in the blanks",
+        "Multiple Meaning/Error Spotting",
+        "Paragraph Completion",
+        "One Word Substitution",
+        "Active and Passive Voice",
+      ],
+      "General Awareness": [
+        "History",
+        "Culture",
+        "Geography",
+        "Economic Scene",
+        "General Policy",
+        "Scientific Research",
+        "Awards and Honors",
+        "Books and Authors",
+      ],
+    },
   },
   tier2ExamPattern: {
     title: "SSC CHSL Tier 2 Exam Pattern",
@@ -298,12 +498,210 @@ export const sscchslExamData = {
         time: "15 minutes 10 minutes",
       },
     ],
+    syllabusData: [
+      {
+        chapter: "Number Systems",
+        topics: [
+          "Computation of Whole Number",
+          "Decimal and Fractions",
+          "Relationship between numbers",
+        ],
+      },
+      {
+        chapter: "Fundamental arithmetical operations",
+        topics: [
+          "Percentages",
+          "Ratio and Proportion",
+          "Square roots",
+          "Averages",
+          "Interest (Simple and Compound)",
+          "Profit and Loss",
+          "Discount",
+          "Partnership Business",
+          "Mixture and Alligation",
+          "Time and distance",
+          "Time and work",
+        ],
+      },
+      {
+        chapter: "Algebra",
+        topics: [
+          "Basic algebraic identities of School Algebra and Elementary surds (simple problems)",
+          "Graphs of Linear Equations",
+        ],
+      },
+
+      {
+        chapter: "Geometry",
+        topics: [
+          "Triangle and its various kinds of centres",
+          "Congruence and similarity of triangles",
+          "Circle and its chords",
+          "Tangents",
+          "Angles subtended by chords of a circle",
+          "Common tangents to two or more circles",
+        ],
+      },
+      {
+        chapter: "Mensuration",
+        topics: [
+          "Triangle",
+          "Quadrilaterals",
+          "Regular Polygons",
+          "Circle",
+          "Right Prism",
+          "Right Circular Cone",
+          "Right Circular Cylinder",
+          "Sphere",
+          "Hemispheres",
+          "Rectangular Parallelepiped",
+          "Regular Right Pyramid with triangular or square Base",
+        ],
+      },
+      {
+        chapter: "Trigonometry",
+        topics: [
+          "Trigonometric ratios",
+          "Complementary angles",
+          "Height and distances (simple problems only)",
+          "Standard Identities like sin2θ + cos2θ = 1 etc.",
+          "Use of Tables and Graphs",
+        ],
+      },
+      {
+        chapter: "Statistics and Probability",
+        topics: [
+          "Histogram",
+          "Frequency polygon",
+          "Bar-diagram",
+          "Pie-chart",
+          "Measures of central tendency: mean, median, mode, standard deviation",
+          "Calculation of simple probabilities",
+        ],
+      },
+    ],
+    generalIntelligence: {
+      title: "Syllabus for General Intelligence and Reasoning",
+      topics: [
+        "Semantic Analogy",
+        "Symbolic operations",
+        "Symbolic/ Number Analogy",
+        "Trends, Figural Analogy",
+        "Space Orientation",
+        "Venn Diagrams",
+        "Semantic Classification",
+        "Symbolic/ Number Classification",
+        "Drawing inferences",
+        "Figural Classification",
+        "Punched hole/ pattern-folding & unfolding",
+        "Semantic Series",
+        "Figural Pattern-folding and completion",
+        "Embedded figures",
+        "Number Series",
+        "Figural Series",
+        "Critical Thinking",
+        "Problem Solving",
+        "Emotional Intelligence",
+        "Social Intelligence",
+        "Word Building",
+        "Coding and de-coding",
+        "Numerical operations",
+      ],
+    },
+    englishAptitude: {
+      title: "Syllabus for English Language",
+      topics: [
+        "Vocabulary",
+        "Grammar",
+        "Sentence structure",
+        "Synonyms/Homonyms",
+        "Antonyms",
+        "Spot the Error",
+        "Fill in the Blanks",
+        "Spellings/ Detecting mis-spelt words",
+        "Idioms and Phrases",
+        "One-word substitution",
+        "Improvement of Sentences",
+        "Active/ Passive Voice of Verbs",
+        "Conversion into Direct/Indirect narration",
+        "Shuffling of Sentence parts",
+        "Shuffling of Sentences in a passage",
+        "Cloze Passage",
+        "Comprehension Passage",
+      ],
+    },
+    generalAwareness: {
+      title: "SGeneral Awareness",
+      topics: [
+        "India and its neighbouring countries especially pertaining to History, Culture, Geography, Economic Scene, General Policy & Scientific Research",
+        "Science",
+        "Current Affairs",
+        "Books and Authors",
+        "Sports",
+        "Important Schemes",
+        "Important Days",
+        "Portfolio",
+        "People in News",
+        "Static GK",
+      ],
+    },
+    quantitativeAptitude: {
+      title: "Syllabus for Quantitative Aptitude",
+      topics: [
+        "Computation of whole numbers",
+        "Decimals",
+        "Fractions",
+        "Relationships between numbers",
+        "Profit and Loss",
+        "Discount",
+        "Partnership Business",
+        "Mixture and Alligation",
+        "Time and distance",
+        "Time & Work",
+        "Percentage",
+        "Ratio & Proportion",
+        "Square roots",
+        "Averages",
+        "Interest",
+        "Basic algebraic identities of School Algebra & Elementary surds",
+        "Graphs of Linear Equations",
+        "Triangle and its various kinds of centres",
+        "Congruence and similarity of triangles",
+        "Circle and its chords, tangents, angles subtended by chords of a circle, common tangents to two or more circles",
+        "Triangle",
+        "Quadrilaterals",
+        "Regular Polygons",
+        "Right Prism",
+        "Right Circular Cone",
+        "Right Circular Cylinder",
+        "Sphere",
+        "Heights and Distances",
+        "Histogram",
+        "Frequency polygon",
+        "Bar diagram & Pie chart",
+        "Hemispheres",
+        "Rectangular Parallelepiped",
+        "Regular Right Pyramid with triangular or square base",
+        "Trigonometric ratio",
+        "Degree and Radian Measures",
+        "Standard Identities",
+        "Complementary angles",
+      ],
+    },
   },
   salaryStructure: {
     title: "SSC CHSL Salary After 7th Pay Commission",
     description:
       "SSC has modified the SSC CHSL Salary Structure for all the Posts after the 7th Pay Commission. SSC CHSL Salary structure after the implementation of the 7th Pay Commission in 2017 is given below:",
-    tableHeaders: ["Post", "City", "Basic Pay", "HRA", "TA", "Gross Salary", "In Hand"],
+    tableHeaders: [
+      "Post",
+      "City",
+      "Basic Pay",
+      "HRA",
+      "TA",
+      "Gross Salary",
+      "In Hand",
+    ],
     tableData: [
       {
         post: "DEO",
@@ -419,7 +817,7 @@ export const sscchslExamData = {
       "The candidates who are preparing for the SSC CHSL examination must avail",
     link: {
       text: "SSC CHSL Online Coaching",
-      url: "https://www.adda247.com/ssc-chsl-online-coaching", // Replace with actual link
+      url: "https://live.winnersinstitute.in/courses/491-ssc-chsl-2025-complete-online-course-chsl1224", // Replace with actual link
     },
     additionalText:
       "to prepare strategically. The online coaching by Adda247 provides structured classes for the candidates whether live or recorded, test papers, doubt-solving activities, study planners, etc.",
@@ -431,7 +829,7 @@ export const sscchslExamData = {
       "The SSC CHSL Mock Test 2025 by Adda247 is designed to help candidates prepare effectively for the exam by providing practice questions based on the latest exam pattern.",
     link: {
       text: "SSC CHSL Mock Test 2025",
-      url: "https://www.adda247.com/ssc-chsl-mock-test", // Replace with actual link
+      url: "https://live.winnersinstitute.in/test-series/207-ssc-chsl-mock-test-tier-i-tier-ii-2024", // Replace with actual link
     },
     descriptionPart2:
       "These tests simulate the actual exam environment, allowing candidates to assess their strengths, identify weak areas, and improve time management skills for better performance.",
@@ -453,7 +851,10 @@ export const sscchslExamData = {
         rightLink: { text: "SSC CHSL Exam Pattern", url: "https://link6.com" },
       },
       {
-        leftLink: { text: "SSC CHSL Online Coaching", url: "https://link7.com" },
+        leftLink: {
+          text: "SSC CHSL Online Coaching",
+          url: "https://link7.com",
+        },
         rightLink: { text: "SSC CHSL Mock Test", url: "https://link8.com" },
       },
     ],

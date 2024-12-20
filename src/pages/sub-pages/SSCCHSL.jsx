@@ -3,7 +3,11 @@ import React, { useState, useEffect } from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
-import { sscchslData, sscchslExamData } from "../../data/ssc-chsl";
+import {
+  sscchslData,
+  sscchslExamData,
+  tableOfContentsData,
+} from "../../data/ssc-chsl";
 import { classes, testSeries, sscbooksdata } from "../../data/sscData";
 import Card from "../../components/card/Card";
 
@@ -12,7 +16,8 @@ const SSCCHSL = () => {
   const { about, notification } = sscchslExamData;
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
-
+  // State to track whether the table is open or closed
+  const [isOpen, setIsOpen] = useState(true);
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -22,6 +27,11 @@ const SSCCHSL = () => {
       duration: 1000,
     });
   }, []);
+  // Function to toggle the state
+  const toggleTable = () => {
+    setIsOpen(!isOpen);
+  };
+
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index); // Toggle between open and closed
   };
@@ -73,15 +83,103 @@ const SSCCHSL = () => {
                 <p className="text-gray-700 leading-relaxed">{content}</p>
               </div>
             </div>
+            {/* Table of Contents */}
+            <div className="border border-gray-300 rounded-md p-4 mt-4">
+              {/* Button to toggle visibility */}
+              <div className="flex justify-between items-center">
+                <h2 className="font-semibold text-lg mb-2">
+                  Table of Contents
+                </h2>
+                <button
+                  onClick={toggleTable}
+                  className="text-gray-600 hover:text-gray-800 flex items-center"
+                >
+                  {/* Open/Close icons */}
+                  {isOpen ? (
+                    <svg
+                      style={{
+                        fill: "#999",
+                        color: "#999",
+                        marginRight: "8px",
+                      }}
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="list-377408"
+                      width="20px"
+                      height="20px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  ) : (
+                    <svg
+                      style={{
+                        fill: "#999",
+                        color: "#999",
+                        marginRight: "8px",
+                      }}
+                      className="arrow-unsorted-368013"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10px"
+                      height="10px"
+                      viewBox="0 0 24 24"
+                      version="1.2"
+                      baseProfile="tiny"
+                    >
+                      <path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path>
+                    </svg>
+                  )}
+                </button>
+              </div>
+
+              {/* Conditionally render Table of Contents */}
+              <div
+                style={{
+                  maxHeight: isOpen ? "1000px" : "0", // Adjust the maxHeight for smoother transitions
+                  overflow: "hidden",
+                  transition: "max-height 0.3s ease", // Smooth transition on toggle
+                }}
+              >
+                <ul className="list-decimal ml-6 space-y-2 text-sm">
+                  {tableOfContentsData?.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href={item.link}
+                        className="text-red-600 hover:underline"
+                      >
+                        {item.title}
+                      </a>
+                      {item.subItems && (
+                        <ul className="list-decimal ml-6 space-y-2">
+                          {item.subItems.map((subItem, subIndex) => (
+                            <li key={subIndex}>
+                              <a
+                                href={subItem.link}
+                                className="text-red-600 hover:underline"
+                              >
+                                {subItem.title}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
             {/* What is SSC CHSL Exam? */}
-            <div className="bg-white shadow-md rounded-md p-6 mb-6">
+            <div id="what-is-ssc-chsl-exam" className="bg-white shadow-md rounded-md p-6 mb-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {about.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">{about.content}</p>
             </div>
             {/* Third Section: SSC CHSL Notification */}
-            <div className="bg-white shadow-md rounded-md p-6 mb-6">
+            <div id="ssc-chsl-2025-notification" className="bg-white shadow-md rounded-md p-6 mb-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {notification.title}
               </h2>
@@ -113,7 +211,7 @@ const SSCCHSL = () => {
               </p>
             </div>
             {/* SSC CHSL 2025 Exam- Overview */}
-            <div className="bg-white shadow-md rounded-md p-6">
+            <div id="ssc-chsl-2025-exam-overview" className="bg-white shadow-md rounded-md p-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.overview?.title}
               </h2>
@@ -143,7 +241,7 @@ const SSCCHSL = () => {
               </div>
             </div>
             {/* SSC CHSL 2025 Important Dates */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-chsl-2025-important-dates" className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.importantDatesData?.title}
@@ -190,7 +288,7 @@ const SSCCHSL = () => {
               </div>
             </div>
             {/* SSC CHSL 2025 Vacancy */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-chsl-2025-vacancy" className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.vacancyData?.title}
@@ -253,7 +351,7 @@ const SSCCHSL = () => {
               </div>
             </div>
             {/* SSC CHSL 2025 Eligibility Criteria */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-chsl-2025-eligibility-criteria" className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.eligibilityData?.title}
@@ -297,7 +395,7 @@ const SSCCHSL = () => {
               </ul>
             </div>
             {/* Age Limit Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-chsl-2025-age-limit" className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.ageLimitData?.title}
@@ -367,7 +465,7 @@ const SSCCHSL = () => {
               </ul>
             </div>
             {/* SSC CHSL 2025 Exam Pattern */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-chsl-2025-exam-pattern" className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.examPattern?.title}
@@ -379,7 +477,7 @@ const SSCCHSL = () => {
               </p>
             </div>
             {/* SSC CHSL Tier 1 Exam Pattern */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-chsl-tier-1-exam-pattern" className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.tier1ExamPattern?.title}
@@ -444,9 +542,53 @@ const SSCCHSL = () => {
                   </tfoot>
                 </table>
               </div>
+              {/* SSC CHSL Tier-1 Syllabus */}
+              <div id="ssc-chsl-tier-1-syllabus" className="overflow-x-auto mt-6">
+                <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
+                  SSC CHSL Tier-1 Syllabus
+                </h2>
+                <table className="table-auto border-collapse border border-gray-300 w-full text-left">
+                  <thead>
+                    <tr className="bg-gray-200">
+                      {Object.keys(
+                        sscchslExamData?.tier1ExamPattern?.syllabusData
+                      ).map((header, index) => (
+                        <th
+                          key={index}
+                          className="border border-gray-300 px-4 py-2 font-semibold text-sm"
+                        >
+                          {header}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {Array.from({
+                      length: Math.max(
+                        ...Object.values(
+                          sscchslExamData?.tier1ExamPattern?.syllabusData
+                        ).map((v) => v.length)
+                      ),
+                    }).map((_, rowIndex) => (
+                      <tr key={rowIndex} className="hover:bg-gray-100">
+                        {Object.values(
+                          sscchslExamData?.tier1ExamPattern?.syllabusData
+                        ).map((category, colIndex) => (
+                          <td
+                            key={colIndex}
+                            className="border border-gray-300 px-4 py-2 text-sm"
+                          >
+                            {category[rowIndex] || ""}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
             {/* SSC CHSL Tier 2 Exam Pattern */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-chsl-tier-2-exam-pattern"  className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.tier2ExamPattern?.title}
@@ -510,9 +652,104 @@ const SSCCHSL = () => {
                   </tbody>
                 </table>
               </div>
+              {/* SSC CHSL Tier-II Syllabus */}
+              <div id="ssc-chsl-tier-2-syllabus" className="overflow-x-auto mt-6 mb-6">
+                <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
+                  SSC CHSL Tier-2 Syllabus
+                </h2>
+                <table className="table-auto border-collapse border border-gray-300 w-full text-left">
+                  <thead>
+                    <tr className="bg-gray-200">
+                      <th className="border border-gray-300 px-4 py-2 font-semibold text-sm">
+                        Chapter
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2 font-semibold text-sm">
+                        Topics
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {sscchslExamData?.tier2ExamPattern?.syllabusData.map(
+                      (item, index) => (
+                        <tr key={index} className="hover:bg-gray-100">
+                          <td className="border border-gray-300 px-4 py-2 text-sm font-medium">
+                            {item.chapter}
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2 text-sm">
+                            <ul className="list-disc pl-5">
+                              {item.topics.map((topic, idx) => (
+                                <li key={idx}>{topic}</li>
+                              ))}
+                            </ul>
+                          </td>
+                        </tr>
+                      )
+                    )}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* Reasoning and General Intelligence: Verbal and non-verbal type*/}
+              <div className="bg-white rounded-md p-6 mt-6">
+                <h6 className="underline font-semibold text-lg mb-4">
+                  {
+                    sscchslExamData?.tier2ExamPattern?.generalIntelligence
+                      ?.title
+                  }
+                </h6>
+                <ul className="list-disc pl-6 space-y-2">
+                  {sscchslExamData?.tier2ExamPattern?.generalIntelligence?.topics.map(
+                    (topic, index) => (
+                      <li key={index}>{topic}</li>
+                    )
+                  )}
+                </ul>
+              </div>
+              {/* English Language and Comprehension */}
+              <div className="bg-white rounded-md p-6 ">
+                <h6 className="underline font-semibold text-lg mb-4">
+                  {sscchslExamData?.tier2ExamPattern?.englishAptitude?.title}
+                </h6>
+                <ul className="list-disc pl-6 space-y-2">
+                  {sscchslExamData?.tier2ExamPattern?.englishAptitude?.topics.map(
+                    (topic, index) => (
+                      <li key={index}>{topic}</li>
+                    )
+                  )}
+                </ul>
+              </div>
+              {/* General Awareness */}
+              <div className="bg-white rounded-md p-6 ">
+                <h6 className="underline font-semibold text-lg mb-4">
+                  {sscchslExamData?.tier2ExamPattern?.generalAwareness?.title}
+                </h6>
+                <ul className="list-disc pl-6 space-y-2">
+                  {sscchslExamData?.tier2ExamPattern?.generalAwareness?.topics.map(
+                    (topic, index) => (
+                      <li key={index}>{topic}</li>
+                    )
+                  )}
+                </ul>
+              </div>
+              {/* Syllabus for Quantitative Aptitude */}
+              <div className="bg-white rounded-md p-6 ">
+                <h6 className="underline font-semibold text-lg mb-4">
+                  {
+                    sscchslExamData?.tier2ExamPattern?.quantitativeAptitude
+                      ?.title
+                  }
+                </h6>
+                <ul className="list-disc pl-6 space-y-2">
+                  {sscchslExamData?.tier2ExamPattern?.quantitativeAptitude?.topics.map(
+                    (topic, index) => (
+                      <li key={index}>{topic}</li>
+                    )
+                  )}
+                </ul>
+              </div>
             </div>
             {/* SSC CHSL Salary After 7th Pay Commission */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-chsl-salary-after-7th-pay-commission" className="bg-white shadow-md rounded-md p-6 mt-6">
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscchslExamData?.salaryStructure?.title}
@@ -763,7 +1000,7 @@ const SSCCHSL = () => {
               </div> */}
             </div>{" "}
             {/* Frequently Asked Questions Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-chsl-2025-faqs" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
                 {sscchslExamData.faq.title}
               </h3>
