@@ -103,8 +103,7 @@ export const sscchslExamData = {
     title: "Frequently Asked Questions",
     questions: [
       {
-        question:
-          "What percentage is required in the 12th Class for SSC CHSL?",
+        question: "What percentage is required in the 12th Class for SSC CHSL?",
         answer: `
                There is no percentage requirement; anyone who has passed the 12th class can apply for the SSC CHSL.
             `,
@@ -589,6 +588,16 @@ export const sscchslExamData = {
         ],
       },
     ],
+    negativemarking: {
+      title: "SSC CHSL Negative Marking",
+      description:
+        "Candidates often have questions about the negative marking norms in the SSC CHSL Exam. As per the SSC CHSL Exam pattern:",
+      tips: [
+        "There is a deduction of 0.50 marks for every wrong answer.",
+        "In Sections 1, 2, and the first Module of Section 3 under Tier 2, there is a negative marking of 1 mark for every wrong answer.",
+        "Hence, candidates must prioritize accuracy in their answers. On the exam day, it’s advisable to read the question paper carefully before attempting the questions to minimize deductions and achieve better scores.",
+      ],
+    },
     generalIntelligence: {
       title: "Syllabus for General Intelligence and Reasoning",
       topics: [
