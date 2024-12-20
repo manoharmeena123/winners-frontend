@@ -1,19 +1,19 @@
 export const ssccglData = {
-  title: "SSC CGL 2025: Notification, Registration Dates Out, Exam Date",
+  title: "SSC CGL 2025: Notification, Registration, and Exam Dates Announced",
   intro: `
-      The Staff Selection Commission (SSC) has released the SSC CGL 2025 Notification release date and registration 
-      will commence from 22nd April 2025 on the official website at 
-      www.ssc.gov.in. Go through this complete guide for the SSC CGL 2025 Exam and get details about Exam Date, 
-      Registration Process, How to Apply, Age Limit, Qualification, Salary, Exam Pattern, and other details here.
+      The Staff Selection Commission (SSC) has officially announced the SSC CGL 2025 Notification, with registrations set 
+      to begin on 22nd April 2025. Candidates can apply through the official website at 
+      www.ssc.gov.in. This guide provides comprehensive details on the SSC CGL 2025 Exam, covering key aspects such as 
+      Exam Dates, Application Process, Eligibility Criteria, Salary Structure, Exam Pattern, and much more.
     `,
   content: `
-      The Staff Selection Commission (SSC) conducts the SSC CGL Exam every year to select eligible candidates for 
-      Various Group B and C services such as Income Tax Officer, Excise Custom Officer, Accountant, AAO, Junior Statistical Officer, etc. 
-      Selected candidates will be posted at various departments, organisations, and ministries under the Government of India. 
-      This is one of the most prestigious jobs which offers handsome salary and career stability and more than 30 lakh candidates 
-      apply for this exam from all over the country. This page offers a complete guide to the SSC CGL Exam 2025 including 
-      notification release date, registration, age limit, qualification, exam pattern, exam date, factors and essentials to 
-      qualify this exam, etc. Bookmark this page for all latest updates and information regarding the upcoming SSC CGL Exam.
+      The SSC CGL Exam, conducted annually by the Staff Selection Commission, is one of the most sought-after exams in India, 
+      aimed at recruiting candidates for various Group B and C positions. These include prestigious roles such as Income Tax 
+      Officer, Excise and Customs Officer, Accountant, AAO, Junior Statistical Officer, and more. Selected candidates will be 
+      appointed to different departments, organizations, and ministries under the Government of India. With a reputation for 
+      providing attractive salaries, job security, and career growth, this exam sees participation from over 30 lakh aspirants 
+      nationwide. This page is your one-stop guide to SSC CGL 2025, offering insights into the notification, registration 
+      process, eligibility, exam dates, and strategies for success. Stay tuned for the latest updates and resources.
     `,
   officialWebsite: "https://www.ssc.gov.in",
 };
@@ -21,18 +21,23 @@ export const ssccglData = {
 // sscExamData.js
 export const sscExamData = {
   about: {
+    id: "about-ssc-cgl",
     title: "About SSC CGL 2025 Exam",
     content: `
-        The SSC CGL stands for Staff Selection Commission Combined Graduate Level. 
-        The Commission conducts this particular exam every year for Graduate level posts mentioned above 
-        and candidates can choose their post preferences while filling out the registration process. 
-        The selection of the candidates is mainly done through 2 stages: Tier 1 and Tier 2. 
-        Tier 1 is qualifying in nature whereas marks obtained in Tier 2 will be considered for Final Merit List. 
-        This exam offers a great opportunity to get a Central Govt Job in India which has its own perks and benefits. 
-        Candidates who have a Bachelor's degree in any stream can apply for this exam given that they are within the age limit. 
-        Learn more about the SSC CGL Notification 2025 release date and how to register in the below sections.
-      `,
+          The Staff Selection Commission Combined Graduate Level (SSC CGL) Exam is an annual recruitment process 
+          for graduate-level posts in various central government departments and ministries. 
+          Candidates can select their preferred posts during registration. 
+  
+          The examination process consists of two key stages: Tier 1 and Tier 2. 
+          Tier 1 is a qualifying stage, while the final merit list is based on Tier 2 marks. 
+          This exam is a gateway to prestigious Central Government jobs, offering excellent salaries, 
+          career growth, and additional benefits. 
+  
+          To be eligible, candidates must hold a Bachelor’s degree in any discipline and meet the prescribed age criteria. 
+          Further details on the SSC CGL 2025 notification, registration, and important updates are provided in the sections below.
+        `,
   },
+
   notification: {
     title: "SSC CGL 2025 Notification",
     content: `
@@ -49,124 +54,96 @@ export const sscExamData = {
   highlights: {
     title: "SSC CGL 2025 Exam-Highlights",
     content:
-      "To stay ahead in your preparation for the SSC CGL Exam 2025, candidates must be fully aware of the exam because SSC CGL is the most competitive and sought-after job and lakhs of candidates apply for Group B and C posts. Check major highlights of the exam below.",
+      "SSC CGL Exam 2025 remains one of the most sought-after opportunities for candidates aspiring to secure Group B and C posts. With lakhs of applicants every year, staying informed about the exam's key details is essential for effective preparation. Explore the major highlights below.",
   },
   importantDates: {
     title: "SSC CGL Recruitment 2025: Important Dates",
-    content: `
-          As per the official SSC Calendar 2025, the important dates for SSC CGL Recruitment 2025 are as follows: 
-          The SSC CGL Notification 2025 will be released on 22nd April 2025 and the application process will commence 
-          on the same day and it will continue till 21st May 2025. Also, the Tier 1 exam will be conducted in June-July 2025. 
-          Check other dates below.
-        `,
+    content:
+      "According to the SSC Calendar 2025, the SSC CGL Notification will be released on 22nd April 2025, marking the start of the application process, which will remain open until 21st May 2025. The Tier 1 exam is scheduled for June-July 2025. Find other key dates below.",
   },
   vacancy: {
     title: "SSC CGL Vacancy 2025",
-    content: `
-          The Staff Selection Commission (SSC) will notify the SSC CGL Vacancy 2025 along with the official notification. 
-          The vacancy will be released for Group B and C services which include posts such as AAO, JSO, Excise Inspector, 
-          Income Tax Inspector, and so on. Below we have presented previous year vacancies as released by the SSC from 
-          the year 2017 till 2024. You can take an idea from the table below.
-        `,
+    content:
+      "The SSC will announce the SSC CGL Vacancy 2025 details with the official notification. Vacancies will be for Group B and C positions, including roles like AAO, JSO, Excise Inspector, and Income Tax Inspector. Below, we’ve provided a summary of vacancies from 2017 to 2024 for reference.",
   },
   registration: {
     title: "SSC CGL 2025 Registration",
-    content: `
-              The registration process for the SSC CGL 2025 exam will begin on 22nd April 2025 and end on 21st May 2025. 
-              Candidates can apply online through the official SSC website. It is important to complete the application 
-              within the specified dates to be eligible for this national-level recruitment exam for government posts. 
-              The mode of application submission is completely online. The process includes registration, application form fill-up, 
-              upload of documents, and application fee payment.
-            `,
+    content:
+      "The registration for the SSC CGL 2025 exam will open on 22nd April 2025 and close on 21st May 2025. Candidates must apply online through the official SSC website to be eligible for this prestigious national-level exam for government positions. The application process includes registration, form submission, document upload, and payment of the application fee, all to be completed within the given timeframe.",
   },
   applicationFee: {
     title: "SSC CGL 2025 Application Fee",
-    content: `
-          The required SSC CGL Application Fee is Rs 100 and there are No Fees to be paid by female, SC, ST, Physically Handicapped, 
-          and Ex-servicemen candidates for the SSC CGL Exam.
-        `,
-    exemption: `
-          Exemption: No fee must be paid by female, SC, ST, Physically Handicapped, and Ex-Servicemen candidates.
-        `,
+    content:
+      "The SSC CGL 2025 application fee is Rs 100, with no fee required for female candidates, SC, ST, physically handicapped, and ex-servicemen.",
+    exemption:
+      "Exemption: Female candidates, SC, ST, Physically Handicapped, and Ex-servicemen candidates are exempt from paying the application fee.",
     instructions: [
-      "Applications fee should be paid only through SBI either in the form of challan or through SBI Net Banking or any other bank Credit/Debit Card. Challan form will be generated online.",
-      "To pay a fee in cash, the candidate should take the printout of the challan generated online after the completion of Part-1 registration. Deposit the requisite fee in any branch of SBI and then continue with the Part-2 registration.",
-      "Those candidates who want to pay online can go directly to part-2 registration after completion of Part-1 registration. Candidate must supply registration number and date of birth to continue to Part-2 registration.",
+      "The application fee must be paid through SBI either in the form of challan, SBI Net Banking, or any bank’s Credit/Debit Card. The challan form can be generated online.",
+      "To pay via cash, candidates must print the challan generated after Part-1 registration, deposit the fee in any SBI branch, and then proceed with Part-2 registration.",
+      "Candidates opting for online payment can directly proceed to Part-2 registration after completing Part-1 by providing their registration number and date of birth.",
     ],
   },
   signatureSpecification: {
     title: "SSC CGL Signature Specification",
-    content: `
-          The candidates can follow the signature specification to apply for the SSC CGL. 
-          The signature is an important part of the document list which the candidates need to provide.
-        `,
+    content:
+      "Candidates must follow the signature specifications outlined to apply for the SSC CGL. The signature is a crucial part of the document list that candidates are required to provide.",
   },
   postPreference: {
     title: "Steps to Fill SSC CGL 2025 Post Preference",
-    content: `
-              Here’s how the candidates can fill the SSC CGL 2025 Post Preference:
-            `,
+    content: 
+      "Follow these steps to correctly fill the SSC CGL 2025 Post Preference and select a role that aligns with your career goals:",
     steps: [
-      "Step 1: The SSC CGL offers the opportunity to apply for more than 30 different job types, providing a broad range of options to consider. Each ministry and department presents its own unique challenges and opportunities, so it's important to choose your preferences thoughtfully.",
-      "Step 2: The job location is also crucial, as the advantages of working in urban and rural areas differ significantly. Urban postings might be more suitable if you are career-oriented. Conversely, if you prefer a more peaceful environment, a rural posting might be a better fit for you.",
-      "Step 3: The salary for each job varies and is influenced by factors such as seniority, location, and responsibilities. Additionally, both monetary and non-monetary benefits differ across positions. Therefore, it’s important to review the salary and benefits of each role before applying.",
-      "Step 4: Even if other factors align, you might not find job satisfaction if the position doesn’t interest you. Apply for a role that you would genuinely enjoy working in.",
+      "Step 1: SSC CGL provides over 30 job options across various ministries and departments. Carefully evaluate the roles and select preferences that match your aspirations and skills.",
+      "Step 2: Consider the job location as it impacts lifestyle and growth. Urban postings may offer career-oriented opportunities, while rural postings can provide a calmer work environment.",
+      "Step 3: Review the salary structure, including monetary and non-monetary benefits, as these vary by role, seniority, and location.",
+      "Step 4: Prioritize job satisfaction. Choose a position that aligns with your interests and passion to ensure long-term career contentment."
     ],
   },
+  
   eligibilityCriteria: {
     title: "SSC CGL 2025 Eligibility Criteria",
-    content: `
-              The eligibility criteria for the SSC CGL exam is provided by the commission in the official notification. 
-              It mainly includes age limit, qualification, nationality, etc. As there are a huge number of vacancies, 
-              it may require different qualifications and age limits. So, candidates are advised to read the entire 
-              notification for correct details.
-            `,
+    content: 
+      "The SSC CGL eligibility criteria encompass various aspects like age limit, educational qualification, and nationality. Since the recruitment spans multiple posts, each may have specific requirements. Candidates must carefully review the official notification for detailed and accurate information.",
     sections: {
       educationalQualification: {
         title: "Educational Qualification",
         points: [
-          "Candidates must hold a bachelor's degree from a recognized university or institution.",
-          "Specific posts may have additional subject-related requirements, such as Statistics or Commerce.",
+          "A bachelor's degree from a recognized university or institution is mandatory for all candidates.",
+          "Certain posts may require specialized qualifications in subjects like Statistics, Commerce, or related fields."
         ],
       },
     },
   },
+  
   ageLimit: {
     title: "SSC CGL Age Limit",
-    content: `
-                  The age limit varies between 18 and 32 years, depending on the post.
-                  Age relaxations apply for reserved categories as per government norms.
-            
-                  SSC offers a variety of government opportunities for candidates seeking respectable jobs in government departments. 
-                  The candidate has found more details about these departments. All these departments have different age limits for 
-                  different posts which are mentioned in the SSC CGL Notification in a detailed manner. Below, the given table 
-                  provides a brief about the SSC CGL Age Limit.
-                `,
+    content: 
+      "The age limit for SSC CGL 2025 varies between 18 and 32 years, depending on the specific post. Reserved category candidates can avail of age relaxations as per government regulations. SSC provides numerous government job opportunities across various departments, each with unique age criteria. For detailed information, candidates should refer to the official SSC CGL notification. A summary of the age limits is provided in the table below.",
   },
+  
   ageLimitOtherPosts: {
     title: "Age Limit for Other Posts",
-    content: `
-          The age limit for other posts including Central Secretariat Services, Ministry of Railways, National Investigation Agency, 
-          and many more has been mentioned in the table given below.
-        `,
+    content: 
+      "The age criteria for posts such as Central Secretariat Services, Ministry of Railways, National Investigation Agency, and others are outlined in the table below. Candidates are advised to review these details for clarity on eligibility.",
   },
+  
   nationality: {
     title: "Nationality",
-    content: `
-          Must be an Indian citizen, a subject of Nepal/Bhutan, or a Tibetan refugee who arrived before January 1, 1962.
-        `,
+    content: 
+      "Candidates must be Indian citizens, subjects of Nepal/Bhutan, or Tibetan refugees who migrated to India before January 1, 1962.",
   },
+  
   selectionProcess: {
     title: "SSC CGL 2025 Selection Process",
-    content: `
-          The SSC CGL selection process consists of multiple tiers to assess candidates' suitability for various government posts:
-        `,
+    content: 
+      "The SSC CGL 2025 selection process involves multiple stages to evaluate candidates' qualifications for government roles.",
     steps: [
-      "Tier-I (Preliminary Exam): Objective type, computer-based exam. Tests General Intelligence, Reasoning, Quantitative Aptitude, English, and General Awareness.",
-      "Tier-II (Main Exam): Computer-based, divided into multiple sections. Includes quantitative aptitude, English language, general studies (finance & economics), and computer proficiency for relevant posts.",
-      "Document Verification: Candidates shortlisted after Tier-II must provide original documents for verification of eligibility.",
+      "Tier-I (Preliminary Exam): A computer-based, objective-type test covering General Intelligence, Reasoning, Quantitative Aptitude, English, and General Awareness.",
+      "Tier-II (Main Exam): A computer-based exam with multiple sections, including Quantitative Aptitude, English Language, General Studies (Finance & Economics), and Computer Proficiency for specific roles.",
+      "Document Verification: Candidates who clear Tier-II must present original documents for eligibility verification.",
     ],
   },
+  
   syllabus: {
     title: "SSC CGL 2024 Syllabus",
     content1: `
@@ -584,139 +561,139 @@ export const sscExamData = {
           "SSC CGL Tier 2 Syllabus - Paper 3 (General Studies-Finance and Economics)",
         content:
           "Paper 3 is only for those students who are applying for the post of Assistant Audit Officer/Assistant Account Officer. (AAO)",
-          moduleTopicsData: [
-            {
-              topic: "Part A: Finance and Accounts (80 marks)",
-              subtopics: [
-                {
-                  topic: "Financial Accounting",
-                  subtopics: [
-                    "Nature and scope",
-                    "Limitations of Financial Accounting",
-                    "Basic concepts and Conventions",
-                    "Generally Accepted Accounting Principles",
-                  ],
-                },
-                {
-                  topic: "Basic concepts of accounting",
-                  subtopics: [
-                    "Distinction between Capital and Revenue Expenditure",
-                    "Depreciation Accounting",
-                    "Valuation of Inventories",
-                    "Single and double entry",
-                    "Books of Original Entry",
-                    "Bank Reconciliation",
-                    "Journal, ledgers",
-                    "Trial Balance",
-                    "Rectification of Errors",
-                    "Manufacturing",
-                    "Trading",
-                    "Profit & Loss Appropriation Accounts",
-                    "Balance Sheet",
-                    "Non-profit organisations Accounts",
-                    "Receipts and Payments and Income & Expenditure Accounts",
-                    "Bills of Exchange",
-                    "Self Balancing Ledgers",
-                  ],
-                },
-              ],
-            },
-            {
-              topic: "Part B: Economics and Governance (120 marks)",
-              subtopics: [
-                {
-                  topic: "Comptroller & Auditor General of India",
-                  subtopics: [
-                    "Constitutional provisions",
-                    "Role and responsibility",
-                  ],
-                },
-                {
-                  topic: "Finance Commission",
-                  subtopics: ["Role and functions"],
-                },
-                {
-                  topic: "Basic Concept of Economics and introduction to Micro Economics",
-                  subtopics: [
-                    "Definition",
-                    "Scope and nature of Economics",
-                    "Methods of economic study",
-                    "Central problems of an economy",
-                    "Production possibilities curve",
-                  ],
-                },
-                {
-                  topic: 'Theory of Demand and Supply',
-                  subtopics: [
-                    'Meaning and determinants of demand',
-                    'Law of demand and Elasticity of demand',
-                    'Price',
-                    'Income and cross elasticity',
-                    'Theory of consumer’s behaviour',
-                    'Marshallian approach and Indifference curve approach',
-                    'Meaning and determinants of supply',
-                    'Law of supply',
-                    'The elasticity of Supply',
-                  ],
-                },
-                {
-                  topic: 'Theory of Production and Cost',
-                  subtopics: [
-                    'Meaning and Factors of production',
-                    'Laws of production- Law of variable proportions and Laws of returns to scale',
-                    'Short-run and long-run production functions',
-                    'Concepts of total, average and marginal product and cost',
-                    'Cost curves: short-run and long-run',
-                    `Producer's equilibrium`,
-                    'Supply curve of the firm and industry',
-                    'Concepts of revenue: total, average and marginal revenue',
-                    `Producer's surplus`,
-                    'Economies and diseconomies of scale',
-                  ],
-                },
-                {
-                  topic: 'Various forms of markets',
-                  subtopics: [
-                    'Perfect Competition',
-                    'Monopoly',
-                    'Monopolistic Competition',
-                    'Oligopoly',
-                    'Price determination in these markets',
-                  ],
-                },
-                {
-                  topic: 'Nature of the Indian Economy',
-                  subtopics: [
-                    'Role of different sectors',
-                    'Role of Agriculture, Industry and Services-their problems and growth',
-                    'National Income of India-Concepts of national income, Different methods of measuring national income',
-                    'Population-Its size, rate of growth and its implication on economic growth',
-                    'Poverty and unemployment- Absolute and relative poverty, types, causes and incidence of unemployment',
-                    'Infrastructure-Energy, Transportation, Communication',
-                  ],
-                },
-                {
-                  topic: 'Economic reforms since 1991',
-                  subtopics: [
-                    'Liberalisation',
-                    'Privatisation',
-                    'Globalisation',
-                    'Disinvestment',
-                  ],
-                },
-                {
-                  topic: 'Monetary/ Fiscal policy',
-                  subtopics: [
-                    'Role and functions of Reserve Bank of India',
-                    'Functions of commercial Banks/RRB/Payment Banks',
-                    'Budget and Fiscal deficits and Balance of payments',
-                    'Fiscal Responsibility and Budget Management Act, 2003',
-                  ],
-                },
-            
-              ],
-            },
-          ]
+        moduleTopicsData: [
+          {
+            topic: "Part A: Finance and Accounts (80 marks)",
+            subtopics: [
+              {
+                topic: "Financial Accounting",
+                subtopics: [
+                  "Nature and scope",
+                  "Limitations of Financial Accounting",
+                  "Basic concepts and Conventions",
+                  "Generally Accepted Accounting Principles",
+                ],
+              },
+              {
+                topic: "Basic concepts of accounting",
+                subtopics: [
+                  "Distinction between Capital and Revenue Expenditure",
+                  "Depreciation Accounting",
+                  "Valuation of Inventories",
+                  "Single and double entry",
+                  "Books of Original Entry",
+                  "Bank Reconciliation",
+                  "Journal, ledgers",
+                  "Trial Balance",
+                  "Rectification of Errors",
+                  "Manufacturing",
+                  "Trading",
+                  "Profit & Loss Appropriation Accounts",
+                  "Balance Sheet",
+                  "Non-profit organisations Accounts",
+                  "Receipts and Payments and Income & Expenditure Accounts",
+                  "Bills of Exchange",
+                  "Self Balancing Ledgers",
+                ],
+              },
+            ],
+          },
+          {
+            topic: "Part B: Economics and Governance (120 marks)",
+            subtopics: [
+              {
+                topic: "Comptroller & Auditor General of India",
+                subtopics: [
+                  "Constitutional provisions",
+                  "Role and responsibility",
+                ],
+              },
+              {
+                topic: "Finance Commission",
+                subtopics: ["Role and functions"],
+              },
+              {
+                topic:
+                  "Basic Concept of Economics and introduction to Micro Economics",
+                subtopics: [
+                  "Definition",
+                  "Scope and nature of Economics",
+                  "Methods of economic study",
+                  "Central problems of an economy",
+                  "Production possibilities curve",
+                ],
+              },
+              {
+                topic: "Theory of Demand and Supply",
+                subtopics: [
+                  "Meaning and determinants of demand",
+                  "Law of demand and Elasticity of demand",
+                  "Price",
+                  "Income and cross elasticity",
+                  "Theory of consumer’s behaviour",
+                  "Marshallian approach and Indifference curve approach",
+                  "Meaning and determinants of supply",
+                  "Law of supply",
+                  "The elasticity of Supply",
+                ],
+              },
+              {
+                topic: "Theory of Production and Cost",
+                subtopics: [
+                  "Meaning and Factors of production",
+                  "Laws of production- Law of variable proportions and Laws of returns to scale",
+                  "Short-run and long-run production functions",
+                  "Concepts of total, average and marginal product and cost",
+                  "Cost curves: short-run and long-run",
+                  `Producer's equilibrium`,
+                  "Supply curve of the firm and industry",
+                  "Concepts of revenue: total, average and marginal revenue",
+                  `Producer's surplus`,
+                  "Economies and diseconomies of scale",
+                ],
+              },
+              {
+                topic: "Various forms of markets",
+                subtopics: [
+                  "Perfect Competition",
+                  "Monopoly",
+                  "Monopolistic Competition",
+                  "Oligopoly",
+                  "Price determination in these markets",
+                ],
+              },
+              {
+                topic: "Nature of the Indian Economy",
+                subtopics: [
+                  "Role of different sectors",
+                  "Role of Agriculture, Industry and Services-their problems and growth",
+                  "National Income of India-Concepts of national income, Different methods of measuring national income",
+                  "Population-Its size, rate of growth and its implication on economic growth",
+                  "Poverty and unemployment- Absolute and relative poverty, types, causes and incidence of unemployment",
+                  "Infrastructure-Energy, Transportation, Communication",
+                ],
+              },
+              {
+                topic: "Economic reforms since 1991",
+                subtopics: [
+                  "Liberalisation",
+                  "Privatisation",
+                  "Globalisation",
+                  "Disinvestment",
+                ],
+              },
+              {
+                topic: "Monetary/ Fiscal policy",
+                subtopics: [
+                  "Role and functions of Reserve Bank of India",
+                  "Functions of commercial Banks/RRB/Payment Banks",
+                  "Budget and Fiscal deficits and Balance of payments",
+                  "Fiscal Responsibility and Budget Management Act, 2003",
+                ],
+              },
+            ],
+          },
+        ],
       },
     },
   },
@@ -1043,3 +1020,68 @@ export const sscExamtableData = {
     },
   ],
 };
+
+export const tableOfContentsData = [
+  {
+    title: "SSC CGL 2025",
+    link: "#ssc-cgl-2025",
+  },
+  {
+    title: "About SSC CGL 2025 Exam",
+    link: "#about-ssc-cgl",
+  },
+  {
+    title: "SSC CGL 2025 Notification Details",
+    link: "#ssc-cgl-2025-notification",
+    subItems: [
+      {
+        title: "Exam Highlights for SSC CGL 2025",
+        link: "#ssc-cgl-2025-highlights",
+      },
+      {
+        title: "Important Dates for SSC CGL 2025 Recruitment",
+        link: "#ssc-cgl-2025-important-dates",
+      },
+      {
+        title: "SSC CGL 2025 Vacancy Details",
+        link: "#ssc-cgl-2025-vacancy",
+      },
+      {
+        title: "How to Register for SSC CGL 2025",
+        link: "#ssc-cgl-2025-registration",
+      },
+    ],
+  },
+  {
+    title: "SSC CGL 2025 Application Fee",
+    link: "#ssc-cgl-2025-application-fee",
+  },
+  {
+    title: "SSC CGL 2025 Signature Specifications",
+    link: "#ssc-cgl-2025-signature-specifications",
+  },
+  {
+    title: "Steps to Fill SSC CGL 2025 Post Preferences",
+    link: "#ssc-cgl-2025-post-preferences",
+  },
+  {
+    title: "SSC CGL 2025 Eligibility Criteria",
+    link: "#ssc-cgl-2025-eligibility-criteria",
+  },
+  {
+    title: "SSC CGL 2025 Age Limit",
+    link: "#ssc-cgl-2025-age-limit",
+  },
+  {
+    title: "SSC CGL 2025 Syllabus",
+    link: "#ssc-cgl-2025-syllabus",
+  },
+  {
+    title: "Download SSC Calendar 2025 PDF",
+    link: "https://ssc.nic.in/SSCFileServer/PortalManagement/UploadedFiles/Annual_Calendar_2024-25_07112023.pdf",
+  },
+  {
+    title: "Frequently Asked Questions about SSC CGL 2025",
+    link: "#ssc-cgl-2025-faqs",
+  },
+];

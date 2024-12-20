@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
-import { ssccglData, sscExamData, sscExamtableData } from "../../data/ssc-cgl";
+import { ssccglData, sscExamData, sscExamtableData,tableOfContentsData } from "../../data/ssc-cgl";
 import { classes, testSeries, sscbooksdata } from "../../data/sscData";
 import Card from "../../components/card/Card";
 
@@ -13,7 +13,13 @@ const SSCCGL = () => {
     sscExamData;
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
+  // State to track whether the table is open or closed
+  const [isOpen, setIsOpen] = useState(true);
 
+  // Function to toggle the state
+  const toggleTable = () => {
+    setIsOpen(!isOpen);
+  };
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index); // Toggle between open and closed
   };
@@ -58,7 +64,7 @@ const SSCCGL = () => {
           {/* Main Column */}
           <div className="md:col-span-9">
             {/* First Section: SSC CGL Intro */}
-            <div className="bg-white  rounded-md lg:p-6 mb-6">
+            <div id="ssc-cgl-2025" className="bg-white  rounded-md lg:p-6 mb-6">
               <h1 className="text-3xl font-bold text-gray-800 mb-4">{title}</h1>
               <p className="text-gray-600 mb-4">
                 {intro}{" "}
@@ -75,15 +81,103 @@ const SSCCGL = () => {
                 <p className="text-gray-700 leading-relaxed">{content}</p>
               </div>
             </div>
+            {/* Table of Contents */}
+            <div className="border border-gray-300 rounded-md p-4 mt-4">
+              {/* Button to toggle visibility */}
+              <div className="flex justify-between items-center">
+                <h2 className="font-semibold text-lg mb-2">
+                  Table of Contents
+                </h2>
+                <button
+                  onClick={toggleTable}
+                  className="text-gray-600 hover:text-gray-800 flex items-center"
+                >
+                  {/* Open/Close icons */}
+                  {isOpen ? (
+                    <svg
+                      style={{
+                        fill: "#999",
+                        color: "#999",
+                        marginRight: "8px",
+                      }}
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="list-377408"
+                      width="20px"
+                      height="20px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  ) : (
+                    <svg
+                      style={{
+                        fill: "#999",
+                        color: "#999",
+                        marginRight: "8px",
+                      }}
+                      className="arrow-unsorted-368013"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10px"
+                      height="10px"
+                      viewBox="0 0 24 24"
+                      version="1.2"
+                      baseProfile="tiny"
+                    >
+                      <path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path>
+                    </svg>
+                  )}
+                </button>
+              </div>
+
+              {/* Conditionally render Table of Contents */}
+              <div
+                style={{
+                  maxHeight: isOpen ? "1000px" : "0", // Adjust the maxHeight for smoother transitions
+                  overflow: "hidden",
+                  transition: "max-height 0.3s ease", // Smooth transition on toggle
+                }}
+              >
+                <ul className="list-decimal ml-6 space-y-2 text-sm">
+                  {tableOfContentsData?.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href={item.link}
+                        className="text-red-600 hover:underline"
+                      >
+                        {item.title}
+                      </a>
+                      {item.subItems && (
+                        <ul className="list-decimal ml-6 space-y-2">
+                          {item.subItems.map((subItem, subIndex) => (
+                            <li key={subIndex}>
+                              <a
+                                href={subItem.link}
+                                className="text-red-600 hover:underline"
+                              >
+                                {subItem.title}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
             {/* Second Section: About SSC CGL */}
-            <div className="bg-white shadow-md rounded-md p-6 mb-6">
+            <div id={about.id} className="bg-white shadow-md rounded-md p-6 mb-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {about.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">{about.content}</p>
             </div>
             {/* Third Section: SSC CGL Notification */}
-            <div className="bg-white shadow-md rounded-md p-6 mb-6">
+            <div id="ssc-cgl-2025-notification" className="bg-white shadow-md rounded-md p-6 mb-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {notification.title}
               </h2>
@@ -115,7 +209,7 @@ const SSCCGL = () => {
               </p>
             </div>
             {/* Highlights Section */}
-            <div className="bg-white shadow-md rounded-md p-6">
+            <div id="ssc-cgl-2025-highlights" className="bg-white shadow-md rounded-md p-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {highlights.title}
               </h2>
@@ -145,7 +239,7 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* Important Dates Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-cgl-2025-important-dates" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {importantDates?.title}
               </h2>
@@ -188,7 +282,7 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* SSC CGL Vacancy Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-cgl-2025-vacancy" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {vacancy.title}
               </h2>
@@ -226,7 +320,7 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* SSC CGL Registration Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-cgl-2025-registration" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.registration.title}
               </h2>
@@ -235,7 +329,7 @@ const SSCCGL = () => {
               </p>
             </div>
             {/* SSC CGL Application Fee Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-cgl-2025-application-fee" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.applicationFee.title}
               </h2>
@@ -290,7 +384,7 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* SSC CGL Signature Specification Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-cgl-2025-signature-specifications" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.signatureSpecification.title}
               </h2>
@@ -332,7 +426,7 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* SSC CGL Post Preference Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-cgl-2025-post-preferences" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.postPreference.title}
               </h2>
@@ -348,7 +442,7 @@ const SSCCGL = () => {
               </ul>
             </div>
             {/* SSC CGL Eligibility Criteria Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-cgl-2025-eligibility-criteria" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.eligibilityCriteria.title}
               </h2>
@@ -411,10 +505,10 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* SSC CGL Age Limit Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-4">
+            <div id="ssc-cgl-2025-age-limit" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData?.ageLimit?.title}
-              </h3>
+              </h2>
               <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
                 {sscExamData?.ageLimit?.content}
               </p>
@@ -541,7 +635,7 @@ const SSCCGL = () => {
                 {sscExamData.syllabus?.content3}{" "}
               </p>
               {/* Syllabus Table */}
-              <div className="overflow-x-auto p-4">
+              <div id="ssc-cgl-2025-syllabus" className="overflow-x-auto p-4">
                 <h2 className="text-lg font-bold mb-4">
                   SSC CGL Tier 1 Exam Pattern 2024
                 </h2>
@@ -1228,7 +1322,7 @@ const SSCCGL = () => {
               </div>
             </div>{" "}
             {/* Frequently Asked Questions Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="ssc-cgl-2025-faqs" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
                 {sscExamData.faq.title}
               </h3>
