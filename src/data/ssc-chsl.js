@@ -86,7 +86,7 @@ export const sscchslExamData = {
   about: {
     title: "What is SSC CHSL Exam?",
     content: `
-        The SSC CHSL stands for Staff Selection Commission Combined Higher Secondary Level Exam which aims to hire candidates who are 12th pass or higher. This is conducted every year and for the year 2025, the total vacancies will be notified along with the release of the official notification. The selection process for 12th-level posts such as Lower Division Clerk (LDC), Data Entry Operator (DEO), Postal/Sorting Assistant, and Junior Secretariat Assistant includes Tier-I (CBE) and Tier-II (CBE). The exams is conducted to evaluate the knowledge and mental ability of the candidates. Those who get selected will be posted across various departments/Ministries of Indian Government and get handsome salary packages..
+        The SSC CHSL, or Staff Selection Commission Combined Higher Secondary Level Exam, is designed to recruit candidates who have passed their 12th grade or higher. Conducted annually, the total number of vacancies for the year 2025 will be announced with the official notification. The selection process for posts such as Lower Division Clerk (LDC), Data Entry Operator (DEO), Postal/Sorting Assistant, and Junior Secretariat Assistant involves two tiers: Tier-I (Computer Based Examination) and Tier-II (Computer Based Examination). This exam assesses the candidates' knowledge and mental ability. Successful candidates will be placed in various departments/ministries of the Indian Government and will receive attractive salary packages.
         `,
   },
   notification: {
@@ -104,25 +104,25 @@ export const sscchslExamData = {
     questions: [
       {
         question:
-          "How much percentage is required in the 12th Class for SSC CHSL?",
+          "What percentage is required in the 12th Class for SSC CHSL?",
         answer: `
-               There is no bar on percentage, anyone who had passed the 12th class can fill the SSC CHSL Application.
+               There is no percentage requirement; anyone who has passed the 12th class can apply for the SSC CHSL.
             `,
       },
       {
-        question: "Is the SSC CHSL exam online or offline?",
-        answer: `SSC CHSL Tier 1 exam is an online exam while Tier 2 is CBT mode.`,
+        question: "Is the SSC CHSL exam conducted online or offline?",
+        answer: `The SSC CHSL Tier 1 exam is conducted online, while Tier 2 is in CBT mode.`,
       },
       {
-        question: "When will SSC release the SSC CHSL Notification 2025?",
+        question: "When will the SSC CHSL Notification 2025 be released?",
         answer: `
              The SSC CHSL Notification 2025 will be released on 27th May 2025.
             `,
       },
       {
-        question: "What is the SSC CHSL Tier 1 Exam Date 2025?",
+        question: "What is the SSC CHSL Tier 1 Exam Date for 2025?",
         answer: `
-              As per the SSC Calendar 2025-26, the SSC CHSL Tier 1 exam will be conducted in July-August 2025..
+              According to the SSC Calendar 2025-26, the SSC CHSL Tier 1 exam will be held in July-August 2025.
             `,
       },
     ],
@@ -130,7 +130,7 @@ export const sscchslExamData = {
   overview: {
     title: "SSC CHSL 2025 Exam- Overview",
     content:
-      "The SSC SSC Combined Higher Secondary Level or 12th Level Exam is an annual process candidates are selected based on their performance in Tier 1 and Tier 2 exams. Both the exams are conducted in computer-based mode. The SSC CHSL Tie 1 exam is released on its official website. Check the major highlights of the exam below.",
+      "The SSC Combined Higher Secondary Level (CHSL) or 12th Level Exam is an annual examination where candidates are selected based on their performance in Tier 1 and Tier 2 exams. Both exams are conducted in computer-based mode. The SSC CHSL Tier 1 exam details are released on its official website. Check the major highlights of the exam below.",
     tableData: [
       {
         label: "Exam Name",
@@ -156,7 +156,7 @@ export const sscchslExamData = {
       { label: "Exam Language", value: "English and Hindi" },
       { label: "Exam Helpdesk No.", value: "011-24361359" },
       { label: "Job Location", value: "All over India" },
-      { label: "Official Website.", value: "www.ssc.gov.in" },
+      { label: "Official Website", value: "www.ssc.gov.in" },
     ],
   },
   importantDatesData: {
@@ -176,7 +176,7 @@ export const sscchslExamData = {
   vacancyData: {
     title: "SSC CHSL 2025 Vacancy",
     description:
-      "The Staff Selection Commission (SSC) has not yet revealed the number of vacancies to be filled this year for the post of Lower Division Clerk (LDC), Junior Secretariat Assistant (JSA), Postal Assistant (PA), Sorting Assistant (SA), and Data Entry Operator (DEO). But looking at the past year trends, we can expect the vacancies to be around 4000 (approximately). Here is the past year trends of SSC CHSL Vacancy from 2018 till 2024.",
+      "The Staff Selection Commission (SSC) has not yet disclosed the number of vacancies for this year for the posts of Lower Division Clerk (LDC), Junior Secretariat Assistant (JSA), Postal Assistant (PA), Sorting Assistant (SA), and Data Entry Operator (DEO). However, based on previous years' trends, we can expect around 4000 vacancies (approximately). Below are the SSC CHSL Vacancy trends from 2018 to 2024.",
     tableHeaders: ["Year", "LDC/ JSA", "PA/ SA", "DEO", "Court Clerk", "Total"],
     tableData: [
       {
@@ -248,7 +248,7 @@ export const sscchslExamData = {
   eligibilityData: {
     title: "SSC CHSL 2025 Eligibility Criteria",
     description:
-      "All the aspiring candidates who are dreaming of SSC CHSL jobs will have to abide by all the SSC CHSL Eligibility Criteria as decided by the SSC Commission. The candidates are advised to go through the requirements of educational qualification, age, physical standards, etc., and satisfy themselves that they are eligible for the post(s) before applying.",
+      "All aspiring candidates aiming for SSC CHSL jobs must meet the SSC CHSL Eligibility Criteria set by the SSC Commission. Candidates should review the educational qualifications, age limits, physical standards, etc., to ensure they are eligible for the positions before applying.",
     nationality: {
       title: "Nationality",
       criteria: [
@@ -348,11 +348,11 @@ export const sscchslExamData = {
   selectionProcess: {
     title: "SSC CHSL 2025 Selection Process",
     steps: [
-      "SSC CHSL Selection Process consists of Tier 1, Tier 2, and Skill Test/Computer Proficiency Test (for some posts) and the result is based on the result of all two tiers.",
-      "Candidates need to qualify for each tier to appear in the subsequent tier.",
-      "The final selection list is prepared by shortlisting applicants based on their cumulative performance across the first two tiers.",
-      "After qualifying all three tiers, the candidates will be called for the Document Verification.",
-      "Candidates will be allotted to the various departments for the post of Postal Assistant/Sorting Assistants, Data Entry Operators, Lower Divisional Clerks, and Court Clerks based on their merit and preference of post.",
+      "The SSC CHSL Selection Process includes Tier 1, Tier 2, and a Skill Test/Computer Proficiency Test (for certain posts), with the final result based on the performance in the first two tiers.",
+      "Candidates must qualify each tier to advance to the next stage.",
+      "The final selection list is created by shortlisting candidates based on their cumulative performance in the first two tiers.",
+      "After passing all three tiers, candidates will be called for Document Verification.",
+      "Candidates will be assigned to various departments for the positions of Postal Assistant/Sorting Assistant, Data Entry Operator, Lower Divisional Clerk, and Court Clerk based on their merit and post preference.",
     ],
   },
   examPattern: {
@@ -832,28 +832,28 @@ export const sscchslExamData = {
   jobProfile: {
     title: "SSC CHSL 2025 Job Profile",
     description:
-      "The SSC CHSL 2025 Job Profile for the various posts offered by the Staff Selection Commission under the SSC CHSL Recruitment 2025. It is important to get familiar with the job profile which includes the roles and responsibilities.",
+      "The SSC CHSL 2025 Job Profile outlines the roles and responsibilities for various posts offered by the Staff Selection Commission under the SSC CHSL Recruitment 2025. It is crucial to understand the job profile for each position.",
     tableHeaders: ["Posts", "Job Profile"],
     tableData: [
       {
         post: "Lower Division Clerk (LDC)/Junior Secretariat Assistant (JSA)",
         profile:
-          "Responsible for clerical work like data entry, maintaining files, handling mail, and other routine office tasks.",
+          "Handles clerical tasks such as data entry, file maintenance, mail management, and other routine office duties.",
       },
       {
         post: "Postal Assistant (PA)/Sorting Assistant",
         profile:
-          "Handles customer service, mail sorting, and managing postal records in post offices and mail departments.",
+          "Manages customer service, mail sorting, and postal records in post offices and mail departments.",
       },
       {
         post: "Data Entry Operator (DEO)",
         profile:
-          "Focuses on data entry tasks, maintaining records, and updating databases using specialized software.",
+          "Performs data entry tasks, maintains records, and updates databases using specialized software.",
       },
       {
         post: "Court Clerk",
         profile:
-          "Assists in legal departments and courts by maintaining court records, scheduling hearings, and performing administrative duties.",
+          "Supports legal departments and courts by maintaining court records, scheduling hearings, and performing administrative tasks.",
       },
     ],
   },
