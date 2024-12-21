@@ -47,7 +47,7 @@ import TermsConditions from "./pages/TermsConditions";
 import SSCCGL from './pages/sub-pages/SSCCGL';
 import SSCCHSL from './pages/sub-pages/SSCCHSL.jsx';
 import SSCMTS from "./pages/sub-pages/SSCMTS.jsx";
-
+import SSCCPO from "./pages/sub-pages/SSCCPO.jsx";
 
 function App() {
   const lenis = new Lenis();
@@ -83,7 +83,8 @@ function App() {
           <Route path="/ssc-cgl" element={<SSCCGL />} />
           <Route path="/ssc-chsl" element={<SSCCHSL />} />
           <Route path="/ssc-mts" element={<SSCMTS />} />
-          <Route path="/ssc-cpo" element={<SSC4 />} />
+          {/* <Route path="/ssc-cpo" element={<SSC4 />} /> */}
+          <Route path="/ssc-cpo" element={<SSCCPO />} />
           <Route path="/ssc-gd" element={<SSC5 />} />
 
 
