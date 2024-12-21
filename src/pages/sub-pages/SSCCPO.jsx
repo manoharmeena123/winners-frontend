@@ -89,20 +89,18 @@ const SSCCPO = () => {
                 <h2 className="text-xl font-semibold text-gray-800 mb-3">
                   Exam Details
                 </h2>
-                <p className="text-gray-700 leading-relaxed">{content}</p> 
+                <p className="text-gray-700 leading-relaxed">{content}</p>
                 {/* Additional Styling */}
-              <div className="mt-6 p-4 bg-gray-50 rounded-md ">
-                <h3 className="text-lg font-bold text-blue-700">
-                  Important Dates
-                </h3>
-                <ul className="list-disc ml-5 text-gray-700">
-                  <li>Paper 1: 23rd June - 30th June 2025</li>
-                  <li>Paper 2: 1st December 2025</li>
-                </ul>
+                <div className="mt-6 p-4 bg-gray-50 rounded-md ">
+                  <h3 className="text-lg font-bold text-blue-700">
+                    Important Dates
+                  </h3>
+                  <ul className="list-disc ml-5 text-gray-700">
+                    <li>Paper 1: 23rd June - 30th June 2025</li>
+                    <li>Paper 2: 1st December 2025</li>
+                  </ul>
+                </div>
               </div>
-              </div>
-
-             
             </div>
 
             {/* Table of Contents */}
