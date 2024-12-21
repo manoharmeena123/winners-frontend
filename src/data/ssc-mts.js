@@ -1,26 +1,74 @@
 export const sscMtsData = {
   title: "SSC MTS 2025: Notification Date Out, Registration, Exam Date",
   intro: `
-     The SSC MTS 2024 is conducted by the Staff Selection Commission (SSC) for Multitasking Staff and Havaldar post. The SSC MTS 2025 Notification will released on 26th June 2025 on the official website at www.ssc.gov.in. Check complete details about SSC MTS Exam including age limit, qualification, registration process, exam date, and other details shared on this page.
-.
+     The SSC MTS 2024 is organized by the Staff Selection Commission (SSC) for the recruitment of Multitasking Staff and Havaldar posts. The SSC MTS 2025 Notification will be released on 26th June 2025 on the official website www.ssc.gov.in. Check complete details about the SSC MTS Exam including age limit, qualification, registration process, exam date, and other information shared on this page.
       `,
   content: `
-      The SSC MTS Exam is an annual exam conducting on national level. For the FY 2025-26, the SSC MTS 2025 Notification will be released on 26th July 2025 on the official website of SSC at www.ssc.gov.in. Candidates will be able to register for the Multitasking Staff and Havaldar post from same day onwards and it will continue till 25th July 2025. Get complete details about the SSC MTS 2025 Exam, Notification, Application Form, Exam Date, Selection Process, and other details here. Bookmark this page for more latest updates about the recruitment cycle.
+      The SSC MTS Exam is an annual national-level exam. For the FY 2025-26, the SSC MTS 2025 Notification will be released on 26th July 2025 on the official SSC website at www.ssc.gov.in. Candidates will be able to register for the Multitasking Staff and Havaldar posts from the same day onwards, and the registration will continue until 25th July 2025. Get complete details about the SSC MTS 2025 Exam, Notification, Application Form, Exam Date, Selection Process, and other information here. Bookmark this page for the latest updates about the recruitment cycle.
       `,
   officialWebsite: "https://www.ssc.gov.in",
 };
+
+export const tableOfContentsData = [
+  {
+    title: "About SSC MTS Exam",
+    link: "#about-ssc-mts-exam",
+  },
+  {
+    title: "SSC MTS 2025 Notification",
+    link: "#ssc-mts-2025-notification",
+  },
+  {
+    title: "SSC MTS EXAM PATTERN – 2025",
+    link: "#ssc-mts-2025-exam-pattern",
+  },
+  {
+    title: "SSC MTS 2025 - Highlights",
+    link: "#ssc-mts-2025-highlights",
+    subItems: [
+      {
+        title: "SSC MTS Recruitment 2025: Important Dates",
+        link: "#ssc-mts-2025-important-dates",
+      },
+      {
+        title: "SSC MTS 2025 Application Form",
+        link: "#ssc-mts-2025-application-form",
+      },
+      {
+        title: "SSC MTS 2025 Eligibility Criteria",
+        link: "#ssc-mts-2025-eligibility-criteria",
+      },
+      {
+        title: "SSC MTS 2025 Selection Process",
+        link: "#ssc-mts-2025-selection-process",
+      },
+    ],
+  },
+  {
+    title: "SSC MTS 2025 Exam Center",
+    link: "#ssc-mts-2025-exam-center",
+  },
+  {
+    title: "Related Post to SSC MTS 2024",
+    link: "#related-post-to-ssc-mts-2024",
+  },
+  {
+    title: "SSC MTS Frequently Asked Questions",
+    link: "#ssc-mts-frequently-asked-questions",
+  },
+];
 
 export const sscMtsExamData = {
   about: {
     title: "About SSC MTS Exam",
     content: `
-            The SSC CHSL stands for Staff Selection Commission Combined Higher Secondary Level Exam which aims to hire candidates who are 12th pass or higher. This is conducted every year and for the year 2025, the total vacancies will be notified along with the release of the official notification. The selection process for 12th-level posts such as Lower Division Clerk (LDC), Data Entry Operator (DEO), Postal/Sorting Assistant, and Junior Secretariat Assistant includes Tier-I (CBE) and Tier-II (CBE). The exams is conducted to evaluate the knowledge and mental ability of the candidates. Those who get selected will be posted across various departments/Ministries of Indian Government and get handsome salary packages..
+            The SSC MTS stands for Staff Selection Commission Multitasking Staff Exam, which aims to recruit candidates for various multitasking positions. This exam is conducted annually, and for the year 2025, the total number of vacancies will be announced with the official notification. The selection process includes a Computer Based Examination (CBE) followed by a Physical Efficiency Test (PET) or Physical Standard Test (PST) for certain posts. The exam evaluates the candidates' skills and abilities. Successful candidates will be placed in various departments/ministries of the Indian Government and will receive attractive salary packages.
         `,
   },
   notification: {
     title: "SSC MTS 2025 Notification",
     content: `
-      As mentioned above, the SSC CHSL Notification 2025 will be released on 27th May 2025 and the registration process will commence on the same day and it will continue till 25th June 2025. The notification consists of all the important details such as the latest eligibility criteria, selection process, how to apply, vacancy, exam pattern, syllabus, salary, exam center, etc. SSC releases this document to make the candidates aware of the recruitment process and what are the stages. Both freshers and experienced candidates can apply for this exam given that they are within the age limit required for this post. The official Notification PDF will be shared here after it gets released.
+      As mentioned earlier, the SSC MTS Notification 2025 will be released on 26th June 2025, and the registration process will start on the same day and continue until 25th July 2025. The notification contains all the essential details such as the latest eligibility criteria, selection process, application procedure, vacancies, exam pattern, syllabus, salary, and exam centers. SSC releases this document to inform candidates about the recruitment process and its stages. Both freshers and experienced candidates can apply for this exam if they meet the age limit requirements. The official Notification PDF will be shared here once it is released.
       `,
     link: {
       text: "SSC Calendar 2025-26",
@@ -30,27 +78,36 @@ export const sscMtsExamData = {
   sscMtsHighlightsData: {
     title: "SSC MTS 2025 - Highlights",
     description: `
-      SSC MTS is a national-level exam conducted every year. Interested candidates can check 
-      the major highlights of the exam mentioned in the table below.
+      SSC MTS is a national-level exam conducted annually. Interested candidates can review 
+      the key highlights of the exam in the table below.
     `,
     tableData: [
       { label: "Conducting Body", value: "Staff Selection Commission" },
       { label: "Exam Name", value: "SSC MTS 2025" },
       { label: "Post Name", value: "Multitasking Staff and Havaldar" },
-      { label: "Vacancy", value: "To be Notified" },
-      { label: "Category", value: "Govt Jobs" },
-      { label: "Advt. No.", value: "To be Notified" },
-      { label: "SSC MTS 2025 Notification Release Date", value: "26th June 2025" },
+      { label: "Vacancy", value: "To be Announced" },
+      { label: "Category", value: "Government Jobs" },
+      { label: "Advt. No.", value: "To be Announced" },
+      {
+        label: "SSC MTS 2025 Notification Release Date",
+        value: "26th June 2025",
+      },
       { label: "Application Mode", value: "Online" },
       { label: "Registration Dates", value: "26th June to 25th July 2025" },
-      { label: "Selection Process", value: "CBT, PET/PST (for Havaldar post), Document Verification" },
+      {
+        label: "Selection Process",
+        value: "CBT, PET/PST (for Havaldar post), Document Verification",
+      },
       { label: "Qualification", value: "10th Pass" },
       { label: "Exam Type", value: "National Level" },
-      { label: "Posting", value: "Ministries/Departments of Indian Govt." },
-      { label: "SSC Official website", value: "www.ssc.gov.in" },
+      {
+        label: "Posting",
+        value: "Ministries/Departments of Indian Government",
+      },
+      { label: "SSC Official Website", value: "www.ssc.gov.in" },
     ],
   },
-  sscMtsImportantDatesData : {
+  sscMtsImportantDatesData: {
     title: "SSC MTS Recruitment 2025: Important Dates",
     description: `
       The SSC MTS Notification 2025 will be released on 26th June 2025. The online application will start 
@@ -58,13 +115,16 @@ export const sscMtsExamData = {
       Also, the exam is tentatively scheduled in September-October 2025.
     `,
     tableData: [
-      { event: "SSC MTS 2025 Notification Release date", date: "26th June 2025" },
+      {
+        event: "SSC MTS 2025 Notification Release date",
+        date: "26th June 2025",
+      },
       { event: "SSC MTS 2025 Apply Online Starts", date: "26th June 2025" },
       { event: "Online Application Last Date", date: "25th July 2025" },
       { event: "SSC MTS 2025 Exam Date", date: "September-October 2025" },
     ],
   },
-  sscMtsApplicationFormData :{
+  sscMtsApplicationFormData: {
     title: "SSC MTS 2025 Application Form",
     description: `
       The SSC MTS 2025 application form will be available on the official SSC website. Candidates must complete 
@@ -74,7 +134,7 @@ export const sscMtsExamData = {
       and it will continue till 25th July 2025.
     `,
   },
-  sscMtsEligibilityCriteriaData :{
+  sscMtsEligibilityCriteriaData: {
     title: "SSC MTS 2025 Eligibility Criteria",
     description: `
       The SSC MTS Eligibility criteria include age limit, educational qualification, and nationality. 
@@ -109,7 +169,7 @@ export const sscMtsExamData = {
       },
     ],
   },
-  sscMtsSelectionProcessData :{
+  sscMtsSelectionProcessData: {
     title: "SSC MTS 2025 Selection Process",
     description: `
       There are two stages for the multitasking staff post and 3 stages for the Havaldar post. 
@@ -135,7 +195,211 @@ export const sscMtsExamData = {
       },
     ],
   },
-   sscMtsExamCentersData :{
+  physicalStandards: {
+    title: "Physical Standard Test for SSC Havaldar Posts",
+    data: [
+      {
+        particulars: "Height",
+        male: "157.5 cms (relaxable by 5 Cms in the case of Garhwalis, Assamese, Gorkhas and members of Scheduled Tribes)",
+        female:
+          "152 cms (relaxable by 2.5 Cms in the case of Garhwalis, Assamese, Gorkhas and members of Schedule Tribes)",
+      },
+      {
+        particulars: "Chest",
+        male: "76 cms (unexpanded) Minimum expansion: 5 cms",
+        female: "-",
+      },
+      {
+        particulars: "Weight",
+        male: "-",
+        female:
+          "48 kg (relaxable by 2 Kg in the case of Garhwalis, Assamese, Gorkhas and members of Schedule Tribes)",
+      },
+    ],
+  },
+  benefits: {
+    title: "Benefits of SSC MTS Syllabus",
+    content:
+      "Benefits of understanding the SSC MTS Syllabus 2025 for SSC MTS Exam 2025 are mentioned below:",
+    sscMtsSyllabusBenefits: [
+      {
+        title: "Examination Structure and Evaluation Guidelines",
+        description:
+          "The syllabus for SSC MTS 2024 offers a transparent outline of the exam's structure and the criteria for marking, aiding candidates in comprehending the organization of the test and the assessment of their performance.",
+      },
+      {
+        title: "Emphasis on Pertinent Subjects",
+        description:
+          "The SSC MTS syllabus pinpoints the essential subjects candidates must focus on for the exam. This assists them in directing their preparation towards the areas that will wield the greatest influence on their scores.",
+      },
+      {
+        title: "Recognition of Improvement Areas",
+        description:
+          "The revised SSC MTS syllabus can also serve to recognize domains where candidates require enhancement in their knowledge or skills. This insight can be harnessed to formulate a tailored study strategy, enabling candidates to tackle weaknesses and elevate their likelihood of success.",
+      },
+      {
+        title: "Tool for Review",
+        description:
+          "By perusing the SSC MTS Syllabus 2024 and revisiting key concepts and subjects, candidates can guarantee their familiarity with the content to be addressed in the exam. This can enhance their confidence and readiness on exam day.",
+      },
+      {
+        title: "Facilitation of In-Depth Comprehension",
+        description:
+          "The syllabus aids candidates in cultivating a deeper grasp of the subjects incorporated in the exam.",
+      },
+      {
+        title: "Fostering Critical Thinking and Problem-Solving Proficiency",
+        description:
+          "The syllabus contributes to the enhancement of candidates' critical thinking and problem-solving abilities.",
+      },
+      {
+        title: "Acquaintance with Exam Format and Question Types",
+        description:
+          "It acquaints candidates with the exam's format and the categories of questions presented.",
+      },
+      {
+        title: "Boosting Confidence and Motivation",
+        description:
+          "The syllabus can boost candidates' self-assurance and enthusiasm for the exam.",
+      },
+    ],
+  },
+
+  sscmtssyllabusData: [
+    {
+      section: "Numerical Aptitude",
+      topics: [
+        "Integers and Whole Numbers",
+        "LCM and HCF",
+        "Decimals and Fractions",
+        "Relationship between Numbers",
+        "Fundamental Arithmetic Operations",
+        "BODMAS",
+        "Percentage",
+        "Ratio and Proportions",
+        "Work and Time",
+        "Direct and Inverse Proportions",
+        "Averages",
+        "Simple Interest",
+        "Profit and Loss",
+        "Discount",
+        "Area and Perimeter of Basic Geometric Figures",
+        "Distance and Time",
+        "Lines and Angles",
+        "Interpretation of simple Graphs and Data",
+        "Square and Square roots",
+        "etc.",
+      ],
+    },
+    {
+      section: "Reasoning Ability",
+      topics: [
+        "Alpha-Numeric Series",
+        "Coding and Decoding",
+        "Analogy",
+        "Following Directions",
+        "Similarities and Differences",
+        "Jumbling",
+        "Problem Solving and Analysis",
+        "Nonverbal Reasoning based on diagrams, Age Calculations, Calendar, and Clock, etc.",
+      ],
+    },
+    {
+      section: "English Language",
+      topics: [
+        "Spot the error",
+        "Fill in the blanks",
+        "Synonyms",
+        "Antonyms",
+        "Spelling/detecting mis-spelt words",
+        "Idioms and Phrases",
+        "One word substitution",
+        "Improvement of sentences",
+        "Comprehension Passage",
+      ],
+    },
+    {
+      section: "General Awareness",
+      topics: [
+        "India and its neighbouring countries",
+        "General Polity including Indian Constitution",
+        "Economic scene",
+        "Scientific Research",
+        "Static GK",
+        "History",
+        "Geography",
+        "Sports",
+        "Culture",
+        "Science & Technology",
+        "Current Affairs",
+        "etc.",
+      ],
+    },
+  ],
+
+  sscmtsexampattern: {
+    title: "SSC MTS EXAM PATTERN - 2025",
+    examType: "Computer Based Examination (Online)",
+    sessions: [
+      {
+        sessionNumber: 1,
+        negativeMarking: false,
+        paperType: "Objective Type Paper",
+      },
+      {
+        sessionNumber: 2,
+        negativeMarking: true,
+        negativeMarksPerWrongAnswer: 1,
+        paperType: "Descriptive Paper",
+      },
+    ],
+    mandatorySessions: true,
+  },
+  sscmtsexampatternData: [
+    {
+      session: "Session 1 (No Negative Marking)",
+      subject: "Numerical and Mathematical Ability",
+      questions: 20,
+      marks: "20 x 3 = 60",
+      duration: "45 minutes",
+    },
+    {
+      session: "",
+      subject: "Reasoning Ability and Problem-Solving",
+      questions: 20,
+      marks: "20 x 3 = 60",
+      duration: "",
+    },
+    {
+      session: "",
+      subject: "Total",
+      questions: 40,
+      marks: "120",
+      duration: "",
+    },
+    {
+      session: "Session 2 (Negative Marking)",
+      subject: "General Awareness",
+      questions: 25,
+      marks: "25 x 3 = 75",
+      duration: "45 minutes",
+    },
+    {
+      session: "",
+      subject: "English Language and Comprehension",
+      questions: 25,
+      marks: "25 x 3 = 75",
+      duration: "",
+    },
+    {
+      session: "",
+      subject: "Total",
+      questions: 50,
+      marks: 150,
+      duration: "",
+    },
+  ],
+  sscMtsExamCentersData: {
     title: "SSC MTS 2025 Exam Center",
     description: `
       Below is a list of all the cities and exam centers where the SSC MTS 2025 exam will be conducted.
@@ -150,13 +414,15 @@ export const sscMtsExamData = {
       },
       {
         region: "North Eastern Region (NER)",
-        states: "Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Tripura",
+        states:
+          "Arunachal Pradesh, Assam, Manipur, Meghalaya, Mizoram, Nagaland, Tripura",
         cityCodes:
           "Itanagar (5001), Dibrugarh (5102), Guwahati (Dispur) (5105), Jorhat (5107), Silchar (5111), Kohima (5302), Shillong (5401), Imphal (5501), Churachandpur (5502), Ukhrul (5503), Agartala (5601), Aizawl (5701)",
       },
       {
         region: "North Western Sub-Region (NWR)",
-        states: "Chandigarh, Haryana, Himachal Pradesh, Jammu and Kashmir, Punjab",
+        states:
+          "Chandigarh, Haryana, Himachal Pradesh, Jammu and Kashmir, Punjab",
         cityCodes:
           "Chandigarh/Mohali (1601), Hamirpur (1202), Shimla (1203), Jammu (1004), Leh (1005), Samba (1010), Srinagar (1007), Jalandhar (1402), Ludhiana (1405), Patiala (1403), Amritsar (1404)",
       },
@@ -168,7 +434,8 @@ export const sscMtsExamData = {
       },
       {
         region: "Eastern Region (ER)",
-        states: "Andaman & Nicobar Islands, Jharkhand, Odisha, Sikkim, West Bengal",
+        states:
+          "Andaman & Nicobar Islands, Jharkhand, Odisha, Sikkim, West Bengal",
         cityCodes:
           "Port Blair (4802), Ranchi (4205), Balasore (4601), Berhampore (Odisha) (4602), Bhubaneshwar (4604), Cuttack (4605), Dhenkanal (4611), Rourkela (4610), Sambalpur (4609), Gangtok (4001), Hooghly (4418), Kolkata (4410), Siliguri (4415)",
       },
@@ -192,7 +459,8 @@ export const sscMtsExamData = {
       },
       {
         region: "Western Region (WR)",
-        states: "Dadra and Nagar Haveli, Daman and Diu, Goa, Gujarat, Maharashtra",
+        states:
+          "Dadra and Nagar Haveli, Daman and Diu, Goa, Gujarat, Maharashtra",
         cityCodes:
           "Panaji (7801), Ahmedabad (7001), Anand (7011), Gandhinagar (7012), Mehsana (7013), Rajkot (7006), Surat (7007), Vadodara (7002), Amravati (7201), Aurangabad (7202), Jalgaon (7214), Kolhapur (7203), Mumbai (7204), Nagpur (7205), Nanded (7206), Nashik (7207), Pune (7208)",
       },
@@ -201,38 +469,42 @@ export const sscMtsExamData = {
       title: "Related Post to SSC MTS 2024",
       tableData: [
         [
-          { text: "SSC MTS Syllabus", link: "/ssc-mts-syllabus" },
-          { text: "SSC MTS Online Coaching 2024", link: "/ssc-mts-online-coaching" },
+          {
+            text: "SSC MTS Online Coaching 2024",
+            link: "https://live.winnersinstitute.in/courses/376-ssc-mts-complete-online-course-mts0324",
+          },
+          {
+            text: "SSC MTS Eligibility",
+            link: "#ssc-mts-2025-eligibility-criteria",
+          },
         ],
         [
-          { text: "SSC MTS Previous Year Question Paper", link: "/ssc-mts-previous-year-paper" },
-          { text: "SSC MTS Mock Test 2024", link: "/ssc-mts-mock-test" },
-        ],
-        [
-          { text: "SSC MTS Eligibility", link: "/ssc-mts-eligibility" },
-          { text: "SSC MTS Salary", link: "/ssc-mts-salary" },
-        ],
-        [
-          { text: "SSC MTS Cut Off", link: "/ssc-mts-cut-off" },
-          { text: "SSC MTS Preparation Tips", link: "/ssc-mts-preparation-tips" },
+          {
+            text: "SSC MTS Previous Year Question Paper",
+            link: "https://live.winnersinstitute.in/test-series/132-ssc-mts-test-series-2023",
+          },
+          {
+            text: "SSC MTS Mock Test 2024",
+            link: "https://live.winnersinstitute.in/test-series/132-ssc-mts-test-series-2023",
+          },
         ],
       ],
     },
   },
-  
-  
+
   faq: {
     title: "Frequently Asked Questions",
     questions: [
       {
         question: "When will SSC release the SSC MTS 2025 Notification?",
-        answer: "The SSC MTS 2025 Notification will be released on 26th June 2025.",
+        answer:
+          "The SSC MTS 2025 Notification will be released on 26th June 2025.",
       },
       {
         question: "What is the selection process for the SSC MTS Exam?",
-        answer: "The SSC MTS 2025 Selection Process involves CBT, PET/PST (For Havaldar only), and Document Verification.",
-      }
+        answer:
+          "The SSC MTS 2025 Selection Process involves CBT, PET/PST (For Havaldar only), and Document Verification.",
+      },
     ],
   },
-
 };

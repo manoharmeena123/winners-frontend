@@ -1,11 +1,17 @@
 import Aos from "aos";
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
 import Footer from "../../components/footer/Footer";
-import { sscMtsData, sscMtsExamData } from "../../data/ssc-mts";
+import {
+  sscMtsData,
+  sscMtsExamData,
+  tableOfContentsData,
+} from "../../data/ssc-mts";
 import { classes, testSeries, sscbooksdata } from "../../data/sscData";
+import { Link } from "react-router-dom";
 import Card from "../../components/card/Card";
+
 const SSCMTS = () => {
   const { title, intro, content, officialWebsite } = sscMtsData;
   const {
@@ -17,29 +23,40 @@ const SSCMTS = () => {
     sscMtsEligibilityCriteriaData,
     sscMtsSelectionProcessData,
     sscMtsExamCentersData,
+    sscmtssyllabusData,
+    sscmtsexampatternData,
+    sscmtsexampattern,
+    physicalStandards,
+    benefits,
   } = sscMtsExamData;
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
+  // State to track whether the table is open or closed
+  const [isOpen, setIsOpen] = useState(true);
 
+  // Function to toggle the state
+  const toggleTable = () => {
+    setIsOpen(!isOpen);
+  };
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index); // Toggle between open and closed
   };
-    useEffect(() => {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-      Aos.init({
-        duration: 1000,
-      });
-    }, []);
-    const handleBuyNowClick = (link) => {
-      window.location.replace(`${link}`);
-    };
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
+  const handleBuyNowClick = (link) => {
+    window.location.replace(`${link}`);
+  };
   return (
     <>
       <Header />
       <ReactHelmet
-        title="SSC CPO - The WiNNERS Institute"
+        title="SSC MTS - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
       <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
@@ -82,15 +99,109 @@ const SSCMTS = () => {
                 <p className="text-gray-700 leading-relaxed">{content}</p>
               </div>
             </div>
+            {/* Table of Contents */}
+            <div className="border border-gray-300 rounded-md p-4 mt-4">
+              {/* Button to toggle visibility */}
+              <div className="flex justify-between items-center">
+                <h2 className="font-semibold text-lg mb-2">
+                  Table of Contents
+                </h2>
+                <button
+                  onClick={toggleTable}
+                  className="text-gray-600 hover:text-gray-800 flex items-center"
+                >
+                  {/* Open/Close icons */}
+                  {isOpen ? (
+                    <svg
+                      style={{
+                        fill: "#999",
+                        color: "#999",
+                        marginRight: "8px",
+                      }}
+                      xmlns="http://www.w3.org/2000/svg"
+                      className="list-377408"
+                      width="20px"
+                      height="20px"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M6 6H4v2h2V6zm14 0H8v2h12V6zM4 11h2v2H4v-2zm16 0H8v2h12v-2zM4 16h2v2H4v-2zm16 0H8v2h12v-2z"
+                        fill="currentColor"
+                      ></path>
+                    </svg>
+                  ) : (
+                    <svg
+                      style={{
+                        fill: "#999",
+                        color: "#999",
+                        marginRight: "8px",
+                      }}
+                      className="arrow-unsorted-368013"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="10px"
+                      height="10px"
+                      viewBox="0 0 24 24"
+                      version="1.2"
+                      baseProfile="tiny"
+                    >
+                      <path d="M18.2 9.3l-6.2-6.3-6.2 6.3c-.2.2-.3.4-.3.7s.1.5.3.7c.2.2.4.3.7.3h11c.3 0 .5-.1.7-.3.2-.2.3-.5.3-.7s-.1-.5-.3-.7zM5.8 14.7l6.2 6.3 6.2-6.3c.2-.2.3-.5.3-.7s-.1-.5-.3-.7c-.2-.2-.4-.3-.7-.3h-11c-.3 0-.5.1-.7.3-.2.2-.3.5-.3.7s.1.5.3.7z"></path>
+                    </svg>
+                  )}
+                </button>
+              </div>
+
+              {/* Conditionally render Table of Contents */}
+              <div
+                style={{
+                  maxHeight: isOpen ? "1000px" : "0", // Adjust the maxHeight for smoother transitions
+                  overflow: "hidden",
+                  transition: "max-height 0.3s ease", // Smooth transition on toggle
+                }}
+              >
+                <ul className="list-decimal ml-6 space-y-2 text-sm">
+                  {tableOfContentsData?.map((item, index) => (
+                    <li key={index}>
+                      <a
+                        href={item.link}
+                        className="text-red-600 hover:underline"
+                      >
+                        {item.title}
+                      </a>
+                      {item.subItems && (
+                        <ul className="list-decimal ml-6 space-y-2">
+                          {item.subItems.map((subItem, subIndex) => (
+                            <li key={subIndex}>
+                              <a
+                                href={subItem.link}
+                                className="text-red-600 hover:underline"
+                              >
+                                {subItem.title}
+                              </a>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
             {/*About SSC MTS Exam */}
-            <div className="bg-white shadow-md rounded-md p-6 mb-6">
+            <div
+              id="about-ssc-mts-exam"
+              className="bg-white shadow-md rounded-md p-6 mb-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {about.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">{about.content}</p>
             </div>
-            {/* /* SSC MTS Notification Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mb-6">
+            {/* /* SSC MTS 2025 Notification */}
+            <div
+              id="ssc-mts-2025-notification"
+              className="bg-white shadow-md rounded-md p-6 mb-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {notification.title}
               </h2>
@@ -128,7 +239,10 @@ const SSCMTS = () => {
               </p>
             </div>
             {/* SSC MTS 2025 - Highlights */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-mts-2025-highlights"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsHighlightsData?.title || "SSC MTS Highlights"}
@@ -185,7 +299,10 @@ const SSCMTS = () => {
               </div>
             </div>
             {/* SSC MTS Recruitment 2025 - Important Dates */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-mts-2025-important-dates"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsImportantDatesData?.title || "Important Dates"}
@@ -242,7 +359,10 @@ const SSCMTS = () => {
               </div>
             </div>
             {/* SSC MTS 2025 Application Form */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-mts-2025-application-form"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsApplicationFormData?.title || "Application Form"}
@@ -255,7 +375,10 @@ const SSCMTS = () => {
               </p>
             </div>
             {/* SSC MTS 2025 Eligibility Criteria */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-mts-2025-eligibility-criteria"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsEligibilityCriteriaData?.title || "Eligibility Criteria"}
@@ -289,7 +412,10 @@ const SSCMTS = () => {
               )}
             </div>
             {/* SSC MTS 2025 Selection Process */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-mts-2025-selection-process"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsSelectionProcessData?.title || "Selection Process"}
@@ -345,8 +471,195 @@ const SSCMTS = () => {
                 </table>
               </div>
             </div>
-            {/* SSC MTS 2025 Exam Centers */}
+            {/* Physical Standard Test for SSC Havaldar Posts */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
+                {physicalStandards.title}
+              </h2>
+              {/* Table */}
+              <div className="overflow-x-auto">
+                {" "}
+                <table className="w-full border-collapse border border-gray-300">
+                  <thead>
+                    <tr>
+                      <th className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300">
+                        Particulars
+                      </th>
+                      <th className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300">
+                        Male
+                      </th>
+                      <th className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300">
+                        Female
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {physicalStandards.data.map((row, index) => (
+                      <tr
+                        key={index}
+                        className={`border-b border-gray-300 ${
+                          index % 2 === 0 ? "bg-gray-50" : "bg-white"
+                        }`}
+                      >
+                        <td className="px-4 py-2 text-gray-700 border border-gray-300">
+                          {row.particulars}
+                        </td>
+                        <td className="px-4 py-2 text-gray-700 border border-gray-300">
+                          {row.male}
+                        </td>
+                        <td className="px-4 py-2 text-gray-700 border border-gray-300">
+                          {row.female}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            {/* Benefits of SSC MTS Syllabus 2024 */}
+            <div className="p-4 bg-white-100 rounded-md mt-06">
+            <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
+              {benefits?.title || "Benefits of SSC MTS Syllabus 2025"}
+              </h2>
+              <p className="mb-2">
+                {benefits?.content}
+                Benefits of understanding the SSC MTS Syllabus 2024 for SSC MTS
+                Exam 2024 are mentioned below:
+              </p>
+              <ul>
+                {benefits?.sscMtsSyllabusBenefits?.map((benefit, index) => (
+                  <li key={index} className="mb-4">
+                    <strong>{benefit.title}:</strong> {benefit.description}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            {/* SSC MTS EXAM PATTERN – 2025 */}
+            <div
+              id="ssc-mts-2025-exam-pattern"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
+              {/* Section Title */}
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
+                {sscmtsexampattern?.title || "Selection Process"}
+              </h2>
+
+              <p className="mb-2">It is a {sscmtsexampattern.examType}.</p>
+              <p className="mb-2">
+                It consists of two sessions - Session 1 & Session 2.
+                {sscmtsexampattern.mandatorySessions &&
+                  "It is mandatory for candidates to attempt both the sessions."}
+              </p>
+              <ul>
+                {sscmtsexampattern?.sessions?.map((session, index) => (
+                  <li key={index} className="mb-2">
+                    <strong>Session {session.sessionNumber}:</strong>{" "}
+                    {session.paperType}.
+                    {session.negativeMarking
+                      ? `Negative marking of ${session.negativeMarksPerWrongAnswer} mark for each wrong answer.`
+                      : "No negative marking."}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="table-auto border-collapse border border-gray-300 w-full">
+                <thead>
+                  <tr>
+                    <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                      Sessions
+                    </th>
+                    <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                      Subject
+                    </th>
+                    <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                      No. of Questions
+                    </th>
+                    <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                      Marks
+                    </th>
+                    <th className="border border-gray-300 px-4 py-2 bg-gray-100">
+                      Duration
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sscmtsexampatternData.map((row, index) => (
+                    <tr key={index}>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {row.session}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {row.subject}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {row.questions}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {row.marks}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {row.duration}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            {/* SSC MTS 2024 Syllabus */}
+            <div id="ssc-mts-syllabus" className="overflow-x-auto">
+              <table className="w-full border-collapse border border-gray-300 text-sm text-left">
+                <thead>
+                  <tr>
+                    <th
+                      colSpan={4}
+                      className="border border-gray-300 px-4 py-3 bg-gray-200 text-center font-semibold text-gray-800"
+                    >
+                      SSC MTS 2025 Syllabus
+                    </th>
+                  </tr>
+                  <tr>
+                    <th className="border border-gray-300 px-4 py-3 bg-gray-100 font-semibold text-gray-600">
+                      Numerical Aptitude
+                    </th>
+                    <th className="border border-gray-300 px-4 py-3 bg-gray-100 font-semibold text-gray-600">
+                      Reasoning Ability
+                    </th>
+                    <th className="border border-gray-300 px-4 py-3 bg-gray-100 font-semibold text-gray-600">
+                      English Language
+                    </th>
+                    <th className="border border-gray-300 px-4 py-3 bg-gray-100 font-semibold text-gray-600">
+                      General Awareness
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {sscmtssyllabusData && (
+                    <tr className="border-b border-gray-300 bg-gray-50">
+                      {sscmtssyllabusData.map((section, index) => (
+                        <td
+                          key={index}
+                          className="border border-gray-300 px-4 py-3 align-top"
+                        >
+                          <ul className="list-disc pl-5">
+                            {section.topics.map((topic, topicIndex) => (
+                              <li key={topicIndex} className="text-gray-600">
+                                {topic}
+                              </li>
+                            ))}
+                          </ul>
+                        </td>
+                      ))}
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+            {/* SSC MTS 2025 Exam Centers */}
+            <div
+              id="ssc-mts-2025-exam-center"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               {/* Section Title */}
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscMtsExamCentersData?.title || "Exam Centers"}
@@ -402,7 +715,10 @@ const SSCMTS = () => {
               <h3 className="text-xl font-bold text-gray-800 mb-4">
                 {sscMtsExamCentersData?.relatedPosts?.title || "Related Posts"}
               </h3>
-              <div className="overflow-x-auto">
+              <div
+                id="related-post-to-ssc-mts-2024"
+                className="overflow-x-auto"
+              >
                 <table className="w-full border-collapse border border-gray-300">
                   <tbody>
                     {sscMtsExamCentersData?.relatedPosts?.tableData.map(
@@ -413,7 +729,9 @@ const SSCMTS = () => {
                               key={colIndex}
                               className="px-4 py-3 text-center text-gray-700 border border-gray-300"
                             >
-                              {item.text}
+                              <Link to={item.link} className="text-blue-500">
+                                {item?.text}
+                              </Link>
                             </td>
                           ))}
                         </tr>
@@ -424,7 +742,10 @@ const SSCMTS = () => {
               </div>
             </div>{" "}
             {/* Frequently Asked Questions Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-mts-frequently-asked-questions"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h3 className="text-xl font-bold text-gray-800 mb-4">
                 {sscMtsExamData.faq.title}
               </h3>
