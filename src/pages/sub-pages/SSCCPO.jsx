@@ -65,8 +65,9 @@ const SSCCPO = () => {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           {/* Main Column */}
           <div className="md:col-span-9 ">
-            {/* First Section: SSC CPO Intro */}
+            {/* First Section: SSC GD Intro */}
             <div className="bg-white rounded-md lg:p-6 mb-6">
+              {/* Title Section */}
               <h1 className="xl:text-3xl lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                 {title}
               </h1>
@@ -87,17 +88,21 @@ const SSCCPO = () => {
               {/* Content Section */}
               <div className="bg-gray-50 p-4 rounded-md border border-gray-300">
                 <h2 className="text-xl font-semibold text-gray-800 mb-3">
-                  Exam Details
+                  Recruitment Details
                 </h2>
                 <p className="text-gray-700 leading-relaxed">{content}</p>
-                {/* Additional Styling */}
-                <div className="mt-6 p-4 bg-gray-50 rounded-md ">
+
+                {/* Important Dates Section */}
+                <div className="mt-6 p-4 bg-gray-50 rounded-md">
                   <h3 className="text-lg font-bold text-blue-700">
                     Important Dates
                   </h3>
                   <ul className="list-disc ml-5 text-gray-700">
-                    <li>Paper 1: 23rd June - 30th June 2025</li>
-                    <li>Paper 2: 1st December 2025</li>
+                    <li>Notification Release: 5th September 2024</li>
+                    <li>
+                      Application Dates: 5th September - 14th October 2024
+                    </li>
+                    <li>Exam Dates: January - February 2025 (Tentative)</li>
                   </ul>
                 </div>
               </div>
