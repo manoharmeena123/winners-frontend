@@ -49,6 +49,8 @@ import SSCCHSL from './pages/sub-pages/SSCCHSL.jsx';
 import SSCMTS from "./pages/sub-pages/SSCMTS.jsx";
 import SSCCPO from "./pages/sub-pages/SSCCPO.jsx";
 import SSCGD from "./pages/sub-pages/SSCGD.jsx";
+import SSCStenographer from "./pages/sub-pages/SSCStenographer.jsx";
+
 
 function App() {
   const lenis = new Lenis();
@@ -88,7 +90,7 @@ function App() {
           <Route path="/ssc-cpo" element={<SSCCPO />} />
           {/* <Route path="/ssc-gd" element={<SSC5 />} /> */}
           <Route path="/ssc-gd" element={<SSCGD />} />
-
+          <Route path="/ssc-stenographer" element={<SSCStenographer />} />
 
           <Route path="/ibps-po" element={<Exam1 />} />
           <Route path="/ibps-sbi" element={<Exam2 />} />

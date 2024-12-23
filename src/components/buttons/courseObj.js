@@ -12,6 +12,7 @@ export const courses = [
       { courseName: "SSC MTS", link: "/ssc-mts" },
       { courseName: "SSC CPO", link: "/ssc-cpo" },
       { courseName: "SSC GD", link: "/ssc-gd" },
+      { courseName: "SSC Stenographer", link: "/ssc-stenographer" },
     ],
   },
   {
@@ -119,4 +120,41 @@ export const RailwayCourse = [
     courseName: "Railway RPF",
     link: "/railway-rpf",
   },
+];
+
+
+
+export const relatedPost = [
+  {
+    title: "SSC CGL 2025 Notification Out, Apply Now",
+    link: "/ssc-cgl",
+  },
+  {
+    title: "SSC CHSL 2025 Exam Pattern,Notification and Syllabus",
+    link: "/ssc-chsl",
+  },
+  {
+    title: "SSC MTS 2025 Exam Pattern,Notification and Syllabus",
+    link: "/ssc-mts",
+  },
+  {
+    title: "SSC Stenographer 2025 Exam Pattern,Notification and Syllabus",
+    link: "/ssc-stenographer-prep-2025",
+  },
+  // {
+  //   title: "SSC JE 2024 Exam Pattern,Notification and Syllabus",
+  //   link: "/ssc-je-answer-key-2024",
+  // },
+  {
+    title: "SSC GD Constable Exam Pattern,Notification and Syllabus",
+    link: "/ssc-gd",
+  },
+  {
+    title: "SSC CPO 2025 Exam Pattern,Notification and Syllabus",
+    link: "/ssc-cpo",
+  },
+  // {
+  //   title: "SSC Selection Post Phase 12 Notification Released",
+  //   link: "#",
+  // },
 ];
