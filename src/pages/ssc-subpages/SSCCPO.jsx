@@ -11,6 +11,7 @@ import {
 import { classes, testSeries, sscbooksdata } from "../../data/sscData";
 import { Link } from "react-router-dom";
 import Card from "../../components/card/Card";
+import RelatedPost from "../../components/sidebar/RelatedPost";
 
 const SSCCPO = () => {
   const { title, intro, content, officialWebsite } = sscCpoData;
@@ -62,7 +63,7 @@ const SSCCPO = () => {
         </nav>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {/* Main Column */}
           <div className="md:col-span-9 ">
             {/* First Section: SSC GD Intro */}
@@ -173,7 +174,7 @@ const SSCCPO = () => {
                     <li key={index}>
                       <a
                         href={item.link}
-                        className="text-red-600 hover:underline"
+                        className="text-red-600 hover:text-blue-600"
                       >
                         {item.title}
                       </a>
@@ -183,7 +184,7 @@ const SSCCPO = () => {
                             <li key={subIndex}>
                               <a
                                 href={subItem.link}
-                                className="text-red-600 hover:underline"
+                                className="text-red-600 hover:text-blue-600"
                               >
                                 {subItem.title}
                               </a>
@@ -806,7 +807,8 @@ const SSCCPO = () => {
               src="/ssc-combo-books.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
-            />
+            />{" "}
+            <RelatedPost />
           </div>
         </div>
       </div>

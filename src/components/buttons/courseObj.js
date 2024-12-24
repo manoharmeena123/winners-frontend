@@ -18,6 +18,12 @@ export const courses = [
   {
     courseName: "BANKING",
     link: "/ibps-po",
+    subCourses :[
+      { courseName: "IBPS PO & SBI PO", link: "/ibps-po" },
+      { courseName: "IBPS RRB's PO & Clerk", link: "/ibps-sbi" },
+      { courseName: "RBI Assistant", link: "/ibps-rbi" },
+      { courseName: "IBPS Clerk & SBI Clerk", link: "/ibps-clerk" },
+    ]
   },
   {
     courseName: "RAILWAY",

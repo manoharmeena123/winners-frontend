@@ -61,7 +61,7 @@ const SSCStenographer = () => {
         </nav>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {/* Main Column */}
           <div className="md:col-span-9 ">
             {/* First Section: SSC Stenographer Intro */}

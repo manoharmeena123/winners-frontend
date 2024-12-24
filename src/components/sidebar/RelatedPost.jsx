@@ -9,7 +9,7 @@ const RelatedPost = () => {
       <ul className="space-y-2">
         {relatedPost?.map((post, index) => (
           <li key={index} className="flex flex-col">
-            <Link to={post?.link} className="text-gray-800 text-base font-semibold hover:text-blue-500">
+            <Link to={post?.link} className="text-gray-800 text-base font-semibold hover:text-red-500">
               <span className="mr-2 text-gray-400">&rarr;</span>{" "}
               {/* Arrow Key */}
               {post.title}

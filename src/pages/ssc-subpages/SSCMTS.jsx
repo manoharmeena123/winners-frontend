@@ -11,6 +11,7 @@ import {
 import { classes, testSeries, sscbooksdata } from "../../data/sscData";
 import { Link } from "react-router-dom";
 import Card from "../../components/card/Card";
+import RelatedPost from "../../components/sidebar/RelatedPost";
 
 const SSCMTS = () => {
   const { title, intro, content, officialWebsite } = sscMtsData;
@@ -76,7 +77,7 @@ const SSCMTS = () => {
         </nav>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {/* Main Column */}
           <div className="md:col-span-9 ">
             {/* First Section: SSC CPO Intro */}
@@ -164,7 +165,7 @@ const SSCMTS = () => {
                     <li key={index}>
                       <a
                         href={item.link}
-                        className="text-red-600 hover:underline"
+                        className="text-red-600 hover:text-blue-600"
                       >
                         {item.title}
                       </a>
@@ -174,7 +175,7 @@ const SSCMTS = () => {
                             <li key={subIndex}>
                               <a
                                 href={subItem.link}
-                                className="text-red-600 hover:underline"
+                                className="text-red-600 hover:text-blue-600"
                               >
                                 {subItem.title}
                               </a>
@@ -518,8 +519,8 @@ const SSCMTS = () => {
             </div>
             {/* Benefits of SSC MTS Syllabus 2024 */}
             <div className="p-4 bg-white-100 rounded-md mt-06">
-            <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
-              {benefits?.title || "Benefits of SSC MTS Syllabus 2025"}
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
+                {benefits?.title || "Benefits of SSC MTS Syllabus 2025"}
               </h2>
               <p className="mb-2">
                 {benefits?.content}
@@ -871,6 +872,7 @@ const SSCMTS = () => {
               alt="Placeholder"
               className="w-full rounded shadow-md"
             />
+            <RelatedPost />
           </div>
         </div>
       </div>

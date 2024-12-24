@@ -10,6 +10,7 @@ import {
 } from "../../data/ssc-chsl";
 import { classes, testSeries, sscbooksdata } from "../../data/sscData";
 import Card from "../../components/card/Card";
+import RelatedPost from "../../components/sidebar/RelatedPost";
 
 const SSCCHSL = () => {
   const { title, intro, content, officialWebsite } = sscchslData;
@@ -66,7 +67,7 @@ const SSCCHSL = () => {
           {/* Main Column */}
           <div className="md:col-span-9 ">
             {/* First Section: SSC CHSL Intro */}
-            <div className="bg-white  rounded-md lg:p-6 mb-6">
+            <div className="bg-white  rounded-md lg:p-6 mb-2">
               <h1 className="text-3xl font-bold text-gray-800 mb-4">{title}</h1>
               <p className="text-gray-600 mb-4">
                 {intro}{" "}
@@ -148,7 +149,7 @@ const SSCCHSL = () => {
                     <li key={index}>
                       <a
                         href={item.link}
-                        className="text-red-600 hover:underline"
+                        className="text-red-600 hover:text-blue-600"
                       >
                         {item.title}
                       </a>
@@ -158,7 +159,7 @@ const SSCCHSL = () => {
                             <li key={subIndex}>
                               <a
                                 href={subItem.link}
-                                className="text-red-600 hover:underline"
+                                className="text-red-600 hover:text-blue-600"
                               >
                                 {subItem.title}
                               </a>
@@ -748,16 +749,21 @@ const SSCCHSL = () => {
 
                 {/* Description */}
                 <p className="text-gray-700 leading-relaxed mb-4">
-                  {sscchslExamData?.tier2ExamPattern?.negativemarking?.description}
+                  {
+                    sscchslExamData?.tier2ExamPattern?.negativemarking
+                      ?.description
+                  }
                 </p>
 
                 {/* Tips List */}
                 <ul className="list-disc pl-6 text-gray-700 leading-relaxed">
-                  {sscchslExamData?.tier2ExamPattern?.negativemarking?.tips.map((tip, index) => (
-                    <li key={index} className="mb-2">
-                      {tip}
-                    </li>
-                  ))}
+                  {sscchslExamData?.tier2ExamPattern?.negativemarking?.tips.map(
+                    (tip, index) => (
+                      <li key={index} className="mb-2">
+                        {tip}
+                      </li>
+                    )
+                  )}
                 </ul>
               </div>
 
@@ -1288,7 +1294,8 @@ const SSCCHSL = () => {
               src="/ssc-combo-books.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
-            />
+            />{" "}
+            <RelatedPost />
           </div>
         </div>
       </div>

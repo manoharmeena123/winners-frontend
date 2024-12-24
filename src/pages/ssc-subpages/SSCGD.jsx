@@ -11,6 +11,7 @@ import {
 import { classes, testSeries, sscbooksdata } from "../../data/sscData";
 import { Link } from "react-router-dom";
 import Card from "../../components/card/Card";
+import RelatedPost from "../../components/sidebar/RelatedPost";
 
 const SSCGD = () => {
   const { title, intro, content, officialWebsite } = sscgdData;
@@ -62,7 +63,7 @@ const SSCGD = () => {
         </nav>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {/* Main Column */}
           <div className="md:col-span-9 ">
             {/* First Section: SSC CD Intro */}
@@ -167,7 +168,7 @@ const SSCGD = () => {
                     <li key={index}>
                       <a
                         href={item.link}
-                        className="text-red-600 hover:underline"
+                        className="text-red-600 hover:text-blue-600"
                       >
                         {item.title}
                       </a>
@@ -177,7 +178,7 @@ const SSCGD = () => {
                             <li key={subIndex}>
                               <a
                                 href={subItem.link}
-                                className="text-red-600 hover:underline"
+                                className="text-red-600 hover:text-blue-600"
                               >
                                 {subItem.title}
                               </a>
@@ -191,7 +192,10 @@ const SSCGD = () => {
               </div>
             </div>
             {/* SSC CD Syllabus 2025 Overview */}
-            <div id="ssc-gd-syllabus-2025-overview" className="bg-white shadow-md rounded-md p-4 lg:p-6">
+            <div
+              id="ssc-gd-syllabus-2025-overview"
+              className="bg-white shadow-md rounded-md p-4 lg:p-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscgdExamData.overviewData.title}
               </h2>
@@ -293,7 +297,10 @@ const SSCGD = () => {
               </table>
             </div>
             {/* SSC GD Selection Process 2025 */}
-            <div id="ssc-gd-selection-process-2025" className="bg-white shadow-md rounded-md p-4 lg:p-6 mt-6">
+            <div
+              id="ssc-gd-selection-process-2025"
+              className="bg-white shadow-md rounded-md p-4 lg:p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscgdExamData.sscgdSelectionData.title}
               </h2>
@@ -314,7 +321,10 @@ const SSCGD = () => {
             </div>
 
             {/* SSC GD Exam Pattern 2025 */}
-            <div id="ssc-gd-exam-pattern-2025" className="bg-white shadow-md rounded-md p-4 lg:p-6 mt-6">
+            <div
+              id="ssc-gd-exam-pattern-2025"
+              className="bg-white shadow-md rounded-md p-4 lg:p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscgdExamData.examPattern.title}
               </h2>
@@ -335,7 +345,10 @@ const SSCGD = () => {
             </div>
 
             {/* SSC GD CBT Exam Pattern 2025 */}
-            <div id="ssc-gd-cbt-exam-pattern-2025" className="bg-white shadow-md rounded-md p-4 lg:p-6 mt-6">
+            <div
+              id="ssc-gd-cbt-exam-pattern-2025"
+              className="bg-white shadow-md rounded-md p-4 lg:p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscgdExamData.cbtexamPattern.title}
               </h2>
@@ -355,7 +368,10 @@ const SSCGD = () => {
               </ul>
             </div>
             {/* "SSC GD Exam Pattern 2025", */}
-            <div id="ssc-gd-exam-pattern-2025-summary" className="bg-white shadow-md rounded-md p-4 lg:p-6">
+            <div
+              id="ssc-gd-exam-pattern-2025-summary"
+              className="bg-white shadow-md rounded-md p-4 lg:p-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscgdExamData?.sscgdExamPatternData.title}
               </h2>
@@ -475,7 +491,10 @@ const SSCGD = () => {
               </div>
             </div>
             {/* SSC GD Physical Test 2025 */}
-            <div id="ssc-gd-physical-standard-test-2025" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-gd-physical-standard-test-2025"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscgdExamData?.physicalTest?.title}
               </h2>
@@ -486,7 +505,10 @@ const SSCGD = () => {
             </div>
 
             {/* SSC GD PET 2025 */}
-            <div id="ssc-gd-physical-eligibility-test-parameters" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-gd-physical-eligibility-test-parameters"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscgdExamData?.physicalTestParameters?.title}
               </h2>
@@ -534,7 +556,10 @@ const SSCGD = () => {
             </div>
 
             {/* SSC GD PST 2025 */}
-            <div id="ssc-gd-physical-standard-test-parameters" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-gd-physical-standard-test-parameters"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscgdExamData?.physicalstandardParameters?.title}
               </h2>
@@ -746,7 +771,8 @@ const SSCGD = () => {
               src="/ssc-combo-books.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
-            />
+            />{" "}
+            <RelatedPost />
           </div>
         </div>
       </div>

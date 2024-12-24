@@ -104,7 +104,7 @@ function SSC() {
               </div>
             </div>
             <img
-              src="https://www.bankersadda.com/wp-content/uploads/multisite/2024/12/06164702/SSC-Calendar-2025-26.png"
+              src="/ssc-promo.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
             />

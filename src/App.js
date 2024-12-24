@@ -44,13 +44,13 @@ import ApplyNow from "./pages/ApplyNow";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import TermsConditions from "./pages/TermsConditions";
-import SSCCGL from './pages/sub-pages/SSCCGL';
-import SSCCHSL from './pages/sub-pages/SSCCHSL.jsx';
-import SSCMTS from "./pages/sub-pages/SSCMTS.jsx";
-import SSCCPO from "./pages/sub-pages/SSCCPO.jsx";
-import SSCGD from "./pages/sub-pages/SSCGD.jsx";
-import SSCStenographer from "./pages/sub-pages/SSCStenographer.jsx";
-
+import SSCCGL from './pages/ssc-subpages/SSCCGL';
+import SSCCHSL from './pages/ssc-subpages/SSCCHSL.jsx';
+import SSCMTS from "./pages/ssc-subpages/SSCMTS.jsx";
+import SSCCPO from "./pages/ssc-subpages/SSCCPO.jsx";
+import SSCGD from "./pages/ssc-subpages/SSCGD.jsx";
+import SSCStenographer from "./pages/ssc-subpages/SSCStenographer.jsx";
+import IBPSPO from  "./pages/banking-subpages/IBPS-PO.jsx";
 
 function App() {
   const lenis = new Lenis();
@@ -92,7 +92,9 @@ function App() {
           <Route path="/ssc-gd" element={<SSCGD />} />
           <Route path="/ssc-stenographer" element={<SSCStenographer />} />
 
-          <Route path="/ibps-po" element={<Exam1 />} />
+            {/* banking */}
+
+          <Route path="/ibps-po" element={<IBPSPO />} />
           <Route path="/ibps-sbi" element={<Exam2 />} />
           <Route path="/ibps-rbi" element={<Exam3 />} />
           <Route path="/ibps-clerk" element={<Exam4 />} />

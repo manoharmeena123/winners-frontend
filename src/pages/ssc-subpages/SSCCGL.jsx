@@ -3,9 +3,15 @@ import React, { useState, useEffect } from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
-import { ssccglData, sscExamData, sscExamtableData,tableOfContentsData } from "../../data/ssc-cgl";
+import {
+  ssccglData,
+  sscExamData,
+  sscExamtableData,
+  tableOfContentsData,
+} from "../../data/ssc-cgl";
 import { classes, testSeries, sscbooksdata } from "../../data/sscData";
 import Card from "../../components/card/Card";
+import RelatedPost from "../../components/sidebar/RelatedPost";
 
 const SSCCGL = () => {
   const { title, intro, content, officialWebsite } = ssccglData;
@@ -60,7 +66,7 @@ const SSCCGL = () => {
         </nav>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {/* Main Column */}
           <div className="md:col-span-9">
             {/* First Section: SSC CGL Intro */}
@@ -146,7 +152,7 @@ const SSCCGL = () => {
                     <li key={index}>
                       <a
                         href={item.link}
-                        className="text-red-600 hover:underline"
+                        className="text-red-600 hover:text-blue-600"
                       >
                         {item.title}
                       </a>
@@ -156,7 +162,7 @@ const SSCCGL = () => {
                             <li key={subIndex}>
                               <a
                                 href={subItem.link}
-                                className="text-red-600 hover:underline"
+                                className="text-red-600 hover:text-blue-600"
                               >
                                 {subItem.title}
                               </a>
@@ -170,14 +176,20 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* Second Section: About SSC CGL */}
-            <div id={about.id} className="bg-white shadow-md rounded-md p-6 mb-6">
+            <div
+              id={about.id}
+              className="bg-white shadow-md rounded-md p-6 mb-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {about.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">{about.content}</p>
             </div>
             {/* Third Section: SSC CGL Notification */}
-            <div id="ssc-cgl-2025-notification" className="bg-white shadow-md rounded-md p-6 mb-6">
+            <div
+              id="ssc-cgl-2025-notification"
+              className="bg-white shadow-md rounded-md p-6 mb-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {notification.title}
               </h2>
@@ -209,7 +221,10 @@ const SSCCGL = () => {
               </p>
             </div>
             {/* Highlights Section */}
-            <div id="ssc-cgl-2025-highlights" className="bg-white shadow-md rounded-md p-6">
+            <div
+              id="ssc-cgl-2025-highlights"
+              className="bg-white shadow-md rounded-md p-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {highlights.title}
               </h2>
@@ -239,7 +254,10 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* Important Dates Section */}
-            <div id="ssc-cgl-2025-important-dates" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-cgl-2025-important-dates"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {importantDates?.title}
               </h2>
@@ -282,7 +300,10 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* SSC CGL Vacancy Section */}
-            <div id="ssc-cgl-2025-vacancy" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-cgl-2025-vacancy"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {vacancy.title}
               </h2>
@@ -320,7 +341,10 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* SSC CGL Registration Section */}
-            <div id="ssc-cgl-2025-registration" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-cgl-2025-registration"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.registration.title}
               </h2>
@@ -329,7 +353,10 @@ const SSCCGL = () => {
               </p>
             </div>
             {/* SSC CGL Application Fee Section */}
-            <div id="ssc-cgl-2025-application-fee" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-cgl-2025-application-fee"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.applicationFee.title}
               </h2>
@@ -384,7 +411,10 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* SSC CGL Signature Specification Section */}
-            <div id="ssc-cgl-2025-signature-specifications" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-cgl-2025-signature-specifications"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.signatureSpecification.title}
               </h2>
@@ -426,7 +456,10 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* SSC CGL Post Preference Section */}
-            <div id="ssc-cgl-2025-post-preferences" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-cgl-2025-post-preferences"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.postPreference.title}
               </h2>
@@ -442,7 +475,10 @@ const SSCCGL = () => {
               </ul>
             </div>
             {/* SSC CGL Eligibility Criteria Section */}
-            <div id="ssc-cgl-2025-eligibility-criteria" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-cgl-2025-eligibility-criteria"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData.eligibilityCriteria.title}
               </h2>
@@ -505,8 +541,11 @@ const SSCCGL = () => {
               </div>
             </div>
             {/* SSC CGL Age Limit Section */}
-            <div id="ssc-cgl-2025-age-limit" className="bg-white shadow-md rounded-md p-6 mt-6">
-            <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
+            <div
+              id="ssc-cgl-2025-age-limit"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
+              <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {sscExamData?.ageLimit?.title}
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
@@ -1322,7 +1361,10 @@ const SSCCGL = () => {
               </div>
             </div>{" "}
             {/* Frequently Asked Questions Section */}
-            <div id="ssc-cgl-2025-faqs" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="ssc-cgl-2025-faqs"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h3 className="text-xl font-bold text-gray-800 mb-4">
                 {sscExamData.faq.title}
               </h3>
@@ -1440,7 +1482,8 @@ const SSCCGL = () => {
               src="/ssc-combo-books.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
-            />
+            />{" "}
+            <RelatedPost />
           </div>
         </div>
       </div>
