@@ -13,12 +13,6 @@ import PhotoGallery from "./pages/PhotoGallery";
 import ContactUS from "./pages/ContactUs";
 // import Franchies from "./pages/Franchies";
 import Scholarship from "./pages/Scholarship";
-import SSC2 from "./pages/SSC2";
-import SSC3 from "./pages/SSC3";
-import SSC4 from "./pages/SSC4";
-import SSC5 from "./pages/SSC5";
-import Exam1 from "./pages/Exam1";
-import Exam2 from "./pages/Exam2";
 import Exam3 from "./pages/Exam3";
 import Exam4 from "./pages/Exam4";
 import Railway1 from "./pages/Railway1";
@@ -31,8 +25,8 @@ import Mp2 from "./pages/Mp2";
 import Mp3 from "./pages/Mp3";
 import Mp4 from "./pages/Mp4";
 import Mp5 from "./pages/Mp5";
-import Lenis from 'lenis'
-import 'aos/dist/aos.css';
+import Lenis from "lenis";
+import "aos/dist/aos.css";
 import Marathonform from "./pages/Marathonform";
 import CareerGuidanceSeminarform from "./pages/CareerGuidanceSeminarform";
 import Career2 from "./pages/Career2";
@@ -44,13 +38,14 @@ import ApplyNow from "./pages/ApplyNow";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import RefundPolicy from "./pages/RefundPolicy";
 import TermsConditions from "./pages/TermsConditions";
-import SSCCGL from './pages/ssc-subpages/SSCCGL';
-import SSCCHSL from './pages/ssc-subpages/SSCCHSL.jsx';
+import SSCCGL from "./pages/ssc-subpages/SSCCGL";
+import SSCCHSL from "./pages/ssc-subpages/SSCCHSL.jsx";
 import SSCMTS from "./pages/ssc-subpages/SSCMTS.jsx";
 import SSCCPO from "./pages/ssc-subpages/SSCCPO.jsx";
 import SSCGD from "./pages/ssc-subpages/SSCGD.jsx";
 import SSCStenographer from "./pages/ssc-subpages/SSCStenographer.jsx";
-import IBPSPO from  "./pages/banking-subpages/IBPS-PO.jsx";
+import IBPSPO from "./pages/banking-subpages/IBPS-PO.jsx";
+import IBPSRRB from "./pages/banking-subpages/IBPS-RRB.jsx";
 
 function App() {
   const lenis = new Lenis();
@@ -78,9 +73,6 @@ function App() {
           <Route path="/refund-policy" element={<RefundPolicy />} />
           <Route path="/terms-conditions" element={<TermsConditions />} />
 
-
-
-          
           <Route path="/mp-psc" element={<MPPSC />} />
           <Route path="/ssc" element={<SSC />} />
           <Route path="/ssc-cgl" element={<SSCCGL />} />
@@ -92,29 +84,14 @@ function App() {
           <Route path="/ssc-gd" element={<SSCGD />} />
           <Route path="/ssc-stenographer" element={<SSCStenographer />} />
 
-            {/* banking */}
+          {/* banking */}
 
           <Route path="/ibps-po" element={<IBPSPO />} />
-          <Route path="/ibps-sbi" element={<Exam2 />} />
+          <Route path="/ibps-sbi" element={<IBPSRRB />} />
           <Route path="/ibps-rbi" element={<Exam3 />} />
           <Route path="/ibps-clerk" element={<Exam4 />} />
 
-
           {/* <Route path="/applynow" element={<ApplyNow />} /> */}
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           <Route path="/railway-alp" element={<Railway1 />} />
           <Route path="/railway-technician" element={<Railway2 />} />
@@ -122,21 +99,11 @@ function App() {
           <Route path="/railway-group-d" element={<Railway4 />} />
           <Route path="/railway-rpf" element={<Railway5 />} />
 
-
-
-
-
-
-
-
           <Route path="/mp-jail" element={<Mp1 />} />
           <Route path="/mp-mahila" element={<Mp2 />} />
           <Route path="/mp-patwari" element={<Mp3 />} />
           <Route path="/mp-police" element={<Mp4 />} />
           <Route path="/mp-sub-inspector" element={<Mp5 />} />
-
-
-
 
           {/* <Route path="/career" element={<Career />} /> */}
           <Route path="/career" element={<Career2 />} />
@@ -149,7 +116,10 @@ function App() {
           <Route path="/career-form" element={<CareerGuidanceSeminarform />} />
           {/* <Route path="/ticket-page/:id" element={<Ticket />} /> */}
           <Route path="/sagar-seminar-form" element={<SagarseminarForm />} />
-          <Route path="/jabalpur-seminar-form" element={<JabalpurSeminarform />} />
+          <Route
+            path="/jabalpur-seminar-form"
+            element={<JabalpurSeminarform />}
+          />
         </Routes>
       </Router>
     </React.Suspense>

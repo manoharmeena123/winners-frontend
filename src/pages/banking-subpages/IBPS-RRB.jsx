@@ -4,16 +4,16 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
 import {
-  ibpsPoData,
-  ipbsExamData,
+  ibpsrrbData,
+  ibpsRrbExamData,
   tableOfContentsData,
   classes,
-} from "../../data/ibps-po";
+} from "../../data/ibps-sbi";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 
-const IBPSPO = () => {
-  const { title, intro, content, officialWebsite } = ibpsPoData;
+const IBPSRRB = () => {
+  const { title, intro, content, officialWebsite } = ibpsrrbData;
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
   // State to track whether the table is open or closed
@@ -57,7 +57,7 @@ const IBPSPO = () => {
               <span className="text-gray-400">&nbsp;&nbsp;»&nbsp;&nbsp;</span>
             </li>
             <li>
-              <span className="text-gray-500">IBPS PO & SBI PO</span>
+              <span className="text-gray-500">IBPS RRB's PO & Clerk</span>
             </li>
           </ol>
         </nav>
@@ -174,26 +174,26 @@ const IBPSPO = () => {
             </div>
             {/* Second Section: About IBPS-PO */}
             <div
-              id="what-is-ibps-po-exam"
+              id="what-is-ibps-rrb-po-clerk-exam"
               className="bg-white shadow-md rounded-md p-6 mb-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
-                {ipbsExamData?.about.title}
+                {ibpsRrbExamData?.about.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                {ipbsExamData?.about.content}
+                {ibpsRrbExamData?.about.content}
               </p>
             </div>
             {/* Second Section:  IBPS-PO Syllbus  */}
             <div
-              id="ibps-po-2025-syllabus"
+              id="ibps-rrb-po-clerk-2025-syllabus"
               className="bg-white shadow-md rounded-md p-6 mb-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
-                {ipbsExamData?.syllabus?.title}
+                {ibpsRrbExamData?.syllabus?.title}
               </h2>
               <p className="text-gray-700 leading-relaxed">
-                {ipbsExamData?.syllabus?.content}
+                {ibpsRrbExamData?.syllabus?.content}
               </p>
             </div>
             {/* Third Section: IBPS-PO Preliums Syllabus Details */}
@@ -202,7 +202,7 @@ const IBPSPO = () => {
               className="overflow-x-auto shadow-md rounded-md p-6 mt-6"
             >
               <h6 className="lg:text-2xl sm:text-xl  font-bold text-gray-500 mb-4">
-                {ipbsExamData?.prelimsSyllabus?.title}
+                {ibpsRrbExamData?.prelimsSyllabus?.title}
               </h6>
               <table className="table-auto border-collapse border border-gray-300 w-full text-left">
                 <thead>
@@ -211,7 +211,7 @@ const IBPSPO = () => {
                       colSpan={5}
                       className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300 text-center"
                     >
-                      {ipbsExamData?.prelimsSyllabus.tableTitle}
+                      {ibpsRrbExamData?.prelimsSyllabus.tableTitle}
                     </th>
                   </tr>
                   <tr className="bg-gray-100">
@@ -229,7 +229,7 @@ const IBPSPO = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {ipbsExamData?.prelimsSyllabus.examData?.map(
+                  {ibpsRrbExamData?.prelimsSyllabus.examData?.map(
                     (item, index) => (
                       <tr key={item.id}>
                         <td className="border border-gray-300 px-4 py-2">
@@ -247,7 +247,7 @@ const IBPSPO = () => {
                         {index === 0 ? (
                           <td
                             rowSpan={
-                              ipbsExamData?.prelimsSyllabus.examData.length
+                              ibpsRrbExamData?.prelimsSyllabus.examData.length
                             }
                             className="border border-gray-300 px-4 py-2 align-top"
                           >
@@ -266,10 +266,10 @@ const IBPSPO = () => {
                       Total
                     </td>
                     <td className="border border-gray-300 px-4 py-2">
-                      {ipbsExamData?.prelimsSyllabus?.totalQuestions}
+                      {ibpsRrbExamData?.prelimsSyllabus?.totalQuestions}
                     </td>
                     <td className="border border-gray-300 px-4 py-2">
-                      {ipbsExamData?.prelimsSyllabus?.totalMarks}
+                      {ibpsRrbExamData?.prelimsSyllabus?.totalMarks}
                     </td>
                     <td className="border border-gray-300 px-4 py-2"></td>
                   </tr>
@@ -283,136 +283,42 @@ const IBPSPO = () => {
               className="overflow-x-auto shadow-md rounded-md p-6 mt-6"
             >
               <h6 className="lg:text-2xl sm:text-xl  font-bold text-gray-500 mb-4">
-                {ipbsExamData?.mainsData?.title}
+                {ibpsRrbExamData?.mainsData?.title}
               </h6>
               <table className="table-auto border-collapse border border-gray-300 w-full text-center">
                 <thead>
                   <tr className="bg-blue-100 text-gray-800">
-                    <th
-                      colSpan={7}
-                      className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300 text-center"
-                    >
-                      {ipbsExamData?.mainsData.tableTitle}
-                    </th>
-                  </tr>
-                  <tr className="bg-gray-100">
-                    <th
-                      rowSpan={2}
-                      className="border border-gray-300 px-4 py-2"
-                    >
-                      Section
-                    </th>
-                    <th
-                      colSpan={2}
-                      className="border border-gray-300 px-4 py-2"
-                    >
-                      Number of Questions
-                    </th>
-                    <th
-                      colSpan={2}
-                      className="border border-gray-300 px-4 py-2"
-                    >
-                      Maximum Marks
-                    </th>
-                    <th
-                      colSpan={2}
-                      className="border border-gray-300 px-4 py-2"
-                    >
-                      Time Allotted
-                    </th>
-                  </tr>
-                  <tr className="bg-gray-100">
-                    <th className="border border-gray-300 px-4 py-2">SBI</th>
-                    <th className="border border-gray-300 px-4 py-2">IBPS</th>
-                    <th className="border border-gray-300 px-4 py-2">SBI</th>
-                    <th className="border border-gray-300 px-4 py-2">IBPS</th>
-                    <th className="border border-gray-300 px-4 py-2">SBI</th>
-                    <th className="border border-gray-300 px-4 py-2">IBPS</th>
+                    <th className="border border-gray-200 p-2">Subject</th>
+                    <th className="border border-gray-200 p-2">Questions</th>
+                    <th className="border border-gray-200 p-2">Marks</th>
+                    <th className="border border-gray-200 p-2">Time</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {ipbsExamData?.mainsData?.sections?.map((section, index) => (
-                    <tr key={index}>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {section.name}
+                  {ibpsRrbExamData?.mainsData?.sections?.map((row) => (
+                    <tr key={row.subject}>
+                      <td className="border border-gray-200 p-2">
+                        {row.subject}
                       </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {section.sbiQuestions}
+                      <td className="border border-gray-200 p-2">
+                        {row.questions}
                       </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {section.ibpsQuestions}
+                      <td className="border border-gray-200 p-2">
+                        {row.marks}
                       </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {section.sbiMarks}
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {section.ibpsMarks}
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {section.sbiTime}
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {section.ibpsTime}
-                      </td>
+                      <td className="border border-gray-200 p-2">{row.time}</td>
                     </tr>
                   ))}
-                  <tr className="bg-gray-100 font-bold">
-                    <td className="border border-gray-300 px-4 py-2">Total</td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      {ipbsExamData?.mainsData?.total.sbiQuestions}
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      {ipbsExamData?.mainsData?.total.ibpsQuestions}
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      {ipbsExamData?.mainsData?.total.sbiMarks}
-                    </td>
-                    <td className="border border-gray-300 px-4 py-2">
-                      {ipbsExamData?.mainsData?.total.ibpsMarks}
-                    </td>
-                    <td
-                      colSpan={2}
-                      className="border border-gray-300 px-4 py-2"
-                    >
-                      {ipbsExamData?.mainsData?.total.timeAllotted}
-                    </td>
-                  </tr>
-                  <tr className="bg-gray-100 font-bold">
-                    <td
-                      colSpan={1}
-                      className="border border-gray-300 px-4 py-2"
-                    >
-                      {ipbsExamData?.mainsData?.descriptive.title}
-                    </td>
-                    <td
-                      colSpan={2}
-                      className="border border-gray-300 px-4 py-2"
-                    >
-                      {ipbsExamData?.mainsData?.descriptive.questions}
-                    </td>
-                    <td
-                      colSpan={2}
-                      className="border border-gray-300 px-4 py-2"
-                    >
-                      {ipbsExamData?.mainsData?.descriptive.marks}
-                    </td>
-                    <td
-                      colSpan={2}
-                      className="border border-gray-300 px-4 py-2"
-                    >
-                      {ipbsExamData?.mainsData?.descriptive.time}
-                    </td>
-                  </tr>
                 </tbody>
               </table>
             </div>
 
             <div
-              id="ibps-po-sbi-po-prelims-syllabus"
+              id="ibps-rrb-po-clerk-prelims-syllabus"
               className="container mx-auto shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {ipbsExamData?.syllabusData?.title}
+                {ibpsRrbExamData?.syllabusData?.title}
               </h2>
               <div className="overflow-x-auto">
                 <table className="min-w-full table-auto border-collapse border border-gray-300 rounded-lg shadow-lg">
@@ -427,7 +333,7 @@ const IBPSPO = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {ipbsExamData?.syllabusData?.tableData?.map(
+                    {ibpsRrbExamData?.syllabusData?.tableData?.map(
                       (section, index) => (
                         <tr
                           key={index}
@@ -454,11 +360,11 @@ const IBPSPO = () => {
             </div>
 
             <div
-              id="ibps-po-sbi-po-mains-syllabus"
+              id="ibps-rrb-po-clerk-mains-syllabus"
               className="container mx-auto shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {ipbsExamData?.syllabusData2?.title}
+                {ibpsRrbExamData?.syllabusData2?.title}
               </h2>
               <div className="overflow-x-auto">
                 <table className="min-w-full table-auto border-collapse border border-gray-300 rounded-lg shadow-lg">
@@ -473,7 +379,7 @@ const IBPSPO = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {ipbsExamData?.syllabusData2?.tableData?.map(
+                    {ibpsRrbExamData?.syllabusData2?.tableData?.map(
                       (section, index) => (
                         <tr
                           key={index}
@@ -501,14 +407,14 @@ const IBPSPO = () => {
 
             {/* Frequently Asked Questions Section */}
             <div
-              id="frequently-asked-questions-about-ibps-po-2025"
+              id="frequently-asked-questions-about-ibps-rrb-po-clerk-2025"
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h3 className="text-xl font-bold text-gray-800 mb-4">
-                {ipbsExamData.faq.title}
+                {ibpsRrbExamData.faq.title}
               </h3>
               <div className="divide-y divide-gray-300">
-                {ipbsExamData.faq.questions.map((faq, index) => (
+                {ibpsRrbExamData.faq.questions.map((faq, index) => (
                   <div key={index} className="py-4">
                     <button
                       onClick={() => toggleFAQ(index)}
@@ -561,7 +467,7 @@ const IBPSPO = () => {
               className="w-full rounded shadow-md"
             />{" "}
             <iframe
-            className="w-full rounded shadow-md"
+              className="w-full rounded shadow-md"
               src="https://www.youtube.com/embed/fow1ryLZU7g"
               title="HOW TO BECOME BANK PO 2023 | बैंक PO कैसे बने? | COMPLETE DETAILED VIDEO BY ADITYA PATEL SIR"
               frameborder="0"
@@ -570,7 +476,7 @@ const IBPSPO = () => {
               allowfullscreen
             ></iframe>
             <img
-             src="banking/sbi-po.jpeg"
+              src="banking/sbi-po.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
             />{" "}
@@ -598,4 +504,4 @@ const IBPSPO = () => {
   );
 };
 
-export default IBPSPO;
+export default IBPSRRB;
