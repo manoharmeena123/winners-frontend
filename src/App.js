@@ -46,6 +46,9 @@ import SSCGD from "./pages/ssc-subpages/SSCGD.jsx";
 import SSCStenographer from "./pages/ssc-subpages/SSCStenographer.jsx";
 import IBPSPO from "./pages/banking-subpages/IBPS-PO.jsx";
 import IBPSRRB from "./pages/banking-subpages/IBPS-RRB.jsx";
+import IBPSRBI from "./pages/banking-subpages/IBPS-RBI.jsx";
+
+
 
 function App() {
   const lenis = new Lenis();
@@ -88,7 +91,7 @@ function App() {
 
           <Route path="/ibps-po" element={<IBPSPO />} />
           <Route path="/ibps-sbi" element={<IBPSRRB />} />
-          <Route path="/ibps-rbi" element={<Exam3 />} />
+          <Route path="/ibps-rbi" element={<IBPSRBI />} />
           <Route path="/ibps-clerk" element={<Exam4 />} />
 
           {/* <Route path="/applynow" element={<ApplyNow />} /> */}
