@@ -17,7 +17,7 @@ export const courses = [
   },
   {
     courseName: "BANKING",
-    link: "/ibps-po",
+    link: "/banking-exam-details",
     subCourses :[
       { courseName: "IBPS PO & SBI PO", link: "/ibps-po" },
       { courseName: "IBPS RRB's PO & Clerk", link: "/ibps-sbi" },

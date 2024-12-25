@@ -48,6 +48,7 @@ import IBPSPO from "./pages/banking-subpages/IBPS-PO.jsx";
 import IBPSRRB from "./pages/banking-subpages/IBPS-RRB.jsx";
 import IBPSRBI from "./pages/banking-subpages/IBPS-RBI.jsx";
 import IBPSCLERK from "./pages/banking-subpages/IBPS-CLERK.jsx";
+import BANKING from "./pages/banking-subpages/BANKING";
 
 function App() {
   const lenis = new Lenis();
@@ -92,7 +93,7 @@ function App() {
           <Route path="/ibps-sbi" element={<IBPSRRB />} />
           <Route path="/ibps-rbi" element={<IBPSRBI />} />
           <Route path="/ibps-clerk" element={<IBPSCLERK />} />
-
+          <Route path="/banking-exam-details" element={<BANKING />} />
           {/* <Route path="/applynow" element={<ApplyNow />} /> */}
 
           <Route path="/railway-alp" element={<Railway1 />} />
