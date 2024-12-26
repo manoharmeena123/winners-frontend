@@ -455,7 +455,7 @@ const MPPSC = () => {
                 <p className="text-gray-800 text-lg font-medium mb-4">
                   {mppscsllaybus?.mainExamData?.description}
                 </p>
-                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900 overflow-x-auto">
                   <thead className="bg-gray-100">
                     <tr>
                       <th className="border border-gray-400 px-4 py-2">
