@@ -56,7 +56,7 @@ const MPPSC = () => {
         title="MPPSC - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
-      <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
+   <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
           <ol className="list-none p-0 inline-flex">
@@ -73,7 +73,7 @@ const MPPSC = () => {
         </nav>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 bg-white rounded-md">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-2 bg-white rounded-md">
           {/* Col-8 */}
           <div className="md:col-span-9 ">
             {/* First Section: SSC  Intro */}
@@ -381,7 +381,7 @@ const MPPSC = () => {
                 {mppscsllaybus?.content}
               </p>
               {/* MPPSC प्रारंभिक परीक्षा */}
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300">
+              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
                 <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
                   {mppscsllaybus?.examData.title}
                 </h1>
@@ -406,19 +406,19 @@ const MPPSC = () => {
                   <p className="mb-4">
                     {mppscsllaybus?.examData.additionalInfo}
                   </p>
-                  <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900 overflow-x-auto">
                     <thead className="bg-gray-100">
                       <tr>
-                        <th className="border border-gray-400 px-4 py-2">
+                        <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
                           प्रश्न प्रश्न पत्र
                         </th>
-                        <th className="border border-gray-400 px-4 py-2">
+                        <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
                           विषय
                         </th>
-                        <th className="border border-gray-400 px-4 py-2">
+                        <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
                           समय
                         </th>
-                        <th className="border border-gray-400 px-4 py-2">
+                        <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
                           अंक
                         </th>
                       </tr>
