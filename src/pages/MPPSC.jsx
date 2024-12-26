@@ -56,7 +56,7 @@ const MPPSC = () => {
         title="MPPSC - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
-   <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
+      <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
           <ol className="list-none p-0 inline-flex">
@@ -406,44 +406,47 @@ const MPPSC = () => {
                   <p className="mb-4">
                     {mppscsllaybus?.examData.additionalInfo}
                   </p>
-                  <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900 overflow-x-auto">
-                    <thead className="bg-gray-100">
-                      <tr>
-                        <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
-                          प्रश्न प्रश्न पत्र
-                        </th>
-                        <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
-                          विषय
-                        </th>
-                        <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
-                          समय
-                        </th>
-                        <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
-                          अंक
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {mppscsllaybus?.examData.examDetails.map(
-                        (exam, index) => (
-                          <tr key={index}>
-                            <td className="border border-gray-400 px-4 py-2">
-                              {exam.paper}
-                            </td>
-                            <td className="border border-gray-400 px-4 py-2">
-                              {exam.subject}
-                            </td>
-                            <td className="border border-gray-400 px-4 py-2">
-                              {exam.time}
-                            </td>
-                            <td className="border border-gray-400 px-4 py-2">
-                              {exam.marks}
-                            </td>
-                          </tr>
-                        )
-                      )}
-                    </tbody>
-                  </table>
+                  <div className="overflow-x-auto mt-6">
+                    {" "}
+                    <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900 overflow-x-auto">
+                      <thead className="bg-gray-100">
+                        <tr>
+                          <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                            प्रश्न प्रश्न पत्र
+                          </th>
+                          <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                            विषय
+                          </th>
+                          <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                            समय
+                          </th>
+                          <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                            अंक
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {mppscsllaybus?.examData.examDetails.map(
+                          (exam, index) => (
+                            <tr key={index}>
+                              <td className="border border-gray-400 px-4 py-2">
+                                {exam.paper}
+                              </td>
+                              <td className="border border-gray-400 px-4 py-2">
+                                {exam.subject}
+                              </td>
+                              <td className="border border-gray-400 px-4 py-2">
+                                {exam.time}
+                              </td>
+                              <td className="border border-gray-400 px-4 py-2">
+                                {exam.marks}
+                              </td>
+                            </tr>
+                          )
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
 
@@ -455,50 +458,60 @@ const MPPSC = () => {
                 <p className="text-gray-800 text-lg font-medium mb-4">
                   {mppscsllaybus?.mainExamData?.description}
                 </p>
-                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900 overflow-x-auto">
-                  <thead className="bg-gray-100">
-                    <tr>
-                      <th className="border border-gray-400 px-4 py-2">
-                        प्रश्न पत्र
-                      </th>
-                      <th className="border border-gray-400 px-4 py-2">खंड</th>
-                      <th className="border border-gray-400 px-4 py-2">विषय</th>
-                      <th className="border border-gray-400 px-4 py-2">
-                        पूर्णांक
-                      </th>
-                      <th className="border border-gray-400 px-4 py-2">अवधि</th>
-                      <th className="border border-gray-400 px-4 py-2">
-                        माध्यम
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {mppscsllaybus?.mainExamData?.examDetails.map(
-                      (exam, index) => (
-                        <tr key={index}>
-                          <td className="border border-gray-400 px-4 py-2">
-                            {exam.paper}
-                          </td>
-                          <td className="border border-gray-400 px-4 py-2">
-                            {exam.section}
-                          </td>
-                          <td className="border border-gray-400 px-4 py-2">
-                            {exam.subject}
-                          </td>
-                          <td className="border border-gray-400 px-4 py-2">
-                            {exam.marks}
-                          </td>
-                          <td className="border border-gray-400 px-4 py-2">
-                            {exam.duration}
-                          </td>
-                          <td className="border border-gray-400 px-4 py-2">
-                            {exam.language}
-                          </td>
-                        </tr>
-                      )
-                    )}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto mt-6">
+                  {" "}
+                  <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900 overflow-x-auto">
+                    <thead className="bg-gray-100">
+                      <tr>
+                        <th className="border border-gray-400 px-4 py-2">
+                          प्रश्न पत्र
+                        </th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          खंड
+                        </th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          विषय
+                        </th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          पूर्णांक
+                        </th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          अवधि
+                        </th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          माध्यम
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {mppscsllaybus?.mainExamData?.examDetails.map(
+                        (exam, index) => (
+                          <tr key={index}>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {exam.paper}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {exam.section}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {exam.subject}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {exam.marks}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {exam.duration}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {exam.language}
+                            </td>
+                          </tr>
+                        )
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+
                 <div className="mt-6">
                   <h2 className="text-gray-800 text-lg font-semibold">
                     अतिरिक्त जानकारी:
@@ -542,30 +555,35 @@ const MPPSC = () => {
                       )
                     )}
                   </ol>
-                  <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
-                    <thead>
-                      <tr>
-                        <th className="border border-gray-400 px-4 py-2">पद</th>
-                        <th className="border border-gray-400 px-4 py-2">
-                          आयु सीमा
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {mppscsllaybus?.mainExamData?.ageLimits.map(
-                        (item, index) => (
-                          <tr key={index}>
-                            <td className="border border-gray-400 px-4 py-2">
-                              {item.post}
-                            </td>
-                            <td className="border border-gray-400 px-4 py-2">
-                              {item.ageLimit}
-                            </td>
-                          </tr>
-                        )
-                      )}
-                    </tbody>
-                  </table>
+                  <div className="overflow-x-auto mt-6">
+                    {" "}
+                    <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                      <thead>
+                        <tr>
+                          <th className="border border-gray-400 px-4 py-2">
+                            पद
+                          </th>
+                          <th className="border border-gray-400 px-4 py-2">
+                            आयु सीमा
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {mppscsllaybus?.mainExamData?.ageLimits.map(
+                          (item, index) => (
+                            <tr key={index}>
+                              <td className="border border-gray-400 px-4 py-2">
+                                {item.post}
+                              </td>
+                              <td className="border border-gray-400 px-4 py-2">
+                                {item.ageLimit}
+                              </td>
+                            </tr>
+                          )
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
                 <div className="bg-white rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
                   <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
@@ -984,8 +1002,6 @@ const MPPSC = () => {
                   </tbody>
                 </table>
               </div>
- 
-
 
               {/* पंचम प्रश्‍न पत्र   सामान्‍य हिन्‍दी एवं व्‍याकरण */}
 
@@ -1029,7 +1045,6 @@ const MPPSC = () => {
                   </tbody>
                 </table>
               </div>
-
 
               {/* षष्‍ठ प्रश्‍न पत्र 
            हिन्‍दी निबंध एवं प्रारूप लेखन */}
