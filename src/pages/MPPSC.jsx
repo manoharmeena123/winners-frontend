@@ -73,11 +73,11 @@ const MPPSC = () => {
         </nav>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 bg-white  rounded-md">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6 bg-white rounded-md">
           {/* Col-8 */}
-          <div className="md:col-span-9 lg:px-6">
+          <div className="md:col-span-9 ">
             {/* First Section: SSC  Intro */}
-            <div className="bg-white  rounded-md lg:p-6 mb-3">
+            <div className="bg-white  rounded-md  mb-3">
               <h1 className="xl:text-3xl lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 MPPSC Notification 2024, Eligibility, Selection Process,
                 Salary..
@@ -215,7 +215,10 @@ const MPPSC = () => {
               </div>
             </div>
             {/* MPPSC Notification 2024 Overview Section */}
-            <div id="mppsc-notification-2024-overview" className="bg-white shadow-md rounded-md p-6">
+            <div
+              id="mppsc-notification-2024-overview"
+              className="bg-white shadow-md rounded-md p-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {overview?.title}
               </h2>
@@ -255,7 +258,10 @@ const MPPSC = () => {
               </div>
             </div>
             {/* MPPSC Notification 2024 Important Dates Section */}
-            <div id="mppsc-notification-2024-important-dates" className="bg-white shadow-md rounded-md p-6">
+            <div
+              id="mppsc-notification-2024-important-dates"
+              className="bg-white shadow-md rounded-md p-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {importantDates?.title}
               </h2>
@@ -304,7 +310,10 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Prelims 2024 Result Out */}
-            <div id="mppsc-prelims-2024-result-out" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-prelims-2024-result-out"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {resultOut.title}
               </h2>
@@ -314,7 +323,10 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Vacancy 2024 */}
-            <div id="mppsc-vacancy-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-vacancy-2024"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2
                 id="ssc-calendar-2025"
                 className="text-xl font-bold text-blue-900 mb-2"
@@ -368,6 +380,766 @@ const MPPSC = () => {
               <p className="text-gray-700 leading-relaxed">
                 {mppscsllaybus?.content}
               </p>
+              {/* MPPSC प्रारंभिक परीक्षा */}
+              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  {mppscsllaybus?.examData.title}
+                </h1>
+                <div className="text-gray-800">
+                  <p className="text-lg font-medium">
+                    {mppscsllaybus?.examData?.description}
+                  </p>
+                  <ol className="list-decimal list-inside ml-4 mt-2">
+                    {mppscsllaybus?.examData?.steps.map((step, index) => (
+                      <li key={index} className="mb-2">
+                        {step.title}
+                        {step.substeps && (
+                          <ol className="list-disc list-inside ml-6 mt-1">
+                            {step.substeps.map((substep, subIndex) => (
+                              <li key={subIndex}>{substep}</li>
+                            ))}
+                          </ol>
+                        )}
+                      </li>
+                    ))}
+                  </ol>
+                  <p className="mb-4">
+                    {mppscsllaybus?.examData.additionalInfo}
+                  </p>
+                  <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                    <thead className="bg-gray-100">
+                      <tr>
+                        <th className="border border-gray-400 px-4 py-2">
+                          प्रश्न प्रश्न पत्र
+                        </th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          विषय
+                        </th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          समय
+                        </th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          अंक
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {mppscsllaybus?.examData.examDetails.map(
+                        (exam, index) => (
+                          <tr key={index}>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {exam.paper}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {exam.subject}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {exam.time}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {exam.marks}
+                            </td>
+                          </tr>
+                        )
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              {/* MPPSC मुख्‍य परीक्षा      */}
+              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  {mppscsllaybus?.mainExamData?.title}
+                </h1>
+                <p className="text-gray-800 text-lg font-medium mb-4">
+                  {mppscsllaybus?.mainExamData?.description}
+                </p>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">
+                        प्रश्न पत्र
+                      </th>
+                      <th className="border border-gray-400 px-4 py-2">खंड</th>
+                      <th className="border border-gray-400 px-4 py-2">विषय</th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        पूर्णांक
+                      </th>
+                      <th className="border border-gray-400 px-4 py-2">अवधि</th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        माध्यम
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mppscsllaybus?.mainExamData?.examDetails.map(
+                      (exam, index) => (
+                        <tr key={index}>
+                          <td className="border border-gray-400 px-4 py-2">
+                            {exam.paper}
+                          </td>
+                          <td className="border border-gray-400 px-4 py-2">
+                            {exam.section}
+                          </td>
+                          <td className="border border-gray-400 px-4 py-2">
+                            {exam.subject}
+                          </td>
+                          <td className="border border-gray-400 px-4 py-2">
+                            {exam.marks}
+                          </td>
+                          <td className="border border-gray-400 px-4 py-2">
+                            {exam.duration}
+                          </td>
+                          <td className="border border-gray-400 px-4 py-2">
+                            {exam.language}
+                          </td>
+                        </tr>
+                      )
+                    )}
+                  </tbody>
+                </table>
+                <div className="mt-6">
+                  <h2 className="text-gray-800 text-lg font-semibold">
+                    अतिरिक्त जानकारी:
+                  </h2>
+                  <ul className="list-disc list-inside text-gray-700">
+                    <li>
+                      कुल योग:{" "}
+                      {
+                        mppscsllaybus?.mainExamData?.additionalDetails
+                          .totalMarks
+                      }
+                    </li>
+                    <li>
+                      साक्षात्कार:{" "}
+                      {
+                        mppscsllaybus?.mainExamData?.additionalDetails
+                          .interviewMarks
+                      }{" "}
+                      अंक
+                    </li>
+                    <li>
+                      कुल अंक:{" "}
+                      {
+                        mppscsllaybus?.mainExamData?.additionalDetails
+                          .finalTotalMarks
+                      }
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="bg-white rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+                  <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                    पात्रता
+                  </h1>
+                  <ol className="list-decimal list-inside ml-4 mt-2">
+                    {mppscsllaybus?.mainExamData?.eligibility.map(
+                      (item, index) => (
+                        <li key={index} className="mb-2">
+                          {item}
+                        </li>
+                      )
+                    )}
+                  </ol>
+                  <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                    <thead>
+                      <tr>
+                        <th className="border border-gray-400 px-4 py-2">पद</th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          आयु सीमा
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {mppscsllaybus?.mainExamData?.ageLimits.map(
+                        (item, index) => (
+                          <tr key={index}>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {item.post}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {item.ageLimit}
+                            </td>
+                          </tr>
+                        )
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+                <div className="bg-white rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+                  <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                    शारीरिक मापदंड
+                  </h1>
+                  <p className="text-gray-800 mb-4">
+                    गृह (पुलिस) विभाग, वाणिज्यिक कर (आबकारी) विभाग, जेल विभाग
+                    तथा परिवहन विभाग के वर्दीधारी पदों हेतु निम्नानुसार शारीरिक
+                    मापदंड निर्धारित है:
+                  </p>
+                  <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                    <thead>
+                      <tr>
+                        <th className="border border-gray-400 px-4 py-2">
+                          लिंग
+                        </th>
+                        <th
+                          className="border border-gray-400 px-4 py-2"
+                          colSpan={2}
+                        >
+                          सीने का घेरा
+                        </th>
+                      </tr>
+                      <tr>
+                        <th className="border border-gray-400 px-4 py-2"></th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          ऊँचाई सेमी. में
+                        </th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          बगैर फुलाए सेमी. में
+                        </th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          पूर्णतः फुलाने पर सेमी. में
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {mppscsllaybus?.mainExamData?.standards.map(
+                        (item, index) => (
+                          <tr key={index}>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {item.gender}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {item.height}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {item.chestUninflated}
+                            </td>
+                            <td className="border border-gray-400 px-4 py-2">
+                              {item.chestInflated}
+                            </td>
+                          </tr>
+                        )
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* मध्‍यप्रदेश राज्‍य सेवा (प्रारंभिक) परीक्षा  */}
+                <div className="bg-white  rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+                  <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                    मध्यप्रदेश राज्य सेवा (प्रारंभिक) परीक्षा
+                  </h1>
+                  <h2 className="text-center text-xl font-bold mb-4">
+                    प्रथम प्रश्न पत्र- सामान्य अध्ययन
+                  </h2>
+                  <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                    <thead>
+                      <tr>
+                        <th className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                          इकाई
+                        </th>
+                        <th className="border border-gray-400 px-4 py-2">
+                          पाठ्यक्रम
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {mppscsllaybus?.mainExamData?.units.map((unit, index) => (
+                        <tr key={index}>
+                          <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                            इकाई - {unit.id}
+                          </td>
+                          <td className="border border-gray-400 px-4 py-2">
+                            <ul className="list-disc list-inside ml-4 mt-2">
+                              <h6 className="text-red-400 font-semibold mb-4">
+                                {unit?.title}
+                              </h6>
+                              {unit.topics.map((topic, index) => (
+                                <li key={index}>{topic}</li>
+                              ))}
+                            </ul>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                  <h2 className="text-center text-xl font-bold mb-4 mt-6">
+                    द्वितीय प्रश्न पत्र- सामान्य अभिरुचि परीक्षण
+                  </h2>
+                  <ol className="list-decimal list-inside ml-4 mt-2">
+                           {" "}
+                    {mppscsllaybus?.mainExamData?.units2.topics.map(
+                      (topic, index) => (
+                        <li key={index} className="mb-2">
+                          {topic}{" "}
+                        </li>
+                      )
+                    )}{" "}
+                  </ol>{" "}
+                  <p className="text-gray-800 mb-4">
+                    टिप्पणी - दसवीं कक्षा के स्तर के हिन्दी भाषा के बोधगम्यता
+                    कौशल से संबंधित प्रश्नों का परीक्षण, प्रश्नपत्र में केवल
+                    हिन्दी भाषा के उद्धरणों के माध्यम से, अँग्रेजी अनुवाद उपलब्ध
+                    कराए बिना किया जाएगा।{" "}
+                  </p>
+                </div>
+              </div>
+
+              {/* मध्‍यप्रदेश राज्‍य सेवा (मुख्‍य) परीक्षा  */}
+              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  मध्‍यप्रदेश राज्‍य सेवा (मुख्‍य) परीक्षा
+                </h1>
+                <h2 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  प्रथम प्रश्न पत्र
+                </h2>
+                <h2 className="text-center text-xl font-bold mb-4">
+                  (खण्ड-अ) इतिहास
+                </h2>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">विषय</th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        पाठ्यक्रम
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mppscsllaybus.syllabusTable?.map((unit, index) => (
+                      <tr key={index}>
+                        <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                          इकाई - {unit.id}
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          <ul className="list-disc list-inside ml-4 mt-2">
+                            {unit.topics.map((topic, index) => (
+                              <li key={index}>{topic}</li>
+                            ))}
+                          </ul>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  प्रथम प्रश्न पत्र
+                </h1>
+                <h2 className="text-center text-xl font-bold mb-4">
+                  (खण्ड-ब) भूगोल
+                </h2>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">विषय</th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        पाठ्यक्रम
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mppscsllaybus.syllabusTable2.map((unit, index) => (
+                      <tr key={index}>
+                        <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                          इकाई - {unit.id}
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          <h6 className="text-red-400 font-semibold mb-4">
+                            {unit?.title}
+                          </h6>
+                          <ul className="list-disc list-inside ml-4 mt-2">
+                            {unit.topics.map((topic, index) => (
+                              <li key={index}>{topic}</li>
+                            ))}
+                          </ul>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  द्वितीय प्रश्न पत्र
+                </h1>
+                <h2 className="text-center text-xl font-bold mb-4">
+                  (खण्ड-अ) - संविधान, शासन व्यवस्था, राजनैतिक एवं प्रशासनिक
+                  संरचना
+                </h2>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">विषय</th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        पाठ्यक्रम
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mppscsllaybus?.secondSection?.map((unit, index) => (
+                      <tr key={index}>
+                        <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                          इकाई - {unit.id}
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          <ul className="list-disc list-inside ml-4 mt-2">
+                            {unit.topics.map((topic, index) => (
+                              <li key={index}>{topic}</li>
+                            ))}
+                          </ul>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  द्वितीय प्रश्न पत्र
+                </h1>
+                <h2 className="text-center text-xl font-bold mb-4">
+                  (खण्ड-ब) समाजशास्‍त्र
+                </h2>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">विषय</th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        पाठ्यक्रम
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mppscsllaybus.socialogysection.map((unit, index) => (
+                      <tr key={index}>
+                        <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                          इकाई - {unit.id}
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          <h6 className="text-red-400 font-semibold mb-4">
+                            {unit?.title}
+                          </h6>
+                          <ul className="list-disc list-inside ml-4 mt-2">
+                            {unit.topics.map((topic, index) => (
+                              <li key={index}>{topic}</li>
+                            ))}
+                          </ul>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* 
+                     तृतीय प्रश्‍न पत्र  
+                   (खण्‍ड-अ) – अर्थशास्‍त्र     */}
+              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  तृतीय प्रश्न पत्र
+                </h1>
+                <h2 className="text-center text-xl font-bold mb-4">
+                  (खण्ड-अ) अर्थशास्‍त्र
+                </h2>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">विषय</th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        पाठ्यक्रम
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mppscsllaybus.economicsSection?.map((unit, index) => (
+                      <tr key={index}>
+                        <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                          इकाई - {unit.id}
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          <h6 className="text-red-400 font-semibold mb-4">
+                            {unit?.title}
+                          </h6>
+                          <ul className="list-disc list-inside ml-4 mt-2">
+                            {unit.topics.map((topic, index) => (
+                              <li key={index}>{topic}</li>
+                            ))}
+                          </ul>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  तृतीय प्रश्न पत्र
+                </h1>
+                <h2 className="text-center text-xl font-bold mb-4">
+                  (खण्‍ड-ब) – विज्ञान, तकनीकी एवं जन स्‍वास्‍थ्‍य
+                </h2>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">विषय</th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        पाठ्यक्रम
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mppscsllaybus.economicsSection2?.map((unit, index) => (
+                      <tr key={index}>
+                        <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                          इकाई - {unit.id}
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          <h6 className="text-red-400 font-semibold mb-4">
+                            {unit?.title}
+                          </h6>
+                          <ul className="list-disc list-inside ml-4 mt-2">
+                            {unit.topics.map((topic, index) => (
+                              <li key={index}>{topic}</li>
+                            ))}
+                          </ul>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* चतुर्थ प्रश्‍न पत्र 
+          (खण्‍ड-अ) – दर्शनशास्त्र, मनोविज्ञान, लोक प्रशासन एवं केस स्‍टडी */}
+              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  चतुर्थ प्रश्‍न पत्र
+                </h1>
+                <h2 className="text-center text-xl font-bold mb-4">
+                  (खण्‍ड-अ) – दर्शनशास्त्र, मनोविज्ञान, लोक प्रशासन एवं केस
+                  स्‍टडी
+                </h2>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">विषय</th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        पाठ्यक्रम
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mppscsllaybus.philosophySection?.map((unit, index) => (
+                      <tr key={index}>
+                        <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                          इकाई - {unit.id}
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          <h6 className="text-red-400 font-semibold mb-4">
+                            {unit?.title}
+                          </h6>
+                          <ul className="list-disc list-inside ml-4 mt-2">
+                            {unit.topics.map((topic, index) => (
+                              <li key={index}>{topic}</li>
+                            ))}
+                          </ul>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  चतुर्थ प्रश्‍न पत्र
+                </h1>
+                <h2 className="text-center text-xl font-bold mb-4">
+                  (खण्‍ड-ब) – उद्यमिता, प्रबंधन, व्‍यक्तित्‍व विकास एवं केस
+                  स्‍टडी
+                </h2>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">विषय</th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        पाठ्यक्रम
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mppscsllaybus.entrepreneurshipSection?.map(
+                      (unit, index) => (
+                        <tr key={index}>
+                          <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                            इकाई - {unit.id}
+                          </td>
+                          <td className="border border-gray-400 px-4 py-2">
+                            <h6 className="text-red-400 font-semibold mb-4">
+                              {unit?.title}
+                            </h6>
+                            <ul className="list-disc list-inside ml-4 mt-2">
+                              {unit.topics.map((topic, index) => (
+                                <li key={index}>{topic}</li>
+                              ))}
+                            </ul>
+                          </td>
+                        </tr>
+                      )
+                    )}
+                  </tbody>
+                </table>
+              </div>
+ 
+
+
+              {/* पंचम प्रश्‍न पत्र   सामान्‍य हिन्‍दी एवं व्‍याकरण */}
+
+              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  पंचम प्रश्न पत्र
+                </h1>
+                <h2 className="text-center text-xl font-bold mb-4">
+                  सामान्य हिन्दी एवं व्याकरण
+                </h2>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">विषय</th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        पाठ्यक्रम
+                      </th>
+                      <th className="border border-gray-400 px-4 py-2">अंक</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mppscsllaybus?.hindiGrammerSection?.map(
+                      (section, index) => (
+                        <tr key={index}>
+                          <td className="border border-gray-400 px-4 py-2">
+                            {section.title}
+                          </td>
+                          <td className="border border-gray-400 px-4 py-2">
+                            <ul className="list-disc list-inside ml-4 mt-2">
+                              {section.topics.map((topic, index) => (
+                                <li key={index}>{topic}</li>
+                              ))}
+                            </ul>
+                          </td>
+                          <td className="border border-gray-400 px-4 py-2">
+                            {section.marks}
+                          </td>
+                        </tr>
+                      )
+                    )}
+                  </tbody>
+                </table>
+              </div>
+
+
+              {/* षष्‍ठ प्रश्‍न पत्र 
+           हिन्‍दी निबंध एवं प्रारूप लेखन */}
+
+              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  छठवाँ प्रश्न पत्र
+                </h1>
+                <h2 className="text-center text-xl font-bold mb-4">
+                  हिन्दी निबंध एवं प्रारूप लेखन
+                </h2>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <tbody>
+                    {mppscsllaybus?.hindiEssaySection.map((section, index) => (
+                      <tr key={index}>
+                        <td
+                          className="border border-gray-400 px-4 py-2"
+                          colSpan={2}
+                        >
+                          {section.title}
+                          <ul className="list-disc list-inside ml-4 mt-2">
+                            {section.topics.map((topic, index) => (
+                              <li key={index}>{topic}</li>
+                            ))}
+                          </ul>
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          {section.marks}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                  <tfoot>
+                    <tr>
+                      <td
+                        colSpan="2"
+                        className="border border-gray-400 px-4 py-2 text-right font-bold"
+                      >
+                        कुल अंक:
+                      </td>
+                      <td className="border border-gray-400 px-4 py-2 font-bold whitespace-nowrap">
+                        अंक - 100
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+
+              {/* MPPSC Mains (ध्‍यान देने योग्‍य बातें)      */}
+              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                  MPPSC Mains (ध्यान देने योग्य बातें)
+                </h1>
+                <table className="table-auto w-full border-collapse border border-gray-400 text-sm text-gray-900">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-400 px-4 py-2">
+                        Paper
+                      </th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        Part / Unit
+                      </th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        Marks
+                      </th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        Questions
+                      </th>
+                      <th className="border border-gray-400 px-4 py-2">
+                        Marks
+                      </th>
+                      <th className="border border-gray-400 px-4 py-2">Time</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mppscsllaybus?.importanoints?.map((paper, index) => (
+                      <tr key={index}>
+                        <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                          Paper - {paper.id}
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          {paper.partUnit}
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          {paper.totalMarks}
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2">
+                          <ul className="list-disc list-inside ml-4 mt-2">
+                            {paper.questionTypes.map((question, index) => (
+                              <li key={index}>{question.type}</li>
+                            ))}
+                          </ul>
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                          <ul className="list-disc list-inside ml-4 mt-2">
+                            {paper.questionTypes.map((question, index) => (
+                              <li className="m-2" key={index}>
+                                {question.marks}
+                              </li>
+                            ))}
+                          </ul>
+                        </td>
+                        <td className="border border-gray-400 px-4 py-2 whitespace-nowrap">
+                          {paper.time}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             {/* MPPSC 2024 Age Limit */}
@@ -669,7 +1441,7 @@ const MPPSC = () => {
             {/* Frequently Asked Questions Section */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
-                {mppscExamData?.faq.title}
+                {mppscExamData?.faq?.title}
               </h3>
               <div className="divide-y divide-gray-300">
                 {mppscExamData?.faq?.questions?.map((faq, index) => (
