@@ -381,7 +381,7 @@ const MPPSC = () => {
                 {mppscsllaybus?.content}
               </p>
               {/* MPPSC प्रारंभिक परीक्षा */}
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 ">
                 <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
                   {mppscsllaybus?.examData.title}
                 </h1>
