@@ -67,10 +67,7 @@ function SSC() {
   return (
     <>
       <Header />
-      <ReactHelmet
-        title="SSC - The WiNNERS Institute"
-        canonicalLink="/ssc"
-      />
+      <ReactHelmet title="SSC - The WiNNERS Institute" canonicalLink="/ssc" />
       <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
