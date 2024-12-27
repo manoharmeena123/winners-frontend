@@ -1386,3 +1386,58 @@ export const mppscExamData = {
     ],
   },
 };
+
+
+export const largeScreenClasses = [
+  {
+    image: "mppsc/2024-12-08-0.9503714420081588.jpg",
+    description: "MPPSC Hindi Medium (Pre+Mains+Interview) Online Course (HPSC0624)",
+    price: "₹7999",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://live.winnersinstitute.in/courses/385--mppsc-hindi-medium-premainsinterview-online-course-hpsc0624",
+  },
+  {
+    image: "mppsc/online-course-book.jpg",
+    description: "MPPSC Hindi Medium (Pre+Mains+Interview) Online Course with Book",
+    price: "₹9200",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/courses/411-mppsc-hindi-medium-premainsinterview-online-course-with-book",
+  },
+  {
+    image: "mppsc/online-batch-mppsc1.jpeg",
+    description: "MPPSC Pre 2025 Online Target Batch (PSCPRE1124)",
+    price: "₹2499",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://live.winnersinstitute.in/courses/457-mppsc-pre-2025-online-target-batch-pscpre1124",
+  },
+];
+
+export const smallScreenClasses =[
+  {
+    image: "mppsc/online-course-hindi.jpg",
+    description: "MPPSC Hindi Medium (Pre+Mains+Interview) Online Course (HPSC0624)",
+    price: "₹7999",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://live.winnersinstitute.in/courses/385--mppsc-hindi-medium-premainsinterview-online-course-hpsc0624",
+  },
+  {
+    image: "mppsc/online-course+book.jpg",
+    description: "MPPSC Hindi Medium (Pre+Mains+Interview) Online Course with Book",
+    price: "₹9200",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/courses/411-mppsc-hindi-medium-premainsinterview-online-course-with-book",
+  },
+  {
+    image: "mppsc/online-batch-mppsc.jpeg",
+    description: "MPPSC Pre 2025 Online Target Batch (PSCPRE1124)",
+    price: "₹2499",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://live.winnersinstitute.in/courses/457-mppsc-pre-2025-online-target-batch-pscpre1124",
+  },
+];

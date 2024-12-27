@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import Footer from "../components/footer/Footer";
 import Header from "../components/nav/Header";
 import ReactHelmet from "../utils/ReactHelmet";
+import { mppscExamData, tableOfContentsData, largeScreenClasses,smallScreenClasses } from "../data/mp-psc";
 import Card from "../components/card/Card";
-import { mppscExamData, tableOfContentsData } from "../data/mp-psc";
+import RelatedPost from "../components/sidebar/RelatedPost";
 
 const MPPSC = () => {
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
@@ -28,6 +29,9 @@ const MPPSC = () => {
   // Function to toggle the state
   const toggleTable = () => {
     setIsOpen(!isOpen);
+  };
+  const handleBuyNowClick = (link) => {
+    window.location.replace(`${link}`);
   };
 
   const {
@@ -207,7 +211,6 @@ const MPPSC = () => {
                 <p className="leading-loose text-gray-700">
                   {mppscExamData.details.description}
                 </p>
-            
               </div>
             </div>
             {/* MPPSC Notification 2024 Overview Section */}
@@ -325,7 +328,7 @@ const MPPSC = () => {
             >
               <h2
                 id="ssc-calendar-2025"
-                className="text-xl font-bold text-blue-900 mb-2"
+                className="text-xl font-bold text-gray-900 mb-2"
               >
                 {mppscExamData.vacancy.title}
               </h2>
@@ -335,7 +338,10 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC 2024 Apply Online Link */}
-            <div id="mppsc-2024-apply-online-link" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-2024-apply-online-link"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {onlineLink.title}
               </h2>
@@ -344,7 +350,10 @@ const MPPSC = () => {
               </p>
             </div>
             {/* Steps to fill out the MPPSC Application Form 2024 */}
-            <div id="steps-to-fill-out-mppsc-application-form-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="steps-to-fill-out-mppsc-application-form-2024"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h1 className="text-2xl font-bold text-gray-800 mb-4">
                 {applicationForm?.title}
               </h1>
@@ -364,7 +373,10 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Syllabus 2024  */}
-            <div id="mppsc-syllabus-2024" className="bg-white shadow-md rounded-md mt-6">
+            <div
+              id="mppsc-syllabus-2024"
+              className="bg-white shadow-md rounded-md mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {mppscsllaybus?.title}
               </h2>
@@ -701,8 +713,8 @@ const MPPSC = () => {
               </div>
 
               {/* मध्‍यप्रदेश राज्‍य सेवा (मुख्‍य) परीक्षा  */}
-              <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
-                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+              <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto ">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4 mt-6">
                   मध्‍यप्रदेश राज्‍य सेवा (मुख्‍य) परीक्षा
                 </h1>
                 <h2 className="text-red-600 text-center text-2xl font-bold mb-4">
@@ -869,7 +881,7 @@ const MPPSC = () => {
                      तृतीय प्रश्‍न पत्र  
                    (खण्‍ड-अ) – अर्थशास्‍त्र     */}
               <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 ">
-                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4 mt-6">
                   तृतीय प्रश्न पत्र
                 </h1>
                 <h2 className="text-center text-xl font-bold mb-4">
@@ -954,7 +966,7 @@ const MPPSC = () => {
               {/* चतुर्थ प्रश्‍न पत्र 
           (खण्‍ड-अ) – दर्शनशास्त्र, मनोविज्ञान, लोक प्रशासन एवं केस स्‍टडी */}
               <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
-                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4 mt-6">
                   चतुर्थ प्रश्‍न पत्र
                 </h1>
                 <h2 className="text-center text-xl font-bold mb-4">
@@ -1044,7 +1056,7 @@ const MPPSC = () => {
               {/* पंचम प्रश्‍न पत्र   सामान्‍य हिन्‍दी एवं व्‍याकरण */}
 
               <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 ">
-                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4 mt-6">
                   पंचम प्रश्न पत्र
                 </h1>
                 <h2 className="text-center text-xl font-bold mb-4">
@@ -1095,7 +1107,7 @@ const MPPSC = () => {
            हिन्‍दी निबंध एवं प्रारूप लेखन */}
 
               <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 ">
-                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4 mt-6">
                   छठवाँ प्रश्न पत्र
                 </h1>
                 <h2 className="text-center text-xl font-bold mb-4">
@@ -1213,7 +1225,10 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC 2024 Age Limit */}
-            <div id="mppsc-2024-age-limit" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-2024-age-limit"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {ageLimits?.title}
               </h2>
@@ -1310,7 +1325,10 @@ const MPPSC = () => {
               </div>
             </div>
             {/* MPPSC Age Relaxation */}
-            <div id="mppsc-2024-age-limit" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-2024-age-limit"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-xl sm:text-xl font-bold text-gray-600 mb-4">
                 {ageRelaxation?.title}
               </h2>
@@ -1356,7 +1374,10 @@ const MPPSC = () => {
               </div>
             </div>
             {/* MPPSC Education Qualification 2024 */}
-            <div id="mppsc-education-qualification-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-education-qualification-2024"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {qualification?.title}
               </h2>
@@ -1366,7 +1387,10 @@ const MPPSC = () => {
             </div>
 
             {/* MPSSC Physical Eligibility Criteria Requirement */}
-            <div id="mppsc-physical-eligibility-criteria-requirement" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-physical-eligibility-criteria-requirement"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {eligibility?.title}
               </h2>
@@ -1422,7 +1446,10 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Selection Process 2024 */}
-            <div id="mppsc-selection-process-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-selection-process-2024"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 {selection?.title}
               </h2>
@@ -1437,7 +1464,10 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Salary 2024 */}
-            <div id="mppsc-salary-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-salary-2024"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 {salaryTableData?.title}
               </h2>
@@ -1490,7 +1520,10 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Admit Card 2024 */}
-            <div id="mppsc-admit-card-2024"  className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-admit-card-2024"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {admitCard?.title}
               </h2>
@@ -1499,7 +1532,10 @@ const MPPSC = () => {
               </p>
             </div>
             {/* MPPSC Results 2024  */}
-            <div id="mppsc-results-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-results-2024"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {results?.title}
               </h2>
@@ -1509,7 +1545,10 @@ const MPPSC = () => {
             </div>
 
             {/* Frequently Asked Questions Section */}
-            <div id="mppsc-notification-2024-faqs" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mppsc-notification-2024-faqs"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h3 className="text-xl font-bold text-gray-800 mb-4">
                 {mppscExamData?.faq?.title}
               </h3>
@@ -1540,40 +1579,74 @@ const MPPSC = () => {
                 ))}
               </div>
             </div>
+            {/* Popular Online Live Classes */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">
+                Popular Online Live Classes
+              </h2>
+
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenClasses?.map((cls, index) => (
+                  <Card
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenClasses?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Col-4 */}
           <div className="md:col-span-3 flex flex-col space-y-4">
             <img
-              src="/ssc-cgl-2025.jpeg"
+              src="mppsc/2024-12-08-0.4263720689748167.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
             />{" "}
             <iframe
               className="w-full rounded shadow-md"
-              src="https://www.youtube.com/embed/mVyOXuo89M4"
-              title="SSC Calendar 2025-26 | SSC Exam Calendar 2025 Out | SSC Exams 2025-26 | Aditya Patel Sir"
-              frameBorder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
-            ></iframe>
-            <img
-              src="/ssc-chsl-2025.jpeg"
-              alt="Placeholder"
-              className="w-full rounded shadow-md"
-            />{" "}
-            <iframe
-              className="w-full rounded shadow-md"
-              src="https://www.youtube.com/embed/KDtJdvmB26U"
-              title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB | What is SSC GD ?"
+              src="https://www.youtube.com/embed/VbbYNi37qAM"
+              title="MPPSC Pre 2025 | MPPSC Exam 2025 | MPPSC 60 Days Master Plan &amp; Prelims Strategy | Aditya Patel Sir"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
             ></iframe>
             <img
-              src="/ssc-combo-books.jpeg"
+              src="mppsc/2024-12-08-0.7899195615278951.jpg"
+              alt="Placeholder"
+              className="w-full rounded shadow-md"
+            />{" "}
+            <iframe
+              className="w-full rounded shadow-md"
+              src="https://www.youtube.com/embed/pCykgexfYnE"
+              title="MPPSC 2025 | MPPSC Prelims 2025 | MPPSC Target Batch | MPPSC WiNNERS Institute | Aditya Patel Sir"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+            <img
+              src="mppsc/2024-12-08-0.9503714420081588.jpg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
             />
