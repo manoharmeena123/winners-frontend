@@ -373,7 +373,7 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Syllabus 2024  */}
-            <div id="mppsc-syllabus-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-syllabus-2024" className="bg-white shadow-md rounded-md mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {mppscsllaybus?.title}
               </h2>
