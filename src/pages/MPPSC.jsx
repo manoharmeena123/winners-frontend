@@ -207,11 +207,7 @@ const MPPSC = () => {
                 <p className="leading-loose text-gray-700">
                   {mppscExamData.details.description}
                 </p>
-                <img
-                  src={mppscExamData.details.imageUrl}
-                  alt="Placeholder"
-                  className="w-full rounded shadow-md"
-                />
+            
               </div>
             </div>
             {/* MPPSC Notification 2024 Overview Section */}
@@ -336,11 +332,6 @@ const MPPSC = () => {
               <p className="leading-loose text-gray-700">
                 {mppscExamData.vacancy.description}
               </p>
-              <img
-                src={mppscExamData.vacancy.imageUrl}
-                alt="Placeholder"
-                className="w-full rounded shadow-md"
-              />
             </div>
 
             {/* MPPSC 2024 Apply Online Link */}

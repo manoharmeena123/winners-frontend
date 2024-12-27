@@ -141,8 +141,7 @@ export const mppscExamData = {
     title: "MPPSC 2024",
     subtitle: "MPPSC Exam Date 2024",
     description: `The MPPSC 2024 notification has been released for 88 posts of State Services and Forest Services Department. The application process for the MPPSC Notification 2024 has been concluded in February 2024. The Madhya Pradesh Public Service Commission has released the MPPSC Exam Date 2024, which is scheduled on 23rd June 2024.`,
-    imageUrl:
-      "https://www.pw.live/exams/wp-content/uploads/2024/03/MPPSC-Exam-Date-jpeg.webp",
+
   },
   overview: {
     title: "MPPSC Notification 2024 Overview",
@@ -224,8 +223,6 @@ export const mppscExamData = {
     title: "MPPSC Vacancy 2024",
     subtitle: "MPPSC Exam Date 2024",
     description: `A total of 88 MPPSC vacancy 2024 has been announced. Among these, 60 positions are allocated for the State Service, and the remaining 28 are designated for the Forest Service. These openings are spread across different departments, and comprehensive details can be accessed in the official MPPCS Notification 2024. Candidates who fulfill the eligibility criteria can apply for the posts of Deputy Superintendent of Police, Cooperative Inspector, Development Block Officer, etc.`,
-    imageUrl:
-      "https://www.pw.live/exams/wp-content/uploads/2023/01/vacancy.png",
   },
   onlineLink: {
     title: "MPPSC 2024 Apply Online Link",
