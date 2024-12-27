@@ -752,7 +752,7 @@ const MPPSC = () => {
                   </table>
                 </div>
 
-                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4 mt-6">
                   प्रथम प्रश्न पत्र
                 </h1>
                 <h2 className="text-center text-xl font-bold mb-4">
@@ -832,7 +832,7 @@ const MPPSC = () => {
                   </table>
                 </div>
 
-                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4 mt-6">
                   द्वितीय प्रश्न पत्र
                 </h1>
                 <h2 className="text-center text-xl font-bold mb-4">
@@ -918,7 +918,7 @@ const MPPSC = () => {
                   </table>
                 </div>
 
-                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4 mt-6">
                   तृतीय प्रश्न पत्र
                 </h1>
                 <h2 className="text-center text-xl font-bold mb-4">
@@ -1005,7 +1005,7 @@ const MPPSC = () => {
                   </table>
                 </div>
 
-                <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
+                <h1 className="text-red-600 text-center text-2xl font-bold mb-4 mt-6">
                   चतुर्थ प्रश्‍न पत्र
                 </h1>
                 <h2 className="text-center text-xl font-bold mb-4">
