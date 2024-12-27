@@ -344,7 +344,7 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC 2024 Apply Online Link */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-2024-apply-online-link" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {onlineLink.title}
               </h2>
@@ -353,7 +353,7 @@ const MPPSC = () => {
               </p>
             </div>
             {/* Steps to fill out the MPPSC Application Form 2024 */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="steps-to-fill-out-mppsc-application-form-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h1 className="text-2xl font-bold text-gray-800 mb-4">
                 {applicationForm?.title}
               </h1>
@@ -373,7 +373,7 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Syllabus 2024  */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-syllabus-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {mppscsllaybus?.title}
               </h2>
@@ -381,7 +381,7 @@ const MPPSC = () => {
                 {mppscsllaybus?.content}
               </p>
               {/* MPPSC प्रारंभिक परीक्षा */}
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 ">
+              <div className="bg-white shadow-md rounded-lg p-2  max-w-4xl mx-auto my-8 border border-gray-300 ">
                 <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
                   {mppscsllaybus?.examData.title}
                 </h1>
@@ -451,7 +451,7 @@ const MPPSC = () => {
               </div>
 
               {/* MPPSC मुख्‍य परीक्षा      */}
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300">
+              <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300">
                 <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
                   {mppscsllaybus?.mainExamData?.title}
                 </h1>
@@ -710,7 +710,7 @@ const MPPSC = () => {
               </div>
 
               {/* मध्‍यप्रदेश राज्‍य सेवा (मुख्‍य) परीक्षा  */}
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+              <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
                 <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
                   मध्‍यप्रदेश राज्‍य सेवा (मुख्‍य) परीक्षा
                 </h1>
@@ -793,7 +793,7 @@ const MPPSC = () => {
                   </table>
                 </div>
               </div>
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+              <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
                 <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
                   द्वितीय प्रश्न पत्र
                 </h1>
@@ -877,7 +877,7 @@ const MPPSC = () => {
               {/* 
                      तृतीय प्रश्‍न पत्र  
                    (खण्‍ड-अ) – अर्थशास्‍त्र     */}
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 ">
+              <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 ">
                 <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
                   तृतीय प्रश्न पत्र
                 </h1>
@@ -962,7 +962,7 @@ const MPPSC = () => {
 
               {/* चतुर्थ प्रश्‍न पत्र 
           (खण्‍ड-अ) – दर्शनशास्त्र, मनोविज्ञान, लोक प्रशासन एवं केस स्‍टडी */}
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
+              <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 overflow-x-auto">
                 <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
                   चतुर्थ प्रश्‍न पत्र
                 </h1>
@@ -1052,7 +1052,7 @@ const MPPSC = () => {
 
               {/* पंचम प्रश्‍न पत्र   सामान्‍य हिन्‍दी एवं व्‍याकरण */}
 
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 ">
+              <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 ">
                 <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
                   पंचम प्रश्न पत्र
                 </h1>
@@ -1103,7 +1103,7 @@ const MPPSC = () => {
               {/* षष्‍ठ प्रश्‍न पत्र 
            हिन्‍दी निबंध एवं प्रारूप लेखन */}
 
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 ">
+              <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 ">
                 <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
                   छठवाँ प्रश्न पत्र
                 </h1>
@@ -1153,7 +1153,7 @@ const MPPSC = () => {
               </div>
 
               {/* MPPSC Mains (ध्‍यान देने योग्‍य बातें)      */}
-              <div className="bg-white shadow-md rounded-lg p-6 max-w-4xl mx-auto my-8 border border-gray-300 ">
+              <div className="bg-white shadow-md rounded-lg p-2 max-w-4xl mx-auto my-8 border border-gray-300 ">
                 <h1 className="text-red-600 text-center text-2xl font-bold mb-4">
                   MPPSC Mains (ध्यान देने योग्य बातें)
                 </h1>
@@ -1222,7 +1222,7 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC 2024 Age Limit */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-2024-age-limit" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {ageLimits?.title}
               </h2>
@@ -1319,7 +1319,7 @@ const MPPSC = () => {
               </div>
             </div>
             {/* MPPSC Age Relaxation */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-2024-age-limit" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-xl sm:text-xl font-bold text-gray-600 mb-4">
                 {ageRelaxation?.title}
               </h2>
@@ -1365,7 +1365,7 @@ const MPPSC = () => {
               </div>
             </div>
             {/* MPPSC Education Qualification 2024 */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-education-qualification-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {qualification?.title}
               </h2>
@@ -1375,7 +1375,7 @@ const MPPSC = () => {
             </div>
 
             {/* MPSSC Physical Eligibility Criteria Requirement */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-physical-eligibility-criteria-requirement" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {eligibility?.title}
               </h2>
@@ -1431,7 +1431,7 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Selection Process 2024 */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-selection-process-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 {selection?.title}
               </h2>
@@ -1446,7 +1446,7 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Salary 2024 */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-salary-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="text-2xl font-bold text-gray-800 mb-4">
                 {salaryTableData?.title}
               </h2>
@@ -1499,7 +1499,7 @@ const MPPSC = () => {
             </div>
 
             {/* MPPSC Admit Card 2024 */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-admit-card-2024"  className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {admitCard?.title}
               </h2>
@@ -1508,7 +1508,7 @@ const MPPSC = () => {
               </p>
             </div>
             {/* MPPSC Results 2024  */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-results-2024" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
                 {results?.title}
               </h2>
@@ -1518,7 +1518,7 @@ const MPPSC = () => {
             </div>
 
             {/* Frequently Asked Questions Section */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="mppsc-notification-2024-faqs" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h3 className="text-xl font-bold text-gray-800 mb-4">
                 {mppscExamData?.faq?.title}
               </h3>
