@@ -1,5 +1,5 @@
 import Aos from "aos";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
@@ -39,12 +39,26 @@ const BANKING = () => {
   const handleBuyNowClick = (link) => {
     window.location.replace(`${link}`);
   };
+  const mediaRefs = useRef([]);
+
+  const handleFullScreen = (index) => {
+    if (mediaRefs.current[index]) {
+      const mediaElement = mediaRefs.current[index];
+      if (mediaElement.requestFullscreen) {
+        mediaElement.requestFullscreen();
+      } else if (mediaElement.webkitRequestFullscreen) {
+        mediaElement.webkitRequestFullscreen(); // For Safari
+      } else if (mediaElement.msRequestFullscreen) {
+        mediaElement.msRequestFullscreen(); // For IE11
+      }
+    }
+  };
   return (
     <>
       <Header />
       <ReactHelmet
         title="Bank Exams - The WiNNERS Institute"
-        canonicalLink="/ssc-cgl"
+        canonicalLink="/banking-exam-details"
       />
       <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
@@ -233,7 +247,10 @@ const BANKING = () => {
             </div>
 
             {/* Know More About Banking Sector in India */}
-            <div id="overview-of-banking-sector-in-india" className="bg-white p-6 rounded-lg shadow-md">
+            <div
+              id="overview-of-banking-sector-in-india"
+              className="bg-white p-6 rounded-lg shadow-md"
+            >
               <h1 className="text-2xl font-bold text-gray-800 mb-2">
                 {bankingExamDetails?.bankingData.title}
               </h1>
@@ -373,7 +390,10 @@ const BANKING = () => {
                 </div>
               </div>
               {/* List of Public Sector Banks in India. */}
-              <div id="list-of-public-sector-banks" className="bg-white p-6 rounded-lg ">
+              <div
+                id="list-of-public-sector-banks"
+                className="bg-white p-6 rounded-lg "
+              >
                 <h1 className="text-2xl font-bold text-gray-800 mb-4">
                   List of Public Sector Banks
                 </h1>
@@ -414,7 +434,10 @@ const BANKING = () => {
                 </div>
               </div>
               {/* List of Private Sector Banks in India */}
-              <div id="list-of-private-sector-banks" className="bg-white p-6 rounded-lg">
+              <div
+                id="list-of-private-sector-banks"
+                className="bg-white p-6 rounded-lg"
+              >
                 <h1 className="text-2xl font-bold text-gray-800 mb-4">
                   List of Private Sector Banks
                 </h1>
@@ -829,6 +852,8 @@ const BANKING = () => {
               src="banking/bps-po.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
+              ref={(el) => (mediaRefs.current[0] = el)}
+              onClick={() => handleFullScreen(0)}
             />{" "}
             <iframe
               className="w-full rounded shadow-md"
@@ -838,13 +863,18 @@ const BANKING = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
+              ref={(el) => (mediaRefs.current[1] = el)}
+              onClick={() => handleFullScreen(1)}
             ></iframe>
             <img
               src="banking/sbi-po.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
+              ref={(el) => (mediaRefs.current[2] = el)}
+              onClick={() => handleFullScreen(2)}
             />{" "}
             <iframe
+              ref={(el) => (mediaRefs.current[3] = el)}
               className="w-full rounded shadow-md"
               src="https://www.youtube.com/embed/7orMVNalBz8"
               title="SBI Clerk Notification 2024 | SBI JA 2024 Notification | SBI Clerk New Vacancy 2024 | Aditya Sir"
@@ -852,12 +882,15 @@ const BANKING = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
+              onClick={() => handleFullScreen(3)}
             ></iframe>
             <img
+              ref={(el) => (mediaRefs.current[4] = el)}
               src="banking/banking-foundation.jpeg"
               height="250"
               alt="Placeholder"
               className="w-full rounded shadow-md"
+              onClick={() => handleFullScreen(4)}
             />{" "}
             <RelatedPost />
           </div>

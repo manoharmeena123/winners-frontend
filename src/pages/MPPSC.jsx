@@ -1,12 +1,15 @@
 import Aos from "aos";
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
 import Footer from "../components/footer/Footer";
 import Header from "../components/nav/Header";
 import ReactHelmet from "../utils/ReactHelmet";
-import { mppscExamData, tableOfContentsData, largeScreenClasses,smallScreenClasses } from "../data/mp-psc";
+import {
+  mppscExamData,
+  tableOfContentsData,
+  largeScreenClasses,
+  smallScreenClasses,
+} from "../data/mp-psc";
 import Card from "../components/card/Card";
-import RelatedPost from "../components/sidebar/RelatedPost";
 
 const MPPSC = () => {
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
@@ -34,6 +37,20 @@ const MPPSC = () => {
     window.location.replace(`${link}`);
   };
 
+  const mediaRefs = useRef([]);
+
+  const handleFullScreen = (index) => {
+    if (mediaRefs.current[index]) {
+      const mediaElement = mediaRefs.current[index];
+      if (mediaElement.requestFullscreen) {
+        mediaElement.requestFullscreen();
+      } else if (mediaElement.webkitRequestFullscreen) {
+        mediaElement.webkitRequestFullscreen(); // For Safari
+      } else if (mediaElement.msRequestFullscreen) {
+        mediaElement.msRequestFullscreen(); // For IE11
+      }
+    }
+  };
   const {
     overview,
     importantDates,
@@ -58,7 +75,7 @@ const MPPSC = () => {
       <Header />
       <ReactHelmet
         title="MPPSC - The WiNNERS Institute"
-        canonicalLink="/ssc-cgl"
+        canonicalLink="/mp-psc"
       />
       <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
@@ -1617,38 +1634,57 @@ const MPPSC = () => {
 
           {/* Col-4 */}
           <div className="md:col-span-3 flex flex-col space-y-4">
+            {/* First Image */}
             <img
+              ref={(el) => (mediaRefs.current[0] = el)}
               src="mppsc/2024-12-08-0.4263720689748167.jpeg"
               alt="Placeholder"
-              className="w-full rounded shadow-md"
-            />{" "}
+              className="w-full rounded shadow-md cursor-pointer"
+              onClick={() => handleFullScreen(0)}
+            />
+
+            {/* First Video */}
             <iframe
-              className="w-full rounded shadow-md"
+              ref={(el) => (mediaRefs.current[1] = el)}
+              className="w-full rounded shadow-md cursor-pointer"
               src="https://www.youtube.com/embed/VbbYNi37qAM"
               title="MPPSC Pre 2025 | MPPSC Exam 2025 | MPPSC 60 Days Master Plan &amp; Prelims Strategy | Aditya Patel Sir"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              onClick={() => handleFullScreen(1)}
             ></iframe>
+
+            {/* Second Image */}
             <img
+              ref={(el) => (mediaRefs.current[2] = el)}
               src="mppsc/2024-12-08-0.7899195615278951.jpg"
               alt="Placeholder"
-              className="w-full rounded shadow-md"
-            />{" "}
+              className="w-full rounded shadow-md cursor-pointer"
+              onClick={() => handleFullScreen(2)}
+            />
+
+            {/* Second Video */}
             <iframe
-              className="w-full rounded shadow-md"
+              ref={(el) => (mediaRefs.current[3] = el)}
+              className="w-full rounded shadow-md cursor-pointer"
               src="https://www.youtube.com/embed/pCykgexfYnE"
               title="MPPSC 2025 | MPPSC Prelims 2025 | MPPSC Target Batch | MPPSC WiNNERS Institute | Aditya Patel Sir"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              onClick={() => handleFullScreen(3)}
             ></iframe>
+
+            {/* Third Image */}
             <img
+              ref={(el) => (mediaRefs.current[4] = el)}
               src="mppsc/2024-12-08-0.9503714420081588.jpg"
               alt="Placeholder"
-              className="w-full rounded shadow-md"
+              className="w-full rounded shadow-md cursor-pointer"
+              onClick={() => handleFullScreen(4)}
             />
           </div>
         </div>

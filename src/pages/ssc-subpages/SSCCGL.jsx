@@ -1,5 +1,5 @@
 import Aos from "aos";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
@@ -41,6 +41,20 @@ const SSCCGL = () => {
   }, []);
   const handleBuyNowClick = (link) => {
     window.location.replace(`${link}`);
+  };
+  const mediaRefs = useRef([]);
+
+  const handleFullScreen = (index) => {
+    if (mediaRefs.current[index]) {
+      const mediaElement = mediaRefs.current[index];
+      if (mediaElement.requestFullscreen) {
+        mediaElement.requestFullscreen();
+      } else if (mediaElement.webkitRequestFullscreen) {
+        mediaElement.webkitRequestFullscreen(); // For Safari
+      } else if (mediaElement.msRequestFullscreen) {
+        mediaElement.msRequestFullscreen(); // For IE11
+      }
+    }
   };
   return (
     <>
@@ -1454,8 +1468,11 @@ const SSCCGL = () => {
               src="/ssc-cgl-2025.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
+              ref={(el) => (mediaRefs.current[0] = el)}
+              onClick={() => handleFullScreen(0)}
             />{" "}
             <iframe
+              ref={(el) => (mediaRefs.current[1] = el)}
               className="w-full rounded shadow-md"
               src="https://www.youtube.com/embed/mVyOXuo89M4"
               title="SSC Calendar 2025-26 | SSC Exam Calendar 2025 Out | SSC Exams 2025-26 | Aditya Patel Sir"
@@ -1463,13 +1480,17 @@ const SSCCGL = () => {
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
+              onClick={() => handleFullScreen(1)}
             ></iframe>
             <img
+              ref={(el) => (mediaRefs.current[2] = el)}
               src="/ssc-chsl-2025.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
+              onClick={() => handleFullScreen(2)}
             />{" "}
             <iframe
+              ref={(el) => (mediaRefs.current[3] = el)}
               className="w-full rounded shadow-md"
               src="https://www.youtube.com/embed/KDtJdvmB26U"
               title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB | What is SSC GD ?"
@@ -1477,11 +1498,14 @@ const SSCCGL = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerpolicy="strict-origin-when-cross-origin"
               allowfullscreen
+              onClick={() => handleFullScreen(3)}
             ></iframe>
             <img
+              ref={(el) => (mediaRefs.current[4] = el)}
               src="/ssc-combo-books.jpeg"
               alt="Placeholder"
               className="w-full rounded shadow-md"
+              onClick={() => handleFullScreen(4)}
             />{" "}
             <RelatedPost />
           </div>
