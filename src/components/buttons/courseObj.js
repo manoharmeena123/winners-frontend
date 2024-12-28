@@ -32,6 +32,28 @@ export const courses = [
   {
     courseName: "MP ESB",
     link: "/mp-jail",
+    subCourses :[
+      {
+        courseName: "MP Jail Prahari",
+        link: "/mp-jail",
+      },
+      {
+        courseName: "MP Mahila Supervisor",
+        link: "/mp-mahila",
+      },
+      {
+        courseName: "MP Patwari",
+        link: "/mp-patwari",
+      },
+      {
+        courseName: "MP Police Constable",
+        link: "/mp-police",
+      },
+      {
+        courseName: "MP Sub Inspector",
+        link: "/mp-sub-inspector",
+      },
+    ]
   },
   {
     courseName: "DEFENCE",

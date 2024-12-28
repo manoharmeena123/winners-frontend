@@ -49,6 +49,7 @@ import IBPSRRB from "./pages/banking-subpages/IBPS-RRB.jsx";
 import IBPSRBI from "./pages/banking-subpages/IBPS-RBI.jsx";
 import IBPSCLERK from "./pages/banking-subpages/IBPS-CLERK.jsx";
 import BANKING from "./pages/banking-subpages/BANKING";
+import MPJAILPRAHARI from './pages/MPESB/MPJAILPRAHARI.jsx';
 
 function App() {
   const lenis = new Lenis();
@@ -102,7 +103,7 @@ function App() {
           <Route path="/railway-group-d" element={<Railway4 />} />
           <Route path="/railway-rpf" element={<Railway5 />} />
 
-          <Route path="/mp-jail" element={<Mp1 />} />
+          <Route path="/mp-jail" element={<MPJAILPRAHARI />} />
           <Route path="/mp-mahila" element={<Mp2 />} />
           <Route path="/mp-patwari" element={<Mp3 />} />
           <Route path="/mp-police" element={<Mp4 />} />
