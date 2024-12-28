@@ -47,6 +47,27 @@ export const tableOfContentsData = [
 ];
 
 export const mpPatwariExamData = {
+  notificationData : {
+    title: "MPESB 2025 Notification",
+    ageLimit: {
+      min: 18,
+      max: 40,
+    },
+    ageRelaxation: [
+      { category: "Scheduled Castes (SC)", relaxation: 5 },
+      { category: "Scheduled Tribes (ST)", relaxation: 5 },
+      { category: "Other Backward Classes (OBC)", relaxation: 5 },
+      { category: "Economically Weaker Section (EWS)", relaxation: 5 },
+    ],
+    qualifications: [
+      {
+        role: "For Various Roles (Graduation Required)",
+        details: [
+          "Graduation (as per the minimum educational qualifications specified by the respective departments).",
+        ],
+      },
+    ],
+  },
   faq: {
     title: "Frequently Asked Questions",
     questions: [
@@ -79,7 +100,7 @@ export const mpPatwariExamData = {
   notification: {
     title: "MP Patwari 2025 Notification Released",
     description:
-      "The MPESB 2025 Notification has been officially released. Candidates can download the notification PDF from the link below.",
+      "The MPESB 2025 Notification has been officially released. Candidates can download the notification PDF from the link below. Additionally, the MPESB 2025 calendar has also been released, providing important dates for upcoming exams and events.",
     link: "https://esb.mp.gov.in/exams_schedule/exams_schedule.htm",
   },
   syllabus: {

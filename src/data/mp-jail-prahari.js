@@ -37,6 +37,33 @@ export const tableOfContentsData = [
 ];
 
 export const mpJailExamData = {
+  notificationData: {
+    title: "MPESB 2025 Notification",
+    ageLimit: {
+      min: 18,
+      max: 33,
+    },
+    ageRelaxation: [
+      { category: "Female (Unreserved)", relaxation: 5 },
+      { category: "Scheduled Castes (SC)", relaxation: 5 },
+      { category: "Scheduled Tribes (ST)", relaxation: 5 },
+      { category: "Other Backward Classes (OBC)", relaxation: 5 },
+    ],
+    qualifications: [
+      {
+        role: "For Forest Guard/Area Guard/Jail Warden",
+        details: [
+          "Passed 10th grade (High School) from Madhya Pradesh Board of Secondary Education or any recognized institution.",
+        ],
+      },
+      {
+        role: "For Assistant Jail Superintendent",
+        details: [
+          "Must have a Bachelor's degree from a recognized university.",
+        ],
+      },
+    ],
+  },
   faq: {
     title: "Frequently Asked Questions",
     questions: [
@@ -70,7 +97,7 @@ export const mpJailExamData = {
   notification: {
     title: "MP Jail Prahari 2025 Notification Released",
     description:
-      "The MP Jail Prahari 2025 Notification has been officially released. Candidates can download the notification PDF from the link below.",
+      "The MPESB 2025 Notification has been officially released. Candidates can download the notification PDF from the link below. Additionally, the MPESB 2025 calendar has also been released, providing important dates for upcoming exams and events.",
     link: "https://esb.mp.gov.in/exams_schedule/exams_schedule.htm",
   },
   syllabus: {
@@ -319,3 +346,170 @@ export const mpJailExamData = {
     },
   },
 };
+
+export const smallScreenClasses = [
+  {
+    image: "/mppeb/vyapam-foundation-square.jpg",
+    description: "ESB/ Vyapam Foundation Combo Online Course (CVF1224)",
+    price: "₹1299",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://live.winnersinstitute.in/courses/468-esb-vyapam-foundation-combo-online-course-cvf1224",
+  },
+  {
+    image:
+    "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.9882978874810506.jpeg",
+    description:
+      "जेल प्रहरी, वन एवं क्षेत्र रक्षक Complete Online Course (FFJ0724)",
+    price: "₹799",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/courses/416--complete-online-course-ffj0724",
+  },
+  {
+    image: "/mppeb/women-supervisor-group5-square.jpg",
+    description:
+      "ESB/Vyapam Group 5 2024 (Part-A) Complete Recorded Course (MPG5-1124)",
+    price: "₹499",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://live.winnersinstitute.in/courses/465-esb-vyapam-group-5-2024-part-a-complete-recorded-course-mpg5-1124",
+  },
+];
+export const largeScreenClasses = [
+  {
+    image:
+      "https://appxcontent.kaxa.in/paid_course3/2024-12-11-0.5572492968176104.jpeg",
+    description: "ESB/ Vyapam Foundation Combo Online Course (CVF1224)",
+    price: "₹1299",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://live.winnersinstitute.in/courses/468-esb-vyapam-foundation-combo-online-course-cvf1224",
+  },
+  {
+    image:
+      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.9882978874810506.jpeg",
+    description:
+      "जेल प्रहरी, वन एवं क्षेत्र रक्षक Complete Online Course (FFJ0724)",
+    price: "₹799",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/courses/416--complete-online-course-ffj0724",
+  },
+  {
+    image:
+      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.12337163111796157.jpeg",
+    description:
+      "ESB/Vyapam Group 5 2024 (Part-A) Complete Recorded Course (MPG5-1124)",
+    price: "₹499",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://live.winnersinstitute.in/courses/465-esb-vyapam-group-5-2024-part-a-complete-recorded-course-mpg5-1124",
+  },
+];
+
+export const smallScreenTestSeries = [
+  {
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2024-12-28-0.9726229122488721.jpeg",
+    description: "म.प्र. महिला पर्यवेक्षक TEST SERIES 2025",
+    price: "₹199",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://live.winnersinstitute.in/test-series/365--test-series-2025",
+  },
+  {
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2024-12-26-0.9265651890897373.jpeg",
+    description: "MPTET शिक्षक भर्ती वर्ग 3 Test Series 2024",
+    price: "₹149",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/test-series/373-mptet-3-test-series-2024",
+  },
+  {
+    image: "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.1402379844059063.jpeg",
+    description: "MPPSC Prelims - 2025 (Online Test Series 2.0)",
+    price: "₹499",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://live.winnersinstitute.in/test-series/454-mppsc-prelims-2025-online-test-series-20",
+  },
+];
+export const largeScreenTestSeries = [
+  {
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2024-12-28-0.9726229122488721.jpeg",
+    description: "म.प्र. महिला पर्यवेक्षक TEST SERIES 2025",
+    price: "₹199",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://live.winnersinstitute.in/test-series/365--test-series-2025",
+  },
+  {
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2024-12-26-0.9265651890897373.jpeg",
+    description: "MPTET शिक्षक भर्ती वर्ग 3 Test Series 2024",
+    price: "₹149",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/test-series/373-mptet-3-test-series-2024",
+  },
+  {
+    image: "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.1402379844059063.jpeg",
+    description: "MPPSC Prelims - 2025 (Online Test Series 2.0)",
+    price: "₹499",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://live.winnersinstitute.in/test-series/454-mppsc-prelims-2025-online-test-series-20",
+  },
+];
+
+export const smallScreenBooks = [
+  {
+    image: "/mppeb/mp-psc-books-combo.jpg",
+    description: "MPPSC Complete Book Combo Set",
+    price: "₹1899.00",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://books.winnerspublication.store/products/mppsc-complete-book-combo-set",
+  },
+  {
+    image: "/mppeb/women-supervisor-books-combo.jpg",
+    description: "Mahila Supervisor Book Combo Set",
+    price: "₹999.00",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://books.winnerspublication.store/products/mahila-supervisor-15-test-papers-based-on-new-pattern",
+  },
+  {
+    image: "/mppeb/mp-tet-group-3.jpg",
+    description: "MPTET Grade 3 Maths (Hindi Medium) Book",
+    price: "₹179.00",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://books.winnerspublication.store/products/mptet-grade-3-maths-hindi-medium-book",
+  },
+];
+export const largeScreenBooks = [
+  {
+    image: "https://appxcontent.kaxa.in/paid_course/2024-12-08-0.22702373599145043.jpeg",
+    description: "MPPSC Complete Book Combo Set",
+    price: "₹1899.00",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://books.winnerspublication.store/products/mppsc-complete-book-combo-set",
+  },
+  {
+    image: "https://appx-content-v2.classx.co.in/paid_course/2024-12-28-0.1568644653603044.jpeg",
+    description: "Mahila Supervisor Book Combo Set",
+    price: "₹999.00",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://books.winnerspublication.store/products/mahila-supervisor-book-combo-set",
+  },
+  {
+    image: "https://appxcontent.securevideo.in/paid_course/2024-10-02-0.15359221998834838.jpeg",
+    description: "MPTET Grade 3 Maths (Hindi Medium) Book",
+    price: "₹179.00",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://books.winnerspublication.store/products/mptet-grade-3-maths-hindi-medium-book",
+  },
+];

@@ -7,8 +7,13 @@ import {
   mpJailData,
   mpJailExamData,
   tableOfContentsData,
+  smallScreenClasses,
+  largeScreenClasses,
+  smallScreenTestSeries,
+  largeScreenTestSeries,
+  smallScreenBooks,
+  largeScreenBooks,
 } from "../../data/mp-jail-prahari";
-import { classes, testSeries, sscbooksdata } from "../../data/sscData";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 
@@ -212,6 +217,68 @@ const MPJAILPRAHARI = () => {
               )}
             </div>
 
+            {/* MP Jail Prahari 2025 Notification Details */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+        
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+              {mpJailExamData?.notificationData.title}
+              </h2>
+              <div className="mb-6">
+                <h2 className="text-xl font-semibold">Age Limit</h2>
+                <ul className="list-disc ml-6">
+                  <li>
+                    Minimum Age:{" "}
+                    <strong>
+                      {mpJailExamData?.notificationData.ageLimit.min} years
+                    </strong>
+                  </li>
+                  <li>
+                    Maximum Age:{" "}
+                    <strong>
+                      {mpJailExamData?.notificationData.ageLimit.max} years
+                    </strong>
+                  </li>
+                  <li>
+                    Age relaxation for reserved categories:
+                    <ul className="list-inside list-disc ml-4">
+                      {mpJailExamData?.notificationData.ageRelaxation.map(
+                        (item, index) => (
+                          <li key={index}>
+                            <strong>{item.category}:</strong> {item.relaxation}{" "}
+                            years
+                          </li>
+                        )
+                      )}
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="mb-6">
+                <h2 className="text-xl font-semibold">
+                  Qualification Required
+                </h2>
+                {mpJailExamData?.notificationData.qualifications.map(
+                  (qualification, index) => (
+                    <div key={index}>
+                      <p className="font-semibold">{qualification.role}:</p>
+                      <ul className="list-disc ml-6">
+                        {qualification.details.map((detail, i) => (
+                          <li key={i}>{detail}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )
+                )}
+              </div>
+
+              <div className="mt-6">
+                <p className="text-center">
+                  For more details, download the official notification.
+                </p>
+              </div>
+            </div>
+
             {/* शारीरिक मापदंड परीक्षण / Physical Parameters Test:- */}
             <div
               id="mp-jail-prahari-physical-test-2025"
@@ -406,7 +473,10 @@ const MPJAILPRAHARI = () => {
               </div>
             </div>
             {/* MP Jail Prahari Syllabus 2025, */}
-            <div id="mp-jail-prahari-syllabus-2025" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mp-jail-prahari-syllabus-2025"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                 {mpJailExamData?.syllabus?.title}
               </h2>
@@ -504,6 +574,104 @@ const MPJAILPRAHARI = () => {
                       </p>
                     )}
                   </div>
+                ))}
+              </div>
+            </div>
+            {/* Popular Online Live Classes */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">
+                Popular Online Live Classes
+              </h2>
+
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenClasses?.map((cls, index) => (
+                  <Card
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenClasses?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+            </div>
+            {/* Popular Mock Test Series */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">
+                Popular Mock Test Series
+              </h2>
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenTestSeries?.map((cls, index) => (
+                  <Card
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenTestSeries?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+            </div>
+            {/* Popular Books */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">Popular Books</h2>
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenBooks?.map((cls, index) => (
+                  <Card
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenBooks?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
                 ))}
               </div>
             </div>

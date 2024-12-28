@@ -4,16 +4,21 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
 import {
-  mpPatwariData,
-  mpPatwariExamData,
+  mpJailData,
+  mpJailExamData,
   tableOfContentsData,
-} from "../../data/mp-patwari";
-import { classes, testSeries, sscbooksdata } from "../../data/sscData";
+  smallScreenClasses,
+  largeScreenClasses,
+  smallScreenTestSeries,
+  largeScreenTestSeries,
+  smallScreenBooks,
+  largeScreenBooks,
+} from "../../data/mp-constable";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 
-const MPPATWARI = () => {
-  const { title, intro, content, officialWebsite } = mpPatwariData;
+const MPCONSTABLE = () => {
+  const { title, intro, content, officialWebsite } = mpJailData;
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
   // State to track whether the table is open or closed
@@ -189,19 +194,19 @@ const MPPATWARI = () => {
 
             {/* MP Jail Prahari 2025 Notification Released */}
             <div
-              id="mp-patwari-2025-notification-released"
+              id="mp-jail-prahari-2025-notification-released"
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {mpPatwariExamData?.notification?.title}
+                {mpJailExamData?.notification?.title}
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
-                {mpPatwariExamData?.notification?.description}
+                {mpJailExamData?.notification?.description}
               </p>
-              {mpPatwariExamData?.notification?.link && (
+              {mpJailExamData?.notification?.link && (
                 <h6 className="bg-red-600 text-white p-2 rounded-md inline-block">
                   <a
-                    href={mpPatwariExamData.notification.link}
+                    href={mpJailExamData.notification.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline text-white"
@@ -212,9 +217,11 @@ const MPPATWARI = () => {
               )}
             </div>
 
+            {/* MP Jail Prahari 2025 Notification Details */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
+        
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {mpPatwariExamData?.notificationData.title}
+              {mpJailExamData?.notificationData.title}
               </h2>
               <div className="mb-6">
                 <h2 className="text-xl font-semibold">Age Limit</h2>
@@ -222,19 +229,19 @@ const MPPATWARI = () => {
                   <li>
                     Minimum Age:{" "}
                     <strong>
-                      {mpPatwariExamData?.notificationData.ageLimit.min} years
+                      {mpJailExamData?.notificationData.ageLimit.min} years
                     </strong>
                   </li>
                   <li>
                     Maximum Age:{" "}
                     <strong>
-                      {mpPatwariExamData?.notificationData.ageLimit.max} years
+                      {mpJailExamData?.notificationData.ageLimit.max} years
                     </strong>
                   </li>
                   <li>
                     Age relaxation for reserved categories:
                     <ul className="list-inside list-disc ml-4">
-                      {mpPatwariExamData?.notificationData.ageRelaxation.map(
+                      {mpJailExamData?.notificationData.ageRelaxation.map(
                         (item, index) => (
                           <li key={index}>
                             <strong>{item.category}:</strong> {item.relaxation}{" "}
@@ -251,7 +258,7 @@ const MPPATWARI = () => {
                 <h2 className="text-xl font-semibold">
                   Qualification Required
                 </h2>
-                {mpPatwariExamData?.notificationData.qualifications.map(
+                {mpJailExamData?.notificationData.qualifications.map(
                   (qualification, index) => (
                     <div key={index}>
                       <p className="font-semibold">{qualification.role}:</p>
@@ -272,16 +279,209 @@ const MPPATWARI = () => {
               </div>
             </div>
 
-            {/* MP PATWARI Syllabus 2025, */}
+            {/* शारीरिक मापदंड परीक्षण / Physical Parameters Test:- */}
             <div
-              id="mp-patwari-syllabus-2025"
+              id="mp-jail-prahari-physical-test-2025"
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {mpPatwariExamData?.syllabus?.title}
+                {mpJailExamData?.physicalTest?.title}
+              </h2>
+              <div className="p-4">
+                {/* Title */}
+                <h6 className="bg-red-600 text-white text-lg font-bold p-2 rounded-md inline-block mb-4">
+                  वनरक्षक/क्षेत्ररक्षक:-
+                </h6>
+
+                {/* Table */}
+                <div className="overflow-x-auto mt-6">
+                  <table className="w-full border-collapse border border-gray-300">
+                    <thead>
+                      <tr className="bg-gray-200 text-left">
+                        <th className="border border-gray-300 px-4 py-2">
+                          शारीरिक माप
+                        </th>
+                        <th className="border border-gray-300 px-4 py-2">
+                          ऊँचाई
+                        </th>
+                        <th className="border border-gray-300 px-4 py-2">
+                          सीना सामान्य
+                        </th>
+                        <th className="border border-gray-300 px-4 py-2">
+                          सीने का न्यूनतम फुलाव
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {mpJailExamData?.physicalTest?.data.map((item) => (
+                        <tr key={item.id} className="hover:bg-gray-100">
+                          <td className="border border-gray-300 px-4 py-2">
+                            {item.category}
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2">
+                            {item.height}
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2">
+                            {item.chestNormal}
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2">
+                            {item.chestExpansion}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Notes */}
+                <div className="mt-4">
+                  {mpJailExamData?.physicalTest?.notes.map((note, index) => (
+                    <p key={index} className="text-gray-700 mb-2">
+                      {note}
+                    </p>
+                  ))}
+                </div>
+              </div>
+
+              <div className="bg-white shadow-md rounded-md p-6 mt-6">
+                {mpJailExamData?.physicalTest?.sections?.map(
+                  (section, index) => (
+                    <div key={index} className="mb-8">
+                      {/* Section Title */}
+                      <h3 className="bg-red-600 text-white text-lg font-bold p-2 rounded-md inline-block mb-4">
+                        {section.title}
+                      </h3>
+
+                      {/* Table */}
+                      <table className="w-full border-collapse border border-gray-300">
+                        <thead>
+                          <tr className="bg-gray-100">
+                            {section.tableHeaders.map((header, i) => (
+                              <th
+                                key={i}
+                                className="border border-gray-300 px-4 py-2 text-left font-medium"
+                              >
+                                {header}
+                              </th>
+                            ))}
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {section.rows.map((row, i) => (
+                            <tr key={i} className="hover:bg-gray-100">
+                              <td className="border border-gray-300 px-4 py-2">
+                                {row.category}
+                              </td>
+                              <td className="border border-gray-300 px-4 py-2">
+                                {row.height}
+                              </td>
+                              <td className="border border-gray-300 px-4 py-2">
+                                {row.chestNormal}
+                              </td>
+                              {row.chestExpanded && (
+                                <td className="border border-gray-300 px-4 py-2">
+                                  {row.chestExpanded}
+                                </td>
+                              )}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  )
+                )}
+              </div>
+
+              <div className="bg-white p-6 shadow-md rounded-md mt-6">
+                {/* Title */}
+                <h2 className="bg-red-600 text-white text-lg font-bold p-2 rounded-md inline-block mb-4">
+                  {mpJailExamData?.physicalTest?.examData?.title}
+                </h2>
+
+                {/* Walking Details */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                    Walking Test:
+                  </h3>
+                  <ul className="list-disc list-inside space-y-2">
+                    <li>
+                      <span className="font-semibold text-gray-700">
+                        Male Candidates:
+                      </span>{" "}
+                      {
+                        mpJailExamData?.physicalTest?.examData?.walkingDetails
+                          .male.distance
+                      }{" "}
+                      in{" "}
+                      {
+                        mpJailExamData?.physicalTest?.examData?.walkingDetails
+                          .male.time
+                      }
+                    </li>
+                    <li>
+                      <span className="font-semibold text-gray-700">
+                        Female Candidates:
+                      </span>{" "}
+                      {
+                        mpJailExamData?.physicalTest?.examData?.walkingDetails
+                          .female.distance
+                      }{" "}
+                      in{" "}
+                      {
+                        mpJailExamData?.physicalTest?.examData?.walkingDetails
+                          .female.time
+                      }
+                    </li>
+                  </ul>
+                  <p className="text-sm text-gray-600 mt-2">
+                    Note: This test is only for qualification, and no marks will
+                    be awarded.
+                  </p>
+                </div>
+
+                {/* Instructions */}
+                <div className="mb-6">
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                    Key Instructions:
+                  </h3>
+                  <ol className="list-decimal list-inside space-y-2">
+                    {mpJailExamData?.physicalTest?.examData?.instructions.map(
+                      (instruction, index) => (
+                        <li key={index} className="text-gray-700">
+                          {instruction}
+                        </li>
+                      )
+                    )}
+                  </ol>
+                </div>
+
+                {/* Additional Notes */}
+                <div>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
+                    Additional Notes:
+                  </h3>
+                  <ul className="list-disc list-inside space-y-2">
+                    {mpJailExamData?.physicalTest?.examData?.additionalNotes.map(
+                      (note, index) => (
+                        <li key={index} className="text-gray-700">
+                          {note}
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            {/* MP Jail Prahari Syllabus 2025, */}
+            <div
+              id="mp-jail-prahari-syllabus-2025"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                {mpJailExamData?.syllabus?.title}
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
-                {mpPatwariExamData?.syllabus?.description}
+                {mpJailExamData?.syllabus?.description}
               </p>
 
               {/* Table */}
@@ -305,7 +505,7 @@ const MPPATWARI = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {mpPatwariExamData?.syllabus?.tableData.map((item) => (
+                    {mpJailExamData?.syllabus?.tableData.map((item) => (
                       <tr key={item.id} className="hover:bg-gray-100">
                         <td className="border border-gray-300 px-4 py-2">
                           {item.id}
@@ -329,7 +529,7 @@ const MPPATWARI = () => {
               </div>
             </div>
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              {mpPatwariExamData?.syllabus?.sections.map((section, index) => (
+              {mpJailExamData?.syllabus?.sections.map((section, index) => (
                 <div key={index} className="mb-4">
                   <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
                     {section.name}
@@ -348,10 +548,10 @@ const MPPATWARI = () => {
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h3 className="text-xl font-bold text-gray-800 mb-4">
-                {mpPatwariExamData.faq.title}
+                {mpJailExamData.faq.title}
               </h3>
               <div className="divide-y divide-gray-300">
-                {mpPatwariExamData.faq.questions.map((faq, index) => (
+                {mpJailExamData.faq.questions.map((faq, index) => (
                   <div key={index} className="py-4">
                     <button
                       onClick={() => toggleFAQ(index)}
@@ -374,6 +574,104 @@ const MPPATWARI = () => {
                       </p>
                     )}
                   </div>
+                ))}
+              </div>
+            </div>
+            {/* Popular Online Live Classes */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">
+                Popular Online Live Classes
+              </h2>
+
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenClasses?.map((cls, index) => (
+                  <Card
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenClasses?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+            </div>
+            {/* Popular Mock Test Series */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">
+                Popular Mock Test Series
+              </h2>
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenTestSeries?.map((cls, index) => (
+                  <Card
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenTestSeries?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+            </div>
+            {/* Popular Books */}
+            <div className="mt-8">
+              <h2 className="text-2xl font-bold mb-6">Popular Books</h2>
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenBooks?.map((cls, index) => (
+                  <Card
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenBooks?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
                 ))}
               </div>
             </div>
@@ -440,4 +738,4 @@ const MPPATWARI = () => {
   );
 };
 
-export default MPPATWARI;
+export default MPCONSTABLE;
