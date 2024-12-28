@@ -85,7 +85,7 @@ const SSCCGL = () => {
           <div className="md:col-span-9">
             {/* First Section: SSC CGL Intro */}
             <div id="ssc-cgl-2025" className="bg-white  rounded-md lg:p-6 mb-6">
-              <h1 className="text-3xl font-bold text-gray-800 mb-4">{title}</h1>
+            <h1 className="xl:text-3xl lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">{title}</h1>
               <p className="text-gray-600 mb-4">
                 {intro}{" "}
                 <a
@@ -831,58 +831,60 @@ const SSCCGL = () => {
                     )
                   )}
                 </ul>
-                <table className="table-auto border-collapse w-full">
-                  <thead>
-                    <tr>
-                      <th className="border px-4 py-2">Sections</th>
-                      <th className="border px-4 py-2">Module</th>
-                      <th className="border px-4 py-2">Subject</th>
-                      <th className="border px-4 py-2">No. of Questions</th>
-                      <th className="border px-4 py-2">Marks</th>
-                      <th className="border px-4 py-2">Time</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {syllabus?.syllabusDetails2?.syllabusDetailsoftier2?.map(
-                      (section, index) => (
-                        <React.Fragment key={index}>
-                          {section.modules.map((module, index) => (
-                            <tr key={index}>
-                              <td className="border px-4 py-2">
-                                {section.section}
-                              </td>
-                              <td className="border px-4 py-2">
-                                {module.module}
-                              </td>
-                              <td className="border px-4 py-2">
-                                {module.subject}
-                              </td>
-                              <td className="border px-4 py-2">
-                                {module.questions}
-                              </td>
-                              <td className="border px-4 py-2">
-                                {module.marks}
-                              </td>
-                              <td className="border px-4 py-2">
-                                {module.time} minutes
-                              </td>
-                            </tr>
-                          ))}
-                        </React.Fragment>
-                      )
-                    )}
-                  </tbody>
-                  <tfoot>
-                    <tr>
-                      <td className="border px-4 py-2" colSpan={3}>
-                        TOTAL
-                      </td>
-                      <td className="border px-4 py-2">150</td>
-                      <td className="border px-4 py-2">450</td>
-                      <td className="border px-4 py-2">2 hours 15 minutes</td>
-                    </tr>
-                  </tfoot>
-                </table>
+                <div className="overflow-x-auto mt-6">
+                  <table className="table-auto border-collapse w-full">
+                    <thead>
+                      <tr>
+                        <th className="border px-4 py-2">Sections</th>
+                        <th className="border px-4 py-2">Module</th>
+                        <th className="border px-4 py-2">Subject</th>
+                        <th className="border px-4 py-2">No. of Questions</th>
+                        <th className="border px-4 py-2">Marks</th>
+                        <th className="border px-4 py-2">Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {syllabus?.syllabusDetails2?.syllabusDetailsoftier2?.map(
+                        (section, index) => (
+                          <React.Fragment key={index}>
+                            {section.modules.map((module, index) => (
+                              <tr key={index}>
+                                <td className="border px-4 py-2">
+                                  {section.section}
+                                </td>
+                                <td className="border px-4 py-2">
+                                  {module.module}
+                                </td>
+                                <td className="border px-4 py-2">
+                                  {module.subject}
+                                </td>
+                                <td className="border px-4 py-2">
+                                  {module.questions}
+                                </td>
+                                <td className="border px-4 py-2">
+                                  {module.marks}
+                                </td>
+                                <td className="border px-4 py-2">
+                                  {module.time} minutes
+                                </td>
+                              </tr>
+                            ))}
+                          </React.Fragment>
+                        )
+                      )}
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td className="border px-4 py-2" colSpan={3}>
+                          TOTAL
+                        </td>
+                        <td className="border px-4 py-2">150</td>
+                        <td className="border px-4 py-2">450</td>
+                        <td className="border px-4 py-2">2 hours 15 minutes</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
               </div>
               <div className="overflow mx-auto mt-4">
                 <div className="mb-6">
@@ -896,53 +898,67 @@ const SSCCGL = () => {
                     }
                   </p>
                 </div>
-                <table className="table-auto border-collapse w-full">
-                  <thead>
-                    <tr>
-                      <th className="border px-4 py-2">Paper</th>
-                      <th className="border px-4 py-2">Section</th>
-                      <th className="border px-4 py-2">No. of Questions</th>
-                      <th className="border px-4 py-2">Maximum Marks</th>
-                      <th className="border px-4 py-2">Duration</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td className="border px-4 py-2">
-                        {syllabus?.syllabusDetails2?.examData?.paper2.paper}
-                      </td>
-                      <td className="border px-4 py-2">
-                        {syllabus?.syllabusDetails2?.examData?.paper2.section}
-                      </td>
-                      <td className="border px-4 py-2">
-                        {syllabus?.syllabusDetails2?.examData?.paper2.questions}
-                      </td>
-                      <td className="border px-4 py-2">
-                        {syllabus?.syllabusDetails2?.examData?.paper2.marks}
-                      </td>
-                      <td className="border px-4 py-2">
-                        {syllabus?.syllabusDetails2?.examData?.paper2.duration}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td className="border px-4 py-2">
-                        {syllabus?.syllabusDetails2?.examData?.paper3.paper}
-                      </td>
-                      <td className="border px-4 py-2">
-                        {syllabus?.syllabusDetails2?.examData?.paper3.section}
-                      </td>
-                      <td className="border px-4 py-2">
-                        {syllabus?.syllabusDetails2?.examData?.paper3.questions}
-                      </td>
-                      <td className="border px-4 py-2">
-                        {syllabus?.syllabusDetails2?.examData?.paper3.marks}
-                      </td>
-                      <td className="border px-4 py-2">
-                        {syllabus?.syllabusDetails2?.examData?.paper3.duration}
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto mt-6">
+                  <table className="table-auto border-collapse w-full">
+                    <thead>
+                      <tr>
+                        <th className="border px-4 py-2">Paper</th>
+                        <th className="border px-4 py-2">Section</th>
+                        <th className="border px-4 py-2">No. of Questions</th>
+                        <th className="border px-4 py-2">Maximum Marks</th>
+                        <th className="border px-4 py-2">Duration</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border px-4 py-2">
+                          {syllabus?.syllabusDetails2?.examData?.paper2.paper}
+                        </td>
+                        <td className="border px-4 py-2">
+                          {syllabus?.syllabusDetails2?.examData?.paper2.section}
+                        </td>
+                        <td className="border px-4 py-2">
+                          {
+                            syllabus?.syllabusDetails2?.examData?.paper2
+                              .questions
+                          }
+                        </td>
+                        <td className="border px-4 py-2">
+                          {syllabus?.syllabusDetails2?.examData?.paper2.marks}
+                        </td>
+                        <td className="border px-4 py-2">
+                          {
+                            syllabus?.syllabusDetails2?.examData?.paper2
+                              .duration
+                          }
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="border px-4 py-2">
+                          {syllabus?.syllabusDetails2?.examData?.paper3.paper}
+                        </td>
+                        <td className="border px-4 py-2">
+                          {syllabus?.syllabusDetails2?.examData?.paper3.section}
+                        </td>
+                        <td className="border px-4 py-2">
+                          {
+                            syllabus?.syllabusDetails2?.examData?.paper3
+                              .questions
+                          }
+                        </td>
+                        <td className="border px-4 py-2">
+                          {syllabus?.syllabusDetails2?.examData?.paper3.marks}
+                        </td>
+                        <td className="border px-4 py-2">
+                          {
+                            syllabus?.syllabusDetails2?.examData?.paper3
+                              .duration
+                          }
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </div>
               {/* Module-I of Session-I of Paper-I (Mathematical Abilities): */}
               <div className="bg-white rounded-md p-6 mt-6">
@@ -1094,7 +1110,7 @@ const SSCCGL = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   {syllabus?.syllabusDetails2?.financeAndEconomics?.content}
                 </p>
-                <div className="overflow mx-auto">
+                <div className="overflow-x-auto">
                   <table className="table-auto border-collapse w-full">
                     <thead>
                       <tr>
