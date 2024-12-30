@@ -62,7 +62,7 @@ const MPSI = () => {
     <>
       <Header />
       <ReactHelmet
-        title="SSC CGL - The WiNNERS Institute"
+        title="MPSI - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
       <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
