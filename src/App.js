@@ -52,6 +52,7 @@ import BANKING from "./pages/banking-subpages/BANKING";
 import MPJAILPRAHARI from "./pages/MPESB/MPJAILPRAHARI.jsx";
 import MPPATWARI from "./pages/MPESB/MPPATWARI.jsx";
 import MPCONSTABLE from "./pages/MPESB/MPCONSTABLE.jsx";
+import MPSI from './pages/MPESB/MPSI.jsx';
 
 function App() {
   const lenis = new Lenis();
@@ -109,7 +110,7 @@ function App() {
           <Route path="/mp-mahila" element={<Mp2 />} />
           <Route path="/mp-patwari" element={<MPPATWARI />} />
           <Route path="/mp-police" element={<MPCONSTABLE />} />
-          <Route path="/mp-sub-inspector" element={<Mp5 />} />
+          <Route path="/mp-sub-inspector" element={<MPSI />} />
 
           {/* <Route path="/career" element={<Career />} /> */}
           <Route path="/career" element={<Career2 />} />

@@ -4,8 +4,8 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
 import {
-  mpJailData,
-  mpJailExamData,
+  mpConstableData,
+  mpConstableExamData,
   tableOfContentsData,
   smallScreenClasses,
   largeScreenClasses,
@@ -18,7 +18,7 @@ import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 
 const MPCONSTABLE = () => {
-  const { title, intro, content, officialWebsite } = mpJailData;
+  const { title, intro, content, officialWebsite } = mpConstableData;
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
   // State to track whether the table is open or closed
@@ -192,21 +192,21 @@ const MPCONSTABLE = () => {
               </div>
             </div>
 
-            {/* MP Jail Prahari 2025 Notification Released */}
+            {/* MP Constable 2025 Notification Released */}
             <div
-              id="mp-jail-prahari-2025-notification-released"
+              id="mp-constable-2025-notification-released"
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {mpJailExamData?.notification?.title}
+                {mpConstableExamData?.notification?.title}
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
-                {mpJailExamData?.notification?.description}
+                {mpConstableExamData?.notification?.description}
               </p>
-              {mpJailExamData?.notification?.link && (
+              {mpConstableExamData?.notification?.link && (
                 <h6 className="bg-red-600 text-white p-2 rounded-md inline-block">
                   <a
-                    href={mpJailExamData.notification.link}
+                    href={mpConstableExamData.notification.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline text-white"
@@ -217,11 +217,10 @@ const MPCONSTABLE = () => {
               )}
             </div>
 
-            {/* MP Jail Prahari 2025 Notification Details */}
+            {/* MP Constable 2025 Notification Details */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-        
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-              {mpJailExamData?.notificationData.title}
+                {mpConstableExamData?.notificationData.title}
               </h2>
               <div className="mb-6">
                 <h2 className="text-xl font-semibold">Age Limit</h2>
@@ -229,19 +228,19 @@ const MPCONSTABLE = () => {
                   <li>
                     Minimum Age:{" "}
                     <strong>
-                      {mpJailExamData?.notificationData.ageLimit.min} years
+                      {mpConstableExamData?.notificationData.ageLimit.min} years
                     </strong>
                   </li>
                   <li>
                     Maximum Age:{" "}
                     <strong>
-                      {mpJailExamData?.notificationData.ageLimit.max} years
+                      {mpConstableExamData?.notificationData.ageLimit.max} years
                     </strong>
                   </li>
                   <li>
                     Age relaxation for reserved categories:
                     <ul className="list-inside list-disc ml-4">
-                      {mpJailExamData?.notificationData.ageRelaxation.map(
+                      {mpConstableExamData?.notificationData.ageRelaxation.map(
                         (item, index) => (
                           <li key={index}>
                             <strong>{item.category}:</strong> {item.relaxation}{" "}
@@ -258,7 +257,7 @@ const MPCONSTABLE = () => {
                 <h2 className="text-xl font-semibold">
                   Qualification Required
                 </h2>
-                {mpJailExamData?.notificationData.qualifications.map(
+                {mpConstableExamData?.notificationData.qualifications.map(
                   (qualification, index) => (
                     <div key={index}>
                       <p className="font-semibold">{qualification.role}:</p>
@@ -279,209 +278,290 @@ const MPCONSTABLE = () => {
               </div>
             </div>
 
-            {/* शारीरिक मापदंड परीक्षण / Physical Parameters Test:- */}
-            <div
-              id="mp-jail-prahari-physical-test-2025"
-              className="bg-white shadow-md rounded-md p-6 mt-6"
-            >
+            {/* Pattern of Exam – Computer-Based Test (CBT):- */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {mpJailExamData?.physicalTest?.title}
+                Pattern of Exam – Computer-Based Test (CBT)
               </h2>
-              <div className="p-4">
-                {/* Title */}
-                <h6 className="bg-red-600 text-white text-lg font-bold p-2 rounded-md inline-block mb-4">
-                  वनरक्षक/क्षेत्ररक्षक:-
-                </h6>
-
-                {/* Table */}
-                <div className="overflow-x-auto mt-6">
-                  <table className="w-full border-collapse border border-gray-300">
-                    <thead>
-                      <tr className="bg-gray-200 text-left">
-                        <th className="border border-gray-300 px-4 py-2">
-                          शारीरिक माप
-                        </th>
-                        <th className="border border-gray-300 px-4 py-2">
-                          ऊँचाई
-                        </th>
-                        <th className="border border-gray-300 px-4 py-2">
-                          सीना सामान्य
-                        </th>
-                        <th className="border border-gray-300 px-4 py-2">
-                          सीने का न्यूनतम फुलाव
-                        </th>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300">
+                  <thead>
+                    <tr className="bg-red-500 text-black">
+                      <th className="border border-gray-300 px-4 py-2">क्र.</th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        प्रश्न पत्र का विवरण
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        कुल प्रश्न
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        कुल अंक
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        कुल समय
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mpConstableExamData?.examData.map((row, index) => (
+                      <tr
+                        key={row.id}
+                        className={`${
+                          index % 2 === 0 ? "bg-gray-100" : "bg-white"
+                        }`}
+                      >
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.id}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2">
+                          {row.description}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.totalQuestions}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.totalMarks}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.totalTime}
+                        </td>
                       </tr>
-                    </thead>
-                    <tbody>
-                      {mpJailExamData?.physicalTest?.data.map((item) => (
-                        <tr key={item.id} className="hover:bg-gray-100">
-                          <td className="border border-gray-300 px-4 py-2">
-                            {item.category}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {item.height}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {item.chestNormal}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {item.chestExpansion}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-
-                {/* Notes */}
-                <div className="mt-4">
-                  {mpJailExamData?.physicalTest?.notes.map((note, index) => (
-                    <p key={index} className="text-gray-700 mb-2">
-                      {note}
-                    </p>
-                  ))}
-                </div>
-              </div>
-
-              <div className="bg-white shadow-md rounded-md p-6 mt-6">
-                {mpJailExamData?.physicalTest?.sections?.map(
-                  (section, index) => (
-                    <div key={index} className="mb-8">
-                      {/* Section Title */}
-                      <h3 className="bg-red-600 text-white text-lg font-bold p-2 rounded-md inline-block mb-4">
-                        {section.title}
-                      </h3>
-
-                      {/* Table */}
-                      <table className="w-full border-collapse border border-gray-300">
-                        <thead>
-                          <tr className="bg-gray-100">
-                            {section.tableHeaders.map((header, i) => (
-                              <th
-                                key={i}
-                                className="border border-gray-300 px-4 py-2 text-left font-medium"
-                              >
-                                {header}
-                              </th>
-                            ))}
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {section.rows.map((row, i) => (
-                            <tr key={i} className="hover:bg-gray-100">
-                              <td className="border border-gray-300 px-4 py-2">
-                                {row.category}
-                              </td>
-                              <td className="border border-gray-300 px-4 py-2">
-                                {row.height}
-                              </td>
-                              <td className="border border-gray-300 px-4 py-2">
-                                {row.chestNormal}
-                              </td>
-                              {row.chestExpanded && (
-                                <td className="border border-gray-300 px-4 py-2">
-                                  {row.chestExpanded}
-                                </td>
-                              )}
-                            </tr>
-                          ))}
-                        </tbody>
-                      </table>
-                    </div>
-                  )
-                )}
-              </div>
-
-              <div className="bg-white p-6 shadow-md rounded-md mt-6">
-                {/* Title */}
-                <h2 className="bg-red-600 text-white text-lg font-bold p-2 rounded-md inline-block mb-4">
-                  {mpJailExamData?.physicalTest?.examData?.title}
-                </h2>
-
-                {/* Walking Details */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Walking Test:
-                  </h3>
-                  <ul className="list-disc list-inside space-y-2">
-                    <li>
-                      <span className="font-semibold text-gray-700">
-                        Male Candidates:
-                      </span>{" "}
-                      {
-                        mpJailExamData?.physicalTest?.examData?.walkingDetails
-                          .male.distance
-                      }{" "}
-                      in{" "}
-                      {
-                        mpJailExamData?.physicalTest?.examData?.walkingDetails
-                          .male.time
-                      }
-                    </li>
-                    <li>
-                      <span className="font-semibold text-gray-700">
-                        Female Candidates:
-                      </span>{" "}
-                      {
-                        mpJailExamData?.physicalTest?.examData?.walkingDetails
-                          .female.distance
-                      }{" "}
-                      in{" "}
-                      {
-                        mpJailExamData?.physicalTest?.examData?.walkingDetails
-                          .female.time
-                      }
-                    </li>
-                  </ul>
-                  <p className="text-sm text-gray-600 mt-2">
-                    Note: This test is only for qualification, and no marks will
-                    be awarded.
-                  </p>
-                </div>
-
-                {/* Instructions */}
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Key Instructions:
-                  </h3>
-                  <ol className="list-decimal list-inside space-y-2">
-                    {mpJailExamData?.physicalTest?.examData?.instructions.map(
-                      (instruction, index) => (
-                        <li key={index} className="text-gray-700">
-                          {instruction}
-                        </li>
-                      )
-                    )}
-                  </ol>
-                </div>
-
-                {/* Additional Notes */}
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-2">
-                    Additional Notes:
-                  </h3>
-                  <ul className="list-disc list-inside space-y-2">
-                    {mpJailExamData?.physicalTest?.examData?.additionalNotes.map(
-                      (note, index) => (
-                        <li key={index} className="text-gray-700">
-                          {note}
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
+                    ))}
+                  </tbody>
+                </table>
               </div>
             </div>
+
+            {/* शारीरिक मापदंड परीक्षण / Physical Parameters Test:- */}
+            <div id="mp-constable-physical-test-2025" className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                Physical Parameters Test ( शारीरिक मापदंड परीक्षण )
+              </h2>
+              <h2 className="text-lg font-semibold text-red-500  mb-6">
+                i. केवल विशेष सशस्त्र बल के लिए (विशेष सशस्त्र बल नियम 1973 के
+                नियम 21 एवं 22 अनुसार):
+              </h2>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300">
+                  <thead>
+                    <tr className="bg-red-500 text-black">
+                      <th className="border border-gray-300 px-4 py-2">क्र.</th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        आरक्षक पदों के लिए
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">वर्ग</th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        ऊँचाई
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        सीना (केवल पुरुषों के लिए) <br />
+                        बिना फूलाव
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        फूलाव सहित
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mpConstableExamData?.physicalParametersTable?.map(
+                      (row, index) => (
+                        <tr
+                          key={row.id}
+                          className={`${
+                            index % 2 === 0 ? "bg-gray-100" : "bg-white"
+                          }`}
+                        >
+                          <td className="border border-gray-300 px-4 py-2 text-center">
+                            {row.id}
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2">
+                            {row.description.map((item, idx) => (
+                              <div key={idx}>{item}</div>
+                            ))}
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2 text-center">
+                            {row.category}
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2 text-center">
+                            {row.height}
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2 text-center">
+                            {row.chestWithoutExpansion}
+                          </td>
+                          <td className="border border-gray-300 px-4 py-2 text-center">
+                            {row.chestWithExpansion}
+                          </td>
+                        </tr>
+                      )
+                    )}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* ii. अन्य 'विशेष सशस्त्र बल छोड़कर संवर्गों के अभ्यर्थियों की भर्ती के लिए:- */}
+              <h2 className="text-lg font-semibold text-red-500  mb-6 mt-6">
+                ii. अन्य 'विशेष सशस्त्र बल छोड़कर संवर्गों के अभ्यर्थियों की
+                भर्ती के लिए:-
+              </h2>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300">
+                  <thead>
+                    <tr className="bg-red-500 text-black">
+                      <th className="border border-gray-300 px-4 py-2">
+                        क्रं.
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        संवर्ग
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">वर्ग</th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        ऊँचाई
+                      </th>
+                      <th
+                        className="border border-gray-300 px-4 py-2 text-center"
+                        colSpan={2}
+                      >
+                        सीना (केवल पुरुषों के लिए)
+                        <th className="border border-gray-300 px-4 py-2">
+                          बिना फुलाए
+                        </th>
+                        <th className="border border-gray-300 px-4 py-2">
+                          फुलाव सहित
+                        </th>{" "}
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mpConstableExamData?.specialphysicalParametersTable?.map(
+                      (row, index) => (
+                        <React.Fragment key={row.id}>
+                          <tr
+                            className={`${
+                              index % 2 === 0 ? "bg-gray-100" : "bg-white"
+                            }`}
+                          >
+                            <td
+                              className="border border-gray-300 px-4 py-2 text-center font-semibold"
+                              rowSpan={2}
+                            >
+                              {row.id}
+                            </td>
+                            <td
+                              className="border border-gray-300 px-4 py-2"
+                              rowSpan={2}
+                            >
+                              {row.description.split("\n").map((line, idx) => (
+                                <div key={idx}>{line}</div>
+                              ))}
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2 text-center">
+                              {row.male.category}
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2 text-center">
+                              {row.male.height}
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2 text-center">
+                              {row.male.chestWithoutExpansion}
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2 text-center">
+                              {row.male.chestWithExpansion}
+                            </td>
+                          </tr>
+                          <tr
+                            className={`${
+                              index % 2 === 0 ? "bg-gray-100" : "bg-white"
+                            }`}
+                          >
+                            <td className="border border-gray-300 px-4 py-2 text-center">
+                              {row.female.category}
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2 text-center">
+                              {row.female.height}
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2 text-center">
+                              {row.female.chestWithoutExpansion}
+                            </td>
+                            <td className="border border-gray-300 px-4 py-2 text-center">
+                              {row.female.chestWithExpansion}
+                            </td>
+                          </tr>
+                        </React.Fragment>
+                      )
+                    )}
+                  </tbody>
+                </table>
+                <p className="mt-4 text-sm text-gray-700">
+                  i. जहाँ भी लागू हो, यदि सीने का माप न्यूनतम निर्धारित माप से
+                  अधिक है तो उसे कम से कम 5 सेमी फुलाव के साथ मापा जाएगा।
+                </p>
+                <p className="mt-4 text-sm text-gray-700">
+                  ii. शारीरिक मापदण्‍डों में किसी भी स्‍तर पर छूट नहीं दी जाएगी
+                  ।
+                </p>
+              </div>
+            </div>
+
+            {/* द्वितीय चरण परीक्षा योजना (Second phase examination scheme) */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              {/* ii. अन्य 'विशेष सशस्त्र बल छोड़कर संवर्गों के अभ्यर्थियों की भर्ती के लिए:- */}
+              <div className="my-6">
+                <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                  द्वितीय चरण परीक्षा योजना (Second phase examination scheme)
+                </h2>
+                <ul className="list-disc ml-6 text-gray-700">
+                  {mpConstableExamData?.secondPhaseofExam?.secondPhase.map(
+                    (scheme, index) => (
+                      <li key={index} className="mb-3">
+                        <span className="font-semibold">
+                          {scheme.postName} के पदों हेतु:
+                        </span>
+                        <p className="ml-4">{scheme.description}</p>
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+              <div className="my-6">
+                <h2 className="text-lg font-bold mb-4 text-red-500">
+                  i. शारीरिक दक्षता परीक्षण – PPT – अधिकतम 100 अंक:
+                </h2>
+                <ul className="list-disc ml-6 text-gray-700">
+                  {mpConstableExamData?.secondPhaseofExam?.testDetailsData.map(
+                    (detail, index) => (
+                      <li key={index} className="mb-3">
+                        {detail}
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+              <div className="my-6">
+                <h2 className="text-lg font-bold mb-4 text-red-500">
+                  शिथिल मापदण्‍डों के साथ होमगार्ड/भूतपूर्व सैनिक: सभी तीन
+                  विधाओं में तथा, आरक्षक (रेडियो-ऑपरेटर) – केवल 800 मी. में:
+                </h2>
+                <ul className="list-disc ml-6 text-gray-700">
+                  {mpConstableExamData?.secondPhaseofExam?.relaxedStandardsData.map(
+                    (standard, index) => (
+                      <li key={index} className="mb-3">
+                        {standard}
+                      </li>
+                    )
+                  )}
+                </ul>
+              </div>
+            </div>
+
             {/* MP Jail Prahari Syllabus 2025, */}
             <div
-              id="mp-jail-prahari-syllabus-2025"
+              id="mp-constable-syllabus-2025"
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {mpJailExamData?.syllabus?.title}
+                {mpConstableExamData?.syllabus?.title}
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
-                {mpJailExamData?.syllabus?.description}
+                {mpConstableExamData?.syllabus?.description}
               </p>
 
               {/* Table */}
@@ -505,7 +585,7 @@ const MPCONSTABLE = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {mpJailExamData?.syllabus?.tableData.map((item) => (
+                    {mpConstableExamData?.syllabus?.tableData.map((item) => (
                       <tr key={item.id} className="hover:bg-gray-100">
                         <td className="border border-gray-300 px-4 py-2">
                           {item.id}
@@ -519,39 +599,81 @@ const MPCONSTABLE = () => {
                         <td className="border border-gray-300 px-4 py-2">
                           {item.marks}
                         </td>
-                        <td className="border border-gray-300 px-4 py-2 ">
+                        <td className="border border-gray-300 px-4 py-2">
                           {item.time}
                         </td>
                       </tr>
                     ))}
+                    <tr className="font-bold bg-gray-200">
+                      <td className="border border-gray-300 px-4 py-2">कुल</td>
+                      <td className="border border-gray-300 px-4 py-2">---</td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {mpConstableExamData?.syllabus?.tableData.reduce(
+                          (total, item) => total + item.questions,
+                          0
+                        )}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {mpConstableExamData?.syllabus?.tableData.reduce(
+                          (total, item) => total + item.marks,
+                          0
+                        )}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {mpConstableExamData?.syllabus?.tableData.length * 120}{" "}
+                        मिनट
+                      </td>
+                    </tr>
                   </tbody>
                 </table>
               </div>
             </div>
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              {mpJailExamData?.syllabus?.sections.map((section, index) => (
-                <div key={index} className="mb-4">
-                  <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
-                    {section.name}
-                  </button>
-                  <ul className="mt-4 list-disc">
-                    {section.topics.map((topic, topicIndex) => (
-                      <li key={topicIndex}>{topic}</li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+              {mpConstableExamData?.syllabus?.sections?.map(
+                (section, index) => (
+                  <div key={index} className="mb-4">
+                    <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                      {section.name}
+                    </button>
+                    <ul className="mt-4 list-disc">
+                      {section?.topics.map((topic, topicIndex) => (
+                        <li key={topicIndex}>
+                          {typeof topic === "string" ? (
+                            topic
+                          ) : (
+                            <>
+                              {topic?.subtopics &&
+                              topic?.subtopics?.length > 0 ? (
+                                <ul className=" mt-2 list-disc">
+                                  {topic.subtopics.map(
+                                    (subtopic, subtopicIndex) => (
+                                      <li key={subtopicIndex}>{subtopic}</li>
+                                    )
+                                  )}
+                                </ul>
+                              ) : (
+                                topic
+                              )}
+                            </>
+                          )}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )
+              )}
             </div>
+
             {/* Frequently Asked Questions Section */}
             <div
               id="frequently-asked-questions"
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h3 className="text-xl font-bold text-gray-800 mb-4">
-                {mpJailExamData.faq.title}
+                {mpConstableExamData.faq.title}
               </h3>
               <div className="divide-y divide-gray-300">
-                {mpJailExamData.faq.questions.map((faq, index) => (
+                {mpConstableExamData.faq.questions.map((faq, index) => (
                   <div key={index} className="py-4">
                     <button
                       onClick={() => toggleFAQ(index)}
