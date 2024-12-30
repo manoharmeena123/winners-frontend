@@ -278,6 +278,382 @@ const MPSI = () => {
               </div>
             </div>
 
+            {/* न्यूनतम शैक्षणिक अर्हता :- */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                न्यूनतम शैक्षणिक अर्हताएँ (Minimum Educational Qualifications)
+              </h2>
+              <div className="overflow-x-auto mb-6">
+                <table className="w-full border-collapse border border-gray-300">
+                  <thead>
+                    <tr className="bg-red-500 font-bold text-black">
+                      <th className="border border-gray-300 px-4 py-2">क्र.</th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        पदनाम
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        पद का प्रकार
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        शैक्षणिक अर्हताएँ
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mpSiExamData?.eligibility?.map((row, index) => (
+                      <tr
+                        key={row.id}
+                        className={`${
+                          index % 2 === 0 ? "bg-gray-100" : "bg-white"
+                        }`}
+                      >
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row["क्र."]}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row["पदनाम"]}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row["पद का प्रकार"]}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row["शैक्षणिक अर्हताएँ"]}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div className="mt-6 mb-6">
+                <ul className="list-disc">
+                  {mpSiExamData?.rules.map((rule, index) => (
+                    <li key={index} className="mb-2">
+                      {rule}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse border border-gray-300">
+                  <thead>
+                    <tr className="bg-red-500 font-bold text-black">
+                      <th className="border border-gray-300 px-4 py-2">क्र.</th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        भर्ती का तरीका
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        पद का प्रकार
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        शैक्षणिक अर्हताएँ
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        आयु सीमा
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        आरक्षण
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mpSiExamData?.tableData.map((row, index) => (
+                      <tr
+                        key={index}
+                        className={`border-b border-gray-300 ${
+                          index % 2 === 0 ? "bg-gray-50" : "bg-white"
+                        }`}
+                      >
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.srNo}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.recruitmentMethod}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.postType}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.educationalQualification}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.ageLimit}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.reservation}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* मध्यप्रदेश के मूल निवासियों के लिए आयु-सीमा में अधिकतम छूट :- */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="text-2xl font-bold mb-4">
+                मध्यप्रदेश के मूल निवासियों के लिए आयु सीमा में छूट
+              </h2>
+              <div className="overflow-x-auto">
+                <table className="min-w-full border border-gray-200">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-300 px-4 py-2">क्र.</th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        वर्ग का संक्षेप
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        पद का प्रकार
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        परीक्षा का प्रकार
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        आयु सीमा
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mpSiExamData?.ageRelaxation.map((row, index) => (
+                      <tr key={index} className="border-b">
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.srNo}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.category}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.postType}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.examType}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {row.ageLimit}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* परीक्षा योजना  Exam Planning :- */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                {mpSiExamData?.examPlanning?.title}
+              </h2>
+              <p className="text-gray-700 mb-4">
+                {mpSiExamData?.examPlanning?.description}
+              </p>
+
+              {mpSiExamData?.examPlanning?.imageUrl && (
+                <div className="flex justify-center items-center">
+                  <div className="items-center">
+                    <div className="flex">
+                      <img
+                        src={mpSiExamData?.examPlanning?.imageUrl}
+                        alt="Exam Planning Structure"
+                        className="max-w-full h-auto mb-2 object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* writtenExam "लिखित परीक्षा" */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                {mpSiExamData?.writtenExam?.title}
+              </h2>
+              <p className="text-gray-700 mb-4">
+                {mpSiExamData?.writtenExam?.description}
+              </p>
+
+              {mpSiExamData?.writtenExam?.imageUrl && (
+                <div className="flex justify-center items-center">
+                  <div className="items-center">
+                    <div className="flex">
+                      <img
+                        src={mpSiExamData?.writtenExam?.imageUrl}
+                        alt="Exam Planning Structure"
+                        className="max-w-full h-auto mb-2 object-contain"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* तकनीकी पदों के लिए पाठ्यक्रम (पेपर – I) कुल अंक - 100 */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="text-2xl font-bold mb-4">
+                तकनीकी पदों के लिए पाठ्यक्रम (पेपर-1) - कुल अंक- 100
+              </h2>
+              <div className="overflow-x-auto mb-6">
+                <table className="w-full border-collapse border border-gray-300">
+                  <thead>
+                    <tr className="bg-red-500 font-bold text-black">
+                      <th className="border border-gray-300 px-4 py-2">
+                        भौतिक विज्ञान
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        रसायन विज्ञान
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">गणित</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center">
+                        <ul className="list-decimal ml-6 space-y-2">
+                          {mpSiExamData?.syllabusData
+                            .find((subject) => subject.subject === "Physics")
+                            ?.topics.map((topic, idx) => (
+                              <li key={idx}>{topic}</li>
+                            ))}
+                        </ul>
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">
+                        <ul className="list-decimal ml-6 space-y-2">
+                          {mpSiExamData?.syllabusData
+                            .find((subject) => subject.subject === "Chemistry")
+                            ?.topics.map((topic, idx) => (
+                              <li key={idx}>{topic}</li>
+                            ))}
+                        </ul>
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">
+                        <ul className="list-decimal ml-6 space-y-2">
+                          {mpSiExamData?.syllabusData
+                            .find(
+                              (subject) => subject.subject === "Mathematics"
+                            )
+                            ?.topics.map((topic, idx) => (
+                              <li key={idx}>{topic}</li>
+                            ))}
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* तकनीकी और गैर तकनीकी पदों के लिए पाठ्यक्रम (पेपर – 2) कुल अंक - 200 */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                तकनीकी पदों के लिए पाठ्यक्रम (पेपर-1) - कुल अंक- 100
+              </h2>
+              <div className="overflow-x-auto mb-6">
+                <table className="w-full border-collapse border border-gray-300">
+                  <thead>
+                    <tr className="bg-red-500 font-bold text-black">
+                      <th className="border border-gray-300 px-4 py-2">
+                        भौतिक विज्ञान
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        रसायन विज्ञान
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">गणित</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td className="border border-gray-300 px-4 py-2 text-center">
+                        <ul className="list-decimal ml-6 space-y-2">
+                          {mpSiExamData?.syllabusData2
+                            .find((subject) => subject.subject === "हिंदी")
+                            ?.topics.map((topic, idx) => (
+                              <li key={idx}>{topic}</li>
+                            ))}
+                        </ul>
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">
+                        <ul className="list-decimal ml-6 space-y-2">
+                          {mpSiExamData?.syllabusData2
+                            .find((subject) => subject.subject === "अंग्रेजी")
+                            ?.topics.map((topic, idx) => (
+                              <li key={idx}>{topic}</li>
+                            ))}
+                        </ul>
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2 text-center">
+                        <ul className="list-decimal ml-6 space-y-2">
+                          {mpSiExamData?.syllabusData2
+                            .find(
+                              (subject) => subject.subject === "सामान्य ज्ञान"
+                            )
+                            ?.topics.map((topic, idx) => (
+                              <li key={idx}>{topic}</li>
+                            ))}
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            {/* न्यूनतम शारीरिक अर्हता :- */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                न्यूनतम शारीरिक अर्हताएँ :
+              </h2>
+              <ul className="list-disc">
+                {mpSiExamData?.qualifications.map((qualification, index) => (
+                  <li key={index} className="mb-2">
+                    {qualification}
+                  </li>
+                ))}
+              </ul>
+
+              <div className="overflow-x-auto mt-6 mb-6">
+                <table className="w-full border-collapse border border-gray-300">
+                  <thead>
+                    <tr>
+                      <th className="border border-gray-300 px-4 py-2">वर्ग</th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        800 मीटर दौड़
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        लंबी छलांग
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        शॉट पुट
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mpSiExamData?.physicalStandards.map((standard) => (
+                      <tr key={standard.category} className="border-b">
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {standard.category}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {standard.eightHundredMeters}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {standard.longJump}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2 text-center">
+                          {standard.shotPut}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                {mpSiExamData?.interviewData?.title}
+              </h2>
+              <p className="text-gray-700">
+                {mpSiExamData?.interviewData?.description}
+              </p>
+            </div>
+
             {/* Frequently Asked Questions Section */}
             <div
               id="frequently-asked-questions"
