@@ -219,9 +219,8 @@ const MPJAILPRAHARI = () => {
 
             {/* MP Jail Prahari 2025 Notification Details */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-        
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-              {mpJailExamData?.notificationData.title}
+                {mpJailExamData?.notificationData.title}
               </h2>
               <div className="mb-6">
                 <h2 className="text-xl font-semibold">Age Limit</h2>
@@ -351,42 +350,43 @@ const MPJAILPRAHARI = () => {
                       <h3 className="bg-red-600 text-white text-lg font-bold p-2 rounded-md inline-block mb-4">
                         {section.title}
                       </h3>
-
-                      {/* Table */}
-                      <table className="w-full border-collapse border border-gray-300">
-                        <thead>
-                          <tr className="bg-gray-100">
-                            {section.tableHeaders.map((header, i) => (
-                              <th
-                                key={i}
-                                className="border border-gray-300 px-4 py-2 text-left font-medium"
-                              >
-                                {header}
-                              </th>
-                            ))}
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {section.rows.map((row, i) => (
-                            <tr key={i} className="hover:bg-gray-100">
-                              <td className="border border-gray-300 px-4 py-2">
-                                {row.category}
-                              </td>
-                              <td className="border border-gray-300 px-4 py-2">
-                                {row.height}
-                              </td>
-                              <td className="border border-gray-300 px-4 py-2">
-                                {row.chestNormal}
-                              </td>
-                              {row.chestExpanded && (
-                                <td className="border border-gray-300 px-4 py-2">
-                                  {row.chestExpanded}
-                                </td>
-                              )}
+                      <div className="overflow-x-auto mt-6">
+                        {/* Table */}
+                        <table className="w-full border-collapse border border-gray-300">
+                          <thead>
+                            <tr className="bg-gray-100">
+                              {section.tableHeaders.map((header, i) => (
+                                <th
+                                  key={i}
+                                  className="border border-gray-300 px-4 py-2 text-left font-medium"
+                                >
+                                  {header}
+                                </th>
+                              ))}
                             </tr>
-                          ))}
-                        </tbody>
-                      </table>
+                          </thead>
+                          <tbody>
+                            {section.rows.map((row, i) => (
+                              <tr key={i} className="hover:bg-gray-100">
+                                <td className="border border-gray-300 px-4 py-2">
+                                  {row.category}
+                                </td>
+                                <td className="border border-gray-300 px-4 py-2">
+                                  {row.height}
+                                </td>
+                                <td className="border border-gray-300 px-4 py-2">
+                                  {row.chestNormal}
+                                </td>
+                                {row.chestExpanded && (
+                                  <td className="border border-gray-300 px-4 py-2">
+                                    {row.chestExpanded}
+                                  </td>
+                                )}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   )
                 )}

@@ -18,11 +18,11 @@ export const mpSiData = {
 
 export const tableOfContentsData = [
   {
-    title: "MP SI 2025 Notification",
+    title: "MPESB 2025 Notification Released",
     link: "#mp-si-2025-notification",
   },
   {
-    title: "MP SI Exam Dates",
+    title: "MPESB SI Recruitment 2025",
     link: "#mp-si-exam-dates",
   },
   {
@@ -30,16 +30,8 @@ export const tableOfContentsData = [
     link: "#mp-si-eligibility-criteria",
   },
   {
-    title: "MP SI Application Process",
-    link: "#mp-si-application-process",
-  },
-  {
-    title: "MP SI Exam Pattern",
-    link: "#mp-si-exam-pattern",
-  },
-  {
-    title: "MP SI Salary Structure",
-    link: "#mp-si-salary-structure",
+    title: "MP SI Physical Criteria",
+    link: "#mp-si-physical-criteria",
   },
   {
     title: "Frequently Asked Questions",

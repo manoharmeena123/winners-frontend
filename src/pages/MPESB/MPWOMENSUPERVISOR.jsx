@@ -17,7 +17,7 @@ import {
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 
-const MPSI = () => {
+const MPWOMENSUPERVISOR = () => {
   const { title, intro, content, officialWebsite } = mpSiData;
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
@@ -841,4 +841,4 @@ const MPSI = () => {
   );
 };
 
-export default MPSI;
+export default MPWOMENSUPERVISOR;
