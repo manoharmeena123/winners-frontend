@@ -542,7 +542,7 @@ export const smallScreenTestSeries = [
   },
   {
     image:
-      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.1402379844059063.jpeg",
+      "mppeb/mppsc-prelims-2025.jpeg",
     description: "MPPSC Prelims - 2025 (Online Test Series 2.0)",
     price: "₹499",
     button: "Buy Now",
