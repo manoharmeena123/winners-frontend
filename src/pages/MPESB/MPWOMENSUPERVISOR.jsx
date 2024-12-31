@@ -4,8 +4,8 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
 import {
-  mpSiData,
-  mpSiExamData,
+  mpWomenSupervisorData,
+  mpWomenSupervisorExamData,
   tableOfContentsData,
   smallScreenClasses,
   largeScreenClasses,
@@ -13,12 +13,12 @@ import {
   largeScreenTestSeries,
   smallScreenBooks,
   largeScreenBooks,
-} from "../../data/mp-si";
+} from "../../data/women-supervisor";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 
 const MPWOMENSUPERVISOR = () => {
-  const { title, intro, content, officialWebsite } = mpSiData;
+  const { title, intro, content, officialWebsite } = mpWomenSupervisorData;
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
   // State to track whether the table is open or closed
@@ -198,15 +198,15 @@ const MPWOMENSUPERVISOR = () => {
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {mpSiExamData?.notification?.title}
+                {mpWomenSupervisorExamData?.notification?.title}
               </h2>
               <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
-                {mpSiExamData?.notification?.description}
+                {mpWomenSupervisorExamData?.notification?.description}
               </p>
-              {mpSiExamData?.notification?.link && (
+              {mpWomenSupervisorExamData?.notification?.link && (
                 <h6 className="bg-red-600 text-white p-2 rounded-md inline-block">
                   <a
-                    href={mpSiExamData.notification.link}
+                    href={mpWomenSupervisorExamData.notification.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:underline text-white"
@@ -218,9 +218,12 @@ const MPWOMENSUPERVISOR = () => {
             </div>
 
             {/* MP Constable 2025 Notification Details */}
-            <div id="mp-si-exam-dates" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mp-si-exam-dates"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {mpSiExamData?.notificationData.title}
+                {mpWomenSupervisorExamData?.notificationData.title}
               </h2>
               <div className="mb-6">
                 <h2 className="text-xl font-semibold">Age Limit</h2>
@@ -228,19 +231,21 @@ const MPWOMENSUPERVISOR = () => {
                   <li>
                     Minimum Age:{" "}
                     <strong>
-                      {mpSiExamData?.notificationData.ageLimit.min} years
+                      {mpWomenSupervisorExamData?.notificationData.ageLimit.min}{" "}
+                      years
                     </strong>
                   </li>
                   <li>
                     Maximum Age:{" "}
                     <strong>
-                      {mpSiExamData?.notificationData.ageLimit.max} years
+                      {mpWomenSupervisorExamData?.notificationData.ageLimit.max}{" "}
+                      years
                     </strong>
                   </li>
                   <li>
                     Age relaxation for reserved categories:
                     <ul className="list-inside list-disc ml-4">
-                      {mpSiExamData?.notificationData.ageRelaxation.map(
+                      {mpWomenSupervisorExamData?.notificationData.ageRelaxation.map(
                         (item, index) => (
                           <li key={index}>
                             <strong>{item.category}:</strong> {item.relaxation}{" "}
@@ -257,7 +262,7 @@ const MPWOMENSUPERVISOR = () => {
                 <h2 className="text-xl font-semibold">
                   Qualification Required
                 </h2>
-                {mpSiExamData?.notificationData.qualifications.map(
+                {mpWomenSupervisorExamData?.notificationData.qualifications.map(
                   (qualification, index) => (
                     <div key={index}>
                       <p className="font-semibold">{qualification.role}:</p>
@@ -277,381 +282,320 @@ const MPWOMENSUPERVISOR = () => {
                 </p>
               </div>
             </div>
-
-            {/* न्यूनतम शैक्षणिक अर्हता :- */}
-            <div id="mp-si-eligibility-criteria" className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                न्यूनतम शैक्षणिक अर्हताएँ (Minimum Educational Qualifications)
-              </h2>
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full border-collapse border border-gray-300">
-                  <thead>
-                    <tr className="bg-red-500 font-bold text-black">
-                      <th className="border border-gray-300 px-4 py-2">क्र.</th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        पदनाम
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        पद का प्रकार
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        शैक्षणिक अर्हताएँ
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {mpSiExamData?.eligibility?.map((row, index) => (
-                      <tr
-                        key={row.id}
-                        className={`${
-                          index % 2 === 0 ? "bg-gray-100" : "bg-white"
-                        }`}
-                      >
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row["क्र."]}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row["पदनाम"]}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row["पद का प्रकार"]}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row["शैक्षणिक अर्हताएँ"]}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-              <div className="mt-6 mb-6">
-                <ul className="list-disc">
-                  {mpSiExamData?.rules.map((rule, index) => (
-                    <li key={index} className="mb-2">
-                      {rule}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="overflow-x-auto">
-                <table className="w-full border-collapse border border-gray-300">
-                  <thead>
-                    <tr className="bg-red-500 font-bold text-black">
-                      <th className="border border-gray-300 px-4 py-2">क्र.</th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        भर्ती का तरीका
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        पद का प्रकार
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        शैक्षणिक अर्हताएँ
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        आयु सीमा
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        आरक्षण
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {mpSiExamData?.tableData.map((row, index) => (
-                      <tr
-                        key={index}
-                        className={`border-b border-gray-300 ${
-                          index % 2 === 0 ? "bg-gray-50" : "bg-white"
-                        }`}
-                      >
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row.srNo}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row.recruitmentMethod}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row.postType}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row.educationalQualification}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row.ageLimit}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row.reservation}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            {/* मध्यप्रदेश के मूल निवासियों के लिए आयु-सीमा में अधिकतम छूट :- */}
+            {/* Pattern of Exam – Objective (CBT) & Typing Test:- */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="text-2xl font-bold mb-4">
-                मध्यप्रदेश के मूल निवासियों के लिए आयु सीमा में छूट
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                Pattern of Exam - Objective (CBT) & Typing Test
               </h2>
               <div className="overflow-x-auto">
-                <table className="min-w-full border border-gray-200">
+                <table className="table-auto w-full">
                   <thead>
                     <tr>
-                      <th className="border border-gray-300 px-4 py-2">क्र.</th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        वर्ग का संक्षेप
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        पद का प्रकार
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        परीक्षा का प्रकार
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        आयु सीमा
-                      </th>
+                      <th className="border px-4 py-2">क्र</th>
+                      <th className="border px-4 py-2">खण्ड</th>
+                      <th className="border px-4 py-2">विषय</th>
+                      <th className="border px-4 py-2">कुल अंक</th>
+                      <th className="border px-4 py-2">कुल प्रश्न</th>
+                      <th className="border px-4 py-2">कुल समय</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {mpSiExamData?.ageRelaxation.map((row, index) => (
-                      <tr key={index} className="border-b">
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row.srNo}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row.category}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row.postType}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row.examType}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {row.ageLimit}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
-            {/* परीक्षा योजना  Exam Planning :- */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {mpSiExamData?.examPlanning?.title}
-              </h2>
-              <p className="text-gray-700 mb-4">
-                {mpSiExamData?.examPlanning?.description}
-              </p>
-
-              {mpSiExamData?.examPlanning?.imageUrl && (
-                <div className="flex justify-center items-center">
-                  <div className="items-center">
-                    <div className="flex">
-                      <img
-                        src={mpSiExamData?.examPlanning?.imageUrl}
-                        alt="Exam Planning Structure"
-                        className="max-w-full h-auto mb-2 object-contain"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* writtenExam "लिखित परीक्षा" */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {mpSiExamData?.writtenExam?.title}
-              </h2>
-              <p className="text-gray-700 mb-4">
-                {mpSiExamData?.writtenExam?.description}
-              </p>
-
-              {mpSiExamData?.writtenExam?.imageUrl && (
-                <div className="flex justify-center items-center">
-                  <div className="items-center">
-                    <div className="flex">
-                      <img
-                        src={mpSiExamData?.writtenExam?.imageUrl}
-                        alt="Exam Planning Structure"
-                        className="max-w-full h-auto mb-2 object-contain"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* तकनीकी पदों के लिए पाठ्यक्रम (पेपर – I) कुल अंक - 100 */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="text-2xl font-bold mb-4">
-                तकनीकी पदों के लिए पाठ्यक्रम (पेपर-1) - कुल अंक- 100
-              </h2>
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full border-collapse border border-gray-300">
-                  <thead>
-                    <tr className="bg-red-500 font-bold text-black">
-                      <th className="border border-gray-300 px-4 py-2">
-                        भौतिक विज्ञान
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        रसायन विज्ञान
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">गणित</th>
-                    </tr>
-                  </thead>
-                  <tbody>
+                    {mpWomenSupervisorExamData?.examPattern.map(
+                      (section, index) => (
+                        <tr key={index}>
+                          <td className="border px-4 py-2">{index + 1}</td>
+                          <td className="border px-4 py-2">
+                            {section.section}
+                          </td>
+                          <td className="border px-4 py-2">
+                            {section.subject}
+                          </td>
+                          <td className="border px-4 py-2">
+                            {section.totalMarks}
+                          </td>
+                          <td className="border px-4 py-2">
+                            {section.totalQuestions}
+                          </td>
+                          <td className="border px-4 py-2">{section.time}</td>
+                        </tr>
+                      )
+                    )}
                     <tr>
-                      <td className="border border-gray-300 px-4 py-2 text-center">
-                        <ul className="list-decimal ml-6 space-y-2">
-                          {mpSiExamData?.syllabusData
-                            .find((subject) => subject.subject === "Physics")
-                            ?.topics.map((topic, idx) => (
-                              <li key={idx}>{topic}</li>
-                            ))}
-                        </ul>
+                      <td className="border px-4 py-2" colSpan={3}>
+                        कुल योग
                       </td>
-                      <td className="border border-gray-300 px-4 py-2 text-center">
-                        <ul className="list-decimal ml-6 space-y-2">
-                          {mpSiExamData?.syllabusData
-                            .find((subject) => subject.subject === "Chemistry")
-                            ?.topics.map((topic, idx) => (
-                              <li key={idx}>{topic}</li>
-                            ))}
-                        </ul>
+                      <td className="border px-4 py-2">
+                        {mpWomenSupervisorExamData?.examPattern.reduce(
+                          (sum, section) => sum + section.totalMarks,
+                          0
+                        )}
                       </td>
-                      <td className="border border-gray-300 px-4 py-2 text-center">
-                        <ul className="list-decimal ml-6 space-y-2">
-                          {mpSiExamData?.syllabusData
-                            .find(
-                              (subject) => subject.subject === "Mathematics"
-                            )
-                            ?.topics.map((topic, idx) => (
-                              <li key={idx}>{topic}</li>
-                            ))}
-                        </ul>
+                      <td className="border px-4 py-2">
+                        {mpWomenSupervisorExamData?.examPattern.reduce(
+                          (sum, section) => sum + section.totalQuestions,
+                          0
+                        )}
                       </td>
+                      <td className="border px-4 py-2"></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
 
-            {/* तकनीकी और गैर तकनीकी पदों के लिए पाठ्यक्रम (पेपर – 2) कुल अंक - 200 */}
+            {/* पर्यवेक्षक (महिला) भर्ती एवं पर्यवेक्षक (महिला) ऑगनवाडी कार्यकर्ता – विस्‍तृत पाठ्यक्रम प्रथम खण्‍ड - पोषण एवं स्‍वास्‍थ्‍य:- */}
+            {/* Supervisor (Female) Recruitment and Supervisor (Female) Anganwadi Worker – Detailed Syllabus First Section - Nutrition and Health:- */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                तकनीकी पदों के लिए पाठ्यक्रम (पेपर-1) - कुल अंक- 100
+                {" "}
+                Supervisor (Female) Recruitment and Supervisor (Female)
+                Anganwadi Worker – Detailed Syllabus First Section - Nutrition
+                and Health ( पर्यवेक्षक (महिला) भर्ती एवं पर्यवेक्षक (महिला)
+                ऑगनवाडी कार्यकर्ता – विस्‍तृत पाठ्यक्रम प्रथम खण्‍ड - पोषण एवं
+                स्‍वास्‍थ्‍य:- )
               </h2>
-              <div className="overflow-x-auto mb-6">
-                <table className="w-full border-collapse border border-gray-300">
+              <div className="overflow-x-auto">
+                <table className="table-auto w-full">
                   <thead>
-                    <tr className="bg-red-500 font-bold text-black">
-                      <th className="border border-gray-300 px-4 py-2">
-                        भौतिक विज्ञान
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        रसायन विज्ञान
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">गणित</th>
+                    <tr>
+                      <th className="border px-4 py-2">क्र.</th>
+                      <th className="border px-4 py-2">विषय</th>
+                      <th className="border px-4 py-2">उप विषय</th>
+                      <th className="border px-4 py-2">अंक</th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                      <td className="border border-gray-300 px-4 py-2 text-center">
-                        <ul className="list-decimal ml-6 space-y-2">
-                          {mpSiExamData?.syllabusData2
-                            .find((subject) => subject.subject === "हिंदी")
-                            ?.topics.map((topic, idx) => (
-                              <li key={idx}>{topic}</li>
-                            ))}
-                        </ul>
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2 text-center">
-                        <ul className="list-decimal ml-6 space-y-2">
-                          {mpSiExamData?.syllabusData2
-                            .find((subject) => subject.subject === "अंग्रेजी")
-                            ?.topics.map((topic, idx) => (
-                              <li key={idx}>{topic}</li>
-                            ))}
-                        </ul>
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2 text-center">
-                        <ul className="list-decimal ml-6 space-y-2">
-                          {mpSiExamData?.syllabusData2
-                            .find(
-                              (subject) => subject.subject === "सामान्य ज्ञान"
-                            )
-                            ?.topics.map((topic, idx) => (
-                              <li key={idx}>{topic}</li>
-                            ))}
-                        </ul>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            {/* न्यूनतम शारीरिक अर्हता :- */}
-            <div id="mp-si-physical-criteria" className="bg-white shadow-md rounded-md p-6 mt-6">
-              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                न्यूनतम शारीरिक अर्हताएँ :
-              </h2>
-              <ul className="list-disc">
-                {mpSiExamData?.qualifications.map((qualification, index) => (
-                  <li key={index} className="mb-2">
-                    {qualification}
-                  </li>
-                ))}
-              </ul>
-
-              <div className="overflow-x-auto mt-6 mb-6">
-                <table className="w-full border-collapse border border-gray-300">
-                  <thead>
-                    <tr>
-                      <th className="border border-gray-300 px-4 py-2">वर्ग</th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        800 मीटर दौड़
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        लंबी छलांग
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        शॉट पुट
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {mpSiExamData?.physicalStandards.map((standard) => (
-                      <tr key={standard.category} className="border-b">
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {standard.category}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {standard.eightHundredMeters}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {standard.longJump}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2 text-center">
-                          {standard.shotPut}
-                        </td>
-                      </tr>
-                    ))}
+                    {mpWomenSupervisorExamData?.examData.map(
+                      (section, sectionIndex) => (
+                        <>
+                          {section.details.map((topic, topicIndex) => (
+                            <tr key={topicIndex}>
+                              <td className="border px-4 py-2">
+                                {topicIndex + 1}
+                              </td>
+                              <td className="border px-4 py-2">
+                                {topic.topic}
+                              </td>
+                              <td className="border px-4 py-2">
+                                <ul className="list-disc pl-4">
+                                  {topic.subtopics.map(
+                                    (subtopic, subtopicIndex) => (
+                                      <li key={subtopicIndex}>{subtopic}</li>
+                                    )
+                                  )}
+                                </ul>
+                              </td>
+                              <td className="border px-4 py-2">
+                                {topic.marks}
+                              </td>
+                            </tr>
+                          ))}
+                          <tr>
+                            <td
+                              className="border px-4 py-2 font-bold-600"
+                              colSpan={3}
+                            >
+                              कुल योग:
+                            </td>
+                            <td className="border px-4 py-2 font-bold-600 text-black">
+                              {section.details.reduce(
+                                (sum, topic) => sum + topic.marks,
+                                0
+                              )}
+                            </td>
+                          </tr>
+                        </>
+                      )
+                    )}
                   </tbody>
                 </table>
               </div>
             </div>
 
+            {/* द्वितीय खंड - सामान्य ज्ञान एवं तर्क शक्ति:- */}
+            {/* Second Section - General Knowledge and Reasoning:- */}
             <div className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {mpSiExamData?.interviewData?.title}
+                Second Section - General Knowledge and Reasoning ( द्वितीय खंड -
+                सामान्य ज्ञान एवं तर्क शक्ति:-)
               </h2>
-              <p className="text-gray-700">
-                {mpSiExamData?.interviewData?.description}
-              </p>
+              <div className="overflow-x-auto">
+                <table className="table-auto w-full">
+                  <thead>
+                    <tr>
+                      <th className="border px-4 py-2">क्र.</th>
+                      <th className="border px-4 py-2">विषय</th>
+                      <th className="border px-4 py-2">उप विषय</th>
+                      <th className="border px-4 py-2">अंक</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mpWomenSupervisorExamData?.examSecondPhase.map(
+                      (section, sectionIndex) => (
+                        <>
+                          {section.details.map((topic, topicIndex) => (
+                            <tr key={topicIndex}>
+                              <td className="border px-4 py-2">
+                                {topicIndex + 1}
+                              </td>
+                              <td className="border px-4 py-2">
+                                {topic.topic}
+                              </td>
+                              <td className="border px-4 py-2">
+                                <ul className="list-disc pl-4">
+                                  {topic.subtopics.map(
+                                    (subtopic, subtopicIndex) => (
+                                      <li key={subtopicIndex}>{subtopic}</li>
+                                    )
+                                  )}
+                                </ul>
+                              </td>
+                              <td className="border px-4 py-2">
+                                {topic.marks}
+                              </td>
+                            </tr>
+                          ))}
+                          <tr>
+                            <td
+                              className="border px-4 py-2 font-bold-600"
+                              colSpan={3}
+                            >
+                              कुल योग:
+                            </td>
+                            <td className="border px-4 py-2 font-bold-600 text-black">
+                              {section.details.reduce(
+                                (sum, topic) => sum + topic.marks,
+                                0
+                              )}
+                            </td>
+                          </tr>
+                        </>
+                      )
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* तृतीय खंड - प्रबंधकीय गुण:- */}
+            {/* Third Section - Managerial Skills:- */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                Third Section - Managerial Skills ( तृतीय खंड - प्रबंधकीय गुण:-)
+              </h2>
+              <div className="overflow-x-auto">
+                <table className="table-auto w-full">
+                  <thead>
+                    <tr>
+                      <th className="border px-4 py-2">क्र.</th>
+                      <th className="border px-4 py-2">विषय</th>
+                      <th className="border px-4 py-2">उप विषय</th>
+                      <th className="border px-4 py-2">अंक</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mpWomenSupervisorExamData?.examThirdPhase.map(
+                      (section, sectionIndex) => (
+                        <>
+                          {section.details.map((topic, topicIndex) => (
+                            <tr key={topicIndex}>
+                              <td className="border px-4 py-2">
+                                {topicIndex + 1}
+                              </td>
+                              <td className="border px-4 py-2">
+                                {topic.topic}
+                              </td>
+                              <td className="border px-4 py-2">{"....."}</td>
+                              <td className="border px-4 py-2">
+                                {topic.marks}
+                              </td>
+                            </tr>
+                          ))}
+                          <tr>
+                            <td
+                              className="border px-4 py-2 font-bold-600"
+                              colSpan={3}
+                            >
+                              कुल योग:
+                            </td>
+                            <td className="border px-4 py-2 font-bold-600 text-black">
+                              {section.details.reduce(
+                                (sum, topic) => sum + topic.marks,
+                                0
+                              )}
+                            </td>
+                          </tr>
+                        </>
+                      )
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* चतुर्थ खंड - शिशु की प्रारम्भिक देखभाल एवं शिक्षा:- */}
+            {/* Fourth Section - Early Childhood Care and Education:- */}
+            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+                Fourth Section - Early Childhood Care and Education ( चतुर्थ खंड
+                - शिशु की प्रारम्भिक देखभाल एवं शिक्षा:-)
+              </h2>
+              <div className="overflow-x-auto">
+                <table className="table-auto w-full">
+                  <thead>
+                    <tr>
+                      <th className="border px-4 py-2">क्र.</th>
+                      <th className="border px-4 py-2">विषय</th>
+                      <th className="border px-4 py-2">उप विषय</th>
+                      <th className="border px-4 py-2">अंक</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {mpWomenSupervisorExamData?.examFourthPhase.map(
+                      (section, sectionIndex) => (
+                        <>
+                          {section.details.map((topic, topicIndex) => (
+                            <tr key={topicIndex}>
+                              <td className="border px-4 py-2">
+                                {topicIndex + 1}
+                              </td>
+                              <td className="border px-4 py-2">
+                                {topic.topic}
+                              </td>
+                              <td className="border px-4 py-2">
+                                <ul className="list-disc pl-4">
+                                  {topic.subtopics.map(
+                                    (subtopic, subtopicIndex) => (
+                                      <li key={subtopicIndex}>{subtopic}</li>
+                                    )
+                                  )}
+                                </ul>
+                              </td>
+                              <td className="border px-4 py-2">
+                                {topic.marks}
+                              </td>
+                            </tr>
+                          ))}
+                          <tr>
+                            <td
+                              className="border px-4 py-2 font-bold-600"
+                              colSpan={3}
+                            >
+                              कुल योग:
+                            </td>
+                            <td className="border px-4 py-2 font-bold-600 text-black">
+                              {section.details.reduce(
+                                (sum, topic) => sum + topic.marks,
+                                0
+                              )}
+                            </td>
+                          </tr>
+                        </>
+                      )
+                    )}
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             {/* Frequently Asked Questions Section */}
@@ -660,10 +604,10 @@ const MPWOMENSUPERVISOR = () => {
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h3 className="text-xl font-bold text-gray-800 mb-4">
-                {mpSiExamData.faq.title}
+                {mpWomenSupervisorExamData.faq.title}
               </h3>
               <div className="divide-y divide-gray-300">
-                {mpSiExamData.faq.questions.map((faq, index) => (
+                {mpWomenSupervisorExamData.faq.questions.map((faq, index) => (
                   <div key={index} className="py-4">
                     <button
                       onClick={() => toggleFAQ(index)}

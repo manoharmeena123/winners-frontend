@@ -479,7 +479,7 @@ export const smallScreenTestSeries = [
 export const largeScreenTestSeries = [
   {
     image:
-      "https://appx-content-v2.classx.co.in/paid_course3/2024-12-28-0.9726229122488721.jpeg",
+      "mppeb/women-supervisor-square.jpeg",
     description: "म.प्र. महिला पर्यवेक्षक TEST SERIES 2025",
     price: "₹199",
     button: "Buy Now",
@@ -488,7 +488,7 @@ export const largeScreenTestSeries = [
   },
   {
     image:
-      "https://appx-content-v2.classx.co.in/paid_course3/2024-12-26-0.9265651890897373.jpeg",
+      "mppeb/mptet-group-2.jpeg",
     description: "MPTET शिक्षक भर्ती वर्ग 3 Test Series 2024",
     price: "₹149",
     button: "Buy Now",

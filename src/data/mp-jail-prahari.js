@@ -358,7 +358,7 @@ export const smallScreenClasses = [
   },
   {
     image:
-    "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.9882978874810506.jpeg",
+      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.9882978874810506.jpeg",
     description:
       "जेल प्रहरी, वन एवं क्षेत्र रक्षक Complete Online Course (FFJ0724)",
     price: "₹799",
@@ -410,7 +410,8 @@ export const largeScreenClasses = [
 
 export const smallScreenTestSeries = [
   {
-    image: "https://appx-content-v2.classx.co.in/paid_course3/2024-12-28-0.9726229122488721.jpeg",
+    image:
+      "https://appx-content-v2.classx.co.in/paid_course3/2024-12-28-0.9726229122488721.jpeg",
     description: "म.प्र. महिला पर्यवेक्षक TEST SERIES 2025",
     price: "₹199",
     button: "Buy Now",
@@ -418,7 +419,8 @@ export const smallScreenTestSeries = [
     link: "https://live.winnersinstitute.in/test-series/365--test-series-2025",
   },
   {
-    image: "https://appx-content-v2.classx.co.in/paid_course3/2024-12-26-0.9265651890897373.jpeg",
+    image:
+      "https://appx-content-v2.classx.co.in/paid_course3/2024-12-26-0.9265651890897373.jpeg",
     description: "MPTET शिक्षक भर्ती वर्ग 3 Test Series 2024",
     price: "₹149",
     button: "Buy Now",
@@ -426,7 +428,8 @@ export const smallScreenTestSeries = [
     link: "https://live.winnersinstitute.in/test-series/373-mptet-3-test-series-2024",
   },
   {
-    image: "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.1402379844059063.jpeg",
+    image:
+      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.1402379844059063.jpeg",
     description: "MPPSC Prelims - 2025 (Online Test Series 2.0)",
     price: "₹499",
     button: "Buy Now",
@@ -436,7 +439,8 @@ export const smallScreenTestSeries = [
 ];
 export const largeScreenTestSeries = [
   {
-    image: "https://appx-content-v2.classx.co.in/paid_course3/2024-12-28-0.9726229122488721.jpeg",
+    image:
+      "mppeb/women-supervisor-square.jpeg",
     description: "म.प्र. महिला पर्यवेक्षक TEST SERIES 2025",
     price: "₹199",
     button: "Buy Now",
@@ -444,7 +448,8 @@ export const largeScreenTestSeries = [
     link: "https://live.winnersinstitute.in/test-series/365--test-series-2025",
   },
   {
-    image: "https://appx-content-v2.classx.co.in/paid_course3/2024-12-26-0.9265651890897373.jpeg",
+    image:
+      "mppeb/mptet-group-2.jpeg",
     description: "MPTET शिक्षक भर्ती वर्ग 3 Test Series 2024",
     price: "₹149",
     button: "Buy Now",
@@ -452,7 +457,8 @@ export const largeScreenTestSeries = [
     link: "https://live.winnersinstitute.in/test-series/373-mptet-3-test-series-2024",
   },
   {
-    image: "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.1402379844059063.jpeg",
+    image:
+      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.1402379844059063.jpeg",
     description: "MPPSC Prelims - 2025 (Online Test Series 2.0)",
     price: "₹499",
     button: "Buy Now",
@@ -489,7 +495,8 @@ export const smallScreenBooks = [
 ];
 export const largeScreenBooks = [
   {
-    image: "https://appxcontent.kaxa.in/paid_course/2024-12-08-0.22702373599145043.jpeg",
+    image:
+      "https://appxcontent.kaxa.in/paid_course/2024-12-08-0.22702373599145043.jpeg",
     description: "MPPSC Complete Book Combo Set",
     price: "₹1899.00",
     button: "Buy Now",
@@ -497,7 +504,8 @@ export const largeScreenBooks = [
     link: "https://books.winnerspublication.store/products/mppsc-complete-book-combo-set",
   },
   {
-    image: "https://appx-content-v2.classx.co.in/paid_course/2024-12-28-0.1568644653603044.jpeg",
+    image:
+      "https://appx-content-v2.classx.co.in/paid_course/2024-12-28-0.1568644653603044.jpeg",
     description: "Mahila Supervisor Book Combo Set",
     price: "₹999.00",
     button: "Buy Now",
@@ -505,7 +513,8 @@ export const largeScreenBooks = [
     link: "https://books.winnerspublication.store/products/mahila-supervisor-book-combo-set",
   },
   {
-    image: "https://appxcontent.securevideo.in/paid_course/2024-10-02-0.15359221998834838.jpeg",
+    image:
+      "https://appxcontent.securevideo.in/paid_course/2024-10-02-0.15359221998834838.jpeg",
     description: "MPTET Grade 3 Maths (Hindi Medium) Book",
     price: "₹179.00",
     button: "Buy Now",

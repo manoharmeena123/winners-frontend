@@ -53,6 +53,7 @@ import MPJAILPRAHARI from "./pages/MPESB/MPJAILPRAHARI.jsx";
 import MPPATWARI from "./pages/MPESB/MPPATWARI.jsx";
 import MPCONSTABLE from "./pages/MPESB/MPCONSTABLE.jsx";
 import MPSI from './pages/MPESB/MPSI.jsx';
+import MPWOMENSUPERVISOR from './pages/MPESB/MPWOMENSUPERVISOR.jsx';
 
 function App() {
   const lenis = new Lenis();
@@ -107,7 +108,7 @@ function App() {
           <Route path="/railway-rpf" element={<Railway5 />} />
 
           <Route path="/mp-jail" element={<MPJAILPRAHARI />} />
-          <Route path="/mp-mahila" element={<Mp2 />} />
+          <Route path="/mp-mahila" element={<MPWOMENSUPERVISOR />} />
           <Route path="/mp-patwari" element={<MPPATWARI />} />
           <Route path="/mp-police" element={<MPCONSTABLE />} />
           <Route path="/mp-sub-inspector" element={<MPSI />} />
