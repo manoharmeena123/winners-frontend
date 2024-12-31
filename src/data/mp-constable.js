@@ -59,7 +59,7 @@ export const mpConstableExamData = {
         role: "Constable (Radio-Operator)",
         details: [
           "Passed 12th Class under the 10+2 system from a recognized board.",
-          "Additionally, completed a 2-year course in Electronics/Electricals and Hardware, Computer Hardware (excluding Computer Applications), Telecommunication, Instrument Mechanic, or Information Technology Engineering from a government-recognized polytechnic/institute/college/university/ITI.",
+         "Additionally, successfully completed a 2-year diploma or certification program in Electronics, Electricals, Computer Hardware (excluding Computer Applications), Telecommunication, Instrument Mechanics, or Information Technology Engineering from a government-recognized polytechnic, institute, college, university, or ITI.",
         ],
       },
     ],
