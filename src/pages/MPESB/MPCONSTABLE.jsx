@@ -490,7 +490,9 @@ const MPCONSTABLE = () => {
                     )}
                   </tbody>
                 </table>
-                <p className="mt-4 text-sm text-gray-700">
+                
+              </div>
+              <p className="mt-4 text-sm text-gray-700">
                   i. जहाँ भी लागू हो, यदि सीने का माप न्यूनतम निर्धारित माप से
                   अधिक है तो उसे कम से कम 5 सेमी फुलाव के साथ मापा जाएगा।
                 </p>
@@ -498,7 +500,6 @@ const MPCONSTABLE = () => {
                   ii. शारीरिक मापदण्‍डों में किसी भी स्‍तर पर छूट नहीं दी जाएगी
                   ।
                 </p>
-              </div>
             </div>
 
             {/* द्वितीय चरण परीक्षा योजना (Second phase examination scheme) */}
