@@ -13,18 +13,12 @@ import PhotoGallery from "./pages/PhotoGallery";
 import ContactUS from "./pages/ContactUs";
 // import Franchies from "./pages/Franchies";
 import Scholarship from "./pages/Scholarship";
-import Exam3 from "./pages/Exam3";
-import Exam4 from "./pages/Exam4";
+
 import Railway1 from "./pages/Railway1";
 import Railway2 from "./pages/Railway2";
-import Railway3 from "./pages/Railway3";
+
 import Railway4 from "./pages/Railway4";
-import Railway5 from "./pages/Railway5";
-import Mp1 from "./pages/Mp1";
-import Mp2 from "./pages/Mp2";
-import Mp3 from "./pages/Mp3";
-import Mp4 from "./pages/Mp4";
-import Mp5 from "./pages/Mp5";
+
 import Lenis from "lenis";
 import "aos/dist/aos.css";
 import Marathonform from "./pages/Marathonform";
@@ -49,11 +43,13 @@ import IBPSRRB from "./pages/banking-subpages/IBPS-RRB.jsx";
 import IBPSRBI from "./pages/banking-subpages/IBPS-RBI.jsx";
 import IBPSCLERK from "./pages/banking-subpages/IBPS-CLERK.jsx";
 import BANKING from "./pages/banking-subpages/BANKING";
-import MPJAILPRAHARI from "./pages/MPESB/MPJAILPRAHARI.jsx";
-import MPPATWARI from "./pages/MPESB/MPPATWARI.jsx";
-import MPCONSTABLE from "./pages/MPESB/MPCONSTABLE.jsx";
-import MPSI from './pages/MPESB/MPSI.jsx';
-import MPWOMENSUPERVISOR from './pages/MPESB/MPWOMENSUPERVISOR.jsx';
+import MPJAILPRAHARI from "./pages/mp-peb/MPJAILPRAHARI.jsx";
+import MPPATWARI from "./pages/mp-peb/MPPATWARI.jsx";
+import MPCONSTABLE from "./pages/mp-peb/MPCONSTABLE.jsx";
+import MPSI from "./pages/mp-peb/MPSI.jsx";
+import MPWOMENSUPERVISOR from "./pages/mp-peb/MPWOMENSUPERVISOR.jsx";
+import RPF from "./pages/railway-subpages/RAILWAY-RPF.jsx";
+import NTPC from "./pages/railway-subpages/RAILWAY-NTPC.jsx";
 
 function App() {
   const lenis = new Lenis();
@@ -103,9 +99,9 @@ function App() {
 
           <Route path="/railway-alp" element={<Railway1 />} />
           <Route path="/railway-technician" element={<Railway2 />} />
-          <Route path="/railway-ntpc" element={<Railway3 />} />
+          <Route path="/railway-ntpc" element={<NTPC />} />
           <Route path="/railway-group-d" element={<Railway4 />} />
-          <Route path="/railway-rpf" element={<Railway5 />} />
+          <Route path="/railway-rpf" element={<RPF />} />
 
           <Route path="/mp-jail" element={<MPJAILPRAHARI />} />
           <Route path="/mp-mahila" element={<MPWOMENSUPERVISOR />} />

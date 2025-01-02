@@ -28,6 +28,13 @@ export const courses = [
   {
     courseName: "RAILWAY",
     link: "/railway-alp",
+    subCourses: [
+      { courseName: "Railway ALP", link: "/railway-alp" },
+      { courseName: "Railway Technician", link: "/railway-technician" },
+      { courseName: "Railway NTPC", link: "/railway-ntpc" },
+      { courseName: "Railway RPF", link: "/railway-rpf" },
+      { courseName: "Railway Group D", link: "/railway-group-d" },
+    ]
   },
   {
     courseName: "MP ESB",
