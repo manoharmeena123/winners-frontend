@@ -195,7 +195,7 @@ const RailwayALP = () => {
 
             {/*RRB ALP 2025 Notification Released */}
             <div
-              id="mp-si-2025-notification"
+              id="railway-alp-2025-notification-released"
               className="bg-white shadow-md rounded-md p-3   mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -218,9 +218,9 @@ const RailwayALP = () => {
               )}
             </div>
 
-            {/* RRB ALP Recruitment 2025 Notification Details */}
+            {/* Railway ALP 2025 Age Limit and Relaxation */}
             <div
-              id="alp-exam-dates"
+              id="railway-alp-2025-age-limit-and-relaxation"
               className="bg-white shadow-md rounded-md p-3 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -296,7 +296,7 @@ const RailwayALP = () => {
 
             {/* RRB ALP SYLLABUS, */}
             <div
-              id="mp-jail-prahari-syllabus-2025"
+              id="rrb-alp-2025-syllabus"
               className="bg-white shadow-md rounded-md p-3   mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -316,12 +316,12 @@ const RailwayALP = () => {
                   </p>
                 </div>
               </div>
-              <div className="rounded-md mt-6">
+              <div id="rrb-alp-syllabus-for-cbt-stage-i" className="rounded-md mt-6">
                 <div className="p-4">
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     RRB ALP Syllabus for CBT Stage I
                   </h2>
-                  <div className="overflow-x-auto p-4">
+                  <div  className="overflow-x-auto p-4">
                     <table className="table-auto w-full border-collapse border border-gray-300">
                       <thead className="bg-gray-100">
                         <tr>
@@ -415,7 +415,7 @@ const RailwayALP = () => {
                     )}
                   </div>
                 </div>
-                <div className="p-4">
+                <div id="railway-alp-cbt-ii" className="p-4">
                   {/* Header */}
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     Railway – ALP CBT-II

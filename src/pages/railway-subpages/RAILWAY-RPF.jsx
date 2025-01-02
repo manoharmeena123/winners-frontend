@@ -195,7 +195,7 @@ const RPF = () => {
 
             {/* RPF SI & CONSTABLE 2025 Notification Released */}
             <div
-              id="mp-si-2025-notification"
+              id="railway-rpf-2025-notification-released"
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -217,82 +217,9 @@ const RPF = () => {
                 </h6>
               )}
             </div>
-
-            {/* Pattern of Exam – Objective Type */}
-            <div className="p-4 bg-gray-50">
-              <div className="bg-red-500 text-white text-lg font-bold p-2">
-                Pattern of Exam &ndash; Objective Type
-              </div>
-              <div className="my-4 text-gray-700">
-                Note: There will be negative marking of 1/3 for each wrong
-                answer.
-              </div>
-              <div className="overflow-x-auto">
-                <table className="table-auto w-full border-collapse border border-gray-200">
-                  <thead className="bg-gray-200">
-                    <tr>
-                      <th className="border border-gray-300 px-4 py-2">
-                        विषय / Subject
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        प्रश्नों की संख्या / Number of Questions
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        अंक / Marks
-                      </th>
-                      <th className="border border-gray-300 px-4 py-2">
-                        समय / Time
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {railwayRpfExamData?.examPatternData?.map((item, index) => (
-                      <tr
-                        key={index}
-                        className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
-                      >
-                        <td className="border border-gray-300 px-4 py-2">
-                          {item.subject}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2">
-                          {item.questions}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2">
-                          {item.marks}
-                        </td>
-                        <td className="border border-gray-300 px-4 py-2">
-                          {item.time}
-                        </td>
-                      </tr>
-                    ))}
-                    <tr className="bg-gray-200 font-bold">
-                      <td className="border border-gray-300 px-4 py-2">
-                        कुल / Total
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {railwayRpfExamData?.examPatternData.reduce(
-                          (acc, item) => acc + item.questions,
-                          0
-                        )}
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {railwayRpfExamData?.examPatternData.reduce(
-                          (acc, item) => acc + item.marks,
-                          0
-                        )}
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        &nbsp;
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-
             {/* RPF SI & Constable Recruitment 2025 Notification Details */}
             <div
-              id="rpf-si-constable-exam-dates"
+              id="rpf-si-constable-recruitment-2024"
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -376,9 +303,81 @@ const RPF = () => {
                 </Link>
               </div>
             </div>
+            {/* Pattern of Exam – Objective Type */}
+            <div className="p-4 bg-gray-50">
+              <div className="bg-red-500 text-white text-lg font-bold p-2">
+                Pattern of Exam &ndash; Objective Type
+              </div>
+              <div className="my-4 text-gray-700">
+                Note: There will be negative marking of 1/3 for each wrong
+                answer.
+              </div>
+              <div className="overflow-x-auto">
+                <table className="table-auto w-full border-collapse border border-gray-200">
+                  <thead className="bg-gray-200">
+                    <tr>
+                      <th className="border border-gray-300 px-4 py-2">
+                        विषय / Subject
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        प्रश्नों की संख्या / Number of Questions
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        अंक / Marks
+                      </th>
+                      <th className="border border-gray-300 px-4 py-2">
+                        समय / Time
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {railwayRpfExamData?.examPatternData?.map((item, index) => (
+                      <tr
+                        key={index}
+                        className={index % 2 === 0 ? "bg-white" : "bg-gray-100"}
+                      >
+                        <td className="border border-gray-300 px-4 py-2">
+                          {item.subject}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2">
+                          {item.questions}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2">
+                          {item.marks}
+                        </td>
+                        <td className="border border-gray-300 px-4 py-2">
+                          {item.time}
+                        </td>
+                      </tr>
+                    ))}
+                    <tr className="bg-gray-200 font-bold">
+                      <td className="border border-gray-300 px-4 py-2">
+                        कुल / Total
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {railwayRpfExamData?.examPatternData.reduce(
+                          (acc, item) => acc + item.questions,
+                          0
+                        )}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {railwayRpfExamData?.examPatternData.reduce(
+                          (acc, item) => acc + item.marks,
+                          0
+                        )}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        &nbsp;
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
             {/* RPF SI & CONSTABLE SYLLABUS, */}
             <div
-              id="mp-jail-prahari-syllabus-2025"
+              id="railway-rpf-syllabus-2025"
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">

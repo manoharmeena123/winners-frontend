@@ -12,20 +12,26 @@ export const railwayAlpData = {
 
 export const tableOfContentsData = [
   {
-    title: "MPESB 2025 Notification Released",
-    link: "#mp-si-2025-notification",
+    title: "Railway ALP 2025 Notification Released",
+    link: "#railway-alp-2025-notification-released",
   },
   {
-    title: "MPESB SI Recruitment 2025",
-    link: "#mp-si-exam-dates",
+    title: "Railway ALP 2025 Age Limit and Relaxation",
+    link: "#railway-alp-2025-age-limit-and-relaxation",
   },
   {
-    title: "MP SI Eligibility Criteria",
-    link: "#mp-si-eligibility-criteria",
-  },
-  {
-    title: "MP SI Physical Criteria",
-    link: "#mp-si-physical-criteria",
+    title: "RRB ALP 2025 Syllabus",
+    link: "#rrb-alp-2025-syllabus",
+    subItems: [
+      {
+        title: "RRB ALP Syllabus for CBT Stage I",
+        link: "#rrb-alp-syllabus-for-cbt-stage-i",
+      },
+      {
+        title: "RRB ALP Syllabus for CBT-II",
+        link: "#railway-alp-cbt-ii",
+      },
+    ]
   },
   {
     title: "Frequently Asked Questions",
@@ -35,7 +41,7 @@ export const tableOfContentsData = [
 
 export const railwayAlpExamData = {
   notificationData: {
-    title: "Railway ALP 2025 Notification Released",
+    title: "Railway ALP 2025 Age Limit and Relaxation",
     ageLimit: {
       general: {
         min: 18,

@@ -14,20 +14,26 @@ export const railwayNtpcData = {
 
 export const tableOfContentsData = [
   {
-    title: "MPESB 2025 Notification Released",
-    link: "#mp-si-2025-notification",
+    title: "Railway NTPC 2025 Notification Released",
+    link: "#railway-ntpc-2025-notification-released",
   },
   {
-    title: "MPESB SI Recruitment 2025",
-    link: "#mp-si-exam-dates",
+    title: "Railway NTPC 2025 Age Limit and Relaxationt",
+    link: "#railway-ntpc-2025-age-limit",
   },
   {
-    title: "MP SI Eligibility Criteria",
-    link: "#mp-si-eligibility-criteria",
-  },
-  {
-    title: "MP SI Physical Criteria",
-    link: "#mp-si-physical-criteria",
+    title: "Railway NTPC 2025 Syllabus",
+    link: "#railway-ntpc-2025-syllabus",
+    subItems: [
+      {
+        title: "Railway – NTPC CBT-1",
+        link: "#preliminary-exam-syllabus",
+      },
+      {
+        title: "Railway – NTPC CBT-2",
+        link: "#railway-ntpc-cbt-2",
+      },
+    ]
   },
   {
     title: "Frequently Asked Questions",
@@ -37,7 +43,7 @@ export const tableOfContentsData = [
 
 export const railwayNtpcExamData = {
   notificationData: {
-    title: "Railway NTPC 2025 Notification Released",
+    title: "Railway NTPC 2025 Age Limit and Relaxation",
     ageLimit: {
       "12th Pass": {
         min: 18,

@@ -12,20 +12,16 @@ export const railwayRpfData = {
 
 export const tableOfContentsData = [
   {
-    title: "MPESB 2025 Notification Released",
-    link: "#mp-si-2025-notification",
+    title: "Railway RPF 2025 Notification Released",
+    link: "#railway-rpf-2025-notification-released",
   },
   {
-    title: "MPESB SI Recruitment 2025",
-    link: "#mp-si-exam-dates",
+    title: "RPF SI & Constable Recruitment 2024",
+    link: "#rpf-si-constable-recruitment-2024",
   },
   {
-    title: "MP SI Eligibility Criteria",
-    link: "#mp-si-eligibility-criteria",
-  },
-  {
-    title: "MP SI Physical Criteria",
-    link: "#mp-si-physical-criteria",
+    title: "Railway RPF 2025 Syllabus",
+    link: "#railway-rpf-syllabus-2025",
   },
   {
     title: "Frequently Asked Questions",

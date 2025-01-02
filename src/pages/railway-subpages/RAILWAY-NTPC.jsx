@@ -193,9 +193,9 @@ const NTPC = () => {
               </div>
             </div>
 
-            {/* RPF SI & CONSTABLE 2025 Notification Released */}
+            {/* Railway NTPC 2025 Notification Released*/}
             <div
-              id="mp-si-2025-notification"
+              id="railway-ntpc-2025-notification-released"
               className="bg-white shadow-md rounded-md p-3   mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -218,9 +218,9 @@ const NTPC = () => {
               )}
             </div>
 
-            {/* Railway NTPC Recruitment 2025 Notification Details */}
+            {/* Railway NTPC 2025 Age Limit */}
             <div
-              id="ntpc-exam-dates"
+              id="railway-ntpc-2025-age-limit"
               className="bg-white shadow-md rounded-md p-3  mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -318,7 +318,7 @@ const NTPC = () => {
 
             {/* Railway NTPC SYLLABUS, */}
             <div
-              id="mp-jail-prahari-syllabus-2025"
+              id="railway-ntpc-2025-syllabus"
               className="bg-white shadow-md rounded-md p-3   mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -338,7 +338,7 @@ const NTPC = () => {
                   </p>
                 </div>
               </div>
-              <div className="rounded-md mt-6">
+              <div id="preliminary-exam-syllabus" className="rounded-md mt-6">
                 <div className="p-4">
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     Railway – NTPC CBT-1
@@ -437,7 +437,7 @@ const NTPC = () => {
                     )}
                   </div>
                 </div>
-                <div className="p-4">
+                <div id="railway-ntpc-cbt-2" className="p-4">
                   {/* Header */}
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     Railway – NTPC CBT-2
