@@ -21,19 +21,19 @@ export const mpWomenSupervisorData = {
 export const tableOfContentsData = [
   {
     title: "MPESB 2025 Notification Released",
-    link: "#mp-si-2025-notification",
+    link: "#mpesb-2025-notification-released",
   },
   {
-    title: "MPESB SI Recruitment 2025",
-    link: "#mp-si-exam-dates",
+    title: "MP Women Supervisor Recruitment 2025",
+    link: "#mp-women-supervisor-recruitment-2025",
   },
   {
-    title: "MP SI Eligibility Criteria",
-    link: "#mp-si-eligibility-criteria",
+    title: "Pattern of Exam - Objective (CBT) & Typing Test",
+    link: "#pattern-of-exam-objective-cbt-typing-test",
   },
   {
-    title: "MP SI Physical Criteria",
-    link: "#mp-si-physical-criteria",
+    title: "Supervisor (Female) Recruitment and Supervisor (Female) Anganwadi Worker – Detailed Syllabus",
+    link: "#supervisor-female-recruitment-and-supervisor-female-anganwadi-worker-detailed-syllabus",
   },
   {
     title: "Frequently Asked Questions",

@@ -192,9 +192,9 @@ const MPWOMENSUPERVISOR = () => {
               </div>
             </div>
 
-            {/* MP Constable 2025 Notification Released */}
+            {/* mpesb-2025-notification-released*/}
             <div
-              id="mp-si-2025-notification"
+              id="mpesb-2025-notification-released"
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -217,9 +217,9 @@ const MPWOMENSUPERVISOR = () => {
               )}
             </div>
 
-            {/* MP Constable 2025 Notification Details */}
+            {/*MP Women Supervisor Recruitment 2025*/}
             <div
-              id="mp-si-exam-dates"
+              id="mp-women-supervisor-recruitment-2025"
               className="bg-white shadow-md rounded-md p-6 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -283,7 +283,7 @@ const MPWOMENSUPERVISOR = () => {
               </div>
             </div>
             {/* Pattern of Exam – Objective (CBT) & Typing Test:- */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="pattern-of-exam-objective-cbt-typing-test" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                 Pattern of Exam - Objective (CBT) & Typing Test
               </h2>
@@ -345,11 +345,11 @@ const MPWOMENSUPERVISOR = () => {
 
             {/* पर्यवेक्षक (महिला) भर्ती एवं पर्यवेक्षक (महिला) ऑगनवाडी कार्यकर्ता – विस्‍तृत पाठ्यक्रम प्रथम खण्‍ड - पोषण एवं स्‍वास्‍थ्‍य:- */}
             {/* Supervisor (Female) Recruitment and Supervisor (Female) Anganwadi Worker – Detailed Syllabus First Section - Nutrition and Health:- */}
-            <div className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div id="supervisor-female-recruitment-and-supervisor-female-anganwadi-worker-detailed-syllabus" className="bg-white shadow-md rounded-md p-6 mt-6">
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                 {" "}
                 Supervisor (Female) Recruitment and Supervisor (Female)
-                Anganwadi Worker – Detailed Syllabus First Section - Nutrition
+                Anganwadi Worker – Detailed Syllabus First Section-Nutrition
                 and Health ( पर्यवेक्षक (महिला) भर्ती एवं पर्यवेक्षक (महिला)
                 ऑगनवाडी कार्यकर्ता – विस्‍तृत पाठ्यक्रम प्रथम खण्‍ड - पोषण एवं
                 स्‍वास्‍थ्‍य:- )
