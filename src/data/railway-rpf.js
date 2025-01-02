@@ -185,6 +185,10 @@ export const railwayRpfExamData = {
       },
     ],
   },
+  notes: [
+    "दस्तावेज़ सत्यापन (डीवी) / Document Verification (DV)",
+    "मेडिकल परीक्षा / Medical Examination (ME)",
+  ],
 };
 
 export const smallScreenClasses = [

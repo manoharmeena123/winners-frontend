@@ -196,7 +196,7 @@ const NTPC = () => {
             {/* RPF SI & CONSTABLE 2025 Notification Released */}
             <div
               id="mp-si-2025-notification"
-              className="bg-white shadow-md rounded-md  mt-6"
+              className="bg-white shadow-md rounded-md p-3   mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                 {railwayNtpcExamData?.notification?.title}
@@ -221,7 +221,7 @@ const NTPC = () => {
             {/* Railway NTPC Recruitment 2025 Notification Details */}
             <div
               id="ntpc-exam-dates"
-              className="bg-white shadow-md rounded-md  mt-6"
+              className="bg-white shadow-md rounded-md p-3  mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                 {railwayNtpcExamData?.notificationData.title}
@@ -319,7 +319,7 @@ const NTPC = () => {
             {/* Railway NTPC SYLLABUS, */}
             <div
               id="mp-jail-prahari-syllabus-2025"
-              className="bg-white shadow-md rounded-md  mt-6"
+              className="bg-white shadow-md rounded-md p-3   mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                 {railwayNtpcExamData?.syllabusData?.title}
@@ -379,9 +379,20 @@ const NTPC = () => {
                               <td className="border border-gray-300 px-4 py-2 text-center">
                                 {item.marks}
                               </td>
-                              <td className="border border-gray-300 px-4 py-2 text-center">
-                                {item.time}
-                              </td>
+                              {index === 0 && (
+                                <td
+                                  className="border border-gray-300 px-4 py-2 text-center"
+                                  rowSpan={
+                                    railwayNtpcExamData?.syllabusData
+                                      ?.cbt1examData?.tableData?.length
+                                  }
+                                >
+                                  {
+                                    railwayNtpcExamData?.syllabusData
+                                      ?.cbt1examData?.tableData[0]?.time
+                                  }
+                                </td>
+                              )}
                             </tr>
                           )
                         )}
@@ -408,6 +419,7 @@ const NTPC = () => {
                       </tbody>
                     </table>
                   </div>
+
                   <div className="mt-4">
                     {railwayNtpcExamData?.syllabusData?.sections.map(
                       (section, index) => (
@@ -479,9 +491,20 @@ const NTPC = () => {
                               <td className="border border-gray-300 px-4 py-2 text-center">
                                 {item.marks}
                               </td>
-                              <td className="border border-gray-300 px-4 py-2 text-center">
-                                {item.time}
-                              </td>
+                              {index === 0 && (
+                                <td
+                                  className="border border-gray-300 px-4 py-2 text-center"
+                                  rowSpan={
+                                    railwayNtpcExamData?.syllabusData
+                                      ?.cbt2examData?.tableData?.length
+                                  }
+                                >
+                                  {
+                                    railwayNtpcExamData?.syllabusData
+                                      ?.cbt2examData?.tableData[0]?.time
+                                  }
+                                </td>
+                              )}
                             </tr>
                           )
                         )}
@@ -508,6 +531,7 @@ const NTPC = () => {
                       </tbody>
                     </table>
                   </div>
+
                   <div className="mt-4">
                     {railwayNtpcExamData?.syllabusData?.sections.map(
                       (section, index) => (
@@ -534,7 +558,9 @@ const NTPC = () => {
                 <div
                   key={index}
                   className={`bg-red-500 text-white font-bold py-2 px-4 rounded ${
-                    index === railwayNtpcExamData?.notes?.length - 1 ? "mt-2" : "mb-2"
+                    index === railwayNtpcExamData?.notes?.length - 1
+                      ? "mt-2"
+                      : "mb-2"
                   }`}
                 >
                   {note}

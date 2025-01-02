@@ -387,7 +387,7 @@ const RPF = () => {
               <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
                 {railwayRpfExamData?.syllabusData?.description}
               </p>
-              <div className="bg-white shadow-md rounded-md p-6 mt-6">
+              <div className="bg-white  rounded-md p-6 mt-6">
                 {railwayRpfExamData?.syllabusData?.sections.map(
                   (section, index) => (
                     <div key={index} className="mb-4">
@@ -403,6 +403,21 @@ const RPF = () => {
                   )
                 )}
               </div>
+            </div>
+            {/* Notes */}
+            <div className="p-4">
+              {railwayRpfExamData?.notes.map((note, index) => (
+                <div
+                  key={index}
+                  className={`bg-red-500 text-white font-bold py-2 px-4 rounded ${
+                    index === railwayRpfExamData?.notes?.length - 1
+                      ? "mt-2"
+                      : "mb-2"
+                  }`}
+                >
+                  {note}
+                </div>
+              ))}
             </div>
             {/* Frequently Asked Questions Section */}
             <div

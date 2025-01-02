@@ -14,7 +14,6 @@ import ContactUS from "./pages/ContactUs";
 // import Franchies from "./pages/Franchies";
 import Scholarship from "./pages/Scholarship";
 
-import Railway1 from "./pages/Railway1";
 import Railway2 from "./pages/Railway2";
 
 import Railway4 from "./pages/Railway4";
@@ -50,6 +49,7 @@ import MPSI from "./pages/mp-peb/MPSI.jsx";
 import MPWOMENSUPERVISOR from "./pages/mp-peb/MPWOMENSUPERVISOR.jsx";
 import RPF from "./pages/railway-subpages/RAILWAY-RPF.jsx";
 import NTPC from "./pages/railway-subpages/RAILWAY-NTPC.jsx";
+import RailwayALP from "./pages/railway-subpages/RAILWAY-ALP.jsx";
 
 function App() {
   const lenis = new Lenis();
@@ -97,7 +97,7 @@ function App() {
           <Route path="/banking-exam-details" element={<BANKING />} />
           {/* <Route path="/applynow" element={<ApplyNow />} /> */}
 
-          <Route path="/railway-alp" element={<Railway1 />} />
+          <Route path="/railway-alp" element={<RailwayALP />} />
           <Route path="/railway-technician" element={<Railway2 />} />
           <Route path="/railway-ntpc" element={<NTPC />} />
           <Route path="/railway-group-d" element={<Railway4 />} />
