@@ -77,7 +77,7 @@ const RailwayTECHNICIAN = () => {
               <span className="text-gray-400">&nbsp;&nbsp;»&nbsp;&nbsp;</span>
             </li>
             <li>
-              <span className="text-gray-500">Railway-NTPC</span>
+              <span className="text-gray-500">Railway-ALP</span>
             </li>
           </ol>
         </nav>

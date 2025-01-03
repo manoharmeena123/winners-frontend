@@ -63,7 +63,7 @@ const RailwayGROUPD = () => {
     <>
       <Header />
       <ReactHelmet
-        title="RRB-Technician - The WiNNERS Institute"
+        title="RRB Group D  - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
       <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
@@ -77,7 +77,7 @@ const RailwayGROUPD = () => {
               <span className="text-gray-400">&nbsp;&nbsp;»&nbsp;&nbsp;</span>
             </li>
             <li>
-              <span className="text-gray-500">Railway-NTPC</span>
+              <span className="text-gray-500">RRB Group D </span>
             </li>
           </ol>
         </nav>
