@@ -51,6 +51,7 @@ import RPF from "./pages/railway-subpages/RAILWAY-RPF.jsx";
 import NTPC from "./pages/railway-subpages/RAILWAY-NTPC.jsx";
 import RailwayALP from "./pages/railway-subpages/RAILWAY-ALP.jsx";
 import RailwayTECHNICIAN from "./pages/railway-subpages/RAILWAY-TECHNICIAN.jsx";
+import RailwayGROUPD from "./pages/railway-subpages/RAILYWAY-GROUP-D.jsx";
 
 function App() {
   const lenis = new Lenis();
@@ -101,7 +102,7 @@ function App() {
           <Route path="/railway-alp" element={<RailwayALP />} />
           <Route path="/railway-technician" element={<RailwayTECHNICIAN />} />
           <Route path="/railway-ntpc" element={<NTPC />} />
-          <Route path="/railway-group-d" element={<Railway4 />} />
+          <Route path="/railway-group-d" element={<RailwayGROUPD />} />
           <Route path="/railway-rpf" element={<RPF />} />
 
           <Route path="/mp-jail" element={<MPJAILPRAHARI />} />
