@@ -851,7 +851,7 @@ const BANKING = () => {
             <img
               src="banking/bps-po.jpeg"
               alt="Placeholder"
-              className="w-full rounded shadow-md"
+              className="w-full rounded-2xl shadow-md"
               ref={(el) => (mediaRefs.current[0] = el)}
               onClick={() => handleFullScreen(0)}
             />{" "}

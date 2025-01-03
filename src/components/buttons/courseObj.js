@@ -192,4 +192,48 @@ export const relatedPost = [
   //   title: "SSC Selection Post Phase 12 Notification Released",
   //   link: "#",
   // },
+  {
+    title: "Railway ALP 2025 Notification Out, Apply Now",
+    link: "/railway-alp",
+  },
+  {
+    title: "Railway NTPC 2025 Exam Pattern, Notification and Syllabus",
+    link: "/railway-ntpc",
+  },
+  {
+    title: "Railway Group D 2025 Exam Details",
+    link: "/railway-group-d",
+  },
+  {
+    title: "IBPS PO 2025 Notification Out, Apply Now",
+    link: "/ibps-po",
+  },
+  {
+    title: "SBI Clerk 2025 Exam Pattern and Syllabus",
+    link: "/sbi-clerk",
+  },
+  {
+    title: "RBI Assistant 2025 Recruitment Details",
+    link: "/rbi-assistant",
+  },
+  {
+    title: "Railway ALP 2025 Notification Out, Apply Now",
+    link: "/railway-alp",
+  },
+  {
+    title: "Railway NTPC 2025 Exam Pattern, Notification and Syllabus",
+    link: "/railway-ntpc",
+  },
+  {
+    title: "Railway Group D 2025 Exam Details",
+    link: "/railway-group-d",
+  },
+  {
+    title: "Railway RPF 2025 Recruitment Details",
+    link: "/railway-rpf",
+  },
+  {
+    title: "Railway Technician 2025 Syllabus and Notification",
+    link: "/railway-technician",
+  },
 ];

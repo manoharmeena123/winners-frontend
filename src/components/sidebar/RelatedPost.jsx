@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 
 const RelatedPost = () => {
   return (
-    <div className="bg-white shadow-md rounded-md p-2">
+    <div className="bg-white shadow-md rounded-md p-2 ">
       <h2 className="text-xl font-bold text-gray-800 mb-4">Recent Posts</h2>
-      <ul className="space-y-2">
+      <ul className="space-y-1">
         {relatedPost?.map((post, index) => (
           <li key={index} className="flex flex-col">
             <Link to={post?.link} className="text-gray-800 text-base font-semibold hover:text-red-500">
-              <span className="mr-2 text-gray-400">&rarr;</span>{" "}
+              <span className="mr-2 text-gray-800">&rarr;</span>{" "}
               {/* Arrow Key */}
               {post.title}
             </Link>
