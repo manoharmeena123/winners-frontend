@@ -50,6 +50,7 @@ import MPWOMENSUPERVISOR from "./pages/mp-peb/MPWOMENSUPERVISOR.jsx";
 import RPF from "./pages/railway-subpages/RAILWAY-RPF.jsx";
 import NTPC from "./pages/railway-subpages/RAILWAY-NTPC.jsx";
 import RailwayALP from "./pages/railway-subpages/RAILWAY-ALP.jsx";
+import RailwayTECHNICIAN from "./pages/railway-subpages/RAILWAY-TECHNICIAN.jsx";
 
 function App() {
   const lenis = new Lenis();
@@ -98,7 +99,7 @@ function App() {
           {/* <Route path="/applynow" element={<ApplyNow />} /> */}
 
           <Route path="/railway-alp" element={<RailwayALP />} />
-          <Route path="/railway-technician" element={<Railway2 />} />
+          <Route path="/railway-technician" element={<RailwayTECHNICIAN />} />
           <Route path="/railway-ntpc" element={<NTPC />} />
           <Route path="/railway-group-d" element={<Railway4 />} />
           <Route path="/railway-rpf" element={<RPF />} />

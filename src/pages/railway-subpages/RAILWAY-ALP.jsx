@@ -18,7 +18,7 @@ import {
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 
-const RailwayALP = () => {
+const RailwayTECHNICIAN = () => {
   const { title, intro, content, officialWebsite } = railwayAlpData;
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
@@ -63,7 +63,7 @@ const RailwayALP = () => {
     <>
       <Header />
       <ReactHelmet
-        title="Railway-NTPC - The WiNNERS Institute"
+        title="Railway-ALP - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
       <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
@@ -737,4 +737,4 @@ const RailwayALP = () => {
   );
 };
 
-export default RailwayALP;
+export default RailwayTECHNICIAN;
