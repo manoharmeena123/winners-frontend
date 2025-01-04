@@ -104,9 +104,9 @@ function SSC() {
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
           {/* Col-8 */}
-          <div className="md:col-span-9 lg:px-6">
+          <div className="md:col-span-9">
             {/* First Section: SSC  Intro */}
-            <div className="bg-white  rounded-md lg:p-6 mb-3">
+            <div className="bg-white  rounded-md  mb-3">
               <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">
                 SSC Calendar 2025 Out, Check Full List of Upcoming SSC Exams..
               </h1>

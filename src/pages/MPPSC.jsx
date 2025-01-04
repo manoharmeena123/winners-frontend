@@ -115,7 +115,7 @@ const MPPSC = () => {
         </nav>
 
         {/* Main Content */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-2 bg-white rounded-md">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-2 bg-white">
           {/* Col-8 */}
           <div className="md:col-span-9 ">
             {/* First Section: SSC  Intro */}
@@ -1661,24 +1661,36 @@ const MPPSC = () => {
               src="mppsc/online-course-hindi.jpg"
               alt="Placeholder"
               className="w-full rounded-2xl shadow-md cursor-pointer"
-              onClick={() => handleFullScreen(0)}
+              onClick={() =>
+                (window.location.href =
+                  "https://live.winnersinstitute.in/courses/385--mppsc-hindi-medium-premainsinterview-online-course-hpsc0624")
+              }
             />
+
             {/* Second Image */}
             <img
               ref={(el) => (mediaRefs.current[2] = el)}
               src="mppsc/online-course+book.jpg"
               alt="Placeholder"
               className="w-full rounded-2xl shadow-md cursor-pointer"
-              onClick={() => handleFullScreen(2)}
-            />{" "}
+              onClick={() =>
+                (window.location.href =
+                  "https://live.winnersinstitute.in/courses?categoryId=20")
+              }
+            />
+
             {/* Third Image */}
             <img
               ref={(el) => (mediaRefs.current[4] = el)}
               src="mppsc/online-batch-mppsc.jpeg"
               alt="Placeholder"
               className="w-full rounded-2xl shadow-md cursor-pointer"
-              onClick={() => handleFullScreen(4)}
+              onClick={() =>
+                (window.location.href =
+                  "https://live.winnersinstitute.in/courses?categoryId=20")
+              }
             />
+
             {/* First Video */}
             <iframe
               ref={(el) => (mediaRefs.current[1] = el)}
@@ -1691,6 +1703,7 @@ const MPPSC = () => {
               allowFullScreen
               onClick={() => handleFullScreen(1)}
             ></iframe>
+
             {/* Second Video */}
             <iframe
               ref={(el) => (mediaRefs.current[3] = el)}
@@ -1703,7 +1716,8 @@ const MPPSC = () => {
               allowFullScreen
               onClick={() => handleFullScreen(3)}
             ></iframe>
-             <RelatedPost />
+
+            <RelatedPost />
           </div>
         </div>
       </div>

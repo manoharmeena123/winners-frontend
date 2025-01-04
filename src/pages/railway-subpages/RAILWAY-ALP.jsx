@@ -106,7 +106,7 @@ const RailwayTECHNICIAN = () => {
           {/* Main Column */}
           <div className="md:col-span-9">
             {/* First Section: SSC CGL Intro */}
-            <div id="ssc-cgl-2025" className="bg-white  rounded-md lg:p-6 mb-6">
+            <div id="ssc-cgl-2025" className="bg-white  rounded-md  mb-3">
               <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">
                 {title}
               </h1>
