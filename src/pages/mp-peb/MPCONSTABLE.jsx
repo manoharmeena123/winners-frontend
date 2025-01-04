@@ -47,17 +47,32 @@ const MPCONSTABLE = () => {
   const mediaRefs = useRef([]);
 
   const handleFullScreen = (index) => {
-    if (mediaRefs.current[index]) {
-      const mediaElement = mediaRefs.current[index];
-      if (mediaElement.requestFullscreen) {
-        mediaElement.requestFullscreen();
-      } else if (mediaElement.webkitRequestFullscreen) {
-        mediaElement.webkitRequestFullscreen(); // For Safari
-      } else if (mediaElement.msRequestFullscreen) {
-        mediaElement.msRequestFullscreen(); // For IE11
+    const mediaElement = mediaRefs.current[index];
+    if (mediaElement) {
+      if (!document.fullscreenElement) {
+        // Enter fullscreen mode
+        if (mediaElement.requestFullscreen) {
+          mediaElement.requestFullscreen();
+        } else if (mediaElement.webkitRequestFullscreen) {
+          mediaElement.webkitRequestFullscreen(); // Safari
+        } else if (mediaElement.msRequestFullscreen) {
+          mediaElement.msRequestFullscreen(); // IE11
+        } else {
+          console.error("Fullscreen API is not supported by this browser.");
+        }
+      } else {
+        // Exit fullscreen mode
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen(); // Safari
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen(); // IE11
+        }
       }
     }
   };
+
   return (
     <>
       <Header />
@@ -87,7 +102,9 @@ const MPCONSTABLE = () => {
           <div className="md:col-span-9">
             {/* First Section: SSC CGL Intro */}
             <div id="ssc-cgl-2025" className="bg-white  rounded-md lg:p-6 mb-6">
-            <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">{title}</h1>
+              <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">
+                {title}
+              </h1>
               <p className="text-gray-600 mb-4">
                 {intro}{" "}
                 <a
@@ -333,7 +350,10 @@ const MPCONSTABLE = () => {
             </div>
 
             {/* शारीरिक मापदंड परीक्षण / Physical Parameters Test:- */}
-            <div id="mp-constable-physical-test-2025" className="bg-white shadow-md rounded-md p-6 mt-6">
+            <div
+              id="mp-constable-physical-test-2025"
+              className="bg-white shadow-md rounded-md p-6 mt-6"
+            >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                 Physical Parameters Test ( शारीरिक मापदंड परीक्षण )
               </h2>
@@ -490,16 +510,14 @@ const MPCONSTABLE = () => {
                     )}
                   </tbody>
                 </table>
-                
               </div>
               <p className="mt-4 text-sm text-gray-700">
-                  i. जहाँ भी लागू हो, यदि सीने का माप न्यूनतम निर्धारित माप से
-                  अधिक है तो उसे कम से कम 5 सेमी फुलाव के साथ मापा जाएगा।
-                </p>
-                <p className="mt-4 text-sm text-gray-700">
-                  ii. शारीरिक मापदण्‍डों में किसी भी स्‍तर पर छूट नहीं दी जाएगी
-                  ।
-                </p>
+                i. जहाँ भी लागू हो, यदि सीने का माप न्यूनतम निर्धारित माप से
+                अधिक है तो उसे कम से कम 5 सेमी फुलाव के साथ मापा जाएगा।
+              </p>
+              <p className="mt-4 text-sm text-gray-700">
+                ii. शारीरिक मापदण्‍डों में किसी भी स्‍तर पर छूट नहीं दी जाएगी ।
+              </p>
             </div>
 
             {/* द्वितीय चरण परीक्षा योजना (Second phase examination scheme) */}
@@ -802,56 +820,48 @@ const MPCONSTABLE = () => {
           {/* Col-4 */}
           <div className="md:col-span-3 flex flex-col space-y-4">
             <img
-              src="/ssc-cgl-2025.jpeg"
+              src="/mppeb/vyapam-foundation-square.jpg"
               alt="Placeholder"
-              className="w-full rounded shadow-md"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[0] = el)}
               onClick={() => handleFullScreen(0)}
-            />{" "}
-            <div
-              ref={(el) => (mediaRefs.current[1] = el)}
-              className="w-full rounded shadow-md"
-              onClick={() => handleFullScreen(1)}
-            >
-              <iframe
-                ref={(el) => (mediaRefs.current[1] = el)}
-                className="w-full rounded shadow-md"
-                src="https://www.youtube.com/embed/vpE5QC1ULgo"
-                title="MPESB Calendar 2025 Out | MPTET Varg 2, Varg 3, Mahila Supervisor &amp; Forest Guard | Aditya Patel Sir"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            </div>
+            />
             <img
+              src="/mppeb/women-supervisor-group5-square.jpg"
+              alt="Placeholder"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[2] = el)}
-              src="/ssc-chsl-2025.jpeg"
-              alt="Placeholder"
-              className="w-full rounded shadow-md"
               onClick={() => handleFullScreen(2)}
-            />{" "}
-            <div
-              ref={(el) => (mediaRefs.current[3] = el)}
-              className="w-full rounded shadow-md"
-              onClick={() => handleFullScreen(3)}
-            >
-              <iframe
-                src="https://www.youtube.com/embed/KDtJdvmB26U"
-                title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB | What is SSC GD?"
-                frameBorder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </div>
+            />
             <img
-              ref={(el) => (mediaRefs.current[4] = el)}
-              src="/ssc-combo-books.jpeg"
+              src="/mppeb/mp-tet-group-3.jpg"
               alt="Placeholder"
-              className="w-full rounded shadow-md"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              ref={(el) => (mediaRefs.current[4] = el)}
               onClick={() => handleFullScreen(4)}
-            />{" "}
+            />
+            <iframe
+              ref={(el) => (mediaRefs.current[1] = el)}
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              src="https://www.youtube.com/embed/vpE5QC1ULgo"
+              title="MPESB Calendar 2025 Out"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              onClick={() => handleFullScreen(1)}
+            ></iframe>
+            <iframe
+              ref={(el) => (mediaRefs.current[3] = el)}
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              src="https://www.youtube.com/embed/KDtJdvmB26U"
+              title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB"
+              frameBorder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              onClick={() => handleFullScreen(3)}
+            ></iframe>
             <RelatedPost />
           </div>
         </div>

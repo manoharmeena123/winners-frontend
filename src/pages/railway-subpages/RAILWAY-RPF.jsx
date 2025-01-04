@@ -560,47 +560,48 @@ const RPF = () => {
           {/* Col-4 */}
           <div className="md:col-span-3 flex flex-col space-y-4">
             <img
-              src="/ssc-cgl-2025.jpeg"
+              src="/mppeb/vyapam-foundation-square.jpg"
               alt="Placeholder"
-              className="w-full rounded shadow-md"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[0] = el)}
               onClick={() => handleFullScreen(0)}
-            />{" "}
+            />
+            <img
+              src="/mppeb/women-supervisor-group5-square.jpg"
+              alt="Placeholder"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              ref={(el) => (mediaRefs.current[2] = el)}
+              onClick={() => handleFullScreen(2)}
+            />
+            <img
+              src="/mppeb/mp-tet-group-3.jpg"
+              alt="Placeholder"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              ref={(el) => (mediaRefs.current[4] = el)}
+              onClick={() => handleFullScreen(4)}
+            />
             <iframe
               ref={(el) => (mediaRefs.current[1] = el)}
-              className="w-full rounded shadow-md"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
               src="https://www.youtube.com/embed/vpE5QC1ULgo"
-              title="MPESB Calendar 2025 Out | MPTET Varg 2, Varg 3, Mahila Supervisor &amp; Forest Guard | Aditya Patel Sir"
-              frameborder="0"
+              title="MPESB Calendar 2025 Out"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
               onClick={() => handleFullScreen(1)}
             ></iframe>
-            <img
-              ref={(el) => (mediaRefs.current[2] = el)}
-              src="/ssc-chsl-2025.jpeg"
-              alt="Placeholder"
-              className="w-full rounded shadow-md"
-              onClick={() => handleFullScreen(2)}
-            />{" "}
             <iframe
+              ref={(el) => (mediaRefs.current[3] = el)}
+              className="w-full rounded-2xl shadow-md cursor-pointer"
               src="https://www.youtube.com/embed/KDtJdvmB26U"
-              title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB | What is SSC GD?"
+              title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB"
               frameBorder="0"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              ref={(el) => (mediaRefs.current[3] = el)}
               onClick={() => handleFullScreen(3)}
             ></iframe>
-            <img
-              ref={(el) => (mediaRefs.current[4] = el)}
-              src="/ssc-combo-books.jpeg"
-              alt="Placeholder"
-              className="w-full rounded shadow-md"
-              onClick={() => handleFullScreen(4)}
-            />{" "}
             <RelatedPost />
           </div>
         </div>

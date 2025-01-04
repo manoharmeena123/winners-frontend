@@ -45,15 +45,28 @@ const BANKING = () => {
   const handleFullScreen = (index) => {
     if (mediaRefs.current[index]) {
       const mediaElement = mediaRefs.current[index];
-      if (mediaElement.requestFullscreen) {
-        mediaElement.requestFullscreen();
-      } else if (mediaElement.webkitRequestFullscreen) {
-        mediaElement.webkitRequestFullscreen(); // For Safari
-      } else if (mediaElement.msRequestFullscreen) {
-        mediaElement.msRequestFullscreen(); // For IE11
+      if (document.fullscreenElement) {
+        // Exit fullscreen if already in fullscreen
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen(); // Safari
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen(); // IE11
+        }
+      } else {
+        // Enter fullscreen mode
+        if (mediaElement.requestFullscreen) {
+          mediaElement.requestFullscreen();
+        } else if (mediaElement.webkitRequestFullscreen) {
+          mediaElement.webkitRequestFullscreen(); // Safari
+        } else if (mediaElement.msRequestFullscreen) {
+          mediaElement.msRequestFullscreen(); // IE11
+        }
       }
     }
   };
+
   return (
     <>
       <Header />
@@ -865,51 +878,42 @@ const BANKING = () => {
             </div>
           </div>
           {/* Col-4 */}
-          <div className="md:col-span-3 flex flex-col space-y-4">
+          {/* Updated Media Section */}
+          <div className="md:col-span-3 flex flex-col space-y-8 w-full max-w-full">
             <img
               src="banking/bps-po.jpeg"
               alt="Placeholder"
-              className="w-full rounded-2xl shadow-md"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[0] = el)}
               onClick={() => handleFullScreen(0)}
-            />{" "}
-            <iframe
-              className="w-full rounded shadow-md"
-              src="https://www.youtube.com/embed/fow1ryLZU7g"
-              title="HOW TO BECOME BANK PO 2023 | बैंक PO कैसे बने? | COMPLETE DETAILED VIDEO BY ADITYA PATEL SIR"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
-              ref={(el) => (mediaRefs.current[1] = el)}
-              onClick={() => handleFullScreen(1)}
-            ></iframe>
+            />
             <img
               src="banking/sbi-po.jpeg"
               alt="Placeholder"
-              className="w-full rounded shadow-md"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[2] = el)}
               onClick={() => handleFullScreen(2)}
-            />{" "}
+            />
+            <iframe
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              src="https://www.youtube.com/embed/fow1ryLZU7g"
+              title="HOW TO BECOME BANK PO 2023 | बैंक PO कैसे बने? | COMPLETE DETAILED VIDEO BY ADITYA PATEL SIR"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+              ref={(el) => (mediaRefs.current[1] = el)}
+              onClick={() => handleFullScreen(1)}
+            ></iframe>
             <iframe
               ref={(el) => (mediaRefs.current[3] = el)}
-              className="w-full rounded shadow-md"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
               src="https://www.youtube.com/embed/7orMVNalBz8"
               title="SBI Clerk Notification 2024 | SBI JA 2024 Notification | SBI Clerk New Vacancy 2024 | Aditya Sir"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerpolicy="strict-origin-when-cross-origin"
-              allowfullscreen
+              allowFullScreen
               onClick={() => handleFullScreen(3)}
             ></iframe>
-            <img
-              ref={(el) => (mediaRefs.current[4] = el)}
-              src="banking/banking-foundation.jpeg"
-              height="250"
-              alt="Placeholder"
-              className="w-full rounded shadow-md"
-              onClick={() => handleFullScreen(4)}
-            />{" "}
             <RelatedPost />
           </div>
         </div>

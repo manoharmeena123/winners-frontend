@@ -48,14 +48,28 @@ const SSCCPO = () => {
   const mediaRefs = useRef([]);
 
   const handleFullScreen = (index) => {
-    if (mediaRefs.current[index]) {
-      const mediaElement = mediaRefs.current[index];
-      if (mediaElement.requestFullscreen) {
-        mediaElement.requestFullscreen();
-      } else if (mediaElement.webkitRequestFullscreen) {
-        mediaElement.webkitRequestFullscreen(); // For Safari
-      } else if (mediaElement.msRequestFullscreen) {
-        mediaElement.msRequestFullscreen(); // For IE11
+    const mediaElement = mediaRefs.current[index];
+    if (mediaElement) {
+      if (!document.fullscreenElement) {
+        // Enter fullscreen mode
+        if (mediaElement.requestFullscreen) {
+          mediaElement.requestFullscreen();
+        } else if (mediaElement.webkitRequestFullscreen) {
+          mediaElement.webkitRequestFullscreen(); // Safari
+        } else if (mediaElement.msRequestFullscreen) {
+          mediaElement.msRequestFullscreen(); // IE11
+        } else {
+          console.error("Fullscreen API is not supported by this browser.");
+        }
+      } else {
+        // Exit fullscreen mode
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen(); // Safari
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen(); // IE11
+        }
       }
     }
   };
@@ -842,51 +856,48 @@ const SSCCPO = () => {
           {/* Col-4 */}
           <div className="md:col-span-3 flex flex-col space-y-4">
             <img
-              src="/ssc-cgl-2025.jpeg"
+              src="/ssc-cgl-20251.jpeg"
               alt="Placeholder"
-              className="w-full rounded shadow-md"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[0] = el)}
               onClick={() => handleFullScreen(0)}
-            />{" "}
+            />
+            <img
+              src="/ssc-chsl1-2025.jpeg"
+              alt="Placeholder"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              ref={(el) => (mediaRefs.current[2] = el)}
+              onClick={() => handleFullScreen(2)}
+            />
+            <img
+              src="/ssc-combo-books1.jpeg"
+              alt="Placeholder"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              ref={(el) => (mediaRefs.current[4] = el)}
+              onClick={() => handleFullScreen(4)}
+            />
             <iframe
               ref={(el) => (mediaRefs.current[1] = el)}
-              className="w-full rounded shadow-md"
-              src="https://www.youtube.com/embed/mVyOXuo89M4"
-              title="SSC Calendar 2025-26 | SSC Exam Calendar 2025 Out | SSC Exams 2025-26 | Aditya Patel Sir"
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              src="https://www.youtube.com/embed/vpE5QC1ULgo"
+              title="MPESB Calendar 2025 Out"
               frameBorder="0"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
               onClick={() => handleFullScreen(1)}
             ></iframe>
-            <img
-              ref={(el) => (mediaRefs.current[2] = el)}
-              src="/ssc-chsl-2025.jpeg"
-              alt="Placeholder"
-              className="w-full rounded shadow-md"
-              onClick={() => handleFullScreen(2)}
-            />{" "}
-            <div
-              ref={(el) => (mediaRefs.current[0] = el)}
-              className="w-full rounded shadow-md"
-              onClick={() => handleFullScreen(0)}
-            >
-              <iframe
-                src="https://www.youtube.com/embed/KDtJdvmB26U"
-                title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB | What is SSC GD?"
-                frameBorder="0"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-              ></iframe>
-            </div>
-            <img
-              ref={(el) => (mediaRefs.current[4] = el)}
-              src="/ssc-combo-books.jpeg"
-              alt="Placeholder"
-              className="w-full rounded shadow-md"
-              onClick={() => handleFullScreen(4)}
-            />{" "}
+            <iframe
+              ref={(el) => (mediaRefs.current[3] = el)}
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              src="https://www.youtube.com/embed/KDtJdvmB26U"
+              title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB"
+              frameBorder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+              onClick={() => handleFullScreen(3)}
+            ></iframe>
             <RelatedPost />
           </div>
         </div>

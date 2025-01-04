@@ -358,13 +358,13 @@ export const smallScreenClasses = [
   },
   {
     image:
-      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.9882978874810506.jpeg",
+      "/mppeb/mp-abhkari.jpeg",
     description:
-      "जेल प्रहरी, वन एवं क्षेत्र रक्षक Complete Online Course (FFJ0724)",
+      "MP Excise Constable 2025 Complete Online Course (MPEC0125)",
     price: "₹799",
     button: "Buy Now",
     background: "bg-green-600",
-    link: "https://live.winnersinstitute.in/courses/416--complete-online-course-ffj0724",
+    link: "https://live.winnersinstitute.in/courses/511-mp-excise-constable-2025-complete-online-course-mpec0125",
   },
   {
     image: "/mppeb/women-supervisor-group5-square.jpg",
@@ -388,13 +388,13 @@ export const largeScreenClasses = [
   },
   {
     image:
-      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.9882978874810506.jpeg",
-    description:
-      "जेल प्रहरी, वन एवं क्षेत्र रक्षक Complete Online Course (FFJ0724)",
+      "https://appx-content-v2.classx.co.in/paid_course3/2025-01-01-0.27139279520267556.jpeg",
+      description:
+      "MP Excise Constable 2025 Complete Online Course (MPEC0125)",
     price: "₹799",
     button: "Buy Now",
     background: "bg-green-600",
-    link: "https://live.winnersinstitute.in/courses/416--complete-online-course-ffj0724",
+    link: "https://live.winnersinstitute.in/courses/511-mp-excise-constable-2025-complete-online-course-mpec0125",
   },
   {
     image:
