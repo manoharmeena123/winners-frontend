@@ -88,7 +88,9 @@ const RailwayGROUPD = () => {
           <div className="md:col-span-9">
             {/* First Section: RRB Group D Intro */}
             <div id="ssc-cgl-2025" className="bg-white  rounded-md lg:p-6 mb-6">
-            <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">{title}</h1>
+              <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">
+                {title}
+              </h1>
               <p className="text-gray-600 mb-4">
                 {intro}{" "}
                 <a
@@ -321,7 +323,7 @@ const RailwayGROUPD = () => {
                 id="rrb-group-d-syllabus-for-cbt-stage-i"
                 className="rounded-md mt-6"
               >
-                <div >
+                <div>
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     RRB Group D CBT-1
                   </h2>
@@ -422,7 +424,10 @@ const RailwayGROUPD = () => {
               </div>
             </div>
             {/* PHYSICAL EFFICIENCY TEST (PET) */}
-            <div id="rrb-group-d-2025-physical-efficiency-test" className="bg-white shadow-md rounded-md p-3 mt-6">
+            <div
+              id="rrb-group-d-2025-physical-efficiency-test"
+              className="bg-white shadow-md rounded-md p-3 mt-6"
+            >
               <h2 className="bg-red-600 text-white lg:text-xl sm:text-xl font-bold py-2 px-4 rounded">
                 {railwayTechnicianData?.petData?.title ||
                   "PHYSICAL EFFICIENCY TEST (PET)"}
