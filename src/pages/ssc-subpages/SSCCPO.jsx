@@ -82,9 +82,7 @@ const SSCCPO = () => {
             {/* First Section: SSC GD Intro */}
             <div className="bg-white rounded-md lg:p-6 mb-6">
               {/* Title Section */}
-              <h1 className="xl:text-3xl lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
-                {title}
-              </h1>
+              <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">{title}</h1>
 
               {/* Intro Section */}
               <p className="text-gray-600 mb-4">

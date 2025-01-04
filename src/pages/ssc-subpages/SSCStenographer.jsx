@@ -79,7 +79,7 @@ const SSCStenographer = () => {
           <div className="md:col-span-9 ">
             {/* First Section: SSC Stenographer Intro */}
             <div className="bg-white rounded-md lg:p-6 mb-6">
-              <h1 className="xl:text-3xl lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
+            <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">{title}
                 {sscstenographerData.title}
               </h1>
 
