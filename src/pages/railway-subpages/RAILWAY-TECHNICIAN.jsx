@@ -321,7 +321,7 @@ const RailwayALP = () => {
                 id="rrb-alp-syllabus-for-cbt-stage-i"
                 className="rounded-md mt-6"
               >
-                <div className="p-4">
+                <div className="mt-6">
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     Technician Grade-I (तकनीशियन ग्रेड- । सिग्नल)
                   </h2>
@@ -419,7 +419,7 @@ const RailwayALP = () => {
                     )}
                   </div>
                 </div>
-                <div id="railway-alp-cbt-ii" className="p-4">
+                <div id="railway-alp-cbt-ii" className="mt-6">
                   {/* Header */}
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     RRB TECHNICIAN SYLLABUS Grade-III (CBT)

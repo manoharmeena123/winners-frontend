@@ -88,7 +88,9 @@ const RPF = () => {
           <div className="md:col-span-9">
             {/* First Section: SSC CGL Intro */}
             <div id="ssc-cgl-2025" className="bg-white  rounded-md lg:p-6 mb-6">
-            <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">{title}</h1>
+              <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">
+                {title}
+              </h1>
               <p className="text-gray-600 mb-4">
                 {intro}{" "}
                 <a
@@ -308,9 +310,12 @@ const RPF = () => {
               <div className="bg-red-500 text-white text-lg font-bold p-2">
                 Pattern of Exam &ndash; Objective Type
               </div>
-              <div className="my-4 text-gray-700">
-                Note: There will be negative marking of 1/3 for each wrong
-                answer.
+              {/* Note */}
+              <div className="bg-white border border-gray-300 rounded-md p-4 mt-2 mb-4">
+                <p className="text-gray-700">
+                  Note - There will be negative marking of 0.33 for each wrong
+                  answer.
+                </p>
               </div>
               <div className="overflow-x-auto">
                 <table className="table-auto w-full border-collapse border border-gray-200">
@@ -386,7 +391,7 @@ const RPF = () => {
               <p className="text-gray-700 leading-relaxed mb-4 whitespace-pre-line">
                 {railwayRpfExamData?.syllabusData?.description}
               </p>
-              <div className="bg-white  rounded-md p-6 mt-6">
+              <div className="bg-white  rounded-md  mt-6">
                 {railwayRpfExamData?.syllabusData?.sections.map(
                   (section, index) => (
                     <div key={index} className="mb-4">

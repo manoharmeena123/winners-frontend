@@ -319,7 +319,7 @@ const NTPC = () => {
             {/* Railway NTPC SYLLABUS, */}
             <div
               id="railway-ntpc-2025-syllabus"
-              className="bg-white shadow-md rounded-md p-3   mt-6"
+              className="bg-white shadow-md rounded-md p-3 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                 {railwayNtpcExamData?.syllabusData?.title}
@@ -339,7 +339,7 @@ const NTPC = () => {
                 </div>
               </div>
               <div id="preliminary-exam-syllabus" className="rounded-md mt-6">
-                <div className="p-4">
+                <div className="">
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     Railway – NTPC CBT-1
                   </h2>
@@ -437,7 +437,7 @@ const NTPC = () => {
                     )}
                   </div>
                 </div>
-                <div id="railway-ntpc-cbt-2" className="p-4">
+                <div id="railway-ntpc-cbt-2" className="mt-4">
                   {/* Header */}
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     Railway – NTPC CBT-2
