@@ -423,88 +423,88 @@ export const railwayTechnicianData = {
 
 export const smallScreenClasses = [
   {
-    image: "/mppeb/vyapam-foundation-square.jpg",
-    description: "ESB/ Vyapam Foundation Combo Online Course (CVF1224)",
-    price: "₹1299",
+    image:
+      "https://appx-content-v2.classx.co.in/paid_course3/2025-01-01-0.8102399804373719.jpg",
+    description: "RRB Assistant Loco Pilot 2024 Live Online Course (ALP0224)",
+    price: "₹399",
     button: "Buy Now",
     background: "bg-blue-900",
-    link: "https://live.winnersinstitute.in/courses/468-esb-vyapam-foundation-combo-online-course-cvf1224",
+    link: "https://live.winnersinstitute.in/courses/341-rrb-assistant-loco-pilot-2024-live-online-course-alp0224",
   },
   {
     image:
-      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.9882978874810506.jpeg",
-    description:
-      "जेल प्रहरी, वन एवं क्षेत्र रक्षक Complete Online Course (FFJ0724)",
-    price: "₹799",
-    button: "Buy Now",
-    background: "bg-green-600",
-    link: "https://live.winnersinstitute.in/courses/416--complete-online-course-ffj0724",
-  },
-  {
-    image: "/mppeb/women-supervisor-group5-square.jpg",
-    description:
-      "ESB/Vyapam Group 5 2024 (Part-A) Complete Recorded Course (MPG5-1124)",
+      "https://appx-content-v2.classx.co.in/paid_course3/2025-01-01-0.5102881726686486.jpg",
+    description: "Railway RPF SI Constable Live Online Course (Code - RPF0424)",
     price: "₹499",
     button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/courses/382-railway-rpf-si-constable-live-online-course-code-rpf0424",
+  },
+  {
+    image:
+      "https://appx-content-v2.classx.co.in/paid_course3/2025-01-01-0.36284227332614405.jpeg",
+    description:
+      "Railway Foundation Combo Online Course (CRF1224)",
+    price: "₹999",
+    button: "Buy Now",
     background: "bg-teal-600",
-    link: "https://live.winnersinstitute.in/courses/465-esb-vyapam-group-5-2024-part-a-complete-recorded-course-mpg5-1124",
+    link: "https://live.winnersinstitute.in/courses/474-railway-foundation-combo-online-course-crf1224",
   },
 ];
 export const largeScreenClasses = [
   {
     image:
-      "https://appxcontent.kaxa.in/paid_course3/2024-12-11-0.5572492968176104.jpeg",
-    description: "ESB/ Vyapam Foundation Combo Online Course (CVF1224)",
-    price: "₹1299",
+      "https://appx-content-v2.classx.co.in/paid_course3/2025-01-01-0.8102399804373719.jpg",
+    description: "RRB Assistant Loco Pilot 2024 Live Online Course (ALP0224)",
+    price: "₹399",
     button: "Buy Now",
     background: "bg-blue-900",
-    link: "https://live.winnersinstitute.in/courses/468-esb-vyapam-foundation-combo-online-course-cvf1224",
+    link: "https://live.winnersinstitute.in/courses/341-rrb-assistant-loco-pilot-2024-live-online-course-alp0224",
   },
   {
     image:
-      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.9882978874810506.jpeg",
-    description:
-      "जेल प्रहरी, वन एवं क्षेत्र रक्षक Complete Online Course (FFJ0724)",
-    price: "₹799",
-    button: "Buy Now",
-    background: "bg-green-600",
-    link: "https://live.winnersinstitute.in/courses/416--complete-online-course-ffj0724",
-  },
-  {
-    image:
-      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.12337163111796157.jpeg",
-    description:
-      "ESB/Vyapam Group 5 2024 (Part-A) Complete Recorded Course (MPG5-1124)",
+      "https://appx-content-v2.classx.co.in/paid_course3/2025-01-01-0.5102881726686486.jpg",
+    description: "Railway RPF SI Constable Live Online Course (Code - RPF0424)",
     price: "₹499",
     button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/courses/382-railway-rpf-si-constable-live-online-course-code-rpf0424",
+  },
+  {
+    image:
+      "https://appx-content-v2.classx.co.in/paid_course3/2025-01-01-0.36284227332614405.jpeg",
+    description:
+      "Railway Foundation Combo Online Course (CRF1224)",
+    price: "₹999",
+    button: "Buy Now",
     background: "bg-teal-600",
-    link: "https://live.winnersinstitute.in/courses/465-esb-vyapam-group-5-2024-part-a-complete-recorded-course-mpg5-1124",
+    link: "https://live.winnersinstitute.in/courses/474-railway-foundation-combo-online-course-crf1224",
   },
 ];
 
 export const smallScreenTestSeries = [
   {
     image:
-      "https://appx-content-v2.classx.co.in/paid_course3/2024-12-28-0.9726229122488721.jpeg",
-    description: "म.प्र. महिला पर्यवेक्षक TEST SERIES 2025",
-    price: "₹199",
+      "https://appx-content-v2.classx.co.in/paid_course3/2025-01-02-0.6276094231874558.jpeg",
+    description: "RRB NTPC CBT I Test Series 2024",
+    price: "₹149",
     button: "Buy Now",
     background: "bg-blue-900",
     link: "https://live.winnersinstitute.in/test-series/365--test-series-2025",
   },
   {
     image:
-      "https://appx-content-v2.classx.co.in/paid_course3/2024-12-26-0.9265651890897373.jpeg",
-    description: "MPTET शिक्षक भर्ती वर्ग 3 Test Series 2024",
+      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.33817270460272253.jpg",
+    description: "RPF Constable & SI Test Series 2024",
     price: "₹149",
     button: "Buy Now",
     background: "bg-green-600",
     link: "https://live.winnersinstitute.in/test-series/373-mptet-3-test-series-2024",
   },
   {
-    image: "mppeb/mppsc-prelims-2025.jpeg",
-    description: "MPPSC Prelims - 2025 (Online Test Series 2.0)",
-    price: "₹499",
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2025-01-02-0.25118974020651064.jpeg",
+    description: "Railway RRC Group D Test Series 2024",
+    price: "₹149",
     button: "Buy Now",
     background: "bg-teal-600",
     link: "https://live.winnersinstitute.in/test-series/454-mppsc-prelims-2025-online-test-series-20",
@@ -512,26 +512,27 @@ export const smallScreenTestSeries = [
 ];
 export const largeScreenTestSeries = [
   {
-    image: "mppeb/women-supervisor-square.jpeg",
-    description: "म.प्र. महिला पर्यवेक्षक TEST SERIES 2025",
-    price: "₹199",
+    image:
+      "https://appx-content-v2.classx.co.in/paid_course3/2025-01-02-0.6276094231874558.jpeg",
+    description: "RRB NTPC CBT I Test Series 2024",
+    price: "₹149",
     button: "Buy Now",
     background: "bg-blue-900",
     link: "https://live.winnersinstitute.in/test-series/365--test-series-2025",
   },
   {
-    image: "mppeb/mptet-group-2.jpeg",
-    description: "MPTET शिक्षक भर्ती वर्ग 3 Test Series 2024",
+    image:
+      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.33817270460272253.jpg",
+    description: "RPF Constable & SI Test Series 2024",
     price: "₹149",
     button: "Buy Now",
     background: "bg-green-600",
     link: "https://live.winnersinstitute.in/test-series/373-mptet-3-test-series-2024",
   },
   {
-    image:
-      "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.1402379844059063.jpeg",
-    description: "MPPSC Prelims - 2025 (Online Test Series 2.0)",
-    price: "₹499",
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2025-01-02-0.25118974020651064.jpeg",
+    description: "Railway RRC Group D Test Series 2024",
+    price: "₹149",
     button: "Buy Now",
     background: "bg-teal-600",
     link: "https://live.winnersinstitute.in/test-series/454-mppsc-prelims-2025-online-test-series-20",
@@ -540,56 +541,53 @@ export const largeScreenTestSeries = [
 
 export const smallScreenBooks = [
   {
-    image: "/mppeb/mp-psc-books-combo.jpg",
-    description: "MPPSC Complete Book Combo Set",
-    price: "₹1899.00",
+    image: "https://appxcontent.kaxa.in/paid_course/2024-12-08-0.08700024762812553.jpeg",
+    description: "Railway NTPC Book Special Combo",
+    price: "₹1,099.00",
     button: "Buy Now",
     background: "bg-blue-900",
-    link: "https://books.winnerspublication.store/products/mppsc-complete-book-combo-set",
+    link: "https://books.winnerspublication.store/products/railway-ntpc-book-special-combo",
   },
   {
-    image: "/mppeb/women-supervisor-books-combo.jpg",
-    description: "Mahila Supervisor Book Combo Set",
-    price: "₹999.00",
+    image: "https://appxcontent.kaxa.in/paid_course/2024-12-08-0.7186266099263936.jpeg",
+    description: "Railway NTPC Book GS Special Combo",
+    price: "₹399.00",
     button: "Buy Now",
     background: "bg-green-600",
-    link: "https://books.winnerspublication.store/products/mahila-supervisor-15-test-papers-based-on-new-pattern",
+    link: "https://books.winnerspublication.store/products/railway-ntpc-book-gs-special-combo",
   },
   {
-    image: "/mppeb/mp-tet-group-3.jpg",
-    description: "MPTET Grade 3 Maths (Hindi Medium) Book",
-    price: "₹179.00",
+    image: "https://appxcontent.kaxa.in/paid_course/2024-04-18-0.32313180871497615.png",
+    description: "Railway General Studies 4K+ One Liner",
+    price: "₹129.00",
     button: "Buy Now",
     background: "bg-teal-600",
-    link: "https://books.winnerspublication.store/products/mptet-grade-3-maths-hindi-medium-book",
+    link: "https://books.winnerspublication.store/products/railway-general-studies-4k-one-liner-book",
   },
 ];
 export const largeScreenBooks = [
   {
-    image:
-      "https://appxcontent.kaxa.in/paid_course/2024-12-08-0.22702373599145043.jpeg",
-    description: "MPPSC Complete Book Combo Set",
-    price: "₹1899.00",
+    image: "https://appxcontent.kaxa.in/paid_course/2024-12-08-0.08700024762812553.jpeg",
+    description: "Railway NTPC Book Special Combo",
+    price: "₹1,099.00",
     button: "Buy Now",
     background: "bg-blue-900",
-    link: "https://books.winnerspublication.store/products/mppsc-complete-book-combo-set",
+    link: "https://books.winnerspublication.store/products/railway-ntpc-book-special-combo",
   },
   {
-    image:
-      "https://appx-content-v2.classx.co.in/paid_course/2024-12-28-0.1568644653603044.jpeg",
-    description: "Mahila Supervisor Book Combo Set",
-    price: "₹999.00",
+    image: "https://appxcontent.kaxa.in/paid_course/2024-12-08-0.7186266099263936.jpeg",
+    description: "Railway NTPC Book GS Special Combo",
+    price: "₹399.00",
     button: "Buy Now",
     background: "bg-green-600",
-    link: "https://books.winnerspublication.store/products/mahila-supervisor-book-combo-set",
+    link: "https://books.winnerspublication.store/products/railway-ntpc-book-gs-special-combo",
   },
   {
-    image:
-      "https://appxcontent.securevideo.in/paid_course/2024-10-02-0.15359221998834838.jpeg",
-    description: "MPTET Grade 3 Maths (Hindi Medium) Book",
-    price: "₹179.00",
+    image: "https://appxcontent.kaxa.in/paid_course/2024-04-18-0.32313180871497615.png",
+    description: "Railway General Studies 4K+ One Liner",
+    price: "₹129.00",
     button: "Buy Now",
     background: "bg-teal-600",
-    link: "https://books.winnerspublication.store/products/mptet-grade-3-maths-hindi-medium-book",
+    link: "https://books.winnerspublication.store/products/railway-general-studies-4k-one-liner-book",
   },
 ];

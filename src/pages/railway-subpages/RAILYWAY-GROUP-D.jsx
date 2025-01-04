@@ -48,15 +48,32 @@ const RailwayGROUPD = () => {
   const mediaRefs = useRef([]);
 
   const handleFullScreen = (index) => {
-    if (mediaRefs.current[index]) {
-      const mediaElement = mediaRefs.current[index];
-      if (mediaElement.requestFullscreen) {
-        mediaElement.requestFullscreen();
-      } else if (mediaElement.webkitRequestFullscreen) {
-        mediaElement.webkitRequestFullscreen(); // For Safari
-      } else if (mediaElement.msRequestFullscreen) {
-        mediaElement.msRequestFullscreen(); // For IE11
+    const mediaElement = mediaRefs.current[index];
+  
+    if (mediaElement) {
+      if (!document.fullscreenElement) {
+        // Enter fullscreen mode
+        if (mediaElement.requestFullscreen) {
+          mediaElement.requestFullscreen();
+        } else if (mediaElement.webkitRequestFullscreen) {
+          mediaElement.webkitRequestFullscreen(); // Safari
+        } else if (mediaElement.msRequestFullscreen) {
+          mediaElement.msRequestFullscreen(); // IE11
+        } else {
+          console.error("Fullscreen API is not supported by this browser.");
+        }
+      } else {
+        // Exit fullscreen mode
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen(); // Safari
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen(); // IE11
+        }
       }
+    } else {
+      console.error("Media element not found.");
     }
   };
   return (
@@ -606,14 +623,14 @@ const RailwayGROUPD = () => {
           {/* Col-4 */}
           <div className="md:col-span-3 flex flex-col space-y-4">
             <img
-              src="/mppeb/vyapam-foundation-square.jpg"
+              src="/railways/railway-ntpc-group-d.jpeg"
               alt="Placeholder"
               className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[0] = el)}
               onClick={() => handleFullScreen(0)}
             />
             <img
-              src="/mppeb/women-supervisor-group5-square.jpg"
+              src="/railways/raiway-foundation.jpeg"
               alt="Placeholder"
               className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[2] = el)}
@@ -627,27 +644,28 @@ const RailwayGROUPD = () => {
               onClick={() => handleFullScreen(4)}
             />
             <iframe
+              className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[1] = el)}
-              className="w-full rounded-2xl shadow-md cursor-pointer"
-              src="https://www.youtube.com/embed/vpE5QC1ULgo"
-              title="MPESB Calendar 2025 Out"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
               onClick={() => handleFullScreen(1)}
-            ></iframe>
-            <iframe
-              ref={(el) => (mediaRefs.current[3] = el)}
-              className="w-full rounded-2xl shadow-md cursor-pointer"
-              src="https://www.youtube.com/embed/KDtJdvmB26U"
-              title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB"
+              src="https://www.youtube.com/embed/e2hRinCNcnQ"
+              title="Railway Group D Vacancy 2025 | RRB NTPC 2025"
               frameBorder="0"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              onClick={() => handleFullScreen(3)}
             ></iframe>
+            <iframe
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              ref={(el) => (mediaRefs.current[3] = el)}
+              onClick={() => handleFullScreen(3)}
+              src="https://www.youtube.com/embed/ttQABdTexr0"
+              title="Railway Calendar 2025 | RRB Official Calendar Out"
+              frameBorder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+
             <RelatedPost />
           </div>
         </div>

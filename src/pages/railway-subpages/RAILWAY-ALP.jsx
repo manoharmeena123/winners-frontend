@@ -48,17 +48,36 @@ const RailwayTECHNICIAN = () => {
   const mediaRefs = useRef([]);
 
   const handleFullScreen = (index) => {
-    if (mediaRefs.current[index]) {
-      const mediaElement = mediaRefs.current[index];
-      if (mediaElement.requestFullscreen) {
-        mediaElement.requestFullscreen();
-      } else if (mediaElement.webkitRequestFullscreen) {
-        mediaElement.webkitRequestFullscreen(); // For Safari
-      } else if (mediaElement.msRequestFullscreen) {
-        mediaElement.msRequestFullscreen(); // For IE11
+    const mediaElement = mediaRefs.current[index];
+  
+    if (mediaElement) {
+      if (!document.fullscreenElement) {
+        // Enter fullscreen mode
+        if (mediaElement.requestFullscreen) {
+          mediaElement.requestFullscreen();
+        } else if (mediaElement.webkitRequestFullscreen) {
+          mediaElement.webkitRequestFullscreen(); // Safari
+        } else if (mediaElement.msRequestFullscreen) {
+          mediaElement.msRequestFullscreen(); // IE11
+        } else {
+          console.error("Fullscreen API is not supported by this browser.");
+        }
+      } else {
+        // Exit fullscreen mode
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen(); // Safari
+        } else if (document.msExitFullscreen) {
+          document.msExitFullscreen(); // IE11
+        }
       }
+    } else {
+      console.error("Media element not found.");
     }
   };
+  
+
   return (
     <>
       <Header />
@@ -88,7 +107,9 @@ const RailwayTECHNICIAN = () => {
           <div className="md:col-span-9">
             {/* First Section: SSC CGL Intro */}
             <div id="ssc-cgl-2025" className="bg-white  rounded-md lg:p-6 mb-6">
-              <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">{title}</h1>
+              <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">
+                {title}
+              </h1>
               <p className="text-gray-600 mb-4">
                 {intro}{" "}
                 <a
@@ -316,12 +337,15 @@ const RailwayTECHNICIAN = () => {
                   </p>
                 </div>
               </div>
-              <div id="rrb-alp-syllabus-for-cbt-stage-i" className="rounded-md mt-6">
+              <div
+                id="rrb-alp-syllabus-for-cbt-stage-i"
+                className="rounded-md mt-6"
+              >
                 <div className="mt-6">
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     RRB ALP Syllabus for CBT Stage I
                   </h2>
-                  <div  className="overflow-x-auto p-4">
+                  <div className="overflow-x-auto p-4">
                     <table className="table-auto w-full border-collapse border border-gray-300">
                       <thead className="bg-gray-100">
                         <tr>
@@ -453,24 +477,26 @@ const RailwayTECHNICIAN = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        {railwayAlpExamData?.syllabusData?.cbtData.partA.map((item, index) => (
-                          <tr
-                            key={index}
-                            className={
-                              index % 2 === 0 ? "bg-white" : "bg-gray-50"
-                            }
-                          >
-                            <td className="border border-gray-300 px-4 py-2">
-                              {item.subject}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2 text-center">
-                              {item.questions}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2 text-center">
-                              {item.time}
-                            </td>
-                          </tr>
-                        ))}
+                        {railwayAlpExamData?.syllabusData?.cbtData.partA.map(
+                          (item, index) => (
+                            <tr
+                              key={index}
+                              className={
+                                index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                              }
+                            >
+                              <td className="border border-gray-300 px-4 py-2">
+                                {item.subject}
+                              </td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">
+                                {item.questions}
+                              </td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">
+                                {item.time}
+                              </td>
+                            </tr>
+                          )
+                        )}
                       </tbody>
                     </table>
 
@@ -493,24 +519,26 @@ const RailwayTECHNICIAN = () => {
                         </tr>
                       </thead>
                       <tbody>
-                        {railwayAlpExamData?.syllabusData?.cbtData.partB.map((item, index) => (
-                          <tr
-                            key={index}
-                            className={
-                              index % 2 === 0 ? "bg-white" : "bg-gray-50"
-                            }
-                          >
-                            <td className="border border-gray-300 px-4 py-2">
-                              {item.subject}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2 text-center">
-                              {item.questions}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2 text-center">
-                              {item.time}
-                            </td>
-                          </tr>
-                        ))}
+                        {railwayAlpExamData?.syllabusData?.cbtData.partB.map(
+                          (item, index) => (
+                            <tr
+                              key={index}
+                              className={
+                                index % 2 === 0 ? "bg-white" : "bg-gray-50"
+                              }
+                            >
+                              <td className="border border-gray-300 px-4 py-2">
+                                {item.subject}
+                              </td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">
+                                {item.questions}
+                              </td>
+                              <td className="border border-gray-300 px-4 py-2 text-center">
+                                {item.time}
+                              </td>
+                            </tr>
+                          )
+                        )}
                       </tbody>
                     </table>
                   </div>
@@ -687,14 +715,14 @@ const RailwayTECHNICIAN = () => {
           {/* Col-4 */}
           <div className="md:col-span-3 flex flex-col space-y-4">
             <img
-              src="/mppeb/vyapam-foundation-square.jpg"
+              src="/railways/railway-ntpc-group-d.jpeg"
               alt="Placeholder"
               className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[0] = el)}
               onClick={() => handleFullScreen(0)}
             />
             <img
-              src="/mppeb/women-supervisor-group5-square.jpg"
+              src="/railways/raiway-foundation.jpeg"
               alt="Placeholder"
               className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[2] = el)}
@@ -708,27 +736,28 @@ const RailwayTECHNICIAN = () => {
               onClick={() => handleFullScreen(4)}
             />
             <iframe
+              className="w-full rounded-2xl shadow-md cursor-pointer"
               ref={(el) => (mediaRefs.current[1] = el)}
-              className="w-full rounded-2xl shadow-md cursor-pointer"
-              src="https://www.youtube.com/embed/vpE5QC1ULgo"
-              title="MPESB Calendar 2025 Out"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              referrerPolicy="strict-origin-when-cross-origin"
-              allowFullScreen
               onClick={() => handleFullScreen(1)}
-            ></iframe>
-            <iframe
-              ref={(el) => (mediaRefs.current[3] = el)}
-              className="w-full rounded-2xl shadow-md cursor-pointer"
-              src="https://www.youtube.com/embed/KDtJdvmB26U"
-              title="SSC GD Bharti BSF, CISF, CRPF, SSB, ITBP, AR, SSF and NCB"
+              src="https://www.youtube.com/embed/e2hRinCNcnQ"
+              title="Railway Group D Vacancy 2025 | RRB NTPC 2025"
               frameBorder="0"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
-              onClick={() => handleFullScreen(3)}
             ></iframe>
+            <iframe
+              className="w-full rounded-2xl shadow-md cursor-pointer"
+              ref={(el) => (mediaRefs.current[3] = el)}
+              onClick={() => handleFullScreen(3)}
+              src="https://www.youtube.com/embed/ttQABdTexr0"
+              title="Railway Calendar 2025 | RRB Official Calendar Out"
+              frameBorder="0"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+
             <RelatedPost />
           </div>
         </div>
