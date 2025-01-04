@@ -221,7 +221,7 @@ export const faqs = [
   },
 ];
 
-export const classes = [
+export const smallScreenClasses = [
   {
     image: "/ssc-chsl1-2025.jpeg",
     description: "SSC CHSL 2025 Complete Online Course (CHSL1224)",
@@ -233,7 +233,7 @@ export const classes = [
   {
     image: "/ssc-cgl-20251.jpeg",
     description: "SSC CGL 2025 Complete Online Course (CGL1224)",
-    price: "₹1199",
+    price: "₹999",
     button: "Buy Now",
     background: "bg-green-600",
     link: "https://live.winnersinstitute.in/courses/492-ssc-cgl-2025-complete-online-course-cgl1224",
@@ -247,8 +247,33 @@ export const classes = [
     link: "https://live.winnersinstitute.in/courses/472-ssc-foundation-combo-online-course-csscf1224",
   },
 ];
-
-export const testSeries = [
+export const largeScreenClasses = [
+  {
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2025-01-02-0.38553812965403567.jpeg",
+    description: "SSC CHSL 2025 Complete Online Course (CHSL1224)",
+    price: "₹999",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://live.winnersinstitute.in/courses/491-ssc-chsl-2025-complete-online-course-chsl1224",
+  },
+  {
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2025-01-02-0.6047366731971668.jpeg",
+    description: "SSC CGL 2025 Complete Online Course (CGL1224)",
+    price: "₹999",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/courses/492-ssc-cgl-2025-complete-online-course-cgl1224",
+  },
+  {
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2025-01-01-0.7354107046736573.jpeg",
+    description: "SSC Foundation Combo Online Course (CSSCF1224)",
+    price: "₹999",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://live.winnersinstitute.in/courses/472-ssc-foundation-combo-online-course-csscf1224",
+  },
+];
+export const smallScreenTestSeries = [
   {
     image: "/ssc-cgl-mock-test1.jpeg",
     description: "SSC CGL Mock Test (Tier-I & Tier II) 2024",
@@ -274,8 +299,34 @@ export const testSeries = [
     link: "https://live.winnersinstitute.in/test-series/321-ssc-mts-test-series-2024",
   },
 ];
+export const largeScreenTestSeries = [
+  {
+    image: "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.5777222845899241.jpeg",
+    description: "SSC CGL Mock Test (Tier-I & Tier II) 2024",
+    price: "₹149",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://live.winnersinstitute.in/test-series/358-ssc-cgl-mock-test-tier-i-tier-ii-2024",
+  },
+  {
+    image: "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.8734372609562768.jpeg",
+    description: "SSC CPO (Tier-I) Mock Test 2024",
+    price: "₹149",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/test-series/267-ssc-cpo-tier-i-mock-test-2024",
+  },
+  {
+    image: "https://appxcontent.kaxa.in/paid_course3/2024-12-08-0.3864584332586367.jpeg",
+    description: "SSC MTS - Online Test Series (55 Mock Test)",
+    price: "₹149",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://live.winnersinstitute.in/test-series/321-ssc-mts-test-series-2024",
+  },
+];
 
-export const sscbooksdata = [
+export const smallScreenBooks = [
   {
     image: "/ssc-gd-combo-books1.jpeg",
     description: "SSC GD Special GS Combo book Set",
@@ -301,7 +352,32 @@ export const sscbooksdata = [
     link: "https://books.winnerspublication.store/products/ssc-foundation-complete-book-combo",
   },
 ];
-
+export const largeScreenBooks = [
+  {
+    image: "https://appxcontent.kaxa.in/paid_course/2024-12-08-0.3875022519208924.jpeg",
+    description: "SSC GD Special GS Combo book Set",
+    price: "₹499.00",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://books.winnerspublication.store/products/ssc-gd-special-gs-combo-book-set",
+  },
+  {
+    image: "https://appxcontent.kaxa.in/paid_course/2024-12-08-0.963736405994581.jpeg",
+    description: "SSC GD Complete Book Set Combo",
+    price: "₹1,299.00",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://books.winnerspublication.store/products/ssc-gd-complete-book-set-combo",
+  },
+  {
+    image: "/ssc-combo-books.jpeg",
+    description: "SSC Foundation Complete Book Combo",
+    price: "₹2,199.00",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://books.winnerspublication.store/products/ssc-foundation-complete-book-combo",
+  },
+];
 export const tableData = [
   {
     id: 1,

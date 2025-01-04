@@ -8,7 +8,14 @@ import {
   sscgdExamData,
   tableOfContentsData,
 } from "../../data/ssc-gd";
-import { classes, testSeries, sscbooksdata } from "../../data/sscData";
+import {
+  smallScreenClasses,
+  largeScreenClasses,
+  smallScreenTestSeries,
+  largeScreenTestSeries,
+  smallScreenBooks,
+  largeScreenBooks,
+} from "../../data/sscData";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 
@@ -81,7 +88,9 @@ const SSCGD = () => {
           <div className="md:col-span-9 ">
             {/* First Section: SSC CD Intro */}
             <div className="bg-white rounded-md lg:p-6 mb-6">
-            <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">{title}</h1>
+              <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">
+                {title}
+              </h1>
 
               {/* Intro Section */}
               <p className="text-gray-600 mb-4">
@@ -700,10 +709,26 @@ const SSCGD = () => {
               <h2 className="text-2xl font-bold mb-6">
                 Popular Online Live Classes
               </h2>
-              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
-                {classes?.map((cls, index) => (
+
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenClasses?.map((cls, index) => (
                   <Card
-                    key={index}
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenClasses?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
                     image={cls.image}
                     description={cls.description}
                     price={cls.price}
@@ -718,10 +743,25 @@ const SSCGD = () => {
               <h2 className="text-2xl font-bold mb-6">
                 Popular Mock Test Series
               </h2>
-              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
-                {testSeries?.map((cls, index) => (
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenTestSeries?.map((cls, index) => (
                   <Card
-                    key={index}
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenTestSeries?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
                     image={cls.image}
                     description={cls.description}
                     price={cls.price}
@@ -734,15 +774,30 @@ const SSCGD = () => {
             {/* Popular Books */}
             <div className="mt-8">
               <h2 className="text-2xl font-bold mb-6">Popular Books</h2>
-              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
-                {sscbooksdata?.map((book, index) => (
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenBooks?.map((cls, index) => (
                   <Card
-                    key={index}
-                    image={book.image}
-                    description={book.description}
-                    price={book.price}
-                    buttonText={book.button}
-                    onButtonClick={() => handleBuyNowClick(book?.link)}
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenBooks?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
                   />
                 ))}
               </div>
