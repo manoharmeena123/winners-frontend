@@ -8,6 +8,8 @@ import {
   ibpsRrbExamData,
   tableOfContentsData,
   classes,
+  smallScreenClasses,
+  largeScreenClasses,
 } from "../../data/ibps-sbi-clerk";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
@@ -454,15 +456,31 @@ const IBPSCLERK = () => {
                 ))}
               </div>
             </div>
-            {/* Popular Online Live Classes */}
-            <div className="mt-8">
+           {/* Popular Online Live Classes */}
+           <div className="mt-8">
               <h2 className="text-2xl font-bold mb-6">
                 Popular Online Live Classes
               </h2>
-              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
-                {classes?.map((cls, index) => (
+
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenClasses?.map((cls, index) => (
                   <Card
-                    key={index}
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenClasses?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
                     image={cls.image}
                     description={cls.description}
                     price={cls.price}

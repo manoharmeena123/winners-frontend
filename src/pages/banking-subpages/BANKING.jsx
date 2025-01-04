@@ -1,5 +1,5 @@
 import Aos from "aos";
-import React, { useState, useEffect,useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
@@ -7,7 +7,8 @@ import {
   bankingExamData,
   bankingExamDetails,
   tableOfContentsData,
-  classes,
+  smallScreenClasses,
+  largeScreenClasses,
 } from "../../data/banking";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
@@ -82,7 +83,9 @@ const BANKING = () => {
           <div className="md:col-span-9">
             {/* First Section: Banking Intro */}
             <div id="ssc-cgl-2025" className="bg-white rounded-md lg:p-6 mb-6">
-            <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">{title}</h1>
+              <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">
+                {title}
+              </h1>
               <p className="text-gray-600 mb-4">{intro}</p>
               {officialWebsites && officialWebsites.length > 0 && (
                 <div className="mb-4">
@@ -826,16 +829,31 @@ const BANKING = () => {
                 ))}
               </div>
             </div>
-
             {/* Popular Online Live Classes */}
             <div className="mt-8">
               <h2 className="text-2xl font-bold mb-6">
                 Popular Online Live Classes
               </h2>
-              <div className="grid lg:grid-cols-3 sm:grid-cols-2 md:grid-cols-1 gap-6">
-                {classes?.map((cls, index) => (
+
+              {/* For small screens */}
+              <div className="grid sm:grid-cols-2 gap-6 lg:hidden">
+                {smallScreenClasses?.map((cls, index) => (
                   <Card
-                    key={index}
+                    key={`small-${index}`}
+                    image={cls.image}
+                    description={cls.description}
+                    price={cls.price}
+                    buttonText={cls.button}
+                    onButtonClick={() => handleBuyNowClick(cls?.link)}
+                  />
+                ))}
+              </div>
+
+              {/* For large screens */}
+              <div className="grid lg:grid-cols-3 gap-6 hidden lg:grid">
+                {largeScreenClasses?.map((cls, index) => (
+                  <Card
+                    key={`large-${index}`}
                     image={cls.image}
                     description={cls.description}
                     price={cls.price}

@@ -390,3 +390,56 @@ export const classes = [
     link: "https://live.winnersinstitute.in/courses/371-ibps-po-complete-online-course-ippm0324",
   },
 ];
+
+export const smallScreenClasses = [
+  {
+    image: "banking/banking-foundation.jpeg",
+    description: "Banking Foundation Combo Online Course (CBF1224)",
+    price: "₹1299",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://live.winnersinstitute.in/courses/478-banking-foundation-combo-online-course-cbf1224",
+  },
+  {
+    image: "banking/sbi-po.jpeg",
+    description: "SBI PO Pre+Mains Complete Online Course (SBIPM0324)",
+    price: "₹1499",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/courses/368-sbi-po-premains-complete-online-course-sbipm0324",
+  },
+  {
+    image: "banking/banking-foundation.jpeg",
+    description: "IBPS PO Complete Online Course (IPPM0324)",
+    price: "₹1299",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://live.winnersinstitute.in/courses/371-ibps-po-complete-online-course-ippm0324",
+  },
+];
+export const largeScreenClasses = [
+  {
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2025-01-01-0.6767091413939894.jpg",
+    description: "Banking Foundation Combo Online Course (CBF1224)",
+    price: "₹1299",
+    button: "Buy Now",
+    background: "bg-blue-900",
+    link: "https://live.winnersinstitute.in/courses/478-banking-foundation-combo-online-course-cbf1224",
+  },
+  {
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2025-01-02-0.2102024138201053.jpeg",
+    description: "SBI PO Pre+Mains Complete Online Course (SBIPM0324)",
+    price: "₹999",
+    button: "Buy Now",
+    background: "bg-green-600",
+    link: "https://live.winnersinstitute.in/courses/368-sbi-po-premains-complete-online-course-sbipm0324",
+  },
+  {
+    image: "https://appx-content-v2.classx.co.in/paid_course3/2025-01-01-0.09604143728538528.jpg",
+    description: "IBPS PO Complete Online Course (IPPM0324)",
+    price: "₹799",
+    button: "Buy Now",
+    background: "bg-teal-600",
+    link: "https://live.winnersinstitute.in/courses/371-ibps-po-complete-online-course-ippm0324",
+  },
+];
