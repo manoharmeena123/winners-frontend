@@ -321,7 +321,7 @@ const RailwayGROUPD = () => {
                 id="rrb-group-d-syllabus-for-cbt-stage-i"
                 className="rounded-md mt-6"
               >
-                <div className="p-4">
+                <div >
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     RRB Group D CBT-1
                   </h2>
