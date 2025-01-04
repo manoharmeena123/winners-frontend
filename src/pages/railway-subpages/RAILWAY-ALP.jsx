@@ -77,7 +77,7 @@ const RailwayTECHNICIAN = () => {
               <span className="text-gray-400">&nbsp;&nbsp;»&nbsp;&nbsp;</span>
             </li>
             <li>
-              <span className="text-gray-500">Railway-ALP</span>
+              <span className="text-gray-500">RRB-ALP</span>
             </li>
           </ol>
         </nav>
@@ -317,7 +317,7 @@ const RailwayTECHNICIAN = () => {
                 </div>
               </div>
               <div id="rrb-alp-syllabus-for-cbt-stage-i" className="rounded-md mt-6">
-                <div className="p-4">
+                <div className="mt-6">
                   <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
                     RRB ALP Syllabus for CBT Stage I
                   </h2>
@@ -433,7 +433,7 @@ const RailwayTECHNICIAN = () => {
                   </div>
 
                   {/* Table */}
-                  <div className="overflow-x-auto p-4">
+                  <div className="overflow-x-auto mt-4">
                     {/* Part-A Table */}
                     <h2 className="text-lg font-bold text-gray-800 mb-4">
                       Part-A CBT-II

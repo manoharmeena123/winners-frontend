@@ -11,24 +11,24 @@ export const rrbGroupDData = {
 };
 export const tableOfContentsData = [
   {
-    title: "RRB Technician 2025 Notification Released",
-    link: "#rrb-technician-2025-notification-released",
+    title: "RRB Group D 2025 Notification Released",
+    link: "#rrb-group-d-2025-notification-released",
   },
   {
-    title: "RRB Technician 2025 Age Limit and Relaxation",
-    link: "#rrb-technician-2025-age-limit-and-relaxation",
+    title: "RRB Group D 2025 Age Limit and Relaxation",
+    link: "#rrb-group-d-2025-age-limit-and-relaxation",
   },
   {
-    title: "RRB Technician 2025 Syllabus",
-    link: "#rrb-technician-2025-syllabus",
+    title: "RRB Group D 2025 Syllabus",
+    link: "#rrb-group-d-2025-syllabus",
     subItems: [
       {
-        title: "RRB Technician Syllabus for CBT Stage I",
-        link: "#rrb-technician-syllabus-for-cbt-stage-i",
+        title: "RRB Group D Syllabus for CBT Stage I",
+        link: "#rrb-group-d-syllabus-for-cbt-stage-i",
       },
       {
-        title: "RRB Technician Syllabus for CBT-II",
-        link: "#rrb-technician-cbt-ii",
+        title: "RRB Group D 2025 Physical Efficiency Test (PET)",
+        link: "#rrb-group-d-2025-physical-efficiency-test",
       },
     ],
   },

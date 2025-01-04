@@ -77,7 +77,7 @@ const RailwayALP = () => {
               <span className="text-gray-400">&nbsp;&nbsp;»&nbsp;&nbsp;</span>
             </li>
             <li>
-              <span className="text-gray-500">RRB Technician</span>
+              <span className="text-gray-500">RRB-Technician</span>
             </li>
           </ol>
         </nav>

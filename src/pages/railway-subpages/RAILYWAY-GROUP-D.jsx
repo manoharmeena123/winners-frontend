@@ -77,7 +77,7 @@ const RailwayGROUPD = () => {
               <span className="text-gray-400">&nbsp;&nbsp;»&nbsp;&nbsp;</span>
             </li>
             <li>
-              <span className="text-gray-500">RRB Group D </span>
+              <span className="text-gray-500">RRB-Group-D </span>
             </li>
           </ol>
         </nav>
@@ -195,7 +195,7 @@ const RailwayGROUPD = () => {
 
             {/*RRB Group D 2025 Notification Released */}
             <div
-              id="rrb-technician-2025-notification-released"
+              id="rrb-group-d-2025-notification-released"
               className="bg-white shadow-md rounded-md p-3   mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -220,7 +220,7 @@ const RailwayGROUPD = () => {
 
             {/* RRB Group D Age Limit and Relaxation */}
             <div
-              id="rrb-technician-2025-age-limit-and-relaxation"
+              id="rrb-group-d-2025-age-limit-and-relaxation"
               className="bg-white shadow-md rounded-md p-3 mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -297,7 +297,7 @@ const RailwayGROUPD = () => {
 
             {/*RRB Group D 2025 Syllabus */}
             <div
-              id="rrb-alp-2025-syllabus"
+              id="rrb-group-d-2025-syllabus"
               className="bg-white shadow-md rounded-md p-3   mt-6"
             >
               <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -318,7 +318,7 @@ const RailwayGROUPD = () => {
                 </div>
               </div>
               <div
-                id="rrb-alp-syllabus-for-cbt-stage-i"
+                id="rrb-group-d-syllabus-for-cbt-stage-i"
                 className="rounded-md mt-6"
               >
                 <div className="p-4">
@@ -422,7 +422,7 @@ const RailwayGROUPD = () => {
               </div>
             </div>
             {/* PHYSICAL EFFICIENCY TEST (PET) */}
-            <div className="bg-white shadow-md rounded-md p-3 mt-6">
+            <div id="rrb-group-d-2025-physical-efficiency-test" className="bg-white shadow-md rounded-md p-3 mt-6">
               <h2 className="bg-red-600 text-white lg:text-xl sm:text-xl font-bold py-2 px-4 rounded">
                 {railwayTechnicianData?.petData?.title ||
                   "PHYSICAL EFFICIENCY TEST (PET)"}

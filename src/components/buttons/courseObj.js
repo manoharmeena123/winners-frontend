@@ -174,7 +174,7 @@ export const relatedPost = [
   },
   {
     title: "SSC Stenographer 2025 Exam Pattern,Notification and Syllabus",
-    link: "/ssc-stenographer-prep-2025",
+    link: "/ssc-stenographer",
   },
   // {
   //   title: "SSC JE 2024 Exam Pattern,Notification and Syllabus",
@@ -210,11 +210,11 @@ export const relatedPost = [
   },
   {
     title: "SBI Clerk 2025 Exam Pattern and Syllabus",
-    link: "/sbi-clerk",
+    link: "/ibps-clerk",
   },
   {
     title: "RBI Assistant 2025 Recruitment Details",
-    link: "/rbi-assistant",
+    link: "/ibps-rbi",
   },
   {
     title: "Railway ALP 2025 Notification Out, Apply Now",
