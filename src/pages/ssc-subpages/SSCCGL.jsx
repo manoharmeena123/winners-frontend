@@ -991,7 +991,7 @@ const SSCCGL = () => {
                 <p className="text-gray-700 leading-relaxed mb-4">
                   {syllabus?.syllabusDetails2?.mathematicalAbilities?.content}
                 </p>
-                <div className="overflow mx-auto">
+                <div className="overflow-x-auto">
                   <table className="table-auto border-collapse w-full">
                     <thead>
                       <tr>
@@ -1062,7 +1062,7 @@ const SSCCGL = () => {
                 <h6 className="underline font-semibold text-lg mb-4">
                   {syllabus?.syllabusDetails2?.mathematicalAbilities?.title}
                 </h6>
-                <div className="overflow mx-auto">
+                <div className="overflow-x-auto">
                   <table className="table-auto border-collapse w-full">
                     <thead>
                       <tr>
