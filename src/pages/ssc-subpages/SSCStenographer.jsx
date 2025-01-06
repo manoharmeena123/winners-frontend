@@ -278,64 +278,67 @@ const SSCStenographer = () => {
                 <h2 className="text-2xl font-bold text-gray-800 mb-4">
                   SSC Stenographer Exam Details
                 </h2>
-                <table className="min-w-full border border-gray-200">
-                  <tbody>
-                    {sscstenographerExamData?.overview?.examDetails?.sscStenographerData?.map(
-                      (exam, index) => (
-                        <tr key={index} className="border-b border-gray-200">
-                          {Object.entries(exam).map(([key, value]) => {
-                            if (typeof value === "object" && value !== null) {
-                              // If value is an object, like markingScheme, render each key-value pair inside it
-                              return (
-                                <tr
-                                  key={key}
-                                  className="border-b border-gray-200"
-                                >
-                                  <td className="px-6 py-4 border border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    {key.replace(/([A-Z])/g, " $1")}
-                                  </td>
-                                  <td className="px-6 py-4 border border-gray-200">
-                                    <ul className="list-disc ml-5">
-                                      {Object.entries(value).map(
-                                        ([subKey, subValue]) => (
-                                          <li key={subKey}>
-                                            <b>
-                                              {subKey.replace(
-                                                /([A-Z])/g,
-                                                " $1"
-                                              )}
-                                              :{" "}
-                                            </b>
-                                            {subValue}
-                                          </li>
-                                        )
-                                      )}
-                                    </ul>
-                                  </td>
-                                </tr>
-                              );
-                            } else {
-                              // If value is not an object, render it normally
-                              return (
-                                <tr
-                                  key={key}
-                                  className="border-b border-gray-200"
-                                >
-                                  <td className="px-6 py-4 border border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                                    {key.replace(/([A-Z])/g, " $1")}
-                                  </td>
-                                  <td className="px-6 py-4 border border-gray-200">
-                                    {value}
-                                  </td>
-                                </tr>
-                              );
-                            }
-                          })}
-                        </tr>
-                      )
-                    )}
-                  </tbody>
-                </table>
+                <div className="overflow-x-auto">
+                  {" "}
+                  <table className="min-w-full border border-gray-200">
+                    <tbody>
+                      {sscstenographerExamData?.overview?.examDetails?.sscStenographerData?.map(
+                        (exam, index) => (
+                          <tr key={index} className="border-b border-gray-200">
+                            {Object.entries(exam).map(([key, value]) => {
+                              if (typeof value === "object" && value !== null) {
+                                // If value is an object, like markingScheme, render each key-value pair inside it
+                                return (
+                                  <tr
+                                    key={key}
+                                    className="border-b border-gray-200"
+                                  >
+                                    <td className="px-6 py-4 border border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                      {key.replace(/([A-Z])/g, " $1")}
+                                    </td>
+                                    <td className="px-6 py-4 border border-gray-200">
+                                      <ul className="list-disc ml-5">
+                                        {Object.entries(value).map(
+                                          ([subKey, subValue]) => (
+                                            <li key={subKey}>
+                                              <b>
+                                                {subKey.replace(
+                                                  /([A-Z])/g,
+                                                  " $1"
+                                                )}
+                                                :{" "}
+                                              </b>
+                                              {subValue}
+                                            </li>
+                                          )
+                                        )}
+                                      </ul>
+                                    </td>
+                                  </tr>
+                                );
+                              } else {
+                                // If value is not an object, render it normally
+                                return (
+                                  <tr
+                                    key={key}
+                                    className="border-b border-gray-200"
+                                  >
+                                    <td className="px-6 py-4 border border-gray-200 bg-gray-50 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                      {key.replace(/([A-Z])/g, " $1")}
+                                    </td>
+                                    <td className="px-6 py-4 border border-gray-200">
+                                      {value}
+                                    </td>
+                                  </tr>
+                                );
+                              }
+                            })}
+                          </tr>
+                        )
+                      )}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
 
@@ -352,7 +355,7 @@ const SSCStenographer = () => {
                 {sscstenographerExamData?.examPattern.content}
               </p>
               {/* Table */}
-              <div className="bg-white rounded-md lg:p-6 mb-6">
+              <div className="overflow-x-auto">
                 <table className="min-w-full border border-gray-200">
                   <thead>
                     <tr>
