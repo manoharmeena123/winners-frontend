@@ -217,7 +217,7 @@ function DetailsModal({ isOpen, onClose, modalData }) {
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center"
+      className="fixed inset-0 z-50 bg-gray-800 bg-opacity-50 flex justify-center items-center overflow-y-auto"
       aria-modal="true"
       role="dialog"
       aria-labelledby="modal-title"
