@@ -197,7 +197,7 @@ function Header() {
                     {courses.map((course, index) => (
                       <div key={index} className="relative">
                         {/* Top-level course */}
-                        <div className="flex items-center">
+                        <div className="flex items-center" onClick={(e) => toggleSubCourses(index, e)}>
                           <a
                             href={course?.link}
                             className="block px-2 py-1 text-black hover:text-white hover:bg-[#D0021B] rounded-md flex-grow"
@@ -205,7 +205,7 @@ function Header() {
                             {course?.courseName}
                           </a>
                           <button
-                            onClick={(e) => toggleSubCourses(index, e)}
+                           
                             className="ml-2 text-gray-600 hover:text-black focus:outline-none"
                           >
                             {/* Arrow Icon */}
