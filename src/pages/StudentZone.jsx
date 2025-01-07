@@ -29,17 +29,16 @@ function StudentZone() {
   const [Notification, setNotification] = useState([]);
   const [AdmitCard, setAdmitCard] = useState([]);
   const [result, setresult] = useState([]);
-  const [getVideolecture, setGetVideolecture] = useState([]); 
+  const [getVideolecture, setGetVideolecture] = useState([]);
   const [Getallforms, setGetallforms] = useState([]);
   const [studyMaterial, setStudyMaterial] = useState([]);
   const [Loading, setLoading] = useState(false);
-  
-  
+
   useEffect(() => {
     const fetchAllData = async () => {
       try {
         setLoading(true);
-        
+
         // Fetch all data concurrently using Promise.all
         const [
           notificationRes,
@@ -47,14 +46,14 @@ function StudentZone() {
           resultRes,
           formsRes,
           videoLectureRes,
-          studyMaterialRes
+          studyMaterialRes,
         ] = await Promise.all([
           GetApi("api/admin/getLatestVacancies"),
           GetApi("api/admin/GetAllAdmitcard"),
           GetApi("api/admin/GetAllResult"),
           GetApi("api/hod/GetAllForms"),
           GetApi("api/admin/getAllVideolecture"),
-          GetApi("api/admin/getAllStudyMaterial")
+          GetApi("api/admin/getAllStudyMaterial"),
         ]);
 
         // Set all state at once
@@ -64,7 +63,7 @@ function StudentZone() {
         setGetallforms(formsRes?.data?.data || []);
         setGetVideolecture(videoLectureRes?.data?.data || []);
         setStudyMaterial(studyMaterialRes?.data?.data || []);
-        
+
         setLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -163,7 +162,6 @@ function StudentZone() {
         </div>
       )}
 
-
       <div className="md:px-[87px] mt-[40px] pt-[80px] pb-[110px] px-[20px]">
         <div data-aos="fade-up">
           <h6 className="font-sans pb-[50px] font-bold text-3xl leading-[44px] text-black">
@@ -204,17 +202,15 @@ function StudentZone() {
         <div className="container mx-auto mt-[100px]">
           <h6
             data-aos="fade-right"
-          
             className="bg-[#D0021B] title-btn mb-[28px] max-w-[226px] w-full font-sans font-bold text-xl leading-[32px] text-white rounded-[4px] py-[6px] px-[16px]"
           >
-           Apply For Lottery
+            Apply For Lottery
           </h6>
         </div>
         <div>
-       <ApplyNow />
+          <ApplyNow />
+        </div>
       </div>
-      </div>
-
 
       <Footer />
     </>
