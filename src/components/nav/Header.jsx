@@ -67,7 +67,7 @@ function Header() {
                   {courses.map((course, index) => (
                     <div
                       key={index}
-                      className="dropdown-item relative group overflow-y-auto"
+                      className="dropdown-item relative group"
                       onMouseEnter={(e) => e.target.classList.add("hovering")}
                       onMouseLeave={(e) =>
                         e.target.classList.remove("hovering")
@@ -84,7 +84,7 @@ function Header() {
                       {/* Popup for sub-courses */}
                       {course?.subCourses && (
                         <div
-                          className="child-menu-popup absolute left-full top-0 hidden group-hover:block bg-white shadow-lg rounded-md mt-[-10px] z-20 p-4 overflow-y-auto"
+                          className="child-menu-popup absolute left-full top-0 hidden group-hover:block bg-white shadow-lg rounded-md mt-[-10px] z-20 p-4"
                           style={{ minWidth: "200px" }}
                         >
                           {course.subCourses.map((subCourse, subIndex) => (
