@@ -5,8 +5,8 @@ export const courses = [
   },
   {
     courseName: "SSC",
-    link: "/ssc",
     subCourses: [
+      { courseName: "SSC COMPLETE", link: "/ssc" },
       { courseName: "SSC CGL", link: "/ssc-cgl" },
       { courseName: "SSC CHSL", link: "/ssc-chsl" },
       { courseName: "SSC MTS", link: "/ssc-mts" },
@@ -17,8 +17,9 @@ export const courses = [
   },
   {
     courseName: "BANKING",
-    link: "/banking-exam-details",
+    // link: "/banking-exam-details",
     subCourses :[
+      { courseName: "BANKING DETAILS", link: "/banking-exam-details" },
       { courseName: "IBPS PO & SBI PO", link: "/ibps-po" },
       { courseName: "IBPS RRB's PO & Clerk", link: "/ibps-sbi" },
       { courseName: "RBI Assistant", link: "/ibps-rbi" },
@@ -27,7 +28,7 @@ export const courses = [
   },
   {
     courseName: "RAILWAY",
-    link: "/railway-alp",
+    // link: "/railway-alp",
     subCourses: [
       { courseName: "Railway ALP", link: "/railway-alp" },
       { courseName: "Railway Technician", link: "/railway-technician" },
@@ -38,7 +39,7 @@ export const courses = [
   },
   {
     courseName: "MP ESB",
-    link: "/mp-jail",
+    // link: "/mp-jail",
     subCourses :[
       {
         courseName: "MP Jail Prahari",
@@ -61,14 +62,6 @@ export const courses = [
         link: "/mp-sub-inspector",
       },
     ]
-  },
-  {
-    courseName: "DEFENCE",
-    link: "/",
-  },
-  {
-    courseName: "TET Exams",
-    link: "/",
   },
 ];
 
