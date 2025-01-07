@@ -100,58 +100,69 @@ function StudentZone() {
         </div>
       </div>
 
-      <div className="bg-white md:pt-[40px] pt-[20px] mb-[40px] md:px-[90px] px-[20px]">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row overflow-hidden">
-            <button
-              data-aos="fade-up"
-              onClick={() => setActiveBtn("Vacancies")}
-              className={`border border-[#D7D7D7] px-[55px] py-[14px] rounded-[16px] font-sans font-bold text-lg leading-[27px] ${activeBtn === "Vacancies"
-                  ? "bg-white text-[#0D1266]"
-                  : "bg-[#cecdcd] text-black"
-                }`}
-            >
-              Vacancies
-            </button>
-            <button
-              data-aos="fade-up"
-              onClick={() => setActiveBtn("Admit Cards")}
-              className={`border border-[#D7D7D7] px-[55px] py-[14px] rounded-[16px] font-sans font-bold text-lg leading-[27px] ${activeBtn === "Admit Cards"
-                  ? "bg-white text-[#0D1266]"
-                : "bg-[#cecdcd] text-black"
-                }`}
-            >
-              Admit Cards
-            </button>
-            <button
-              data-aos="fade-up"
-              onClick={() => setActiveBtn("Results")}
-              className={`border border-[#D7D7D7] px-[55px] py-[14px] rounded-[16px] font-sans font-bold text-lg leading-[27px] ${activeBtn === "Results"
-                  ? "bg-white text-[#0D1266]"
-                : "bg-[#cecdcd] text-black"
-                }`}
-            >
-              Results
-            </button>
-          </div>
-
-          {activeBtn === "Vacancies" && (
-            <div className="border zone-slider flex flex-wrap md:justify-start justify-center gap-[14px] overflow-hidden border-[#D2D0D0] md:py-[55px] py-[26px] md:px-[47px] px-[20px] rounded-[16px] bg-white">
-              <Vacancies Notification={Notification} />
-            </div>
-          )}
-          {activeBtn === "Admit Cards" && (
-            <div className="border zone-slider flex flex-wrap md:justify-start justify-center gap-[14px] overflow-hidden border-[#D2D0D0] md:py-[55px] py-[26px] md:px-[47px] px-[20px] rounded-[16px] bg-white">
-              <ZoneSlider AdmitCard={AdmitCard} />
-            </div>
-          )}
-          {activeBtn === "Results" && (
-            <div className="border zone-slider flex flex-wrap md:justify-start justify-center gap-[14px] overflow-hidden border-[#D2D0D0] md:py-[55px] py-[26px] md:px-[47px] px-[20px] rounded-[16px] bg-white">
-              <AdmitCardSlider result={result} />
-            </div>
-          )}
+      {Loading ? (
+        <div className="flex justify-center items-center h-[400px]">
+          <div className="loader"></div>
+          <p className="text-lg text-[#0D1266] font-bold">Loading...</p>
         </div>
-      </div>
+      ) : (
+        <div className="bg-white md:pt-[40px] pt-[20px] mb-[40px] md:px-[90px] px-[20px]">
+          <div className="container mx-auto">
+            <div className="flex flex-col md:flex-row overflow-hidden">
+              <button
+                data-aos="fade-up"
+                onClick={() => setActiveBtn("Vacancies")}
+                className={`border border-[#D7D7D7] px-[55px] py-[14px] rounded-[16px] font-sans font-bold text-lg leading-[27px] ${
+                  activeBtn === "Vacancies"
+                    ? "bg-white text-[#0D1266]"
+                    : "bg-[#cecdcd] text-black"
+                }`}
+              >
+                Vacancies
+              </button>
+              <button
+                data-aos="fade-up"
+                onClick={() => setActiveBtn("Admit Cards")}
+                className={`border border-[#D7D7D7] px-[55px] py-[14px] rounded-[16px] font-sans font-bold text-lg leading-[27px] ${
+                  activeBtn === "Admit Cards"
+                    ? "bg-white text-[#0D1266]"
+                    : "bg-[#cecdcd] text-black"
+                }`}
+              >
+                Admit Cards
+              </button>
+              <button
+                data-aos="fade-up"
+                onClick={() => setActiveBtn("Results")}
+                className={`border border-[#D7D7D7] px-[55px] py-[14px] rounded-[16px] font-sans font-bold text-lg leading-[27px] ${
+                  activeBtn === "Results"
+                    ? "bg-white text-[#0D1266]"
+                    : "bg-[#cecdcd] text-black"
+                }`}
+              >
+                Results
+              </button>
+            </div>
+
+            {activeBtn === "Vacancies" && (
+              <div className="border zone-slider flex flex-wrap md:justify-start justify-center gap-[14px] overflow-hidden border-[#D2D0D0] md:py-[55px] py-[26px] md:px-[47px] px-[20px] rounded-[16px] bg-white">
+                <Vacancies Notification={Notification} />
+              </div>
+            )}
+            {activeBtn === "Admit Cards" && (
+              <div className="border zone-slider flex flex-wrap md:justify-start justify-center gap-[14px] overflow-hidden border-[#D2D0D0] md:py-[55px] py-[26px] md:px-[47px] px-[20px] rounded-[16px] bg-white">
+                <ZoneSlider AdmitCard={AdmitCard} />
+              </div>
+            )}
+            {activeBtn === "Results" && (
+              <div className="border zone-slider flex flex-wrap md:justify-start justify-center gap-[14px] overflow-hidden border-[#D2D0D0] md:py-[55px] py-[26px] md:px-[47px] px-[20px] rounded-[16px] bg-white">
+                <AdmitCardSlider result={result} />
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
 
       <div className="md:px-[87px] mt-[40px] pt-[80px] pb-[110px] px-[20px]">
         <div data-aos="fade-up">
@@ -188,50 +199,6 @@ function StudentZone() {
           <div className="">
             <VideoSlider getVideolecture={getVideolecture} />
           </div>
-
-          {/* <div className="md:mt-[80px] mt-[40px] md:pb-[100px] pb-[50px]">
-            <div className="container mx-auto">
-              <h6
-                data-aos="fade-right"
-                className="bg-[#D0021B] title-btn mb-[48px] max-w-[245px] w-full font-sans font-bold text-xl leading-[32px] text-white rounded-[4px] py-[6px] px-[16px]"
-              >
-                All Video Lectures
-              </h6>
-              <div className="md:px-[42px] px-[20px]">
-                <div className="grid md:grid-cols-3 grid-cols-1 gap-[16px]">
-                  {getVideolecture?.map((e, i) => (
-                    <div className="video-card overflow-hidden" key={i}>
-                      <Link
-                        to={e?.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                      >
-                        <div className="relative">
-                          <img
-                            src={e?.thumbnail}
-                            className="w-full h-auto object-cover rounded-lg"
-                            alt=""
-                          />
-                          <img
-                            src="assets/youtube.png"
-                            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-12 h-12"
-                            alt=""
-                          />
-                        </div>
-                      </Link>
-
-                      <div data-aos="fade-up">
-                        <h6 className="font-sans font-semibold text-lg leading-[22px] mt-[18px]">
-                          {e?.Discription}
-                        </h6>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div> */}
         </div>
 
         <div className="container mx-auto mt-[100px]">
