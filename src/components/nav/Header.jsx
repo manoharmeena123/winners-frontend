@@ -7,24 +7,17 @@ function Header() {
   const path = useLocation();
   const [exams, setExams] = useState(false);
   const [dropdown, setDropdown] = useState(false);
+  const [openSubCoursesIndex, setOpenSubCoursesIndex] = useState(null);
 
   function handleDropdown() {
     setDropdown(!dropdown);
   }
-  const [openSubCourses, setOpenSubCourses] = useState({});
-  const toggleSubCourses = (index, e) => {
-    e.stopPropagation(); // Prevent the link from being triggered
-    setOpenSubCourses((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
-  };
-  // Close dropdown when unhovered
-  const handleMouseLeave = (index) => {
-    setOpenSubCourses((prevState) => ({
-      ...prevState,
-      [index]: false,
-    }));
+  const toggleSubCourses = (index) => {
+    if (openSubCoursesIndex === index) {
+      setOpenSubCoursesIndex(null); // Close the currently open dropdown
+    } else {
+      setOpenSubCoursesIndex(index); // Open the new dropdown
+    }
   };
 
   return (
@@ -197,21 +190,21 @@ function Header() {
                     {courses.map((course, index) => (
                       <div key={index} className="relative">
                         {/* Top-level course */}
-                        <div className="flex items-center" onClick={(e) => toggleSubCourses(index, e)}>
+                        <div
+                          className="flex items-center"
+                          onClick={(e) => toggleSubCourses(index, e)}
+                        >
                           <a
                             href={course?.link}
                             className="block px-2 py-1 text-black hover:text-white hover:bg-[#D0021B] rounded-md flex-grow"
                           >
                             {course?.courseName}
                           </a>
-                          <button
-                           
-                            className="ml-2 text-gray-600 hover:text-black focus:outline-none"
-                          >
+                          <button className="ml-2 text-gray-600 hover:text-black focus:outline-none">
                             {/* Arrow Icon */}
                             <img
                               src={
-                                openSubCourses[index]
+                                openSubCoursesIndex === index
                                   ? "/assets/about/up-arrow-key.png"
                                   : "/assets/about/downwards-arrow-key.png"
                               }
@@ -221,23 +214,23 @@ function Header() {
                           </button>
                         </div>
                         {/* Sub-courses dropdown */}
-                        {openSubCourses[index] && course?.subCourses && (
-                          <div
-                            className="bg-white shadow-lg rounded-md p-4 z-20 mt-2"
-                            style={{ minWidth: "200px" }}
-                          >
-                            {course.subCourses.map((subCourse, subIndex) => (
-                              <a
-                                key={subIndex}
-                                href={subCourse?.link}
-                                className="block px-2 py-1 text-gray-700 hover:text-white hover:bg-[#D0021B] rounded-md"
-                                onClick={() => handleMouseLeave(index)}
-                              >
-                                {subCourse?.courseName}
-                              </a>
-                            ))}
-                          </div>
-                        )}
+                        {openSubCoursesIndex === index &&
+                          course?.subCourses && (
+                            <div
+                              className="bg-white shadow-lg rounded-md p-4 z-20 mt-2"
+                              style={{ minWidth: "200px" }}
+                            >
+                              {course.subCourses.map((subCourse, subIndex) => (
+                                <a
+                                  key={subIndex}
+                                  href={subCourse?.link}
+                                  className="block px-2 py-1 text-gray-700 hover:text-white hover:bg-[#D0021B] rounded-md"
+                                >
+                                  {subCourse?.courseName}
+                                </a>
+                              ))}
+                            </div>
+                          )}
                       </div>
                     ))}
                   </div>
