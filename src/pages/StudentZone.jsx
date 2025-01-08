@@ -6,38 +6,25 @@ import Header from "../components/nav/Header";
 import Vacancies from "../components/slider/Vacancies";
 import VideoSlider from "../components/slider/VideoSlider";
 import ZoneSlider from "../components/slider/ZoneSlider";
-
 import AdmitCardSlider from "../components/slider/AdmitCardSlider";
 import MaterialSlider from "../components/slider/MaterialSlider";
 import ApplyNow from "./ApplyNow";
+import Loading from "../utils/Loading";
 
-const data = [
-  { id: 1 },
-  { id: 2 },
-  { id: 3 },
-  { id: 4 },
-  { id: 5 },
-  { id: 6 },
-  { id: 7 },
-  { id: 8 },
-  { id: 9 },
-];
-
-function StudentZone() {
+const StudentZone = () => {
   const [activeBtn, setActiveBtn] = useState("Vacancies");
-  // const navigate = useNavigate()
-  const [Notification, setNotification] = useState([]);
-  const [AdmitCard, setAdmitCard] = useState([]);
-  const [result, setresult] = useState([]);
-  const [getVideolecture, setGetVideolecture] = useState([]);
-  const [Getallforms, setGetallforms] = useState([]);
+  const [notification, setNotification] = useState([]);
+  const [admitCard, setAdmitCard] = useState([]);
+  const [result, setResult] = useState([]);
+  const [getVideoLecture, setGetVideoLecture] = useState([]);
+  const [getAllForms, setGetAllForms] = useState([]);
   const [studyMaterial, setStudyMaterial] = useState([]);
-  const [Loading, setLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true); // Track loading state
 
   useEffect(() => {
     const fetchAllData = async () => {
       try {
-        setLoading(true);
+        setIsLoading(true); // Start loading
 
         // Fetch all data concurrently using Promise.all
         const [
@@ -59,15 +46,15 @@ function StudentZone() {
         // Set all state at once
         setNotification(notificationRes?.data?.data || []);
         setAdmitCard(admitCardRes?.data?.data || []);
-        setresult(resultRes?.data?.data || []);
-        setGetallforms(formsRes?.data?.data || []);
-        setGetVideolecture(videoLectureRes?.data?.data || []);
+        setResult(resultRes?.data?.data || []);
+        setGetAllForms(formsRes?.data?.data || []);
+        setGetVideoLecture(videoLectureRes?.data?.data || []);
         setStudyMaterial(studyMaterialRes?.data?.data || []);
 
-        setLoading(false);
+        setIsLoading(false); // Stop loading after data is fetched
       } catch (error) {
         console.error("Error fetching data:", error);
-        setLoading(false);
+        setIsLoading(false); // Stop loading in case of an error
       }
     };
 
@@ -81,7 +68,7 @@ function StudentZone() {
     Aos.init({
       duration: 1000,
     });
-  }, []); // Single useEffect for all data fetching
+  }, []);
 
   return (
     <>
@@ -99,11 +86,8 @@ function StudentZone() {
         </div>
       </div>
 
-      {Loading ? (
-        <div className="flex justify-center items-center h-[400px]">
-          <div className="loader"></div>
-          <p className="text-lg text-[#0D1266] font-bold">Loading...</p>
-        </div>
+      {isLoading ? (
+        <Loading message="Fetching data, please wait..." />
       ) : (
         <div className="bg-white md:pt-[40px] pt-[20px] mb-[40px] md:px-[90px] px-[20px]">
           <div className="container mx-auto">
@@ -145,12 +129,12 @@ function StudentZone() {
 
             {activeBtn === "Vacancies" && (
               <div className="border zone-slider flex flex-wrap md:justify-start justify-center gap-[14px] overflow-hidden border-[#D2D0D0] md:py-[55px] py-[26px] md:px-[47px] px-[20px] rounded-[16px] bg-white">
-                <Vacancies Notification={Notification} />
+                <Vacancies Notification={notification} />
               </div>
             )}
             {activeBtn === "Admit Cards" && (
               <div className="border zone-slider flex flex-wrap md:justify-start justify-center gap-[14px] overflow-hidden border-[#D2D0D0] md:py-[55px] py-[26px] md:px-[47px] px-[20px] rounded-[16px] bg-white">
-                <ZoneSlider AdmitCard={AdmitCard} />
+                <ZoneSlider AdmitCard={admitCard} />
               </div>
             )}
             {activeBtn === "Results" && (
@@ -172,16 +156,6 @@ function StudentZone() {
           <MaterialSlider studyMaterial={studyMaterial} />
         </div>
 
-        {/* <div className="pt-[80px]">
-          <div className="container mx-auto">
-            <div className="flex justify-between items-center py-[10px]">
-              <h6 data-aos="fade-up" className="font-sans font-bold text-3xl leading-[44px] text-black">
-                Video Lectures
-              </h6> 
-            </div>
-          </div>
-        </div> */}
-
         <div className="pt-[40px] overflow-hidden px-[30px]">
           <div className="container mx-auto">
             <h6
@@ -195,7 +169,7 @@ function StudentZone() {
 
         <div className="container mx-auto">
           <div className="">
-            <VideoSlider getVideolecture={getVideolecture} />
+            <VideoSlider getVideolecture={getVideoLecture} />
           </div>
         </div>
 
@@ -215,6 +189,6 @@ function StudentZone() {
       <Footer />
     </>
   );
-}
+};
 
 export default StudentZone;

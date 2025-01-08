@@ -14,10 +14,6 @@ import ContactUS from "./pages/ContactUs";
 // import Franchies from "./pages/Franchies";
 import Scholarship from "./pages/Scholarship";
 
-import Railway2 from "./pages/Railway2";
-
-import Railway4 from "./pages/Railway4";
-
 import Lenis from "lenis";
 import "aos/dist/aos.css";
 import Marathonform from "./pages/Marathonform";
