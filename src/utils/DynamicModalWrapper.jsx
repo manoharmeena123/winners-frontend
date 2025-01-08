@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReusableModal from "./ReusableModal";
-import Loading from "./Loading";
+import Loading from "../components/loading/Loading";
 
 const DynamicModalWrapper = ({ children, bottomImage, centerImage }) => {
   const [showBottomModal, setShowBottomModal] = useState(false);

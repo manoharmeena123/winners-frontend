@@ -9,7 +9,7 @@ import ZoneSlider from "../components/slider/ZoneSlider";
 import AdmitCardSlider from "../components/slider/AdmitCardSlider";
 import MaterialSlider from "../components/slider/MaterialSlider";
 import ApplyNow from "./ApplyNow";
-import Loading from "../utils/Loading";
+import Loading from "../components/loading/Loading";
 
 const StudentZone = () => {
   const [activeBtn, setActiveBtn] = useState("Vacancies");

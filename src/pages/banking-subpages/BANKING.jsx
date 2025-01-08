@@ -14,7 +14,7 @@ import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 import DynamicModalWrapper from "../../utils/DynamicModalWrapper";
 import useFullScreen from "../../hooks/useFullScreen";
-import Loading from "../../utils/Loading";
+import Loading from "../../components/loading/Loading";
 
 const BANKING = () => {
   const { title, intro, content, officialWebsites } = bankingExamData;
