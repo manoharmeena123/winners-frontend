@@ -12,18 +12,19 @@ import StudentSlider from "../components/slider/StudentSlider";
 // import { useSpring, animated, config } from "react-spring";
 import { Link } from "react-router-dom";
 import ReactHelmet from "../utils/ReactHelmet";
+import Loading from "../components/loading/Loading";
 
 function Home() {
   // const navigate = useNavigate();
   const [our, setOur] = useState("Upcoming Batches");
-  const [Loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [vacancies, setVacancies] = useState([]);
   const [Upcomingexam, setUpcomingExam] = useState([]);
   const [courses, setCourses] = useState([]);
   const [filteredCourses, setFilteredCourses] = useState(courses);
   const [courseName, setCourseName] = useState("All");
 
-  console.log(filteredCourses, "allllllllll")
+  console.log(filteredCourses, "allllllllll");
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -35,26 +36,24 @@ function Home() {
           GetApi("api/admin/GetAllNotification"),
           GetApi("api/admin/getAllUpcomingexam"),
           GetApi("api/course/getAllCourses"),
-          
         ]);
         setVacancies(notifications?.data?.data || []);
-        
-        console.log(notifications?.data?.data)
+
+        console.log(notifications?.data?.data);
         setUpcomingExam(exams?.data?.data || []);
         setCourses(allCourses?.data?.data || []);
         setFilteredCourses(allCourses?.data?.data || []);
         setLoading(false);
       } catch (error) {
         console.error("Error:", error);
-        setLoading(false); 
+        setLoading(false);
       }
     };
     fetchData();
   }, []);
 
-
   function ResetFilter() {
-    setFilteredCourses(courses)
+    setFilteredCourses(courses);
     setCourseName("All");
   }
 
@@ -73,18 +72,16 @@ function Home() {
     }
   };
 
-
   function handleOur(e) {
     setOur(e);
   }
-
+  if (loading) {
+    return <Loading variant="danger" message="Fetching data..." />;
+  }
   return (
     <>
       <Header />
-      <ReactHelmet
-        title="The Winners Institute"
-        canonicalLink="/"
-      />
+      <ReactHelmet title="The Winners Institute" canonicalLink="/" />
       <div className="hero-section overflow-hidden">
         <div className="container-fluid m-auto">
           <div className="wrap-1"></div>
@@ -106,9 +103,9 @@ function Home() {
               </div>
               <div data-aos="fade-right">
                 <p className="font-[Outfit] font-[400] text-[18px] leading-[28px] text-[#FFFFFF] md:pb-[40px] pb-[10px]">
-                  WiNNERS Institute - Best Learning Platform to prepare Government
-                  Competitive Exams along with Top Educators and structured crash
-                  courses, mock tests, and practice section.
+                  WiNNERS Institute - Best Learning Platform to prepare
+                  Government Competitive Exams along with Top Educators and
+                  structured crash courses, mock tests, and practice section.
                 </p>
               </div>
               {/* Uncomment and adjust button if needed */}
@@ -125,7 +122,6 @@ function Home() {
         </div>
       </div>
 
-
       <div className="overflow-hidden md:px-0 px-[20px] md:pt-[128px] pt-[60px] relative">
         <div className="container m-auto">
           <img
@@ -138,9 +134,7 @@ function Home() {
             className="roll md:block hidden"
             alt=""
           />
-          <div
-         
-            data-aos="flip-left">
+          <div data-aos="flip-left">
             <h6 className="font-sans font-[700] text-[36px] leading-[36.97px] text-center text-[#000000] pb-[18px]">
               Explore Our <span className="text-[#D0021B]"> Courses</span>
             </h6>
@@ -466,33 +460,34 @@ function Home() {
         <div className="container m-auto">
           <div className="relative bg-[#1C2672] rounded-[12px] md:py-[68px] py-[20px] md:px-[46px] px-[20px]">
             <div className=" items-center justify-center">
-              <img src="https://firebasestorage.googleapis.com/v0/b/imageuploader-7809e.appspot.com/o/WhatsApp%20Image%202024-10-22%20at%2008.59.53_c23eef73%20(1).png?alt=media&token=e5371a69-8691-4d24-b956-da23c20f2e51"
-                className="md:absolute hidden xl:block relative lg:right-[0] right-[0] bottom-0" alt=""
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/imageuploader-7809e.appspot.com/o/WhatsApp%20Image%202024-10-22%20at%2008.59.53_c23eef73%20(1).png?alt=media&token=e5371a69-8691-4d24-b956-da23c20f2e51"
+                className="md:absolute hidden xl:block relative lg:right-[0] right-[0] bottom-0"
+                alt=""
                 style={{
-                height : "580px"
-              }}
+                  height: "580px",
+                }}
               />
-              <img src="https://firebasestorage.googleapis.com/v0/b/imageuploader-7809e.appspot.com/o/WhatsApp%20Image%202024-10-22%20at%2008.59.53_c23eef73%20(1).png?alt=media&token=e5371a69-8691-4d24-b956-da23c20f2e51"
-                className="md:absolute hidden lg:block xl:hidden relative right-[-4rem] bottom-0" alt=""
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/imageuploader-7809e.appspot.com/o/WhatsApp%20Image%202024-10-22%20at%2008.59.53_c23eef73%20(1).png?alt=media&token=e5371a69-8691-4d24-b956-da23c20f2e51"
+                className="md:absolute hidden lg:block xl:hidden relative right-[-4rem] bottom-0"
+                alt=""
                 style={{
-                height : "380px"
-              }}
+                  height: "380px",
+                }}
               />
             </div>
-            
-         
-           
- <img
+
+            <img
               src="https://firebasestorage.googleapis.com/v0/b/imageuploader-7809e.appspot.com/o/WhatsApp%20Image%202024-10-22%20at%2008.59.53_c23eef73%20(1).png?alt=media&token=e5371a69-8691-4d24-b956-da23c20f2e51"
-                className="lg:absolute lg:hidden relative lg:right-0 right-auto am:top-[-140px] top-auto"
+              className="lg:absolute lg:hidden relative lg:right-0 right-auto am:top-[-140px] top-auto"
               alt=""
               style={{
                 // height : "500px"
-                margin : 'auto',
-                "height": "100%"
-            }}
-              />
-         
+                margin: "auto",
+                height: "100%",
+              }}
+            />
 
             <div data-aos="fade-right">
               <h6 className="font-sans font-[700] md:text-[40px] text-[30px] md:leading-[44px] leading-[34px] text-[#FFFFFF] md:pb-[54px] pb-[20px]">
@@ -533,7 +528,7 @@ function Home() {
         <div className="container m-auto">
           <div data-aos="fade-left">
             <h6 className="font-sans font-[700] text-[36px] leading-[44px] text-center text-[#000000] pb-[17px]">
-            What Students Say
+              What Students Say
             </h6>
             <p className="font-[Outfit] font-[400] pb-[56px] text-[18px] leading-[22px] text-center text-[#616161]">
               A Practical platform based on practicot knowledge with best &

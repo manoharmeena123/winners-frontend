@@ -13,9 +13,13 @@ const Loading = ({ variant = "danger", message = "Loading..." }) => {
   };
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white z-50" style={{ height: "100vh", width: "100vw" }}>
+    <div
+      className="fixed inset-0 flex flex-col items-center justify-center bg-white z-50"
+      style={{ height: "100vh", width: "100vw" }}
+    >
+      {/* Spinner */}
       <div
-        className={`h-16 w-16 animate-[spinner-grow_0.75s_linear_infinite] rounded-full bg-current align-[-0.125em] ${variantClasses[variant]}  motion-reduce:animate-[spinner-grow_1.5s_linear_infinite]`}
+        className={`h-16 w-16 animate-[spinner-grow_0.75s_linear_infinite] rounded-full bg-current align-[-0.125em] ${variantClasses[variant]} motion-reduce:animate-[spinner-grow_1.5s_linear_infinite]`}
         role="status"
       >
         <span
@@ -24,6 +28,8 @@ const Loading = ({ variant = "danger", message = "Loading..." }) => {
           {message}
         </span>
       </div>
+
+      {/* Message */}
       {message && <p className="mt-4 text-gray-600 text-lg">{message}</p>}
     </div>
   );

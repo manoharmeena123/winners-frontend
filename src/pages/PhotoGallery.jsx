@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { GetApi } from "../ApIcall";
 import Footer from "../components/footer/Footer";
 import Header from "../components/nav/Header";
+import Loading from "../components/loading/Loading";
 
 function PhotoGallery() {
   const [galleries, setGalleries] = useState([]);
@@ -11,6 +12,7 @@ function PhotoGallery() {
   const [fullScreenImage, setFullScreenImage] = useState(null);
   const [allCategories, setAllCategories] = useState([]);
   const [imageDimensions, setImageDimensions] = useState({});
+  const [isLoading, setIsLoading] = useState(true); // Loading state
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -19,6 +21,8 @@ function PhotoGallery() {
   useEffect(() => {
     const fetchGalleries = async () => {
       try {
+        setIsLoading(true); // Start loading
+
         const response = await GetApi("api/admin/getAllGallary");
         const fetchedGalleries = response?.data?.data || [];
         setGalleries(fetchedGalleries);
@@ -34,8 +38,11 @@ function PhotoGallery() {
 
         setSelectedEvents(eventsPerYear); // Set default selected events per year
         setAllCategories(categories);
+
+        setIsLoading(false); // Stop loading
       } catch (error) {
         console.error("Error:", error);
+        setIsLoading(false); // Stop loading in case of an error
       }
     };
 
@@ -46,7 +53,6 @@ function PhotoGallery() {
     Aos.init({ duration: 1000 });
   }, []);
 
-  // Function to handle the image preload and get dimensions
   const preloadImages = (selectedGallery) => {
     const dimensions = {};
     const promises = selectedGallery.Images.map((image, index) => {
@@ -79,20 +85,18 @@ function PhotoGallery() {
     setFullScreenImage(null);
   };
 
-  // Select the gallery for the year
   const getSelectedGallery = (year) => {
     return galleries.filter(
       (gallery) => gallery.Year === year && selectedEvents[year] === gallery.Name
     );
   };
 
-  // Effect to preload images when a gallery is selected
   useEffect(() => {
     const selectedGallery = galleries.find((gallery) => gallery.Name === selectedEvents);
     if (selectedGallery) {
       preloadImages(selectedGallery);
     }
-  }, [selectedEvents, galleries]); // Re-run when selectedEvents or galleries change
+  }, [selectedEvents, galleries]);
 
   const renderYearSection = (year, galleriesOfYear) => {
     const selectedGallery = galleriesOfYear.find(
@@ -143,18 +147,25 @@ function PhotoGallery() {
 
   const uniqueYears = [...new Set(galleries.map((gallery) => gallery.Year))];
 
+  if (isLoading) {
+    // Display loading indicator while data is being fetched
+    return <Loading message="Loading photo gallery, please wait..." />;
+  }
+
   return (
     <>
       <Header />
       <div className="photo-section flex items-center justify-center">
         <div className="container m-auto text-center">
-          <h6 className="text-[#FFFFFF] text-[46px] font-bold pb-[14px]" data-aos="fade-up">Photo Gallery</h6>
+          <h6 className="text-[#FFFFFF] text-[46px] font-bold pb-[14px]" data-aos="fade-up">
+            Photo Gallery
+          </h6>
           <img
-            
-            style={{
-              margin  :"auto"
-            }}
-            src="assets/video/line-white.svg" alt="" data-aos="fade-up" />
+            style={{ margin: "auto" }}
+            src="assets/video/line-white.svg"
+            alt=""
+            data-aos="fade-up"
+          />
         </div>
       </div>
 
