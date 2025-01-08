@@ -18,10 +18,11 @@ import { classes, testSeries, sscbooksdata } from "../../data/sscData";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 import DynamicModalWrapper from "../../utils/DynamicModalWrapper";
+import useFullScreen from "../../hooks/useFullScreen";
 
 const MPPATWARI = () => {
   const { title, intro, content, officialWebsite } = mpPatwariData;
-
+  const { mediaRefs, handleFullScreen } = useFullScreen();
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
   // State to track whether the table is open or closed
   const [isOpen, setIsOpen] = useState(true);
@@ -46,34 +47,7 @@ const MPPATWARI = () => {
   const handleBuyNowClick = (link) => {
     window.location.replace(`${link}`);
   };
-  const mediaRefs = useRef([]);
 
-  const handleFullScreen = (index) => {
-    const mediaElement = mediaRefs.current[index];
-    if (mediaElement) {
-      if (!document.fullscreenElement) {
-        // Enter fullscreen mode
-        if (mediaElement.requestFullscreen) {
-          mediaElement.requestFullscreen();
-        } else if (mediaElement.webkitRequestFullscreen) {
-          mediaElement.webkitRequestFullscreen(); // Safari
-        } else if (mediaElement.msRequestFullscreen) {
-          mediaElement.msRequestFullscreen(); // IE11
-        } else {
-          console.error("Fullscreen API is not supported by this browser.");
-        }
-      } else {
-        // Exit fullscreen mode
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen(); // Safari
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen(); // IE11
-        }
-      }
-    }
-  };
   return (
     <>
       <Header />

@@ -17,10 +17,12 @@ import {
 } from "../../data/railway-alp";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
+import DynamicModalWrapper from "../../utils/DynamicModalWrapper";
+import useFullScreen from "../../hooks/useFullScreen";
 
 const RailwayTECHNICIAN = () => {
   const { title, intro, content, officialWebsite } = railwayAlpData;
-
+  const { mediaRefs, handleFullScreen } = useFullScreen();
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
   // State to track whether the table is open or closed
   const [isOpen, setIsOpen] = useState(true);
@@ -45,38 +47,7 @@ const RailwayTECHNICIAN = () => {
   const handleBuyNowClick = (link) => {
     window.location.replace(`${link}`);
   };
-  const mediaRefs = useRef([]);
-
-  const handleFullScreen = (index) => {
-    const mediaElement = mediaRefs.current[index];
-  
-    if (mediaElement) {
-      if (!document.fullscreenElement) {
-        // Enter fullscreen mode
-        if (mediaElement.requestFullscreen) {
-          mediaElement.requestFullscreen();
-        } else if (mediaElement.webkitRequestFullscreen) {
-          mediaElement.webkitRequestFullscreen(); // Safari
-        } else if (mediaElement.msRequestFullscreen) {
-          mediaElement.msRequestFullscreen(); // IE11
-        } else {
-          console.error("Fullscreen API is not supported by this browser.");
-        }
-      } else {
-        // Exit fullscreen mode
-        if (document.exitFullscreen) {
-          document.exitFullscreen();
-        } else if (document.webkitExitFullscreen) {
-          document.webkitExitFullscreen(); // Safari
-        } else if (document.msExitFullscreen) {
-          document.msExitFullscreen(); // IE11
-        }
-      }
-    } else {
-      console.error("Media element not found.");
-    }
-  };
-  
+ 
 
   return (
     <>
@@ -85,7 +56,11 @@ const RailwayTECHNICIAN = () => {
         title="Railway-ALP - The WiNNERS Institute"
         canonicalLink="/ssc-cgl"
       />
-      <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
+           <DynamicModalWrapper
+        bottomImage="https://appx-content-v2.classx.co.in/subject/2025-01-07-0.8639866624465913.jpeg"
+        centerImage="https://appx-content-v2.classx.co.in/paid_course3/2025-01-07-0.912741095495186.jpg"
+      >
+          <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
         {/* Breadcrumbs */}
         <nav className="text-sm mb-4" aria-label="Breadcrumb">
           <ol className="list-none p-0 inline-flex">
@@ -762,6 +737,8 @@ const RailwayTECHNICIAN = () => {
           </div>
         </div>
       </div>
+      </DynamicModalWrapper>
+    
       <Footer />
     </>
   );
