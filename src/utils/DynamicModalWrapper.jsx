@@ -2,7 +2,13 @@ import React, { useState, useEffect } from "react";
 import ReusableModal from "./ReusableModal";
 import Loading from "../components/loading/Loading";
 
-const DynamicModalWrapper = ({ children, bottomImage, centerImage }) => {
+const DynamicModalWrapper = ({
+  children,
+  bottomImage,
+  centerImage,
+  centerlink,
+  bottomlink,
+}) => {
   const [showBottomModal, setShowBottomModal] = useState(false);
   const [showCenterModal, setShowCenterModal] = useState(false);
   const [loading, setLoading] = useState(true); // Loading state
@@ -47,6 +53,7 @@ const DynamicModalWrapper = ({ children, bottomImage, centerImage }) => {
             onClose={handleBottomModalClose}
             position="bottom"
             image={bottomImage}
+            link={centerlink}
           />
           {/* Center Modal */}
           <ReusableModal
@@ -54,6 +61,7 @@ const DynamicModalWrapper = ({ children, bottomImage, centerImage }) => {
             onClose={handleCenterModalClose}
             position="center"
             image={centerImage}
+            link={bottomlink}
           />
         </>
       )}

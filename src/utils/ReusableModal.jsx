@@ -1,7 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
-const ReusableModal = ({ isVisible, onClose, position, image, altText }) => {
+const ReusableModal = ({
+  isVisible,
+  onClose,
+  position,
+  image,
+  altText,
+  link,
+}) => {
   if (!isVisible) return null;
 
   const positionClasses =
@@ -49,11 +57,22 @@ const ReusableModal = ({ isVisible, onClose, position, image, altText }) => {
             </svg>
           </button>
 
-          <img
-            src={image}
-            alt={altText || "Modal Content"}
-            className="w-full h-auto rounded-md object-contain"
-          />
+          {/* Wrap the image in a <Link> tag for navigation */}
+          {link ? (
+            <Link to={link}>
+              <img
+                src={image}
+                alt={altText || "Modal Content"}
+                className="w-full h-auto rounded-md object-contain"
+              />
+            </Link>
+          ) : (
+            <img
+              src={image}
+              alt={altText || "Modal Content"}
+              className="w-full h-auto rounded-md object-contain"
+            />
+          )}
         </div>
       </div>
     </div>
@@ -66,10 +85,12 @@ ReusableModal.propTypes = {
   position: PropTypes.oneOf(["bottom", "center"]).isRequired,
   image: PropTypes.string.isRequired,
   altText: PropTypes.string,
+  link: PropTypes.string, // New prop for internal navigation link
 };
 
 ReusableModal.defaultProps = {
   altText: "Modal Content",
+  link: null, // Default value for link
 };
 
 export default ReusableModal;
