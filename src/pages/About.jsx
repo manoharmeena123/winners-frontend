@@ -1,20 +1,36 @@
 import Aos from "aos";
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { Link } from "react-router-dom";
 import Footer from "../components/footer/Footer";
 import Header from "../components/nav/Header";
 import WhySlider from "../components/slider/WhySlider";
+import Loading from "../components/loading/Loading";
 
 function About() {
+  const [loading, setLoading] = useState(true); // Loading state
+
   useEffect(() => {
+    // Simulate a loading process
+    const timer = setTimeout(() => {
+      setLoading(false); // Stop loading after 1.5 seconds
+    }, 1500);
+
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
+
     Aos.init({
       duration: 1000,
     });
+
+    return () => clearTimeout(timer); // Cleanup timer
   }, []);
+
+  if (loading) {
+    return <Loading message="Loading About Page..." />;
+  }
+
   return (
     <>
       <Header />

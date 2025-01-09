@@ -14,26 +14,21 @@ const ReusableModal = ({
 
   const positionClasses =
     position === "bottom"
-      ? "bottom-0 left-0 right-0 mx-auto"
-      : "top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2";
-
-  const handleOverlayClick = (e) => {
-    // Close modal if clicked on overlay, not on content
-    if (e.target === e.currentTarget) {
-      onClose();
-    }
-  };
+      ? "fixed bottom-0 left-0 right-0 mx-auto" // Bottom modal: fixed at bottom
+      : "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"; // Center modal: fixed at center
 
   return (
     <div
-      className={`fixed inset-0 ${
-        position === "center" ? "bg-black bg-opacity-50" : ""
-      } flex items-center justify-center z-50`}
+      className={`${
+        position === "center" ? "fixed inset-0 bg-black bg-opacity-50 z-50" : "fixed inset-0"
+      }`} // Overlay only for center modal
       role="dialog"
       aria-modal="true"
     >
       <div
-        className={`absolute ${positionClasses} bg-white rounded-md shadow-lg w-8/12 sm:w-10/12 md:w-3/4 lg:w-2/4 xl:w-1/3`}
+        className={`absolute ${positionClasses} ${
+          position === "bottom" ? "" : "bg-white"
+        } rounded-md shadow-lg w-8/12 sm:w-10/12 md:w-3/4 lg:w-2/4 xl:w-1/3`}
       >
         <div className="relative">
           <button

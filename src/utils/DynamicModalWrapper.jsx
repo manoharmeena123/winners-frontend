@@ -24,7 +24,9 @@ const DynamicModalWrapper = ({
 
   useEffect(() => {
     // Show bottom modal when the component is mounted
-    setShowBottomModal(true);
+    setTimeout(() => {
+      setShowBottomModal(true);
+    }, 2000);
   }, []);
 
   const handleBottomModalClose = () => {
