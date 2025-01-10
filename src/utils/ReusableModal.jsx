@@ -6,10 +6,13 @@ const ReusableModal = ({
   isVisible,
   onClose,
   position,
-  image,
-  altText,
-  link,
+  centerImage,
+  bottomImage,
+  centerLink,
+  bottomLink,
 }) => {
+  console.log("object :>> ", bottomImage);
+  console.log("object :>> ", centerImage);
   if (!isVisible) return null;
 
   const positionClasses =
@@ -20,7 +23,9 @@ const ReusableModal = ({
   return (
     <div
       className={`${
-        position === "center" ? "fixed inset-0 bg-black bg-opacity-50 z-50" : "fixed inset-0"
+        position === "center"
+          ? "fixed inset-0 bg-black bg-opacity-50 z-50"
+          : "fixed inset-0"
       }`} // Overlay only for center modal
       role="dialog"
       aria-modal="true"
@@ -51,23 +56,41 @@ const ReusableModal = ({
               />
             </svg>
           </button>
-
-          {/* Wrap the image in a <Link> tag for navigation */}
-          {link ? (
-            <Link to={link}>
+          {/* Render bottom modal image */}
+          {position === "bottom" &&
+            (bottomLink ? (
+              <Link to={bottomLink}>
+                <img
+                  src={bottomImage}
+                  alt={"Bottom Modal"}
+                  className="w-full h-auto object-fill md:max-w-[100%] md:mx-auto md:max-h-[200px] lg:max-w-[100%] lg:mx-auto lg:max-h-[200px]" // Add max height for mid and large screens
+                />
+              </Link>
+            ) : (
               <img
-                src={image}
-                alt={altText || "Modal Content"}
-                className="w-full h-auto rounded-md object-contain"
+                src={bottomImage}
+                alt={"Bottom Modal"}
+                className="w-full h-auto object-fill md:max-w-[100%] md:mx-auto md:max-h-[200px] lg:max-w-[100%] lg:mx-auto lg:max-h-[200px]" // Add max height for mid and large screens
               />
-            </Link>
-          ) : (
-            <img
-              src={image}
-              alt={altText || "Modal Content"}
-              className="w-full h-auto rounded-md object-contain"
-            />
-          )}
+            ))}
+
+          {/* Render center modal image */}
+          {position === "center" &&
+            (centerLink ? (
+              <Link to={centerLink}>
+                <img
+                  src={centerImage}
+                  alt={"Center Modal"}
+                  className="w-full h-auto object-contain"
+                />
+              </Link>
+            ) : (
+              <img
+                src={centerImage}
+                alt={"Center Modal"}
+                className="w-full h-auto object-contain"
+              />
+            ))}
         </div>
       </div>
     </div>
@@ -78,14 +101,18 @@ ReusableModal.propTypes = {
   isVisible: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   position: PropTypes.oneOf(["bottom", "center"]).isRequired,
-  image: PropTypes.string.isRequired,
-  altText: PropTypes.string,
-  link: PropTypes.string, // New prop for internal navigation link
+  centerImage: PropTypes.string, // Image for center modal
+  bottomImage: PropTypes.string, // Image for bottom modal
+  centerLink: PropTypes.string, // Link for center modal
+  bottomLink: PropTypes.string, // Link for bottom modal
 };
 
 ReusableModal.defaultProps = {
+  centerImage: null,
+  bottomImage: null,
   altText: "Modal Content",
-  link: null, // Default value for link
+  centerLink: null,
+  bottomLink: null,
 };
 
 export default ReusableModal;

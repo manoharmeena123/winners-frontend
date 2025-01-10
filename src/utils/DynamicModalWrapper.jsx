@@ -15,27 +15,29 @@ const DynamicModalWrapper = ({
 
   useEffect(() => {
     // Simulate loading for children rendering
-    const timer = setTimeout(() => {
-      setLoading(false); // Stop loading after 1.5 seconds (or adjust timing as needed)
+    const loadingTimer = setTimeout(() => {
+      setLoading(false); // Stop loading after 1.5 seconds
     }, 1500);
 
-    return () => clearTimeout(timer);
-  }, []);
-
-  useEffect(() => {
-    // Show bottom modal when the component is mounted
-    setTimeout(() => {
+    // Show bottom modal after 2 seconds
+    const bottomModalTimer = setTimeout(() => {
       setShowBottomModal(true);
     }, 2000);
+
+    // Show center modal after 5 seconds
+    const centerModalTimer = setTimeout(() => {
+      setShowCenterModal(true);
+    }, 5000);
+
+    return () => {
+      clearTimeout(loadingTimer);
+      clearTimeout(bottomModalTimer);
+      clearTimeout(centerModalTimer);
+    };
   }, []);
 
   const handleBottomModalClose = () => {
     setShowBottomModal(false);
-    const timer = setTimeout(() => {
-      setShowCenterModal(true);
-    }, 1000);
-
-    return () => clearTimeout(timer);
   };
 
   const handleCenterModalClose = () => {
@@ -54,16 +56,16 @@ const DynamicModalWrapper = ({
             isVisible={showBottomModal}
             onClose={handleBottomModalClose}
             position="bottom"
-            image={bottomImage}
-            link={centerlink}
+            bottomImage={bottomImage}
+            bottomLink={bottomlink}
           />
           {/* Center Modal */}
           <ReusableModal
             isVisible={showCenterModal}
             onClose={handleCenterModalClose}
             position="center"
-            image={centerImage}
-            link={bottomlink}
+            centerImage={centerImage}
+            centerLink={centerlink}
           />
         </>
       )}
