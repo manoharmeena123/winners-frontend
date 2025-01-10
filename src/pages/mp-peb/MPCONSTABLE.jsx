@@ -824,21 +824,30 @@ const MPCONSTABLE = () => {
                 alt="Placeholder"
                 className="w-full rounded-2xl shadow-md cursor-pointer"
                 ref={(el) => (mediaRefs.current[0] = el)}
-                onClick={() => handleFullScreen(0)}
+                onClick={() =>
+                  (window.location.href =
+                    "https://live.winnersinstitute.in/courses/468-esb-vyapam-foundation-combo-online-course-cvf1224")
+                }
               />
               <img
                 src="/mppeb/women-supervisor-group5-square.jpg"
                 alt="Placeholder"
                 className="w-full rounded-2xl shadow-md cursor-pointer"
                 ref={(el) => (mediaRefs.current[2] = el)}
-                onClick={() => handleFullScreen(2)}
+                onClick={() =>
+                  (window.location.href =
+                    "https://live.winnersinstitute.in/courses/465-esb-vyapam-group-5-2024-part-a-complete-recorded-course-mpg5-1124")
+                }
               />
               <img
-                src="/mppeb/mp-tet-group-3.jpg"
+                src="/mppeb/women-supervisor.png"
                 alt="Placeholder"
                 className="w-full rounded-2xl shadow-md cursor-pointer"
                 ref={(el) => (mediaRefs.current[4] = el)}
-                onClick={() => handleFullScreen(4)}
+                onClick={() =>
+                  (window.location.href =
+                    "https://books.winnerspublication.store/products/mahila-supervisor-book-combo-set")
+                }
               />
               <iframe
                 ref={(el) => (mediaRefs.current[1] = el)}

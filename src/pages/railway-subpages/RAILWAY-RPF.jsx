@@ -563,21 +563,20 @@ const RPF = () => {
                 alt="Placeholder"
                 className="w-full rounded-2xl shadow-md cursor-pointer"
                 ref={(el) => (mediaRefs.current[0] = el)}
-                onClick={() => handleFullScreen(0)}
+                onClick={() =>
+                  (window.location.href =
+                    "https://live.winnersinstitute.in/courses/504-railway-exam-2025-ntpc-group-d-complete-online-course-re1224")
+                }
               />
               <img
                 src="/railways/raiway-foundation.jpeg"
                 alt="Placeholder"
                 className="w-full rounded-2xl shadow-md cursor-pointer"
                 ref={(el) => (mediaRefs.current[2] = el)}
-                onClick={() => handleFullScreen(2)}
-              />
-              <img
-                src="/mppeb/mp-tet-group-3.jpg"
-                alt="Placeholder"
-                className="w-full rounded-2xl shadow-md cursor-pointer"
-                ref={(el) => (mediaRefs.current[4] = el)}
-                onClick={() => handleFullScreen(4)}
+                onClick={() =>
+                  (window.location.href =
+                    "https://live.winnersinstitute.in/courses/474-railway-foundation-combo-online-course-crf1224")
+                }
               />
               <iframe
                 className="w-full rounded-2xl shadow-md cursor-pointer"

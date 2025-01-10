@@ -881,14 +881,20 @@ const BANKING = () => {
                 alt="Placeholder"
                 className="w-full rounded-2xl shadow-md cursor-pointer"
                 ref={(el) => (mediaRefs.current[0] = el)}
-                onClick={() => handleFullScreen(0)}
+                onClick={() =>
+                  (window.location.href =
+                    "https://live.winnersinstitute.in/courses/371-ibps-po-complete-online-course-ippm0324")
+                }
               />
               <img
                 src="banking/sbi-po.jpeg"
                 alt="Placeholder"
                 className="w-full rounded-2xl shadow-md cursor-pointer"
                 ref={(el) => (mediaRefs.current[2] = el)}
-                onClick={() => handleFullScreen(2)}
+                onClick={() =>
+                  (window.location.href =
+                    "https://live.winnersinstitute.in/courses/508-sbi-po-2025-complete-online-course-sbip0125")
+                }
               />
               <iframe
                 className="w-full rounded-2xl shadow-md cursor-pointer"

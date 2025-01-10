@@ -650,21 +650,30 @@ function SSC() {
                 alt="Placeholder"
                 className="w-full rounded-2xl shadow-md cursor-pointer"
                 ref={(el) => (mediaRefs.current[0] = el)}
-                onClick={() => handleFullScreen(0)}
+                onClick={() =>
+                  (window.location.href =
+                    "https://live.winnersinstitute.in/courses/492-ssc-cgl-2025-complete-online-course-cgl1224")
+                }
               />
               <img
                 src="/ssc-chsl1-2025.jpeg"
                 alt="Placeholder"
                 className="w-full rounded-2xl shadow-md cursor-pointer"
                 ref={(el) => (mediaRefs.current[2] = el)}
-                onClick={() => handleFullScreen(2)}
+                onClick={() =>
+                  (window.location.href =
+                    "https://live.winnersinstitute.in/courses/491-ssc-chsl-2025-complete-online-course-chsl1224")
+                }
               />
               <img
                 src="/ssc-combo-books1.jpeg"
                 alt="Placeholder"
                 className="w-full rounded-2xl shadow-md cursor-pointer"
                 ref={(el) => (mediaRefs.current[4] = el)}
-                onClick={() => handleFullScreen(4)}
+                onClick={() =>
+                  (window.location.href =
+                    "https://books.winnerspublication.store/products/ssc-foundation-complete-book-combo")
+                }
               />
               <iframe
                 ref={(el) => (mediaRefs.current[1] = el)}
