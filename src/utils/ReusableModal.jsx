@@ -15,7 +15,7 @@ const ReusableModal = ({
 
   const positionClasses =
     position === "bottom"
-      ? "fixed bottom-0 left-0 right-0 mx-auto pointer-events-auto" // Allow interaction for bottom modal
+      ? "fixed bottom-0 left-0 right-0 mx-auto animate-slide-up" // Add slide-up animation for bottom modal
       : "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"; // Center modal: fixed at center
 
   return (
@@ -23,20 +23,20 @@ const ReusableModal = ({
       className={`${
         position === "center"
           ? "fixed inset-0 bg-black bg-opacity-50 z-50 pointer-events-auto"
-          : " fixed inset-0 pointer-events-none" // Allow interaction with the body when it's a bottom modal
-      }`}
+          : "fixed inset-0 pointer-events-none"
+      }`} // Overlay only for center modal
       role="dialog"
       aria-modal="true"
     >
       <div
         className={`absolute ${positionClasses} ${
-          position === "bottom" ? "" : "bg-white"
+          position === "bottom" ? "animate-slideUp bg-white" : " bg-white"
         } rounded-md shadow-lg w-8/12 sm:w-10/12 md:w-3/4 lg:w-2/4 xl:w-1/3`}
       >
         <div className="relative">
           <button
             onClick={onClose}
-            className="absolute top-0 right-0 text-black bg-white hover:bg-red-700 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-red-300"
+            className="absolute top-0 right-0 text-black bg-white hover:bg-red-700 rounded-full p-1 focus:outline-none focus:ring-2 focus:ring-red-300 pointer-events-auto"
             aria-label="Close modal"
           >
             <svg
@@ -61,14 +61,14 @@ const ReusableModal = ({
                 <img
                   src={bottomImage}
                   alt={"Bottom Modal"}
-                  className="w-full h-auto object-fill md:max-w-[100%] md:mx-auto md:max-h-[150px] lg:max-w-[100%] lg:mx-auto lg:max-h-[150px]" // Add max height for mid and large screens
+                  className="w-full h-auto object-fill md:max-w-[100%] md:mx-auto md:max-h-[150px] lg:max-w-[100%] lg:mx-auto lg:max-h-[150px]"
                 />
               </Link>
             ) : (
               <img
                 src={bottomImage}
                 alt={"Bottom Modal"}
-                className="w-full h-auto object-fill md:max-w-[100%] md:mx-auto md:max-h-[150px] lg:max-w-[100%] lg:mx-auto lg:max-h-[150px]" // Add max height for mid and large screens
+                className="w-full h-auto object-fill md:max-w-[100%] md:mx-auto md:max-h-[150px] lg:max-w-[100%] lg:mx-auto lg:max-h-[150px]"
               />
             ))}
 
@@ -99,16 +99,15 @@ ReusableModal.propTypes = {
   isVisible: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   position: PropTypes.oneOf(["bottom", "center"]).isRequired,
-  centerImage: PropTypes.string, // Image for center modal
-  bottomImage: PropTypes.string, // Image for bottom modal
-  centerLink: PropTypes.string, // Link for center modal
-  bottomLink: PropTypes.string, // Link for bottom modal
+  centerImage: PropTypes.string,
+  bottomImage: PropTypes.string,
+  centerLink: PropTypes.string,
+  bottomLink: PropTypes.string,
 };
 
 ReusableModal.defaultProps = {
   centerImage: null,
   bottomImage: null,
-  altText: "Modal Content",
   centerLink: null,
   bottomLink: null,
 };
