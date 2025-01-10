@@ -63,14 +63,14 @@ const ReusableModal = ({
                 <img
                   src={bottomImage}
                   alt={"Bottom Modal"}
-                  className="w-full h-auto object-fill md:max-w-[100%] md:mx-auto md:max-h-[200px] lg:max-w-[100%] lg:mx-auto lg:max-h-[200px]" // Add max height for mid and large screens
+                  className="w-full h-auto object-fill md:max-w-[100%] md:mx-auto md:max-h-[150px] lg:max-w-[100%] lg:mx-auto lg:max-h-[150px]" // Add max height for mid and large screens
                 />
               </Link>
             ) : (
               <img
                 src={bottomImage}
                 alt={"Bottom Modal"}
-                className="w-full h-auto object-fill md:max-w-[100%] md:mx-auto md:max-h-[200px] lg:max-w-[100%] lg:mx-auto lg:max-h-[200px]" // Add max height for mid and large screens
+                className="w-full h-auto object-fill md:max-w-[100%] md:mx-auto md:max-h-[150px] lg:max-w-[100%] lg:mx-auto lg:max-h-[150px]" // Add max height for mid and large screens
               />
             ))}
 
