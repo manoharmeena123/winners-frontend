@@ -56,7 +56,9 @@ const MPJAILPRAHARI = () => {
       />
       <DynamicModalWrapper
         bottomImage="https://appx-content-v2.classx.co.in/subject/2025-01-07-0.8639866624465913.jpeg"
-        centerImage="https://appx-content-v2.classx.co.in/paid_course3/2025-01-07-0.912741095495186.jpg"
+        centerImage="https://appx-content-v2.classx.co.in/paid_course3/2025-01-07-0.8613862074392284.jpeg"
+        centerlink="https://live.winnersinstitute.in/courses/468-esb-vyapam-foundation-combo-online-course-cvf1224"
+        bottomlink="https://live.winnersinstitute.in/courses/482-mahila-supervisor-2025-30-online-course-cmps1224"
       >
         <div className="container mx-auto max-w-[1166px] mx-auto lg:px-6 sm:px-0 py-4 mt-[82px] relative">
           {/* Breadcrumbs */}
@@ -722,9 +724,8 @@ const MPJAILPRAHARI = () => {
             </div>
           </div>
         </div>
+        <Footer />
       </DynamicModalWrapper>
-
-      <Footer />
     </>
   );
 };
