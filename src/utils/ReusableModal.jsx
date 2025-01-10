@@ -11,22 +11,20 @@ const ReusableModal = ({
   centerLink,
   bottomLink,
 }) => {
-  console.log("object :>> ", bottomImage);
-  console.log("object :>> ", centerImage);
   if (!isVisible) return null;
 
   const positionClasses =
     position === "bottom"
-      ? "fixed bottom-0 left-0 right-0 mx-auto" // Bottom modal: fixed at bottom
+      ? "fixed bottom-0 left-0 right-0 mx-auto pointer-events-auto" // Allow interaction for bottom modal
       : "fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"; // Center modal: fixed at center
 
   return (
     <div
       className={`${
         position === "center"
-          ? "fixed inset-0 bg-black bg-opacity-50 z-50"
-          : "fixed inset-0"
-      }`} // Overlay only for center modal
+          ? "fixed inset-0 bg-black bg-opacity-50 z-50 pointer-events-auto"
+          : " fixed inset-0 pointer-events-none" // Allow interaction with the body when it's a bottom modal
+      }`}
       role="dialog"
       aria-modal="true"
     >
