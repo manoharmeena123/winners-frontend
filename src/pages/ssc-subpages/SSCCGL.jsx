@@ -831,16 +831,6 @@ const SSCCGL = () => {
                   <h2 className="text-lg font-bold mb-2">
                     SSC CGL 2024 Exam Pattern & Syllabus for Tier 2
                   </h2>
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    {syllabus?.syllabusDetails2?.content1?.paragraph}
-                  </p>
-                  <ul className="list-disc pl-6 space-y-2">
-                    {syllabus?.syllabusDetails2?.content1?.topics.map(
-                      (topic, index) => (
-                        <li key={index}>{topic}</li>
-                      )
-                    )}
-                  </ul>
                   <div className="overflow-x-auto mt-6">
                     <table className="table-auto border-collapse w-full">
                       <thead>
@@ -855,13 +845,18 @@ const SSCCGL = () => {
                       </thead>
                       <tbody>
                         {syllabus?.syllabusDetails2?.syllabusDetailsoftier2?.map(
-                          (section, index) => (
-                            <React.Fragment key={index}>
-                              {section.modules.map((module, index) => (
-                                <tr key={index}>
-                                  <td className="border px-4 py-2">
-                                    {section.section}
-                                  </td>
+                          (section, sectionIndex) => (
+                            <React.Fragment key={sectionIndex}>
+                              {section.modules.map((module, moduleIndex) => (
+                                <tr key={moduleIndex}>
+                                  {moduleIndex === 0 && (
+                                    <td
+                                      className="border px-4 py-2"
+                                      rowSpan={section.modules.length}
+                                    >
+                                      {section.section}
+                                    </td>
+                                  )}
                                   <td className="border px-4 py-2">
                                     {module.module}
                                   </td>
@@ -869,14 +864,25 @@ const SSCCGL = () => {
                                     {module.subject}
                                   </td>
                                   <td className="border px-4 py-2">
-                                    {module.questions}
+                                    {module.questions || "N/A"}
                                   </td>
                                   <td className="border px-4 py-2">
-                                    {module.marks}
+                                    {module.marks || "N/A"}
                                   </td>
-                                  <td className="border px-4 py-2">
-                                    {module.time} minutes
-                                  </td>
+                                  {moduleIndex === 0 && (
+                                    <td
+                                      className="border px-4 py-2"
+                                      rowSpan={
+                                        section.modules.filter(
+                                          (m) => m.time === module.time
+                                        ).length
+                                      }
+                                    >
+                                      {module.time === 60
+                                        ? "60 minutes"
+                                        : `${module.time} minutes`}
+                                    </td>
+                                  )}
                                 </tr>
                               ))}
                             </React.Fragment>
@@ -896,7 +902,7 @@ const SSCCGL = () => {
                         </tr>
                       </tfoot>
                     </table>
-                  </div>
+                  </div>{" "}
                 </div>
                 <div className="overflow mx-auto mt-4">
                   <div className="mb-6">
