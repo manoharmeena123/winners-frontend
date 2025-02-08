@@ -100,9 +100,9 @@ export const sscgdExamData = {
     conductingAuthority: "Staff Selection Commission",
     examName: { text: "SSC GD Exam 2025", link: "https://ssc.gov.in" },
     post: "Constables",
-    notificationDate: "5 Sept 2024",
+    notificationDate: "11 November 2025",
     examDates:
-      "4th, 5th, 6th, 7th, 8th, 9th, 10th, 11th, 12th, 13th, 17th, 18th, 19th, 20th, 21st, 24th, and 25th February 2025",
+      "March - April 2026",
     selectionProcess: [
       "Computer Based Test",
       "Physical Efficiency Test",

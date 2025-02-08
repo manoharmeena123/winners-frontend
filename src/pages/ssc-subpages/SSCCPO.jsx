@@ -114,11 +114,11 @@ const SSCCPO = () => {
                       Important Dates
                     </h3>
                     <ul className="list-disc ml-5 text-gray-700">
-                      <li>Notification Release: 5th September 2024</li>
+                      <li>Notification Release: 16th May 2025</li>
                       <li>
-                        Application Dates: 5th September - 14th October 2024
+                        Application Dates: 16th May 2025 - 14th June 2025
                       </li>
-                      <li>Exam Dates: January - February 2025 (Tentative)</li>
+                      <li>Exam Dates: July - August 2025 (Tentative)</li>
                     </ul>
                   </div>
                 </div>

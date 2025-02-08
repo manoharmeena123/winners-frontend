@@ -723,6 +723,32 @@ const SSCCHSL = () => {
                     </tbody>
                   </table>
                 </div>
+                {/* SSC CHSL Negative Marking */}
+                <div className="bg-white shadow-md rounded-md p-6 mt-6">
+                  {/* Section Title */}
+                  <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
+                    {sscchslExamData?.tier2ExamPattern?.negativemarking?.title}
+                  </h2>
+
+                  {/* Description */}
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    {
+                      sscchslExamData?.tier2ExamPattern?.negativemarking
+                        ?.description
+                    }
+                  </p>
+
+                  {/* Tips List */}
+                  <ul className="list-disc pl-6 text-gray-700 leading-relaxed">
+                    {sscchslExamData?.tier2ExamPattern?.negativemarking?.tips.map(
+                      (tip, index) => (
+                        <li key={index} className="mb-2">
+                          {tip}
+                        </li>
+                      )
+                    )}
+                  </ul>
+                </div>
                 {/* SSC CHSL Tier-II Syllabus */}
                 <div
                   id="ssc-chsl-tier-2-syllabus"
@@ -763,32 +789,6 @@ const SSCCHSL = () => {
                   </table>
                 </div>
 
-                {/* SSC CHSL Negative Marking */}
-                <div className="bg-white shadow-md rounded-md p-6 mt-6">
-                  {/* Section Title */}
-                  <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
-                    {sscchslExamData?.tier2ExamPattern?.negativemarking?.title}
-                  </h2>
-
-                  {/* Description */}
-                  <p className="text-gray-700 leading-relaxed mb-4">
-                    {
-                      sscchslExamData?.tier2ExamPattern?.negativemarking
-                        ?.description
-                    }
-                  </p>
-
-                  {/* Tips List */}
-                  <ul className="list-disc pl-6 text-gray-700 leading-relaxed">
-                    {sscchslExamData?.tier2ExamPattern?.negativemarking?.tips.map(
-                      (tip, index) => (
-                        <li key={index} className="mb-2">
-                          {tip}
-                        </li>
-                      )
-                    )}
-                  </ul>
-                </div>
 
                 {/* Reasoning and General Intelligence: Verbal and non-verbal type*/}
                 <div className="bg-white rounded-md p-6 mt-6">
@@ -833,7 +833,7 @@ const SSCCHSL = () => {
                   </ul>
                 </div>
                 {/* Syllabus for Quantitative Aptitude */}
-                <div className="bg-white rounded-md p-6 ">
+                {/* <div className="bg-white rounded-md p-6 ">
                   <h6 className="underline font-semibold text-lg mb-4">
                     {
                       sscchslExamData?.tier2ExamPattern?.quantitativeAptitude
@@ -847,7 +847,7 @@ const SSCCHSL = () => {
                       )
                     )}
                   </ul>
-                </div>
+                </div> */}
 
                 {/*  Computer Proficiency */}
                 <div className="overflow-x-auto">

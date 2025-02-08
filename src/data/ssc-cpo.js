@@ -142,7 +142,7 @@ export const sscCpoExamData = {
         ],
       },
       {
-        section: "3. EnglishComprehensionAndLanguage:",
+        section: "3. English Comprehension And Language:",
         points: [
           "Improve comprehension, grammar, and vocabulary",
           "Read newspapers, especially editorials, to enhance vocabulary and understanding",
@@ -151,7 +151,7 @@ export const sscCpoExamData = {
         ],
       },
       {
-        section: "4. GeneralReasoning:",
+        section: "4. General Reasoning:",
         points: [
           "Recognized as an easy and scoring section by many candidates",
           "Practice a variety of question types to build familiarity",
@@ -398,13 +398,9 @@ export const sscCpoExamData = {
       {
         question: "How do I download my SSC CPO admit card?",
         answer:
-          "Candidates may download their SSC CPO admit card 2025 by visiting their SSC CPO regional website and clicking on the admit card option on the home page.",
+          "Candidates may download their SSC CPO admit card 2025 by visiting their SSC regional website and clicking on the admit card option on the home page.",
       },
-      {
-        question: "What is the SSC CPO eligibility?",
-        answer:
-          "An Indian citizen between the age of 20- 25 years with a bachelor’s degree from a recognized univers.",
-      },
+  
       {
         question: "What is SSC CPO work?",
         answer:

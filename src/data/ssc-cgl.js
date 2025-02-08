@@ -804,33 +804,29 @@ export const sscExamData = {
         {
           subject: "Quantitative Aptitude",
           books: [
-            "Quantitative Aptitude for Competitive Examinations by R.S. Aggarwal",
-            "Fast Track Objective Arithmetic by Rajesh Verma",
-            "Quantitative Aptitude Quantum CAT by Sarvesh K. Verma",
+            "Maths Pro Arithmetic and Advance Complete Book by Aditya sir",
+            "MATHS Formula by Aditya sir",
           ],
         },
         {
           subject: "General Intelligence and Reasoning",
           books: [
-            "A Modern Approach to Verbal & Non-Verbal Reasoning by R.S. Aggarwal",
-            "Analytical Reasoning by M.K. Pandey",
-            "Logical and Analytical Reasoning by A.K. Gupta",
+            "Reasonoing book by Aditya sir ",
           ],
         },
         {
           subject: "English",
           books: [
-            "Objective General English by S.P. Bakshi",
-            "Word Power Made Easy by Norman Lewis",
-            "High School English Grammar and Composition by Wren and Martin",
+            "General English (Bilingual Book) by Winners Publications",
+            "The English Pro Vocabulary Book by Winners Publications"
           ],
         },
         {
           subject: "General Awareness",
           books: [
-            "Lucent’s General Knowledge by Dr. Binay Karna, Manwendra Mukul, and Sanjeev Kumar",
-            "General Knowledge by Arihant Publications",
-            "Manorama Yearbook by Mammen Mathew",
+            "Static GK Sanjivani Book by Winners Publications",
+            "General Science 5K+ One Liner by Winners Publications",
+            "History, Geography, Polity Combo Book Set by Winners Publications"
           ],
         },
       ],
@@ -948,7 +944,7 @@ export const sscExamtableData = {
             `,
       },
       {
-        post: "Compiler Posts",
+        post: "Statistical Investigator Grade-II ",
         qualification: `
               - Bachelor's Degree from a recognized institution with Economics
               OR

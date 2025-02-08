@@ -112,7 +112,7 @@ const SSCGD = () => {
                       Important Dates
                     </h3>
                     <ul className="list-disc ml-5 text-gray-700">
-                      <li>Written Exam: February 4 - 25, 2025</li>
+                      <li>Written Exam: 	March - April 2026</li>
                     </ul>
                   </div>
                 </div>
