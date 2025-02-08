@@ -4,21 +4,21 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
 import {
-  ibpsClerkData,
+  sbiClerkData,
   ibpsRrbExamData,
   tableOfContentsData,
   classes,
   smallScreenClasses,
   largeScreenClasses,
-} from "../../data/ibps-clerk";
+} from "../../data/sbi-clerk";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 import DynamicModalWrapper from "../../utils/DynamicModalWrapper";
 import useFullScreen from "../../hooks/useFullScreen";
 
-const IBPSCLERK = () => {
+const SBICLERK = () => {
   const { mediaRefs, handleFullScreen } = useFullScreen();
-  const { title, intro, content, officialWebsite } = ibpsClerkData;
+  const { title, intro, content, officialWebsite } = sbiClerkData;
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
   // State to track whether the table is open or closed
@@ -49,7 +49,7 @@ const IBPSCLERK = () => {
     <>
       <Header />
       <ReactHelmet
-        title="IBPS Clerk  - The WiNNERS Institute"
+        title="SBI Clerk - The WiNNERS Institute"
         canonicalLink="/ibps-clerk"
       />
       <DynamicModalWrapper
@@ -69,7 +69,7 @@ const IBPSCLERK = () => {
                 <span className="text-gray-400">&nbsp;&nbsp;»&nbsp;&nbsp;</span>
               </li>
               <li>
-                <span className="text-gray-500">IBPS Clerk</span>
+                <span className="text-gray-500">SBI Clerk</span>
               </li>
             </ol>
           </nav>
@@ -78,7 +78,7 @@ const IBPSCLERK = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
             {/* Main Column */}
             <div className="md:col-span-9">
-              {/* First Section: RBI Assistant Intro */}
+              {/* First Section: SBI Clerk Intro */}
               <div id="ssc-cgl-2025" className="bg-white  rounded-md  mb-3">
                 <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">
                   {title}
@@ -186,9 +186,9 @@ const IBPSCLERK = () => {
                   </ul>
                 </div>
               </div>
-              {/* Second Section: About RBI Assistant */}
+              {/* Second Section: About SBI Clerk */}
               <div
-                id="what-is-ibps-clerk"
+                id="what-is-ibps-clerk-sbi-clerk"
                 className="bg-white shadow-md rounded-md p-6 mb-6 mt-6"
               >
                 <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -198,9 +198,9 @@ const IBPSCLERK = () => {
                   {ibpsRrbExamData?.about.content}
                 </p>
               </div>
-              {/* Second Section:  RBI Assistant Syllbus  */}
+              {/* Second Section:  SBI Clerk Syllbus  */}
               <div
-                id="ibps-clerk-2025-syllabus"
+                id="ibps-clerk-sbi-clerk-2025-syllabus"
                 className="bg-white shadow-md rounded-md p-6 mb-6 mt-6"
               >
                 <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -210,7 +210,7 @@ const IBPSCLERK = () => {
                   {ibpsRrbExamData?.syllabus?.content}
                 </p>
               </div>
-              {/* Third Section: RBI Assistant Preliums Syllabus Details */}
+              {/* Third Section: SBI Clerk Preliums Syllabus Details */}
               <div
                 id="preliminary-exam-syllabus"
                 className="overflow-x-auto shadow-md rounded-md p-6 mt-6"
@@ -284,13 +284,13 @@ const IBPSCLERK = () => {
                       </td>
                       <td className="border border-gray-300 px-4 py-2">
                         {ibpsRrbExamData?.prelimsSyllabus?.totalTime} Min
-                      </td> 
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              {/* RBI Assistant 2025 Main Syllabus  */}
+              {/* SBI Clerk 2025 Main Syllabus  */}
               <div
                 id="mains-exam-syllabus"
                 className="overflow-x-auto shadow-md rounded-md p-6 mt-6"
@@ -329,7 +329,7 @@ const IBPSCLERK = () => {
               </div>
 
               <div
-                id="ibps-clerk-prelims-syllabus"
+                id="ibps-clerk-sbi-clerk-prelims-syllabus"
                 className="container mx-auto shadow-md rounded-md p-6 mt-6"
               >
                 <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -378,7 +378,7 @@ const IBPSCLERK = () => {
               </div>
 
               <div
-                id="ibps-clerk-mains-syllabus"
+                id="ibps-clerk-sbi-clerk-mains-syllabus"
                 className="container mx-auto shadow-md rounded-md p-6 mt-6"
               >
                 <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -428,7 +428,7 @@ const IBPSCLERK = () => {
 
               {/* Frequently Asked Questions Section */}
               <div
-                id="frequently-asked-questions-about-ibps-clerk-2025"
+                id="frequently-asked-questions-about-ibps-clerk-sbi-clerk-2025"
                 className="bg-white shadow-md rounded-md p-6 mt-6"
               >
                 <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -548,4 +548,4 @@ const IBPSCLERK = () => {
   );
 };
 
-export default IBPSCLERK;
+export default SBICLERK;

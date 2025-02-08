@@ -33,12 +33,20 @@ import SSCMTS from "./pages/ssc-subpages/SSCMTS.jsx";
 import SSCCPO from "./pages/ssc-subpages/SSCCPO.jsx";
 import SSCGD from "./pages/ssc-subpages/SSCGD.jsx";
 import SSCStenographer from "./pages/ssc-subpages/SSCStenographer.jsx";
+
+
+// banking
 import IBPSPO from "./pages/banking-subpages/IBPS-PO.jsx";
 import SBIPO from './pages/banking-subpages/SBI-PO.jsx';
-import IBPSRRB from "./pages/banking-subpages/IBPS-RRB.jsx";
+import IBPSRRB from "./pages/banking-subpages/IBPS-RRB-PO.jsx";
 import IBPSRBI from "./pages/banking-subpages/IBPS-RBI.jsx";
 import IBPSCLERK from "./pages/banking-subpages/IBPS-CLERK.jsx";
+import SBICLERK from './pages/banking-subpages/SBI-CLERK.jsx'
+import IBPSRRBCLERK from "./pages/banking-subpages/IBPS-RRB-CLERK.jsx"
 import BANKING from "./pages/banking-subpages/BANKING";
+
+
+
 import MPJAILPRAHARI from "./pages/mp-peb/MPJAILPRAHARI.jsx";
 import MPPATWARI from "./pages/mp-peb/MPPATWARI.jsx";
 import MPCONSTABLE from "./pages/mp-peb/MPCONSTABLE.jsx";
@@ -90,10 +98,13 @@ function App() {
           {/* banking */}
 
           <Route path="/ibps-po" element={<IBPSPO />} />
-          <Route path="/sbi-po" element={<SBIPO />} />
-          <Route path="/ibps-sbi" element={<IBPSRRB />} />
+          <Route path="/sbi-po" element={<SBIPO />} />IBPSRRBCLERK
+          <Route path="/ibps-rrb-po" element={<IBPSRRB />} />
+          <Route path="/ibps-rrb-clerk" element={<IBPSRRBCLERK />} />
           <Route path="/ibps-rbi" element={<IBPSRBI />} />
           <Route path="/ibps-clerk" element={<IBPSCLERK />} />
+          <Route path="/sbi-clerk" element={<SBICLERK />} />
+
           <Route path="/banking-exam-details" element={<BANKING />} />
           {/* <Route path="/applynow" element={<ApplyNow />} /> */}
 

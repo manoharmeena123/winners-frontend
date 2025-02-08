@@ -4,22 +4,21 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
 import {
-  ibpsClerkData,
+  ibpsrrbData,
   ibpsRrbExamData,
   tableOfContentsData,
   classes,
   smallScreenClasses,
   largeScreenClasses,
-} from "../../data/ibps-clerk";
+} from "../../data/ibps-rrb-clerk";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 import DynamicModalWrapper from "../../utils/DynamicModalWrapper";
 import useFullScreen from "../../hooks/useFullScreen";
 
-const IBPSCLERK = () => {
+const IBPSRRBCLERK = () => {
+  const { title, intro, content, officialWebsite } = ibpsrrbData;
   const { mediaRefs, handleFullScreen } = useFullScreen();
-  const { title, intro, content, officialWebsite } = ibpsClerkData;
-
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
   // State to track whether the table is open or closed
   const [isOpen, setIsOpen] = useState(true);
@@ -49,8 +48,8 @@ const IBPSCLERK = () => {
     <>
       <Header />
       <ReactHelmet
-        title="IBPS Clerk  - The WiNNERS Institute"
-        canonicalLink="/ibps-clerk"
+        title="IBPS RRB's PO & Clerk - The WiNNERS Institute"
+        canonicalLink="/ibps-sbi"
       />
       <DynamicModalWrapper
         bottomImage="https://appx-content-v2.classx.co.in/subject/2025-01-07-0.8639866624465913.jpeg"
@@ -69,7 +68,7 @@ const IBPSCLERK = () => {
                 <span className="text-gray-400">&nbsp;&nbsp;»&nbsp;&nbsp;</span>
               </li>
               <li>
-                <span className="text-gray-500">IBPS Clerk</span>
+                <span className="text-gray-500">IBPS RRB's PO & Clerk</span>
               </li>
             </ol>
           </nav>
@@ -78,7 +77,7 @@ const IBPSCLERK = () => {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-2">
             {/* Main Column */}
             <div className="md:col-span-9">
-              {/* First Section: RBI Assistant Intro */}
+              {/* First Section: SSC CGL Intro */}
               <div id="ssc-cgl-2025" className="bg-white  rounded-md  mb-3">
                 <h1 className="lg:text-3xl md:text-2xl font-bold text-gray-800 mb-4">
                   {title}
@@ -186,9 +185,9 @@ const IBPSCLERK = () => {
                   </ul>
                 </div>
               </div>
-              {/* Second Section: About RBI Assistant */}
+              {/* Second Section: About IBPS-PO */}
               <div
-                id="what-is-ibps-clerk"
+                id="what-is-ibps-rrb-po-clerk-exam"
                 className="bg-white shadow-md rounded-md p-6 mb-6 mt-6"
               >
                 <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -198,9 +197,9 @@ const IBPSCLERK = () => {
                   {ibpsRrbExamData?.about.content}
                 </p>
               </div>
-              {/* Second Section:  RBI Assistant Syllbus  */}
+              {/* Second Section:  IBPS-PO Syllbus  */}
               <div
-                id="ibps-clerk-2025-syllabus"
+                id="ibps-rrb-po-clerk-2025-syllabus"
                 className="bg-white shadow-md rounded-md p-6 mb-6 mt-6"
               >
                 <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-800 mb-4">
@@ -210,7 +209,7 @@ const IBPSCLERK = () => {
                   {ibpsRrbExamData?.syllabus?.content}
                 </p>
               </div>
-              {/* Third Section: RBI Assistant Preliums Syllabus Details */}
+              {/* Third Section: IBPS-PO Preliums Syllabus Details */}
               <div
                 id="preliminary-exam-syllabus"
                 className="overflow-x-auto shadow-md rounded-md p-6 mt-6"
@@ -262,9 +261,16 @@ const IBPSCLERK = () => {
                           <td className="border border-gray-300 px-4 py-2">
                             {item.marks}
                           </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {item.time}
-                          </td>
+                          {index === 0 ? (
+                            <td
+                              rowSpan={
+                                ibpsRrbExamData?.prelimsSyllabus.examData.length
+                              }
+                              className="border border-gray-300 px-4 py-2 align-top"
+                            >
+                              A cumulative time of 60 minutes (1 hour)
+                            </td>
+                          ) : null}
                         </tr>
                       )
                     )}
@@ -282,15 +288,13 @@ const IBPSCLERK = () => {
                       <td className="border border-gray-300 px-4 py-2">
                         {ibpsRrbExamData?.prelimsSyllabus?.totalMarks}
                       </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {ibpsRrbExamData?.prelimsSyllabus?.totalTime} Min
-                      </td> 
+                      <td className="border border-gray-300 px-4 py-2"></td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
-              {/* RBI Assistant 2025 Main Syllabus  */}
+              {/* IBPS PO 2025 Main Syllabus  */}
               <div
                 id="mains-exam-syllabus"
                 className="overflow-x-auto shadow-md rounded-md p-6 mt-6"
@@ -329,7 +333,7 @@ const IBPSCLERK = () => {
               </div>
 
               <div
-                id="ibps-clerk-prelims-syllabus"
+                id="ibps-rrb-po-clerk-prelims-syllabus"
                 className="container mx-auto shadow-md rounded-md p-6 mt-6"
               >
                 <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -378,7 +382,7 @@ const IBPSCLERK = () => {
               </div>
 
               <div
-                id="ibps-clerk-mains-syllabus"
+                id="ibps-rrb-po-clerk-mains-syllabus"
                 className="container mx-auto shadow-md rounded-md p-6 mt-6"
               >
                 <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -428,7 +432,7 @@ const IBPSCLERK = () => {
 
               {/* Frequently Asked Questions Section */}
               <div
-                id="frequently-asked-questions-about-ibps-clerk-2025"
+                id="frequently-asked-questions-about-ibps-rrb-po-clerk-2025"
                 className="bg-white shadow-md rounded-md p-6 mt-6"
               >
                 <h3 className="text-xl font-bold text-gray-800 mb-4">
@@ -548,4 +552,4 @@ const IBPSCLERK = () => {
   );
 };
 
-export default IBPSCLERK;
+export default IBPSRRBCLERK;

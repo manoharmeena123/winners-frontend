@@ -1,21 +1,20 @@
 export const ibpsrrbData = {
-  title:
-    "IBPS RRB PO & Clerk 2025: Notification Date Out, Registration, Exam Date",
+  title: "IBPS RRB PO 2025: Notification Date Out, Registration, Exam Date",
   intro: `
-         The IBPS RRB PO & Clerk 2025 is organized by the Institute of Banking Personnel Selection (IBPS) for the recruitment of Probationary Officers and Clerks in Regional Rural Banks (RRBs). The IBPS RRB PO & Clerk 2025 Notification will be released on 1st August 2025 on the official website www.ibps.in. Check complete details about the IBPS RRB PO & Clerk Exam including age limit, qualification, registration process, exam date, and other information shared on this page.
+         The IBPS RRB PO 2025 is organized by the Institute of Banking Personnel Selection (IBPS) for the recruitment of Probationary Officers and Clerks in Regional Rural Banks (RRBs). The IBPS RRB PO 2025 Notification will be released on 1st August 2025 on the official website www.ibps.in. Check complete details about the IBPS RRB PO Exam including age limit, qualification, registration process, exam date, and other information shared on this page.
           `,
   content: `
-          The IBPS RRB PO & Clerk Exam is an annual national-level exam. For the FY 2025-26, the IBPS RRB PO & Clerk 2025 Notification will be released on 1st August 2025 on the official IBPS website at www.ibps.in. Candidates will be able to register for the Probationary Officer and Clerk posts from the same day onwards, and the registration will continue until 31st August 2025. Get complete details about the IBPS RRB PO & Clerk 2025 Exam, Notification, Application Form, Exam Date, Selection Process, and other information here. Bookmark this page for the latest updates about the recruitment cycle.
+          The IBPS RRB PO Exam is an annual national-level exam. For the FY 2025-26, the IBPS RRB PO 2025 Notification will be released on 1st August 2025 on the official IBPS website at www.ibps.in. Candidates will be able to register for the Probationary Officer and Clerk posts from the same day onwards, and the registration will continue until 31st August 2025. Get complete details about the IBPS RRB PO 2025 Exam, Notification, Application Form, Exam Date, Selection Process, and other information here. Bookmark this page for the latest updates about the recruitment cycle.
           `,
   officialWebsite: "https://www.ibps.in",
 };
 export const tableOfContentsData = [
     {
-        title: "What is IBPS RRB PO & Clerk Exam?",
+        title: "What is IBPS RRB PO Exam?",
         link: "#what-is-ibps-rrb-po-clerk-exam",
     },
     {
-        title: "IBPS RRB PO & Clerk 2025 Syllabus",
+        title: "IBPS RRB PO 2025 Syllabus",
         link: "#ibps-rrb-po-clerk-2025-syllabus",
         subItems: [
             {
@@ -27,73 +26,71 @@ export const tableOfContentsData = [
                 link: "#mains-exam-syllabus",
             },
             {
-                title: "IBPS RRB PO & Clerk Prelims Syllabus",
+                title: "IBPS RRB PO Prelims Syllabus",
                 link: "#ibps-rrb-po-clerk-prelims-syllabus",
             },
             {
-                title: "IBPS RRB PO & Clerk Mains Syllabus",
+                title: "IBPS RRB PO Mains Syllabus",
                 link: "#ibps-rrb-po-clerk-mains-syllabus",
             },
         ],
     },
     {
-        title: "Frequently Asked Questions about IBPS RRB PO & Clerk 2025",
+        title: "Frequently Asked Questions about IBPS RRB PO 2025",
         link: "#frequently-asked-questions-about-ibps-rrb-po-clerk-2025",
     },
 ];
 
 export const ibpsRrbExamData = {
   about: {
-    title: "What is IBPS RRB PO & Clerk Exam?",
+    title: "What is IBPS RRB PO Exam?",
     content: `
-                        The IBPS RRB PO & Clerk Exam is a national-level examination conducted annually by the Institute of Banking Personnel Selection (IBPS) for the recruitment of Probationary Officers and Clerks in Regional Rural Banks (RRBs). The exam consists of three stages: Preliminary Exam, Main Exam, and Interview (for PO). Candidates who qualify in all stages are selected for the respective posts. The exam tests candidates on various subjects including quantitative aptitude, reasoning ability, English language, and general awareness. The IBPS RRB PO & Clerk exam is highly competitive and requires thorough preparation.
+                        The IBPS RRB PO Exam is a national-level examination conducted annually by the Institute of Banking Personnel Selection (IBPS) for the recruitment of Probationary Officers and Clerks in Regional Rural Banks (RRBs). The exam consists of three stages: Preliminary Exam, Main Exam, and Interview (for PO). Candidates who qualify in all stages are selected for the respective posts. The exam tests candidates on various subjects including quantitative aptitude, reasoning ability, English language, and general awareness. The IBPS RRB PO exam is highly competitive and requires thorough preparation.
                         `,
   },
   faq: {
     title: "Frequently Asked Questions",
     questions: [
       {
-        question: "What is IBPS RRB PO & Clerk Exam?",
+        question: "What is IBPS RRB PO Exam?",
         answer: `
-                                The IBPS RRB PO & Clerk exam is a national-level test conducted by the Institute of Banking Personnel Selection 
+                                The IBPS RRB PO exam is a national-level test conducted by the Institute of Banking Personnel Selection 
                                 to recruit candidates for the posts of Probationary Officers and Clerks in Regional Rural Banks (RRBs) in India. It includes multiple 
                                 stages such as Preliminary, Main, and Interview (for PO), assessing quantitative aptitude, reasoning, English, and general awareness.
                         `,
       },
       {
-        question:
-          "What is the IBPS RRB PO & Clerk 2025 Notification release date?",
-        answer: `The IBPS RRB PO & Clerk 2025 Notification will be released on 1st August 2025.`,
+        question: "What is the IBPS RRB PO 2025 Notification release date?",
+        answer: `The IBPS RRB PO 2025 Notification will be released on 1st August 2025.`,
       },
       {
-        question: "What is the selection process for IBPS RRB PO & Clerk 2025?",
+        question: "What is the selection process for IBPS RRB PO 2025?",
         answer: `
-                                The IBPS RRB PO & Clerk 2025 Selection process includes Preliminary Exam, Main Exam, and Interview (for PO).
+                                The IBPS RRB PO 2025 Selection process includes Preliminary Exam, Main Exam, and Interview (for PO).
                         `,
       },
       {
-        question:
-          "Is there a negative marking in the IBPS RRB PO & Clerk Exam?",
+        question: "Is there a negative marking in the IBPS RRB PO Exam?",
         answer: `
                                 Yes, there is a negative marking of 0.25 mark for each wrong answer marked in both Preliminary and Main exams.
                         `,
       },
       {
-        question: "Who can apply for the IBPS RRB PO & Clerk Exam?",
+        question: "Who can apply for the IBPS RRB PO Exam?",
         answer: `
                                 Candidates who have a Bachelor's degree can apply for the posts given that they are within the age limit of 18-30 years for PO and 18-28 years for Clerk.
                         `,
       },
       {
-        question: "When is the IBPS RRB PO & Clerk Preliminary Exam 2025?",
-        answer: `The IBPS RRB PO & Clerk Preliminary Exam Date 2025 is expected to be in October 2025.`,
+        question: "When is the IBPS RRB PO Preliminary Exam 2025?",
+        answer: `The IBPS RRB PO Preliminary Exam Date 2025 is expected to be in October 2025.`,
       },
     ],
   },
   syllabus: {
-    title: "IBPS RRB PO & Clerk 2025 Syllabus",
+    title: "IBPS RRB PO 2025 Syllabus",
     content: `
-            The IBPS RRB PO & Clerk 2025 Syllabus is divided into three main sections: Preliminary Exam, Main Exam, and Interview (for PO). Each section tests different skills and knowledge areas. The Preliminary Exam includes English Language, Quantitative Aptitude, and Reasoning Ability. The Main Exam covers Reasoning, General Awareness, Numerical Ability, English/Hindi Language, and Computer Knowledge. The Interview (for PO) assesses the candidate's personality, communication skills, and overall suitability for the banking sector.
+            The IBPS RRB PO 2025 Syllabus is divided into three main sections: Preliminary Exam, Main Exam, and Interview (for PO). Each section tests different skills and knowledge areas. The Preliminary Exam includes English Language, Quantitative Aptitude, and Reasoning Ability. The Main Exam covers Reasoning, General Awareness, Numerical Ability, English/Hindi Language, and Computer Knowledge. The Interview (for PO) assesses the candidate's personality, communication skills, and overall suitability for the banking sector.
             `,
   },
   prelimsSyllabus: {
@@ -149,7 +146,7 @@ export const ibpsRrbExamData = {
     ],
   },
   syllabusData: {
-    title: "IBPS RRB PO & Clerk Prelims Syllabus",
+    title: "IBPS RRB PO Prelims Syllabus",
     tableData: [
       {
         section: "Quantitative Aptitude",
@@ -278,7 +275,7 @@ export const ibpsRrbExamData = {
     ],
   },
   syllabusData2: {
-    title: "IBPS RRB PO & Clerk Mains Syllabus",
+    title: "IBPS RRB PO Mains Syllabus",
     tableData: [
       {
         section: "Data Analysis & Interpretation",

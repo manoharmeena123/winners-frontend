@@ -22,9 +22,11 @@ export const courses = [
       { courseName: "BANKING DETAILS", link: "/banking-exam-details" },
       { courseName: "IBPS PO", link: "/ibps-po" },
       { courseName: "SBI PO", link: "/sbi-po" },
-      { courseName: "IBPS RRB's PO & Clerk", link: "/ibps-sbi" },
+      { courseName: "IBPS RRB PO", link: "/ibps-rrb-po" },
+      { courseName: "IBPS RRB Clerk", link: "/ibps-rrb-clerk" },
       { courseName: "RBI Assistant", link: "/ibps-rbi" },
-      { courseName: "IBPS Clerk & SBI Clerk", link: "/ibps-clerk" },
+      { courseName: "IBPS Clerk", link: "/ibps-clerk" },
+      { courseName: "SBI Clerk", link: "/sbi-clerk" },
     ]
   },
   {

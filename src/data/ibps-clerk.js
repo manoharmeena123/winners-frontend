@@ -1,22 +1,21 @@
-export const ibpsSbiClerkData = {
-  title:
-    "IBPS Clerk & SBI Clerk 2025: Notification Date Out, Registration, Exam Date",
+export const ibpsClerkData = {
+  title: "IBPS Clerk 2025: Notification Date Out, Registration, Exam Date",
   intro: `
-             The IBPS Clerk & SBI Clerk 2025 exams are organized by the Institute of Banking Personnel Selection (IBPS) and State Bank of India (SBI) respectively for the recruitment of clerks in various branches across the country. The notifications for both exams will be released in 2025 on their official websites. Check complete details about the IBPS Clerk & SBI Clerk exams including age limit, qualification, registration process, exam date, and other information shared on this page.
+             The IBPS Clerk 2025 exam is organized by the Institute of Banking Personnel Selection (IBPS) for the recruitment of clerks in various branches across the country. The notification for the exam will be released in 2025 on the official website. Check complete details about the IBPS Clerk exam including age limit, qualification, registration process, exam date, and other information shared on this page.
               `,
   content: `
-              The IBPS Clerk & SBI Clerk exams are annual national-level exams. For the FY 2025-26, the notifications for both exams will be released in 2025 on their respective official websites. Candidates will be able to register for the clerk posts from the same day onwards, and the registration will continue for a specified period. Get complete details about the IBPS Clerk & SBI Clerk 2025 exams, notifications, application forms, exam dates, selection processes, and other information here. Bookmark this page for the latest updates about the recruitment cycles.
+              The IBPS Clerk exam is an annual national-level exam. For the FY 2025-26, the notification for the exam will be released in 2025 on the official IBPS website at www.ibps.in. Candidates will be able to register for the clerk posts from the same day onwards, and the registration will continue for a specified period. Get complete details about the IBPS Clerk 2025 exam, notification, application form, exam date, selection process, and other information here. Bookmark this page for the latest updates about the recruitment cycle.
               `,
   officialWebsite: "https://www.ibps.in",
 };
 export const tableOfContentsData = [
   {
-    title: "What is IBPS Clerk & SBI Clerk?",
-    link: "#what-is-ibps-clerk-sbi-clerk",
+    title: "What is IBPS Clerk?",
+    link: "#what-is-ibps-clerk",
   },
   {
-    title: "IBPS Clerk & SBI Clerk 2025 Syllabus",
-    link: "#ibps-clerk-sbi-clerk-2025-syllabus",
+    title: "IBPS Clerk 2025 Syllabus",
+    link: "#ibps-clerk-2025-syllabus",
     subItems: [
       {
         title: "Preliminary Exam Syllabus",
@@ -26,84 +25,73 @@ export const tableOfContentsData = [
         title: "Mains Exam Syllabus",
         link: "#mains-exam-syllabus",
       },
-      {
-        title: "IBPS Clerk & SBI Clerk Prelims Syllabus",
-        link: "#ibps-clerk-sbi-clerk-prelims-syllabus",
-      },
-      {
-        title: "IBPS Clerk & SBI Clerk Mains Syllabus",
-        link: "#ibps-clerk-sbi-clerk-mains-syllabus",
-      },
     ],
   },
   {
-    title: "Frequently Asked Questions about IBPS Clerk & SBI Clerk 2025",
-    link: "#frequently-asked-questions-about-ibps-clerk-sbi-clerk-2025",
+    title: "Frequently Asked Questions about IBPS Clerk 2025",
+    link: "#frequently-asked-questions-about-ibps-clerk-2025",
   },
 ];
-
 export const ibpsRrbExamData = {
   about: {
-    title: "What is IBPS Clerk & SBI Clerk?",
+    title: "What is IBPS Clerk?",
     content: `
-            The IBPS Clerk & SBI Clerk exams are conducted annually by the Institute of Banking Personnel Selection (IBPS) and State Bank of India (SBI) respectively. These exams are held to recruit clerks for various branches across the country. The selection process includes Preliminary and Main exams, testing candidates on subjects like quantitative aptitude, reasoning ability, English language, and general awareness. Successful candidates are appointed as clerks in different banks. The exams are highly competitive and require thorough preparation.
+            The IBPS Clerk exam is conducted annually by the Institute of Banking Personnel Selection (IBPS). This exam is held to recruit clerks for various branches across the country. The selection process includes Preliminary and Main exams, testing candidates on subjects like quantitative aptitude, reasoning ability, English language, and general awareness. Successful candidates are appointed as clerks in different banks. The exam is highly competitive and requires thorough preparation.
         `,
   },
   faq: {
     title: "Frequently Asked Questions",
     questions: [
       {
-        question: "What is IBPS Clerk & SBI Clerk?",
+        question: "What is IBPS Clerk?",
         answer: `
-                    The IBPS Clerk & SBI Clerk exams are national-level tests conducted by IBPS and SBI respectively to recruit clerks for various branches across the country. The exams include Preliminary and Main stages, assessing candidates on quantitative aptitude, reasoning, English, and general awareness.
+                    The IBPS Clerk exam is a national-level test conducted by IBPS to recruit clerks for various branches across the country. The exam includes Preliminary and Main stages, assessing candidates on quantitative aptitude, reasoning, English, and general awareness.
                 `,
       },
       {
-        question:
-          "When will the IBPS Clerk & SBI Clerk 2025 notifications be released?",
-        answer: `The notifications for IBPS Clerk & SBI Clerk 2025 will be released in 2025 on their official websites.`,
+        question: "When will the IBPS Clerk 2025 notification be released?",
+        answer: `The notification for IBPS Clerk 2025 will be released in 2025 on the official website.`,
       },
       {
-        question:
-          "What is the selection process for IBPS Clerk & SBI Clerk 2025?",
+        question: "What is the selection process for IBPS Clerk 2025?",
         answer: `
-                    The selection process for IBPS Clerk & SBI Clerk 2025 includes Preliminary and Main exams. Candidates who qualify in both stages are selected for the respective posts.
+                    The selection process for IBPS Clerk 2025 includes Preliminary and Main exams. Candidates who qualify in both stages are selected for the respective posts.
                 `,
       },
       {
-        question:
-          "Is there a negative marking in the IBPS Clerk & SBI Clerk exams?",
+        question: "Is there a negative marking in the IBPS Clerk exam?",
         answer: `
                     Yes, there is a negative marking of 0.25 mark for each wrong answer marked in both Preliminary and Main exams.
                 `,
       },
       {
-        question: "Who can apply for the IBPS Clerk & SBI Clerk exams?",
+        question: "Who can apply for the IBPS Clerk exam?",
         answer: `
-                    Candidates who have a Bachelor's degree can apply for the posts given that they are within the age limit specified in the notifications.
+                    Candidates who have a Bachelor's degree can apply for the post given that they are within the age limit specified in the notification.
                 `,
       },
       {
-        question: "When are the IBPS Clerk & SBI Clerk Preliminary Exams 2025?",
-        answer: `The IBPS Clerk & SBI Clerk Preliminary Exams 2025 dates will be announced in the official notifications.`,
+        question: "When is the IBPS Clerk Preliminary Exam 2025?",
+        answer: `The IBPS Clerk Preliminary Exam 2025 date will be announced in the official notification.`,
       },
     ],
   },
   syllabus: {
-    title: "IBPS Clerk & SBI Clerk 2025 Syllabus",
-    content: `The IBPS Clerk & SBI Clerk 2025 Syllabus is divided into two main sections: Preliminary Exam and Main Exam. Each section tests different skills and knowledge areas. The Preliminary Exam includes English Language, Quantitative Aptitude, and Reasoning Ability. The Main Exam covers Reasoning, General Awareness, Numerical Ability, English Language, and Computer Knowledge.
+    title: "IBPS Clerk 2025 Syllabus",
+    content: `The IBPS Clerk 2025 Syllabus is divided into two main sections: Preliminary Exam and Main Exam. Each section tests different skills and knowledge areas. The Preliminary Exam includes English Language, Quantitative Aptitude, and Reasoning Ability. The Main Exam covers Reasoning, General Awareness, Numerical Ability, English Language, and Computer Knowledge.
                 `,
   },
   prelimsSyllabus: {
     title: "Preliminary Exam Syllabus",
     tableTitle: "PRELIMS",
     examData: [
-      { id: 2, section: "Numerical Ability", questions: 35, marks: 35 },
-      { id: 3, section: "Reasoning", questions: 35, marks: 35 },
-      { id: 3, section: "English", questions: 30, marks: 30 },
+      { id: 2, section: "Numerical Ability", questions: 35, marks: 35, time :'20 min' },
+      { id: 3, section: "Reasoning", questions: 35, marks: 35,time :'20 min' },
+      { id: 3, section: "English", questions: 30, marks: 30,time :'20 min' },
     ],
     totalQuestions: 100,
     totalMarks: 100,
+    totalTime : 'A cumulative time of 60 minutes (1 hour)' 
   },
   mainsData: {
     title: "Mains Exam Syllabus",
@@ -142,7 +130,7 @@ export const ibpsRrbExamData = {
     ],
   },
   syllabusData: {
-    title: "RBI Assistant Prelims Syllabus",
+    title: "IBPS Clerk Prelims Syllabus",
     tableData: [
       {
         section: "Quantitative Aptitude",
@@ -192,7 +180,7 @@ export const ibpsRrbExamData = {
     ],
   },
   syllabusData2: {
-    title: "RBI Assistant Mains Syllabus",
+    title: "IBPS Clerk Mains Syllabus",
     tableData: [
       {
         section: "Reasoning",

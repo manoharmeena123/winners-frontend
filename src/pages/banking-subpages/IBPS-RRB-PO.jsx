@@ -10,7 +10,7 @@ import {
   classes,
   smallScreenClasses,
   largeScreenClasses,
-} from "../../data/ibps-sbi";
+} from "../../data/ibps-rrb-po";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 import DynamicModalWrapper from "../../utils/DynamicModalWrapper";
