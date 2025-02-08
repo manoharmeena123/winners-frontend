@@ -34,6 +34,7 @@ import SSCCPO from "./pages/ssc-subpages/SSCCPO.jsx";
 import SSCGD from "./pages/ssc-subpages/SSCGD.jsx";
 import SSCStenographer from "./pages/ssc-subpages/SSCStenographer.jsx";
 import IBPSPO from "./pages/banking-subpages/IBPS-PO.jsx";
+import SBIPO from './pages/banking-subpages/SBI-PO.jsx';
 import IBPSRRB from "./pages/banking-subpages/IBPS-RRB.jsx";
 import IBPSRBI from "./pages/banking-subpages/IBPS-RBI.jsx";
 import IBPSCLERK from "./pages/banking-subpages/IBPS-CLERK.jsx";
@@ -89,6 +90,7 @@ function App() {
           {/* banking */}
 
           <Route path="/ibps-po" element={<IBPSPO />} />
+          <Route path="/sbi-po" element={<SBIPO />} />
           <Route path="/ibps-sbi" element={<IBPSRRB />} />
           <Route path="/ibps-rbi" element={<IBPSRBI />} />
           <Route path="/ibps-clerk" element={<IBPSCLERK />} />

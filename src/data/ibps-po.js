@@ -26,14 +26,6 @@ export const tableOfContentsData = [
         title: "Mains Exam Syllabus",
         link: "#mains-exam-syllabus",
       },
-      {
-        title: "IBPS PO & SBI PO Prelims Syllabus",
-        link: "#ibps-po-sbi-po-prelims-syllabus",
-      },
-      {
-        title: "IBPS PO & SBI PO Mains Syllabus",
-        link: "#ibps-po-sbi-po-mains-syllabus",
-      },
     ],
   },
   {
@@ -95,7 +87,7 @@ export const ipbsExamData = {
       `,
   },
   prelimsSyllabus: {
-    title: "Preliminary Exam Syllabus",
+    title: "IBPS PO Preliminary Exam Syllabus",
     tableTitle: "PRELIMS",
     examData: [
       { id: 1, section: "English", questions: 30, marks: 30 },
@@ -106,7 +98,7 @@ export const ipbsExamData = {
     totalMarks: 100,
   },
   mainsData: {
-    title: "Mains Exam Syllabus",
+    title: "IBPS PO Mains Exam Syllabus",
     tableTitle: "MAINS",
     sections: [
       {
@@ -162,7 +154,7 @@ export const ipbsExamData = {
   },
 
   syllabusData: {
-    title: "  IBPS PO & SBI PO Prelims Syllabus",
+    title: "  IBPS PO Prelims Syllabus",
     tableData: [
       {
         section: "Quantitative Aptitude",
@@ -219,7 +211,7 @@ export const ipbsExamData = {
     ],
   },
   syllabusData2: {
-    title: "IBPS PO & SBI PO Mains Syllabus",
+    title: "IBPS PO Mains Syllabus",
     tableData: [
       {
         section: "Data Analysis & Interpretation",

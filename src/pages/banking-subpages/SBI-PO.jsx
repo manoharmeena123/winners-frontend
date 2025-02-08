@@ -4,21 +4,21 @@ import Footer from "../../components/footer/Footer";
 import Header from "../../components/nav/Header";
 import ReactHelmet from "../../utils/ReactHelmet";
 import {
-  ibpsPoData,
+  sbiPoData,
   ipbsExamData,
   tableOfContentsData,
   classes,
   smallScreenClasses,
   largeScreenClasses,
-} from "../../data/ibps-po";
+} from "../../data/sbi-po";
 import Card from "../../components/card/Card";
 import RelatedPost from "../../components/sidebar/RelatedPost";
 import DynamicModalWrapper from "../../utils/DynamicModalWrapper";
 import useFullScreen from "../../hooks/useFullScreen";
 
-const IBPSPO = () => {
+const SBIPO = () => {
   const { mediaRefs, handleFullScreen } = useFullScreen();
-  const { title, intro, content, officialWebsite } = ibpsPoData;
+  const { title, intro, content, officialWebsite } = sbiPoData;
 
   const [openIndex, setOpenIndex] = useState(null); // Track which question is open
   // State to track whether the table is open or closed
@@ -49,8 +49,8 @@ const IBPSPO = () => {
     <>
       <Header />
       <ReactHelmet
-        title="IBPS-PO - The WiNNERS Institute"
-        canonicalLink="/ibps-po"
+        title="SBI-PO - The WiNNERS Institute"
+        canonicalLink="/sbi-po"
       />
       <DynamicModalWrapper
         bottomImage="https://appx-content-v2.classx.co.in/subject/2025-01-07-0.8639866624465913.jpeg"
@@ -69,7 +69,7 @@ const IBPSPO = () => {
                 <span className="text-gray-400">&nbsp;&nbsp;»&nbsp;&nbsp;</span>
               </li>
               <li>
-                <span className="text-gray-500">IBPS PO</span>
+                <span className="text-gray-500">SBI PO</span>
               </li>
             </ol>
           </nav>
@@ -295,7 +295,7 @@ const IBPSPO = () => {
                 </table>
               </div>
 
-              {/* IBPS PO 2025 Main Syllabus  */}
+              {/* SBI PO 2025 Main Syllabus  */}
               <div
                 id="mains-exam-syllabus"
                 className="overflow-x-auto shadow-md rounded-md p-6 mt-6"
@@ -428,9 +428,9 @@ const IBPSPO = () => {
                   </tbody>
                 </table>
               </div>
-              {/* IBPS PO Prelims Syllabus */}
+              {/*SBI PO Prelims Syllabus */}
               <div
-                id="ibps-po-sbi-po-prelims-syllabus"
+                id="sbi-po-prelims-syllabus"
                 className="container mx-auto shadow-md rounded-md p-6 mt-6"
               >
                 <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -479,7 +479,7 @@ const IBPSPO = () => {
               </div>
 
               <div
-                id="ibps-po-sbi-po-mains-syllabus"
+                id="sbi-po-mains-syllabus"
                 className="container mx-auto shadow-md rounded-md p-6 mt-6"
               >
                 <h2 className="lg:text-2xl sm:text-xl font-bold text-gray-800 mb-4">
@@ -649,4 +649,4 @@ const IBPSPO = () => {
   );
 };
 
-export default IBPSPO;
+export default SBIPO;
