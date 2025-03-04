@@ -266,9 +266,9 @@ const IBPSRRB = () => {
                               rowSpan={
                                 ibpsRrbExamData?.prelimsSyllabus.examData.length
                               }
-                              className="border border-gray-300 px-4 py-2 align-top"
+                              className="border border-gray-300 px-4 py-2 align-center"
                             >
-                              A cumulative time of 60 minutes (1 hour)
+                              45 minutes
                             </td>
                           ) : null}
                         </tr>
@@ -299,7 +299,7 @@ const IBPSRRB = () => {
                 id="mains-exam-syllabus"
                 className="overflow-x-auto shadow-md rounded-md p-6 mt-6"
               >
-                <h6 className="lg:text-2xl sm:text-xl  font-bold text-gray-500 mb-4">
+                <h6 className="lg:text-2xl sm:text-xl font-bold text-gray-500 mb-4">
                   {ibpsRrbExamData?.mainsData?.title}
                 </h6>
                 <table className="table-auto border-collapse border border-gray-300 w-full text-center">
@@ -312,8 +312,13 @@ const IBPSRRB = () => {
                     </tr>
                   </thead>
                   <tbody>
-                    {ibpsRrbExamData?.mainsData?.sections?.map((row) => (
-                      <tr key={row.subject}>
+                    {ibpsRrbExamData?.mainsData?.sections?.map((row, index) => (
+                      <tr
+                        key={row.subject}
+                        className={
+                          row.subject === "Total" ? "font-bold bg-blue-50" : ""
+                        }
+                      >
                         <td className="border border-gray-200 p-2">
                           {row.subject}
                         </td>
@@ -323,15 +328,29 @@ const IBPSRRB = () => {
                         <td className="border border-gray-200 p-2">
                           {row.marks}
                         </td>
-                        <td className="border border-gray-200 p-2">
-                          {row.time}
-                        </td>
+
+                        {/* Render Time only once in the first row but with value from "Total" row */}
+                        {index === 0 ? (
+                          <td
+                            rowSpan={
+                              ibpsRrbExamData?.mainsData?.sections.length
+                            }
+                            className="border border-gray-300 px-4 py-2 align-center"
+                          >
+                            {
+                              ibpsRrbExamData?.mainsData?.sections.find(
+                                (s) => s.subject === "Total"
+                              )?.time
+                            }
+                          </td>
+                        ) : null}
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
 
+              {/* IBPS RRB PO PRELIMS SYLLABUS */}
               <div
                 id="ibps-rrb-po-clerk-prelims-syllabus"
                 className="container mx-auto shadow-md rounded-md p-6 mt-6"
@@ -347,7 +366,7 @@ const IBPSRRB = () => {
                           Section
                         </th>
                         <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-gray-700">
-                          Topics
+                          Topics (Hindi & English)
                         </th>
                       </tr>
                     </thead>
@@ -368,7 +387,10 @@ const IBPSRRB = () => {
                                     key={topicIndex}
                                     className="text-gray-700"
                                   >
-                                    {topic}
+                                    <span className="font-bold">
+                                      {topic.hindi}
+                                    </span>{" "}
+                                    - {topic.english}
                                   </li>
                                 ))}
                               </ul>
@@ -381,6 +403,7 @@ const IBPSRRB = () => {
                 </div>
               </div>
 
+              {/* IBPS RRB PO Mains Syllabus */}
               <div
                 id="ibps-rrb-po-clerk-mains-syllabus"
                 className="container mx-auto shadow-md rounded-md p-6 mt-6"
@@ -396,7 +419,7 @@ const IBPSRRB = () => {
                           Section
                         </th>
                         <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-gray-700">
-                          Topics
+                          Topics (Hindi & English)
                         </th>
                       </tr>
                     </thead>
@@ -417,7 +440,10 @@ const IBPSRRB = () => {
                                     key={topicIndex}
                                     className="text-gray-700"
                                   >
-                                    {topic}
+                                    <span className="font-bold">
+                                      {topic.hindi}
+                                    </span>{" "}
+                                    - {topic.english}
                                   </li>
                                 ))}
                               </ul>

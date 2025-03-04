@@ -262,16 +262,9 @@ const IBPSPO = () => {
                           <td className="border border-gray-300 px-4 py-2">
                             {item.marks}
                           </td>
-                          {index === 0 ? (
-                            <td
-                              rowSpan={
-                                ipbsExamData?.prelimsSyllabus.examData.length
-                              }
-                              className="border border-gray-300 px-4 py-2 align-top"
-                            >
-                              A cumulative time of 60 minutes (1 hour)
-                            </td>
-                          ) : null}
+                          <td className="border border-gray-300 px-4 py-2">
+                            {item.time}
+                          </td>
                         </tr>
                       )
                     )}
@@ -289,145 +282,89 @@ const IBPSPO = () => {
                       <td className="border border-gray-300 px-4 py-2">
                         {ipbsExamData?.prelimsSyllabus?.totalMarks}
                       </td>
-                      <td className="border border-gray-300 px-4 py-2"></td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {ipbsExamData?.prelimsSyllabus?.totalTime}
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
               {/* IBPS PO 2025 Main Syllabus  */}
+          
               <div
+              className="overflow-x-auto shadow-md rounded-md p-6 mt-6"
                 id="mains-exam-syllabus"
-                className="overflow-x-auto shadow-md rounded-md p-6 mt-6"
               >
-                <h6 className="lg:text-2xl sm:text-xl  font-bold text-gray-500 mb-4">
+                <h2 className="lg:text-2xl sm:text-xl  font-bold text-gray-500 mb-4">
                   {ipbsExamData?.mainsData?.title}
-                </h6>
-                <table className="table-auto border-collapse border border-gray-300 w-full text-center">
+                </h2>
+
+                {/* Objective Paper */}
+                <table className="exam-table">
                   <thead>
-                    <tr className="bg-blue-100 text-gray-800">
-                      <th
-                        colSpan={7}
-                        className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300 text-center"
-                      >
-                        {ipbsExamData?.mainsData.tableTitle}
-                      </th>
-                    </tr>
-                    <tr className="bg-gray-100">
-                      <th
-                        rowSpan={2}
-                        className="border border-gray-300 px-4 py-2"
-                      >
-                        Section
-                      </th>
-                      <th
-                        colSpan={2}
-                        className="border border-gray-300 px-4 py-2"
-                      >
-                        Number of Questions
-                      </th>
-                      <th
-                        colSpan={2}
-                        className="border border-gray-300 px-4 py-2"
-                      >
-                        Maximum Marks
-                      </th>
-                      <th
-                        colSpan={2}
-                        className="border border-gray-300 px-4 py-2"
-                      >
-                        Time Allotted
-                      </th>
-                    </tr>
-                    <tr className="bg-gray-100">
-                      <th className="border border-gray-300 px-4 py-2">SBI</th>
-                      <th className="border border-gray-300 px-4 py-2">IBPS</th>
-                      <th className="border border-gray-300 px-4 py-2">SBI</th>
-                      <th className="border border-gray-300 px-4 py-2">IBPS</th>
-                      <th className="border border-gray-300 px-4 py-2">SBI</th>
-                      <th className="border border-gray-300 px-4 py-2">IBPS</th>
+                    <tr>
+                      <th>Sections (Objective)</th>
+                      <th>Number of Questions</th>
+                      <th>Duration</th>
+                      <th>Maximum Marks</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {ipbsExamData?.mainsData?.sections?.map(
+                    {ipbsExamData?.mainsData?.objective.map(
                       (section, index) => (
                         <tr key={index}>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {section.name}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {section.sbiQuestions}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {section.ibpsQuestions}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {section.sbiMarks}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {section.ibpsMarks}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {section.sbiTime}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {section.ibpsTime}
-                          </td>
+                          <td>{section.name}</td>
+                          <td className="text-center">{section.questions}</td>
+                          <td className="text-center">{section.duration}</td>
+                          <td className="text-center">{section.marks}</td>
                         </tr>
                       )
                     )}
-                    <tr className="bg-gray-100 font-bold">
-                      <td className="border border-gray-300 px-4 py-2">
-                        Total
+                    {/* Total Row */}
+                    <tr className="font-bold">
+                      <td>Total</td>
+                      <td className="text-center">
+                        {ipbsExamData?.mainsData?.total.questions}
                       </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {ipbsExamData?.mainsData?.total.sbiQuestions}
+                      <td className="text-center">
+                        {ipbsExamData?.mainsData?.total.duration}
                       </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {ipbsExamData?.mainsData?.total.ibpsQuestions}
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {ipbsExamData?.mainsData?.total.sbiMarks}
-                      </td>
-                      <td className="border border-gray-300 px-4 py-2">
-                        {ipbsExamData?.mainsData?.total.ibpsMarks}
-                      </td>
-                      <td
-                        colSpan={2}
-                        className="border border-gray-300 px-4 py-2"
-                      >
-                        {ipbsExamData?.mainsData?.total.timeAllotted}
-                      </td>
-                    </tr>
-                    <tr className="bg-gray-100 font-bold">
-                      <td
-                        colSpan={1}
-                        className="border border-gray-300 px-4 py-2"
-                      >
-                        {ipbsExamData?.mainsData?.descriptive.title}
-                      </td>
-                      <td
-                        colSpan={2}
-                        className="border border-gray-300 px-4 py-2"
-                      >
-                        {ipbsExamData?.mainsData?.descriptive.questions}
-                      </td>
-                      <td
-                        colSpan={2}
-                        className="border border-gray-300 px-4 py-2"
-                      >
-                        {ipbsExamData?.mainsData?.descriptive.marks}
-                      </td>
-                      <td
-                        colSpan={2}
-                        className="border border-gray-300 px-4 py-2"
-                      >
-                        {ipbsExamData?.mainsData?.descriptive.time}
+                      <td className="text-center">
+                        {ipbsExamData?.mainsData?.total.marks}
                       </td>
                     </tr>
                   </tbody>
                 </table>
+
+                {/* Descriptive Paper */}
+                <h3 className="text-xl font-bold text-center mt-6">
+                  Descriptive Paper
+                </h3>
+                <table className="exam-table">
+                  <thead>
+                    <tr>
+                      <th>Section</th>
+                      <th>Number of Questions</th>
+                      <th>Duration</th>
+                      <th>Maximum Marks</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {ipbsExamData?.mainsData?.descriptive.map(
+                      (section, index) => (
+                        <tr key={index}>
+                          <td>{section.name}</td>
+                          <td className="text-center">{section.questions}</td>
+                          <td className="text-center">{section.duration}</td>
+                          <td className="text-center">{section.marks}</td>
+                        </tr>
+                      )
+                    )}
+                  </tbody>
+                </table>
               </div>
+
               {/* IBPS PO Prelims Syllabus */}
               <div
                 id="ibps-po-sbi-po-prelims-syllabus"

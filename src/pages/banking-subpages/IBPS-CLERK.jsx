@@ -301,10 +301,10 @@ const IBPSCLERK = () => {
                 <table className="table-auto border-collapse border border-gray-300 w-full text-center">
                   <thead>
                     <tr className="bg-blue-100 text-gray-800">
-                      <th className="border border-gray-200 p-2">Subject</th>
-                      <th className="border border-gray-200 p-2">Questions</th>
-                      <th className="border border-gray-200 p-2">Marks</th>
-                      <th className="border border-gray-200 p-2">Time</th>
+                      <th className="border border-gray-200 p-2">Sections</th>
+                      <th className="border border-gray-200 p-2">Number of Questions</th>
+                      <th className="border border-gray-200 p-2">Maximum Marks</th>
+                      <th className="border border-gray-200 p-2">Duration</th>
                     </tr>
                   </thead>
                   <tbody>
