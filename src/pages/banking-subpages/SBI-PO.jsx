@@ -222,16 +222,14 @@ const SBIPO = () => {
                   <thead>
                     <tr className="bg-blue-100 text-gray-800">
                       <th
-                        colSpan={5}
+                        colSpan={4}
                         className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300 text-center"
                       >
                         {ipbsExamData?.prelimsSyllabus.tableTitle}
                       </th>
                     </tr>
                     <tr className="bg-gray-100">
-                      <th className="border border-gray-300 px-4 py-2">
-                        S. No.
-                      </th>
+                      
                       <th className="border border-gray-300 px-4 py-2">
                         Section
                       </th>
@@ -239,10 +237,10 @@ const SBIPO = () => {
                         No. of Questions
                       </th>
                       <th className="border border-gray-300 px-4 py-2">
-                        Marks
+                        Total Marks
                       </th>
                       <th className="border border-gray-300 px-4 py-2">
-                        Time Allotted
+                        Duration
                       </th>
                     </tr>
                   </thead>
@@ -250,9 +248,9 @@ const SBIPO = () => {
                     {ipbsExamData?.prelimsSyllabus.examData?.map(
                       (item, index) => (
                         <tr key={item.id}>
-                          <td className="border border-gray-300 px-4 py-2">
+                          {/* <td className="border border-gray-300 px-4 py-2">
                             {index + 1}
-                          </td>
+                          </td> */}
                           <td className="border border-gray-300 px-4 py-2">
                             {item.section}
                           </td>
@@ -262,16 +260,10 @@ const SBIPO = () => {
                           <td className="border border-gray-300 px-4 py-2">
                             {item.marks}
                           </td>
-                          {index === 0 ? (
-                            <td
-                              rowSpan={
-                                ipbsExamData?.prelimsSyllabus.examData.length
-                              }
-                              className="border border-gray-300 px-4 py-2 align-top"
-                            >
-                              A cumulative time of 60 minutes (1 hour)
-                            </td>
-                          ) : null}
+
+                          <td className="border border-gray-300 px-4 py-2">
+                            {item.duration}
+                          </td>
                         </tr>
                       )
                     )}
@@ -279,7 +271,7 @@ const SBIPO = () => {
                     <tr className="bg-gray-100 font-bold">
                       <td
                         className="border border-gray-300 px-4 py-2 text-center"
-                        colSpan={2}
+                        colSpan={1}
                       >
                         Total
                       </td>
@@ -289,7 +281,10 @@ const SBIPO = () => {
                       <td className="border border-gray-300 px-4 py-2">
                         {ipbsExamData?.prelimsSyllabus?.totalMarks}
                       </td>
-                      <td className="border border-gray-300 px-4 py-2"></td>
+                      <td className="border border-gray-300 px-4 py-2">
+                        {ipbsExamData?.prelimsSyllabus?.totalDuration}
+                      </td>
+                     
                     </tr>
                   </tbody>
                 </table>
@@ -307,7 +302,7 @@ const SBIPO = () => {
                   <thead>
                     <tr className="bg-blue-100 text-gray-800">
                       <th
-                        colSpan={7}
+                        colSpan={4}
                         className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300 text-center"
                       >
                         {ipbsExamData?.mainsData.tableTitle}
@@ -318,35 +313,33 @@ const SBIPO = () => {
                         rowSpan={2}
                         className="border border-gray-300 px-4 py-2"
                       >
-                        Section
+                        Section (objective)
                       </th>
                       <th
-                        colSpan={2}
                         className="border border-gray-300 px-4 py-2"
                       >
                         Number of Questions
                       </th>
                       <th
-                        colSpan={2}
+                        className="border border-gray-300 px-4 py-2"
+                      >
+                        Duration
+                      </th>
+                      <th
                         className="border border-gray-300 px-4 py-2"
                       >
                         Maximum Marks
                       </th>
-                      <th
-                        colSpan={2}
-                        className="border border-gray-300 px-4 py-2"
-                      >
-                        Time Allotted
-                      </th>
+                      
                     </tr>
-                    <tr className="bg-gray-100">
+                    {/* <tr className="bg-gray-100">
                       <th className="border border-gray-300 px-4 py-2">SBI</th>
                       <th className="border border-gray-300 px-4 py-2">IBPS</th>
                       <th className="border border-gray-300 px-4 py-2">SBI</th>
                       <th className="border border-gray-300 px-4 py-2">IBPS</th>
                       <th className="border border-gray-300 px-4 py-2">SBI</th>
                       <th className="border border-gray-300 px-4 py-2">IBPS</th>
-                    </tr>
+                    </tr> */}
                   </thead>
                   <tbody>
                     {ipbsExamData?.mainsData?.sections?.map(
@@ -356,27 +349,18 @@ const SBIPO = () => {
                             {section.name}
                           </td>
                           <td className="border border-gray-300 px-4 py-2">
-                            {section.sbiQuestions}
+                            {section.Questions}
                           </td>
                           <td className="border border-gray-300 px-4 py-2">
-                            {section.ibpsQuestions}
-                          </td>
+                            {section.Time}
+                          </td>    
                           <td className="border border-gray-300 px-4 py-2">
-                            {section.sbiMarks}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {section.ibpsMarks}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {section.sbiTime}
-                          </td>
-                          <td className="border border-gray-300 px-4 py-2">
-                            {section.ibpsTime}
+                            {section.Marks}
                           </td>
                         </tr>
                       )
                     )}
-                    <tr className="bg-gray-100 font-bold">
+                    {/* <tr className="bg-gray-100 font-bold">
                       <td className="border border-gray-300 px-4 py-2">
                         Total
                       </td>
@@ -398,8 +382,16 @@ const SBIPO = () => {
                       >
                         {ipbsExamData?.mainsData?.total.timeAllotted}
                       </td>
+                    </tr> */}
+                    <tr className="bg-blue-100 text-gray-800">
+                      <th
+                        colSpan={4}
+                        className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300 text-center"
+                      >
+                        {ipbsExamData?.mainsData?.descriptiveTitle.titel}
+                      </th>
                     </tr>
-                    <tr className="bg-gray-100 font-bold">
+                    <tr className="bg-white-100 ">
                       <td
                         colSpan={1}
                         className="border border-gray-300 px-4 py-2"
@@ -407,22 +399,22 @@ const SBIPO = () => {
                         {ipbsExamData?.mainsData?.descriptive.title}
                       </td>
                       <td
-                        colSpan={2}
+                        colSpan={1}
                         className="border border-gray-300 px-4 py-2"
                       >
                         {ipbsExamData?.mainsData?.descriptive.questions}
                       </td>
                       <td
-                        colSpan={2}
-                        className="border border-gray-300 px-4 py-2"
-                      >
-                        {ipbsExamData?.mainsData?.descriptive.marks}
-                      </td>
-                      <td
-                        colSpan={2}
+                        colSpan={1}
                         className="border border-gray-300 px-4 py-2"
                       >
                         {ipbsExamData?.mainsData?.descriptive.time}
+                      </td>
+                      <td
+                        colSpan={1}
+                        className="border border-gray-300 px-4 py-2"
+                      >
+                        {ipbsExamData?.mainsData?.descriptive.marks}
                       </td>
                     </tr>
                   </tbody>
@@ -486,46 +478,88 @@ const SBIPO = () => {
                   {ipbsExamData?.syllabusData2?.title}
                 </h2>
                 <div className="overflow-x-auto">
-                  <table className="min-w-full table-auto border-collapse border border-gray-300 rounded-lg shadow-lg">
-                    <thead>
-                      <tr className="bg-gray-100">
-                        <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-gray-700">
-                          Section
-                        </th>
-                        <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-gray-700">
-                          Topics
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {ipbsExamData?.syllabusData2?.tableData?.map(
-                        (section, index) => (
-                          <tr
-                            key={index}
-                            className="odd:bg-white even:bg-gray-50"
-                          >
-                            <td className="border border-gray-300 px-4 py-2 font-medium text-gray-800">
-                              {section.section}
-                            </td>
-                            <td className="border border-gray-300 px-4 py-2">
-                              <ul className="list-disc pl-4">
-                                {section.topics.map((topic, topicIndex) => (
-                                  <li
-                                    key={topicIndex}
-                                    className="text-gray-700"
-                                  >
-                                    {topic}
-                                  </li>
-                                ))}
-                              </ul>
-                            </td>
-                          </tr>
-                        )
-                      )}
-                    </tbody>
-                  </table>
+                <table className="min-w-full table-auto border-collapse border border-gray-300 rounded-lg shadow-lg">
+          <thead>
+            <tr className="bg-gray-100">
+              <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-gray-700">
+                Section
+              </th>
+              <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-gray-700">
+                Topics
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {ipbsExamData?.syllabusData2?.tableData?.map((section, index) => (
+              <tr key={index} className="odd:bg-white even:bg-gray-50">
+                <td className="border border-gray-300 px-4 py-2 font-medium text-gray-800">
+                  {section.section}
+                </td>
+                <td className="border border-gray-300 px-4 py-2">
+                  <ul className="list-disc pl-4">
+                    {section.topics.map((topic, topicIndex) => (
+                      <li key={topicIndex} className="text-gray-700">
+                        {topic}
+                      </li>
+                    ))}
+                  </ul>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      {/* Descriptive Section */}
+      <div className="mt-6 p-4 border border-gray-300 rounded-md shadow-sm">
+        <h2 className="text-xl font-bold text-gray-800">
+          {ipbsExamData?.syllabusData2?.descriptive?.title}
+        </h2>
+        <p className="text-gray-700 mt-2">{ipbsExamData?.syllabusData2?.descriptive?.description}</p>
+        <ul className="list-disc pl-6 mt-2">
+          {ipbsExamData?.syllabusData2?.descriptive?.sections.map((section, index) => (
+            <li key={index} className="text-gray-700">{section}</li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Interview Section */}
+      <div className="mt-6 p-4 border border-gray-300 rounded-md shadow-sm">
+        <h2 className="text-xl font-bold text-gray-800">{ipbsExamData?.syllabusData2?.interview?.title}</h2>
+        <p className="text-gray-700 mt-2">{ipbsExamData?.syllabusData2?.interview?.description}</p>
+        <div className="overflow-x-auto">
+          <table className="min-w-full table-auto border border-gray-300 mt-2">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 px-4 py-2">Test</th>
+                <th className="border border-gray-300 px-4 py-2">Weightage</th>
+              </tr>
+            </thead>
+            <tbody>
+              {ipbsExamData?.syllabusData2?.interview?.tableData.map((row, index) => (
+                <tr key={index} className="odd:bg-white even:bg-gray-50">
+                  <td className="border border-gray-300 px-4 py-2">{row.test}</td>
+                  <td className="border border-gray-300 px-4 py-2">{row.weightage}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Document Verification */}
+      <div className="mt-6 p-4 border border-gray-300 rounded-md shadow-sm">
+        <h2 className="text-xl font-bold text-gray-800">{ipbsExamData?.syllabusData2?.documentVerification?.title}</h2>
+        { /* <p className="text-gray-700 mt-2">{ipbsExamData?.syllabusData2?.documentVerification?.description}</p> */}
+      </div>
+
+      {/* Medical */}
+      <div className="mt-6 p-4 border border-gray-300 rounded-md shadow-sm">
+        <h2 className="text-xl font-bold text-gray-800">{ipbsExamData?.syllabusData2?.medical?.title}</h2>
+        { /* <p className="text-gray-700 mt-2">{ipbsExamData?.syllabusData2?.medical?.description}</p> */}
+      </div>
                 </div>
-              </div>
+              
 
               {/* Frequently Asked Questions Section */}
               <div
