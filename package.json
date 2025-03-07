@@ -58,6 +58,7 @@
     "web-vitals": "^4.2.4"
   },
   "dependencies": {
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "winners": "file:"
   }
 }
