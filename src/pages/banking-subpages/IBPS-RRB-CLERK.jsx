@@ -232,16 +232,16 @@ const IBPSRRBCLERK = () => {
                         S. No.
                       </th>
                       <th className="border border-gray-300 px-4 py-2">
-                        Section
+                        Name of Tests(Objective)
                       </th>
                       <th className="border border-gray-300 px-4 py-2">
                         No. of Questions
                       </th>
                       <th className="border border-gray-300 px-4 py-2">
-                        Marks
+                        Maximum Marks
                       </th>
                       <th className="border border-gray-300 px-4 py-2">
-                        Time Allotted
+                        Duration
                       </th>
                     </tr>
                   </thead>
@@ -255,10 +255,10 @@ const IBPSRRBCLERK = () => {
                           <td className="border border-gray-300 px-4 py-2">
                             {item.section}
                           </td>
-                          <td className="border border-gray-300 px-4 py-2">
+                          <td className="border border-gray-300 px-4 py-2 text-center">
                             {item.questions}
                           </td>
-                          <td className="border border-gray-300 px-4 py-2">
+                          <td className="border border-gray-300 px-4 py-2 text-center">
                             {item.marks}
                           </td>
                           {index === 0 ? (
@@ -266,9 +266,9 @@ const IBPSRRBCLERK = () => {
                               rowSpan={
                                 ibpsRrbExamData?.prelimsSyllabus.examData.length
                               }
-                              className="border border-gray-300 px-4 py-2 align-top"
+                              className="border border-gray-300 px-4 py-2 "
                             >
-                              A cumulative time of 60 minutes (1 hour)
+                              45 minutes
                             </td>
                           ) : null}
                         </tr>
@@ -282,10 +282,10 @@ const IBPSRRBCLERK = () => {
                       >
                         Total
                       </td>
-                      <td className="border border-gray-300 px-4 py-2">
+                      <td className="border border-gray-300 px-4 py-2 text-center">
                         {ibpsRrbExamData?.prelimsSyllabus?.totalQuestions}
                       </td>
-                      <td className="border border-gray-300 px-4 py-2">
+                      <td className="border border-gray-300 px-4 py-2 text-center">
                         {ibpsRrbExamData?.prelimsSyllabus?.totalMarks}
                       </td>
                       <td className="border border-gray-300 px-4 py-2"></td>
@@ -305,14 +305,26 @@ const IBPSRRBCLERK = () => {
                 <table className="table-auto border-collapse border border-gray-300 w-full text-center">
                   <thead>
                     <tr className="bg-blue-100 text-gray-800">
-                      <th className="border border-gray-200 p-2">Subject</th>
-                      <th className="border border-gray-200 p-2">Questions</th>
-                      <th className="border border-gray-200 p-2">Marks</th>
-                      <th className="border border-gray-200 p-2">Time</th>
+                      <th
+                        colSpan={5}
+                        className="px-4 py-2 text-left font-semibold text-gray-700 border border-gray-300 text-center"
+                      >
+                        {ibpsRrbExamData?.mainsData.tableTitle}
+                      </th>
+                    </tr>
+                    <tr className="bg-blue-100 text-gray-800">
+                      <th className="border border-gray-200 p-2">Sections</th>
+                      <th className="border border-gray-200 p-2">
+                        Number of Questions
+                      </th>
+                      <th className="border border-gray-200 p-2">
+                        Maximum Marks{" "}
+                      </th>
+                      <th className="border border-gray-200 p-2">Duration</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {ibpsRrbExamData?.mainsData?.sections?.map((row) => (
+                    {ibpsRrbExamData?.mainsData?.sections?.map((row, index) => (
                       <tr key={row.subject}>
                         <td className="border border-gray-200 p-2">
                           {row.subject}
@@ -323,9 +335,14 @@ const IBPSRRBCLERK = () => {
                         <td className="border border-gray-200 p-2">
                           {row.marks}
                         </td>
-                        <td className="border border-gray-200 p-2">
-                          {row.time}
-                        </td>
+                        {index === 0 ? (
+                          <td
+                            rowSpan={ibpsRrbExamData?.mainsData.sections.length}
+                            className="border border-gray-300 px-4 py-2 "
+                          >
+                            2 Hours
+                          </td>
+                        ) : null}
                       </tr>
                     ))}
                   </tbody>
@@ -347,7 +364,7 @@ const IBPSRRBCLERK = () => {
                           Section
                         </th>
                         <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-gray-700">
-                          Topics
+                          Topics (Hindi & English)
                         </th>
                       </tr>
                     </thead>
@@ -368,7 +385,10 @@ const IBPSRRBCLERK = () => {
                                     key={topicIndex}
                                     className="text-gray-700"
                                   >
-                                    {topic}
+                                    <span className="font-bold">
+                                      {topic.hindi}
+                                    </span>{" "}
+                                    - {topic.english}
                                   </li>
                                 ))}
                               </ul>
@@ -396,7 +416,7 @@ const IBPSRRBCLERK = () => {
                           Section
                         </th>
                         <th className="border border-gray-300 px-4 py-2 text-left font-semibold text-gray-700">
-                          Topics
+                          Topics (Hindi & English)
                         </th>
                       </tr>
                     </thead>
@@ -417,7 +437,10 @@ const IBPSRRBCLERK = () => {
                                     key={topicIndex}
                                     className="text-gray-700"
                                   >
-                                    {topic}
+                                    <span className="font-bold">
+                                      {topic.hindi}
+                                    </span>{" "}
+                                    - {topic.english}
                                   </li>
                                 ))}
                               </ul>
@@ -428,8 +451,19 @@ const IBPSRRBCLERK = () => {
                     </tbody>
                   </table>
                 </div>
+                 {/* Document Verification */}
+                      <div className="mt-6 p-4 border border-gray-300 rounded-md shadow-sm">
+                        <h2 className="text-xl font-bold text-gray-800">{ibpsRrbExamData?.syllabusData2?.documentVerification?.title}</h2>
+                        { /* <p className="text-gray-700 mt-2">{ipbsExamData?.syllabusData2?.documentVerification?.description}</p> */}
+                      </div>
+                
+                      {/* Medical */}
+                      <div className="mt-6 p-4 border border-gray-300 rounded-md shadow-sm">
+                        <h2 className="text-xl font-bold text-gray-800">{ibpsRrbExamData?.syllabusData2?.medical?.title}</h2>
+                        { /* <p className="text-gray-700 mt-2">{ipbsExamData?.syllabusData2?.medical?.description}</p> */}
+                      </div>
               </div>
-
+               
               {/* Frequently Asked Questions Section */}
               <div
                 id="frequently-asked-questions-about-ibps-rrb-po-clerk-2025"
